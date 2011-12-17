@@ -1,0 +1,102 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ConTeXt-engine "xetex")
+ '(Info-additional-directory-list (quote ("/opt/local/share/info" "/Users/graham/share/info")))
+ '(LaTeX-math-menu-unicode t)
+ '(TeX-PDF-mode t)
+ '(abbrev-mode t t)
+ '(aquamacs-additional-fontsets nil t)
+ '(aquamacs-customization-version-id 215 t)
+ '(aquamacs-tool-bar-user-customization (quote ((16777249 new-file open-file recent-files aquamacs-print nil copy isearch-forward nil customize help))) t)
+ '(auto-insert-directory "~/wd/code/insert/")
+ '(auto-insert-mode t)
+ '(bib-file "~/wd/git/citations/citations.bib")
+ '(browse-url-browser-function (quote browse-url-default-macosx-browser))
+ '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
+ '(compilation-mode-hook nil)
+ '(current-language-environment "UTF-8")
+ '(custom-enabled-themes (quote (solarized-dark)))
+ '(default-frame-alist (quote ((menu-bar-lines . 1) (foreground-color . "Black") (background-color . "White") (cursor-type . box) (cursor-color . "Red") (vertical-scroll-bars . right) (internal-border-width . 0) (left-fringe . 1) (right-fringe) (fringe))))
+ '(dired-dwim-target t)
+ '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|^\\.git$")
+ '(display-time-mode t)
+ '(ebib-latex-preamble (quote ("\\usepackage{url}" "\\bibliographystyle{plain}")))
+ '(ebib-preload-bib-files (quote ("~/wd/citations/IEEEfull.bib" "~/wd/citations/citations.bib")))
+ '(glasses-separator "-")
+ '(glasses-uncapitalize-p t)
+ '(ido-enable-flex-matching t)
+ '(ido-enable-tramp-completion nil)
+ '(ido-everywhere t)
+ '(ido-ignore-directories (quote ("\\`\\.git/" "\\`CVS/" "\\`\\.\\./" "\\`\\./")))
+ '(ido-ignore-files (quote ("\\`\\.git/" "\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./")))
+ '(ido-mode (quote both) nil (ido))
+ '(ido-use-filename-at-point (quote guess))
+ '(ido-use-url-at-point t)
+ '(indent-region-mode t)
+ '(indent-tabs-mode nil)
+ '(inferior-lisp-program "/usr/local/bin/sbcl")
+ '(inhibit-startup-screen t)
+ '(jde-ant-enable-find t)
+ '(jde-build-function (quote (jde-ant-build)))
+ '(jde-jdk (quote ("1.6.0")))
+ '(jde-jdk-registry (quote (("1.6.0" . "/System/Library/Frameworks/JavaVM.framework"))))
+ '(jde-mvn-nexus-url "http://acelot8/nexus")
+ '(js2-use-font-lock-faces t)
+ '(menu-bar-mode t)
+ '(ns-alternate-modifier nil)
+ '(ns-command-modifier (quote meta))
+ '(ns-tool-bar-display-mode (quote both) t)
+ '(ns-tool-bar-size-mode (quote regular) t)
+ '(org-agenda-files (quote ("~/wd/org/main.org")))
+ '(org-clock-idle-time 10)
+ '(org-default-notes-file "~/wd/org/main.org")
+ '(org-directory "~/wd/org")
+ '(org-mobile-files (quote (org-agenda-files "recipes.org")))
+ '(org-remember-templates (quote (("Todo" 116 "* TODO %^{Brief Description} %^g\\nAdded: %U\\n %i\"
+" nil "Tasks" nil) ("Journal" 106 "\\n* %^{topic} %T \\n%i%?\\n\"
+" nil nil nil) ("Book" 98 "\\n* %^{Book Title} %t :READING: \\n
+" nil nil nil) ("Paper" 112 "\\n* TODO %^{Paper Title} %t :READING: \\n:PROPERTIES:\\n:Title: %?\\n:Author:\\n:Year:\\n:Book Title:\\n:END:\\nComments:\\n
+" nil "Citations" nil))))
+ '(outline-regexp "\\*+ ")
+ '(quack-default-program "mzscheme -i -l errortrace")
+ '(quack-pretty-lambda-p t)
+ '(reftex-plug-into-AUCTeX t)
+ '(reftex-use-external-file-finders t)
+ '(safe-local-variable-values (quote ((noweb-default-code-mode . java-mode) (Syntax . Common-Lisp) (Syntax . ANSI-Common-Lisp) (TeX-master . "paper.tex") (TeX-master . t) (TeX-master . "paper"))))
+ '(semanticdb-default-save-directory "~/.semantic")
+ '(server-window (quote switch-to-buffer-other-frame))
+ '(swank-clojure-extra-classpaths (list* (expand-file-name "~/.clojure") (when (file-directory-p "~/.clojure") (directory-files "~/.clojure" t ".jar$"))))
+ '(swank-clojure-jar-path "/Users/graham/wd/EXTERNAL/clojure/trunk/clojure.jar")
+ '(swank-clojure-library-paths nil)
+ '(todochiku-command "/Users/graham/bin/growlnotify")
+ '(tool-bar-mode nil)
+ '(unread-bib-file "~/wd/citations/to-be-read.bib")
+ '(user-mail-address "graham@sigwinch.org")
+ '(visual-line-mode nil t)
+ '(which-function-mode t)
+ '(woman-manpath (quote ("/usr/share/man/" "/usr/local/share/man/" "/usr/X11/man/" "/usr/local/teTeX/man" "/opt/local/man" "/Users/graham/man" "/Users/graham/share/man")))
+ '(x-select-enable-clipboard t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(autoface-default ((t (:inherit default))) t)
+ '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Inconsolata"))) t))
+
+;; Check custom-file compatibility
+(when (and (boundp 'aquamacs-version-id)
+           (< (floor (/ aquamacs-version-id 10))
+	   (floor (/ aquamacs-customization-version-id 10))))
+  (defadvice frame-notice-user-settings (before show-version-warning activate)
+    (defvar aquamacs-backup-custom-file nil "Backup of `custom-file', if any.")
+    (setq aquamacs-backup-custom-file "~/Library/Preferences/Aquamacs Emacs/customizations.2.0.el")
+    (let ((msg "Aquamacs options were saved by a more recent program version.
+Errors may occur.  Save Options to overwrite the customization file. The original, older customization file was backed up to ~/Library/Preferences/Aquamacs Emacs/customizations.2.0.el."))
+      (if window-system
+	  (x-popup-dialog t (list msg '("OK" . nil) 'no-cancel) "Warning")
+	(message msg)))))
+;; End compatibility check
