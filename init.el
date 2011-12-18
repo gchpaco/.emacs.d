@@ -11,7 +11,7 @@
 (add-to-list 'exec-path "/usr/local/texlive/2011/bin/universal-darwin")
 (add-to-list 'exec-path "/Applications/Racket v5.0.1/bin")
 
-(add-to-list 'load-path "~/wd/code/emacs-lisp")
+(add-to-list 'load-path "~/.emacs.d")
 
 (require 'environment-local)
 
