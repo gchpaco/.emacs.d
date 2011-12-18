@@ -1,2 +1,0 @@
-@set VERSION 2010-11-06
-@set DATE 2010-11-06

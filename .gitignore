@@ -25,3 +25,5 @@ anything-c-adaptive-history
 auto-save-list/
 url/cookies
 tramp
+elpa/*
+el-get/*
