@@ -27,3 +27,6 @@ url/cookies
 tramp
 elpa/*
 el-get/*
+
+org-clock-save.el
+eproject.lst
