@@ -54,8 +54,8 @@
 
 (el-get 'sync my-packages)
 
-(require 'solarized-light-theme)
 (require 'solarized-dark-theme)
+(require 'solarized-light-theme)
 
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)
