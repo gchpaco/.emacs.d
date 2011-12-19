@@ -42,7 +42,7 @@
       (append
        '(el-get apache-mode auctex autopair cisco-router-mode 
                 clang-completion-mode clevercss coffee-mode cedet
-                color-theme-solarized crontab-mode dig dired-toggle-sudo
+                crontab-mode dig dired-toggle-sudo
                 doc-mode edit-server eredis escreen feature-mode filladapt
                 find-file-in-project fold-dwim fold-dwim-org full-ack
                 gist go-mode haml-mode highlight-parentheses js2-mode magit
