@@ -40,7 +40,7 @@
 
 (setq my-packages
       (append
-       '(el-get apache-mode auctex autopair cisco-router-mode 
+       '(el-get apache-mode auctex cisco-router-mode 
                 clang-completion-mode clevercss coffee-mode cedet
                 crontab-mode dig dired-toggle-sudo
                 doc-mode edit-server eredis escreen feature-mode filladapt
@@ -213,7 +213,7 @@
 ;(add-to-list 'anything-sources 'anything-c-source-files-in-current-dir)
 ;(add-to-list 'anything-sources 'anything-c-source-recentf)
 
-(autopair-global-mode)
+(electric-pair-mode)
 (dired-x-bind-find-file)
 (auto-compression-mode t)
 (display-time)
