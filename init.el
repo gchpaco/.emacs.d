@@ -214,6 +214,7 @@
 ;(add-to-list 'anything-sources 'anything-c-source-recentf)
 
 (electric-pair-mode)
+(electric-indent-mode)
 (dired-x-bind-find-file)
 (auto-compression-mode t)
 (display-time)
