@@ -41,7 +41,7 @@
 (setq my-packages
       (append
        '(el-get apache-mode auctex autopair cisco-router-mode 
-                clang-completion-mode clevercss coffee-mode color-theme cedet
+                clang-completion-mode clevercss coffee-mode cedet
                 color-theme-solarized crontab-mode dig dired-toggle-sudo
                 doc-mode edit-server eredis escreen feature-mode filladapt
                 find-file-in-project fold-dwim fold-dwim-org full-ack
@@ -53,9 +53,6 @@
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
-
-(require 'solarized-dark-theme)
-(require 'solarized-light-theme)
 
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)
@@ -158,7 +155,6 @@
 (require 'org)
 (require 'zap-up-to-char)
 (require 'mac-local)
-(require 'color-theme)
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-clock-persist 'history)
