@@ -40,7 +40,7 @@
 
 (setq my-packages
       (append
-       '(el-get apache-mode auctex cisco-router-mode 
+       '(el-get apache-mode auctex cisco-router-mode
                 clang-completion-mode clevercss coffee-mode cedet
                 crontab-mode dig dired-toggle-sudo
                 doc-mode edit-server eredis escreen feature-mode filladapt
@@ -103,7 +103,7 @@
 (add-to-list 'auto-mode-alist '("\\.igc\\'" . igc-mode))
 
 (autoload 'igc-mode "igc-mode" nil t)
-(autoload 'jw-visit-source "jw-visit-source" "If the current line contains text like '../src/program.rb:34', visit that file in the other window and position point on that line." t) 
+(autoload 'jw-visit-source "jw-visit-source" "If the current line contains text like '../src/program.rb:34', visit that file in the other window and position point on that line." t)
 
 (add-to-list 'completion-ignored-extensions ".git/")
 
@@ -141,9 +141,9 @@
   (interactive "r\nsSummary:")
   (let ((n (count-lines b e)))
     (delete-region b e)
-    (insert (format "[snip%s (%d line%s)]" 
+    (insert (format "[snip%s (%d line%s)]"
               (if (= 0 (length summ)) "" (concat ": " summ))
-              n 
+              n
               (if (= 1 n) "" "s")))))
 
 (require 'dired-x)
@@ -248,4 +248,3 @@
 (put 'set-goal-column 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 (put 'with-state 'scheme-indent-function 2)
-
