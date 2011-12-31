@@ -155,6 +155,30 @@
 (require 'org)
 (require 'zap-up-to-char)
 (require 'mac-local)
+(require 'whitespace)
+
+;; nuke trailing whitespaces when writing to a file
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)
+
+;; display only tails of lines longer than 80 columns, tabs and
+;; trailing whitespaces
+(setq whitespace-line-column 80
+      whitespace-style '(face tabs trailing lines-tail))
+
+;; face for long lines' tails
+(set-face-attribute 'whitespace-line nil
+                    :background "red1"
+                    :foreground "yellow"
+                    :weight 'bold)
+
+;; face for Tabs
+(set-face-attribute 'whitespace-tab nil
+                    :background "red1"
+                    :foreground "yellow"
+                    :weight 'bold)
+
+;; activate minor whitespace mode when programming
+(add-hook 'prog-mode-hook 'whitespace-mode)
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-clock-persist 'history)
