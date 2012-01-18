@@ -161,6 +161,8 @@
 (require 'zap-up-to-char)
 (require 'mac-local)
 (require 'whitespace)
+(require 'vc-p4)
+(require 'p4)
 
 ;; nuke trailing whitespaces when writing to a file
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
