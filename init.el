@@ -85,15 +85,19 @@
 (defun colons->list (string)
   (split-string string ":" nil))
 (defun list->colons (list)
-  (apply #'concat (car list) (mapcar (lambda (path) (concat ":" path)) (cdr list))))
+  (apply #'concat (car list) (mapcar (lambda (path) (concat ":" path))
+                                     (cdr list))))
 (defun add-to-envlist (envname &rest items)
   (setenv envname
-          (list->colons (remove-duplicates (append items (colons->list (or (getenv envname) "")))
+          (list->colons (remove-duplicates (append items (colons->list
+                                                          (or (getenv envname)
+                                                              "")))
                                            :test #'string-equal :from-end t))))
 (let ((base-dir (expand-file-name "~/wd/acelot/proposals")))
   (add-to-envlist "BSTINPUTS" "." (concat base-dir "/bibstyles"))
   (add-to-envlist "BIBINPUTS" "." base-dir)
-  (add-to-envlist "TEXINPUTS" "." (concat base-dir "/styles") (concat base-dir "/classes")))
+  (add-to-envlist "TEXINPUTS" "." (concat base-dir "/styles")
+                  (concat base-dir "/classes")))
 
 (setq-default org-mobile-directory "~/Dropbox/MobileOrg/")
 (setq-default org-mobile-inbox-for-pull "~/Dropbox/MobileOrg/index.org")
@@ -103,7 +107,8 @@
 (add-to-list 'auto-mode-alist '("\\.igc\\'" . igc-mode))
 
 (autoload 'igc-mode "igc-mode" nil t)
-(autoload 'jw-visit-source "jw-visit-source" "If the current line contains text like '../src/program.rb:34', visit that file in the other window and position point on that line." t)
+(autoload 'jw-visit-source "jw-visit-source"
+  "If the current line contains text like '../src/program.rb:34', visit that file in the other window and position point on that line." t)
 
 (add-to-list 'completion-ignored-extensions ".git/")
 
