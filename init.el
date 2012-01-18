@@ -18,6 +18,7 @@
 (set-language-environment "UTF-8")
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(require 'inversion)
 
 (unless (require 'el-get nil t)
   (with-current-buffer
@@ -34,7 +35,6 @@
         ;       :type elpa)
         (:name org-magit :type elpa)
         (:name feature-mode :type elpa)
-        (:name find-file-in-project :type elpa)
         (:name fold-dwim :type elpa)
         (:name fold-dwim-org :type elpa)))
 
@@ -44,7 +44,7 @@
                 clang-completion-mode clevercss coffee-mode cedet
                 crontab-mode dig dired-toggle-sudo
                 doc-mode edit-server eredis escreen feature-mode filladapt
-                find-file-in-project fold-dwim fold-dwim-org full-ack
+                fold-dwim fold-dwim-org full-ack
                 gist go-mode haml-mode highlight-parentheses js2-mode magit
                 magithub mmm-mode nxhtml org-mode org-buffers org-fstree paredit
                 puppet-mode quack rails-el rinari rspec-mode rst-mode
