@@ -32,7 +32,18 @@
       '(
         ;(:name magit
         ;       :after (lambda () (global-set-key (kbd "C-c g") 'magit-status))
-        ;       :type elpa)
+                                        ;       :type elpa)
+        (:name bbdb
+               :website "http://bbdb.sourceforge.net/"
+               :description "The Insidious Big Brother Database (BBDB) is a contact management utility."
+               :type git
+               :url "git://git.savannah.nongnu.org/bbdb.git"
+               :load-path ("./lisp")
+               ;; if using vm, add `--with-vm-dir=DIR' after ./configure
+               :build `("autoconf" ,(concat "./configure --with-emacs=" el-get-emacs) "make bbdb")
+               :features bbdb
+               :autoloads nil
+               :post-init (lambda () (bbdb-initialize 'gnus 'message)))
         (:name org-magit :type elpa)
         (:name feature-mode :type elpa)
         (:name fold-dwim :type elpa)
@@ -178,6 +189,11 @@
 (require 'whitespace)
 (require 'vc-p4)
 (require 'p4)
+(require 'bbdb-gnus)
+(require 'bbdb-message)
+(require 'bbdb-migrate)
+(require 'bbdb-mua)
+(bbdb-mua-auto-update-init 'gnus 'message)
 
 ;; nuke trailing whitespaces when writing to a file
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
