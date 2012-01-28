@@ -44,7 +44,7 @@
                 clang-completion-mode clevercss coffee-mode cedet
                 crontab-mode dig dired-toggle-sudo
                 doc-mode edit-server eredis escreen feature-mode filladapt
-                fold-dwim fold-dwim-org full-ack
+                fold-dwim fold-dwim-org
                 gist go-mode haml-mode highlight-parentheses js2-mode magit
                 magithub mmm-mode nxhtml org-mode org-buffers org-fstree paredit
                 puppet-mode quack rails-el rinari rspec-mode rst-mode
@@ -111,6 +111,21 @@
   "If the current line contains text like '../src/program.rb:34', visit that file in the other window and position point on that line." t)
 
 (add-to-list 'completion-ignored-extensions ".git/")
+
+(define-key gnus-group-mode-map (kbd "vo")
+  '(lambda ()
+     (interactive)
+     (shell-command "offlineimap -1 &" "*offlineimap*" nil)))
+
+(autoload 'ack-and-a-half-same "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half-find-file-same "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half-find-file "ack-and-a-half" nil t)
+;; Create shorter aliases
+(defalias 'ack 'ack-and-a-half)
+(defalias 'ack-same 'ack-and-a-half-same)
+(defalias 'ack-find-file 'ack-and-a-half-find-file)
+(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
