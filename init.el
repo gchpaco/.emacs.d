@@ -45,8 +45,6 @@
                :autoloads nil
                :post-init (lambda () (bbdb-initialize 'gnus 'message)))
         (:name org-magit :type elpa)
-        (:name feature-mode :type elpa)
-        (:name fold-dwim :type elpa)
         (:name fold-dwim-org :type elpa)))
 
 (setq my-packages
@@ -54,7 +52,6 @@
        '(el-get apache-mode auctex cisco-router-mode
                 clang-completion-mode clevercss coffee-mode cedet
                 crontab-mode dig dired-toggle-sudo
-                doc-mode edit-server eredis escreen feature-mode filladapt
                 fold-dwim fold-dwim-org
                 gist go-mode haml-mode highlight-parentheses js2-mode magit
                 magithub mmm-mode nxhtml org-mode org-buffers org-fstree paredit
