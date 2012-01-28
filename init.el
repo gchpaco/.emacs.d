@@ -68,6 +68,10 @@
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)
 
+(add-to-list 'after-make-frame-functions
+             (lambda (ignored)
+               (enable-theme 'solarized-light)))
+
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
 ;;; interfacing with ELPA, the package archive.
