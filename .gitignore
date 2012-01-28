@@ -31,3 +31,4 @@ el-get/*
 
 org-clock-save.el
 eproject.lst
+/eshell/history
