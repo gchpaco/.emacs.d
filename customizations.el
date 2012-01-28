@@ -14,7 +14,7 @@
  '(auto-insert-directory "~/wd/code/insert/")
  '(auto-insert-mode t)
  '(bib-file "~/wd/git/citations/citations.bib")
- '(browse-url-browser-function (quote browse-url-default-macosx-browser))
+ '(browse-url-browser-function (quote browse-url-firefox))
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(compilation-mode-hook nil)
  '(current-language-environment "UTF-8")
