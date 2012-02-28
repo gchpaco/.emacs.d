@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("xmonad.hs"
+ (filename . "~/.xmonad/xmonad.hs")
+ (front-context-string . "\n    , ((modm .|")
+ (rear-context-string . "ws W.swapMaster)")
+ (position . 6703))
+("perforce-puppet"
+ (filename . "~/wd/puppet_main/")
+ (front-context-string . "modules\n  drwxrw")
+ (rear-context-string . "012-02-07 17:11 ")
+ (position . 587))
+("legacy-puppet"
+ (filename . "~/wd/ops/puppet/puppet/")
+ (front-context-string . "modules\n  drwxrw")
+ (rear-context-string . "012-02-07 17:08 ")
+ (position . 456))
+("git-puppet"
+ (filename . "~/wd/git/puppet_main/")
+ (front-context-string . "modules\n  -rw-rw")
+ (rear-context-string . "012-02-22 11:03 ")
+ (position . 661))
+("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . "ad \"Jump to book")
+ (rear-context-string . "rk-completing-re")
+ (position . 6658))
+)

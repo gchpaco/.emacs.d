@@ -1,0 +1,11 @@
+(require 'dired-x)
+(require 'sgml-mode)
+(require 'info-look)
+(require 'pretty-greek)
+(require 'uniquify)
+(require 'zap-up-to-char)
+(require 'mac-local)
+(require 'vc-p4)
+(require 'p4)
+
+(dired-x-bind-find-file)

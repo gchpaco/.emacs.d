@@ -1,0 +1,5 @@
+(add-to-list 'anything-sources 'anything-c-source-google-suggest)
+(add-to-list 'anything-sources 'anything-c-source-calculation-result)
+;(add-to-list 'anything-sources 'anything-c-source-mac-spotlight)
+(add-to-list 'anything-sources 'anything-c-source-files-in-current-dir)
+(add-to-list 'anything-sources 'anything-c-source-recentf)

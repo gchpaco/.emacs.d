@@ -83,9 +83,12 @@
  '(org-agenda-files (quote ("~/wd/org/agenda.org" "~/wd/org/main.org")))
  '(org-agenda-include-diary t)
  '(org-clock-idle-time 10)
+ '(org-clock-persist (quote history))
  '(org-default-notes-file "~/wd/org/main.org")
  '(org-directory "~/wd/org")
+ '(org-mobile-directory "~/Dropbox/MobileOrg/")
  '(org-mobile-files (quote (org-agenda-files "recipes.org")))
+ '(org-mobile-inbox-for-pull "~/Dropbox/MobileOrg/index.org")
  '(org-remember-templates (quote (("Todo" 116 "* TODO %^{Brief Description} %^g\\nAdded: %U\\n %i\"
 " nil "Tasks" nil) ("Journal" 106 "\\n* %^{topic} %T \\n%i%?\\n\"
 " nil nil nil) ("Book" 98 "\\n* %^{Book Title} %t :READING: \\n
