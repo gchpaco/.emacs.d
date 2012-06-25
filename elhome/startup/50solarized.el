@@ -1,3 +1,2 @@
-(add-to-list 'after-make-frame-functions
-             (lambda (ignored)
-               (enable-theme 'solarized-light)))
+;;(require 'solarized-dark-theme)
+(require 'solarized-light-theme)
