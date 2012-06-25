@@ -18,31 +18,26 @@
 
 ;; local sources
 (setq el-get-sources
-      '(
-        ;(:name magit
-        ;       :after (lambda () (global-set-key (kbd "C-c g") 'magit-status))
-                                        ;       :type elpa)
-	(:name elhome :after elhome-init)
+      '((:name elhome :after (elhome-init))
         (:name org-magit :type elpa)))
 
 (setq my-packages
       (append
-       '(el-get Enhanced-Ruby-Mode
-                anything anything-ack anything-orgcard apache-mode auctex
+       '(el-get anything anything-ack anything-orgcard apache-mode auctex
                 auto-complete auto-complete-clang auto-complete-css bbdb
                 auto-complete-emacs-lisp auto-complete-etags auto-complete-latex
-                auto-complete-ruby auto-complete-yasnippet
+                auto-complete-yasnippet
                 cisco-router-mode cssh fic-ext-mode html5
-                mediawiki minimap ri-emacs ssh tail undo-tree
-                xcscope xcscope+ erc
-                clang-completion-mode clevercss coffee-mode cedet
+                minimap ri-emacs ssh tail undo-tree
+                xcscope xcscope+ erc wikipedia-mode toggle-friend-file
+                virtualenv
+                clang-completion-mode clevercss coffee-mode
                 crontab-mode dig dired-toggle-sudo emms feature-mode
-                gist go-mode haml-mode highlight-parentheses js2-mode magit
-                magithub mmm-mode nxhtml org-mode org-buffers org-fstree paredit
+                go-mode haml-mode highlight-parentheses js2-mode magit
+                magithub mmm-mode org-mode org-buffers org-fstree paredit
                 puppet-mode quack rails-el rinari rspec-mode rst-mode
                 ruby-block sass-mode smex ssh-config sudo-save tidy
-                wikipedia-mode yaml-mode yasnippet
-                elhome)
+                yaml-mode yasnippet elhome zenburn-theme)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
