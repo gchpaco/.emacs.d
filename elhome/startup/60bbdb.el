@@ -3,4 +3,4 @@
 (require 'bbdb-migrate)
 (require 'bbdb-mua)
 
-(bbdb-mua-auto-update-init 'gnus 'message)
+(bbdb-initialize 'gnus 'message)
