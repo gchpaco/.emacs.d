@@ -32,3 +32,9 @@ el-get/*
 org-clock-save.el
 eproject.lst
 /eshell/history
+
+/eshell/lastdir
+
+emms/*
+
+ac-comphist.dat
