@@ -22,8 +22,8 @@
  '(compilation-mode-hook nil)
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes (quote (solarized-light)))
- '(custom-safe-themes (quote ("117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" "0174d99a8f1fdc506fa54403317072982656f127" "5600dc0bb4a2b72a613175da54edb4ad770105aa" default)))
- '(custom-theme-load-path (quote (custom-theme-directory t)))
+ '(custom-safe-themes (quote ("5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
+ '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
  '(default-frame-alist (quote ((menu-bar-lines . 1) (foreground-color . "Black") (background-color . "White") (cursor-type . box) (cursor-color . "Red") (vertical-scroll-bars . right) (internal-border-width . 0) (left-fringe . 1) (right-fringe) (fringe))))
  '(dired-dwim-target t)
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|^\\.git$")
@@ -31,6 +31,7 @@
  '(ebib-latex-preamble (quote ("\\usepackage{url}" "\\bibliographystyle{plain}")))
  '(ebib-preload-bib-files (quote ("~/wd/citations/IEEEfull.bib" "~/wd/citations/citations.bib")))
  '(emms-player-mpd-music-directory "~/Music")
+ '(enh-ruby-program "/home/ghughes/.rbenv/versions/1.9.3-p194/bin/ruby")
  '(erc-auto-query (quote frame))
  '(erc-autojoin-channels-alist (quote (("sysadmin1.ops.expertcity.com" "#sysadmins"))))
  '(erc-header-line-format nil)
@@ -74,6 +75,8 @@
  '(jde-jdk-registry (quote (("1.6.0" . "/System/Library/Frameworks/JavaVM.framework"))))
  '(jde-mvn-nexus-url "http://acelot8/nexus")
  '(js2-use-font-lock-faces t)
+ '(mediawiki-site-alist (quote (("Wikipedia" "http://en.wikipedia.org/w/" "username" "password" "Main Page") ("Ops Wiki" "https://opswiki1.ops.expertcity.com/wiki/" "ghughes" "" "Main Page"))))
+ '(mediawiki-site-default "Ops Wiki")
  '(menu-bar-mode t)
  '(message-send-mail-function (quote smtpmail-send-it))
  '(nnmail-expiry-target "Archived")
@@ -101,7 +104,7 @@
  '(quack-pretty-lambda-p t)
  '(reftex-plug-into-AUCTeX t)
  '(reftex-use-external-file-finders t)
- '(safe-local-variable-values (quote ((require-final-newline . t) (noweb-default-code-mode . java-mode) (Syntax . Common-Lisp) (Syntax . ANSI-Common-Lisp) (TeX-master . "paper.tex") (TeX-master . t) (TeX-master . "paper"))))
+ '(safe-local-variable-values (quote ((eval ignore-errors (add-hook (quote before-save-hook) (quote delete-trailing-whitespace)) (require (quote whitespace)) (set-face-attribute (quote whitespace-line) nil :background "red1" :foreground "yellow" :weight (quote bold)) (set-face-attribute (quote whitespace-tab) nil :background "red1" :foreground "yellow" :weight (quote bold)) "Need to ensure that whitespace mode is turned off and on again. This guaranteees that the new values of the whitespace-related variables will take effect." (whitespace-mode 0) (whitespace-mode 1)) (whitespace-line-column . 80) (whitespace-style face trailing lines-tail) (require-final-newline . t) (noweb-default-code-mode . java-mode) (Syntax . Common-Lisp) (Syntax . ANSI-Common-Lisp) (TeX-master . "paper.tex") (TeX-master . t) (TeX-master . "paper"))))
  '(semanticdb-default-save-directory "~/.semantic")
  '(send-mail-function (quote smtpmail-send-it))
  '(server-window (quote switch-to-buffer-other-frame))
@@ -130,7 +133,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#fcf4dc" :foreground "Black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :family "Inconsolata"))))
  '(autoface-default ((t (:inherit default))) t)
  '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Inconsolata"))) t))
 
