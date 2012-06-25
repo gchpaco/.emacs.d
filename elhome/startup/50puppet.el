@@ -6,7 +6,6 @@
                (group . 1)
                (spacing . 1)))
 (require 'speedbar)
-(speedbar-add-supported-extension ".rb")
 (speedbar-add-supported-extension ".pp")
 (add-to-list 'speedbar-fetch-etags-parse-list
              '("\\.rb" . "\\(\\(class\\|def\\)\\s-+\\([a-zA-Z0-9_.:]+\\)\\)\\s-*(?^?"))
@@ -61,7 +60,7 @@
   "#" \n
   "# === Copyright" \n
   "#" \n
-  "# Copyright 2011 Citrix Systems Inc, unless otherwise noted." \n
+  "# Copyright 2012 Citrix Systems Inc, unless otherwise noted." \n
   "#" \n
   "class " str " {" \n
   > _ \n
