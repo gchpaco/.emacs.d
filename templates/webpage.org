@@ -1,0 +1,6 @@
+* %a %?
+:PROPERTIES:
+ :DateCreated: %T
+:END:
+
+%i

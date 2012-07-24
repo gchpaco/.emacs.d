@@ -87,6 +87,7 @@
  '(ns-tool-bar-size-mode (quote regular) t)
  '(org-agenda-files (quote ("~/wd/org/agenda.org" "~/wd/org/main.org")))
  '(org-agenda-include-diary t)
+ '(org-capture-templates (quote (("t" "Todo" entry (file+headline "~/wd/org/gtd.org" "Tasks") (file "~/.emacs.d/templates/todo.org")) ("j" "Journal" entry (file+datetree "~/wd/org/journal.org") (file "~/.emacs.d/templates/journal.org")) ("w" "Web page" entry (file+headline "~/wd/org/refile.org" "Web capture") (file "~/.emacs.d/templates/webpage.org")) ("n" "Quick note to refile later" entry (file+headline "~/wd/org/refile.org" "Notes To Refile") (file "~/.emacs.d/templates/note.org")))))
  '(org-clock-idle-time 10)
  '(org-clock-persist (quote history))
  '(org-default-notes-file "~/wd/org/main.org")
