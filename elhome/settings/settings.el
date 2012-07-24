@@ -15,6 +15,8 @@
  '(aquamacs-tool-bar-user-customization (quote ((16777249 new-file open-file recent-files aquamacs-print nil copy isearch-forward nil customize help))) t)
  '(auto-insert-directory "~/wd/code/insert/")
  '(auto-insert-mode t)
+ '(auto-save-file-name-transforms (quote (("\\`/[^/]*:\\([^/]*/\\)*\\([^/]*\\)\\'" "/tmp/\\2" t) ("^/home/ghughes/wiki/\\([^/]*/\\)*\\([^/]*\\)\\'" "/tmp/wiki/\\2" t))))
+ '(backup-directory-alist (quote (("\\`/home/ghughes/wiki/\\([^/]*/\\)*\\([^/]*\\)\\'" . "/tmp/wikibackup/\\2"))))
  '(bib-file "~/wd/git/citations/citations.bib")
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-generic-program "x-www-browser")
