@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(ConTeXt-engine "xetex")
  '(Info-additional-directory-list (quote ("/opt/local/share/info" "/Users/graham/share/info")))
- '(Info-default-directory-list (quote ("/home/ghughes/.emacs.d/el-get/rinari/doc" "/home/ghughes/.emacs.d/el-get/org-mode/doc" "/home/ghughes/.emacs.d/el-get/magit" "/home/ghughes/.emacs.d/el-get/emms/doc" "/home/ghughes/.emacs.d/el-get/emacs-w3m/doc" "/home/ghughes/.emacs.d/el-get/auctex/doc" "/home/ghughes/.emacs.d/elhome/info" "/usr/share/info/emacs-snapshot" "/usr/share/info/" "/usr/share/info/")))
+ '(Info-default-directory-list (quote ("/home/ghughes/.emacs.d/el-get/rinari/doc" "/home/ghughes/.emacs.d/el-get/org-mode/doc" "/home/ghughes/.emacs.d/el-get/magit" "/home/ghughes/.emacs.d/el-get/emms/doc" "/home/ghughes/.emacs.d/el-get/emacs-w3m/doc" "/home/ghughes/.emacs.d/el-get/auctex/doc" "/home/ghughes/.emacs.d/elhome/info" "/usr/share/info/emacs-snapshot" "/usr/share/info/" "/usr/share/info/")) t)
  '(LaTeX-math-menu-unicode t)
  '(TeX-PDF-mode t)
  '(abbrev-mode t t)
