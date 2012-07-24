@@ -25,6 +25,7 @@
  '(custom-safe-themes (quote ("5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
  '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
  '(default-frame-alist (quote ((menu-bar-lines . 1) (foreground-color . "Black") (background-color . "White") (cursor-type . box) (cursor-color . "Red") (vertical-scroll-bars . right) (internal-border-width . 0) (left-fringe . 1) (right-fringe) (fringe))))
+ '(delete-by-moving-to-trash t)
  '(dired-dwim-target t)
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|^\\.git$")
  '(display-time-mode t)
