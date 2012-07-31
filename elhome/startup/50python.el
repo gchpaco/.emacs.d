@@ -10,8 +10,9 @@
  "';'.join(module_completion('''%s'''))\n"
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
+(when (string= system-type "gnu/linux")
+  (require 'pymacs)
+  (pymacs-load "ropemacs" "rope-"))
 
 (when (load "flymake" t)
   (defun flymake-pyflakes-init ()
