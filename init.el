@@ -23,21 +23,21 @@
 
 (setq my-packages
       (append
-       '(el-get anything anything-ack anything-orgcard apache-mode auctex
-                auto-complete auto-complete-clang auto-complete-css bbdb
-                auto-complete-emacs-lisp auto-complete-etags auto-complete-latex
+       '(el-get anything apache-mode auctex
+                auto-complete auto-complete-clang auto-complete-css
+                auto-complete-emacs-lisp auto-complete-etags
                 auto-complete-yasnippet
-                cisco-router-mode cssh fic-ext-mode html5
-                minimap ri-emacs ssh tail undo-tree
-                xcscope xcscope+ erc wikipedia-mode toggle-friend-file
+                cisco-router-mode cssh fic-ext-mode
+                minimap ri-emacs tail undo-tree ssh
+                xcscope xcscope+ erc wikipedia-mode
                 virtualenv
                 clang-completion-mode clevercss coffee-mode
                 crontab-mode dig dired-toggle-sudo emms feature-mode
-                go-mode haml-mode highlight-parentheses js2-mode magit
+                go-mode highlight-parentheses js2-mode magit haml-mode
                 magithub mmm-mode org-mode org-buffers org-fstree paredit
                 puppet-mode quack rails-el rinari rspec-mode rst-mode
-                ruby-block sass-mode smex ssh-config sudo-save tidy
-                yaml-mode yasnippet elhome zenburn-theme)
+                ruby-block smex ssh-config sudo-save tidy yasnippet sass-mode
+                yaml-mode elhome)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
