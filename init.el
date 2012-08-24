@@ -25,18 +25,20 @@
 ;; local sources
 (setq el-get-sources
       '((:name elhome :after (elhome-init))
-        (:name org-magit :type elpa)))
+        (:name org-magit :type elpa)
+	(:name ssh :type elpa)
+	(:name feature-mode :type elpa)))
 
 (setq my-packages
       (append
-       '(el-get anything apache-mode auctex
+       '(anything apache-mode auctex
                 auto-complete auto-complete-clang auto-complete-css
                 auto-complete-emacs-lisp auto-complete-etags
                 auto-complete-yasnippet
                 cisco-router-mode cssh fic-ext-mode
                 minimap ri-emacs tail undo-tree ssh
-                xcscope xcscope+ erc wikipedia-mode
-                virtualenv
+                xcscope xcscope+ wikipedia-mode
+                virtualenv python
                 clang-completion-mode clevercss coffee-mode
                 crontab-mode dig dired-toggle-sudo emms feature-mode
                 go-mode highlight-parentheses js2-mode magit haml-mode
