@@ -32,7 +32,7 @@
 (add-hook 'ruby-mode-hook (lambda ()
                             (make-local-variable 'parens-require-spaces)
                             (setq parens-require-spaces nil)))
-(add-hook 'org-mode-hook (lambda () (electric-indent-mode nil)))
+(add-hook 'org-mode-hook (lambda () (electric-indent-mode -1)))
 (add-hook 'progmodes-hooks 'abbrev-mode)
 
 (defun my-dired-browser-find-file ()
