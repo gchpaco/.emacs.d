@@ -1,4 +1,5 @@
 (add-to-list 'exec-path "/opt/local/bin")
+(add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path (expand-file-name "~/.rbenv/bin"))
 (add-to-list 'exec-path (expand-file-name "~/.rbenv/shims"))
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
