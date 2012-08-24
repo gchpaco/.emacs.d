@@ -101,6 +101,7 @@
  '(org-mobile-directory "~/Dropbox/MobileOrg/")
  '(org-mobile-files (quote (org-agenda-files "recipes.org")))
  '(org-mobile-inbox-for-pull "~/Dropbox/MobileOrg/index.org")
+ '(org-refile-targets (quote ((org-agenda-files :level . 1))))
  '(org-remember-templates (quote (("Todo" 116 "* TODO %^{Brief Description} %^g\\nAdded: %U\\n %i\"
 " nil "Tasks" nil) ("Journal" 106 "\\n* %^{topic} %T \\n%i%?\\n\"
 " nil nil nil) ("Book" 98 "\\n* %^{Book Title} %t :READING: \\n
