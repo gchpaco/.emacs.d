@@ -50,6 +50,8 @@
 
 (el-get 'sync my-packages)
 
+(elhome-init)
+
 (defun djcb-snip (b e summ)
   "remove selected lines, and replace it with [snip:summary (n lines)]"
   (interactive "r\nsSummary:")
