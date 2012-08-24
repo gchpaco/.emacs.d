@@ -136,7 +136,8 @@
  '(visual-line-mode nil t)
  '(which-function-mode t)
  '(woman-manpath (quote ("/usr/share/man/" "/usr/local/share/man/" "/usr/X11/man/" "/usr/local/teTeX/man" "/opt/local/man" "/Users/graham/man" "/Users/graham/share/man")))
- '(x-select-enable-clipboard t))
+ '(x-select-enable-clipboard t)
+ '(yas/snippet-dirs (quote ("~/.emacs.d/snippets" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
