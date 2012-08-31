@@ -6,7 +6,6 @@
 (define-key me-minor-mode-map "\C-cb" 'org-iswitchb)
 (define-key me-minor-mode-map "\C-cB" 'speedbar-get-focus)
 (define-key me-minor-mode-map "\C-cc" 'org-capture)
-(define-key me-minor-mode-map "\C-ce" 'edit-as-root)
 (define-key me-minor-mode-map "\C-cf" 'ffap)
 (define-key me-minor-mode-map "\C-cF" 'ido-find-file-in-tag-files)
 (define-key me-minor-mode-map "\C-cg" 'magit-status)
