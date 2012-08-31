@@ -8,44 +8,83 @@
 
 (require 'package)
 (add-to-list 'package-archives
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
+             '("marmalade" .
+               "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'inversion)
 
+;; So the idea is that you copy/paste this code into your *scratch* buffer,
+;; hit C-j, and you have a working developper edition of el-get.
+
 (unless (require 'el-get nil t)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (end-of-buffer)
-    (eval-print-last-sexp)))
+  (url-retrieve
+   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (let (el-get-master-branch)
+       (goto-char (point-max))
+       (eval-print-last-sexp)))))
 
 ;; local sources
 (setq el-get-sources
       '((:name elhome :after (elhome-init))
         (:name org-magit :type elpa)
-	(:name ssh :type elpa)
-	(:name feature-mode :type elpa)))
+        (:name ack-and-a-half :type elpa)
+        (:name all :type elpa)
+        (:name evernote-mode :type elpa)
+        (:name feature-mode :type elpa)
+        (:name helm :type elpa)
+        (:name helm-git :type elpa)
+        (:name helm-gtags :type elpa)
+        (:name helm-c-yasnippet :type elpa)
+        (:name jenkins-watch :type elpa)
+        (:name ipython :type elpa)
+        (:name js2-mode :type elpa)
+        (:name markdown-mode :type elpa)
+        (:name markdown-mode+ :type elpa)
+        (:name mediawiki :type elpa)
+        (:name p4 :type elpa)
+        (:name pep8 :type elpa)
+        (:name auctex :type elpa)
+        (:name ssh :type elpa)
+        (:name yasnippet :type elpa)
+        (:name magit-gh-pulls :type elpa)
+        (:name feature-mode :type elpa)))
 
 (setq my-packages
       (append
        '(anything apache-mode auctex
-                auto-complete auto-complete-clang auto-complete-css
-                auto-complete-emacs-lisp auto-complete-etags
-                auto-complete-yasnippet
-                cisco-router-mode cssh fic-ext-mode
-                minimap ri-emacs tail undo-tree ssh
-                xcscope xcscope+ wikipedia-mode
-                virtualenv python
-                clang-completion-mode clevercss coffee-mode
-                crontab-mode dig dired-toggle-sudo emms feature-mode
-                go-mode highlight-parentheses js2-mode magit haml-mode
-                magithub mmm-mode org-mode org-buffers org-fstree paredit
-                puppet-mode quack rails-el rinari rspec-mode rst-mode
-                ruby-block smex ssh-config sudo-save tidy yasnippet sass-mode
-                yaml-mode elhome)
+                  cisco-router-mode cssh fic-ext-mode
+                  org-magit magit-gh-pulls
+                  ack-and-a-half
+                  all
+                  evernote-mode
+                  feature-mode
+                  helm
+                  helm-git
+                  helm-gtags
+                  helm-c-yasnippet
+                  jenkins-watch
+                  ipython
+                  js2-mode
+                  markdown-mode
+                  markdown-mode+
+                  mediawiki
+                  p4
+                  pep8
+                  minimap ri-emacs tail undo-tree ssh
+                  xcscope xcscope+ wikipedia-mode
+                  virtualenv python
+                  clang-completion-mode clevercss coffee-mode
+                  crontab-mode dig dired-toggle-sudo emms feature-mode
+                  go-mode highlight-parentheses js2-mode magit haml-mode
+                  mmm-mode org-mode org-buffers org-fstree paredit
+                  puppet-mode quack rails-el rinari rspec-mode rst-mode
+                  ruby-block smex ssh-config sudo-save tidy yasnippet sass-mode
+                  yaml-mode elhome)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
@@ -62,7 +101,7 @@
               n
               (if (= 1 n) "" "s")))))
 
-(put 'scroll-left 'disabled nil)
 (put 'set-goal-column 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 (put 'with-state 'scheme-indent-function 2)
+(put 'scroll-left 'disabled nil)
