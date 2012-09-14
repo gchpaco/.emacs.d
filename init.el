@@ -47,6 +47,8 @@
         (:name markdown-mode+ :type elpa)
         (:name mediawiki :type elpa)
         (:name p4 :type elpa)
+        (:name projectile :type elpa)
+        (:name project-persist :type elpa)
         (:name pep8 :type elpa)
         (:name auctex :type elpa)
         (:name ssh :type elpa)
@@ -74,6 +76,7 @@
                   markdown-mode+
                   mediawiki
                   p4
+                  project-persist projectile
                   pep8
                   minimap ri-emacs tail undo-tree ssh
                   xcscope xcscope+ wikipedia-mode
