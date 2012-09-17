@@ -10,9 +10,16 @@
  "';'.join(module_completion('''%s'''))\n"
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-(when (string= system-type "gnu/linux")
-  (require 'pymacs)
-  (pymacs-load "ropemacs" "rope-"))
+(require 'pymacs)
+(pymacs-load "ropemacs" "rope-")
+
+(require 'info-look)
+
+(info-lookup-add-help
+ :mode 'python-mode
+ :regexp "[[:alnum:]_]+"
+ :doc-spec
+ '(("(python)Index" nil "")))
 
 (when (load "flymake" t)
   (defun flymake-pyflakes-init ()
