@@ -27,7 +27,7 @@
 (define-key me-minor-mode-map "\C-cti" 'iso8879-character-insert)
 (define-key me-minor-mode-map "\C-ct'" 'unicode-smart-single-quote)
 (define-key me-minor-mode-map "\C-ct\"" 'unicode-smart-double-quote)
-(define-key me-minor-mode-map (kbd "M-x") 'helm-M-x)
+(define-key me-minor-mode-map (kbd "M-x") 'smex)
 (define-key me-minor-mode-map (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (define-key me-minor-mode-map (kbd "C-c M-x") 'execute-extended-command)
