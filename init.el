@@ -107,3 +107,4 @@
 (put 'narrow-to-region 'disabled nil)
 (put 'with-state 'scheme-indent-function 2)
 (put 'scroll-left 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
