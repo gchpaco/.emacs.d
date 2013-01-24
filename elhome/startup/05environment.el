@@ -23,3 +23,16 @@
   (add-to-envlist "BIBINPUTS" "." base-dir)
   (add-to-envlist "TEXINPUTS" "." (concat base-dir "/styles")
                   (concat base-dir "/classes")))
+
+
+
+(setenv "P4USER" "ghughes")
+(setenv "P4CLIENT" (with-temp-buffer
+                     (call-process "hostname" nil t)
+                     (goto-char (point-max))
+                     (delete-blank-lines)
+                     (let ((trailnewlines (abs (skip-chars-backward "\n\t"))))
+                       (if (> trailnewlines 0)
+                           (progn
+                             (delete-char trailnewlines))))
+                     (buffer-string)))
