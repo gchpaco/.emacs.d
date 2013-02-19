@@ -1,4 +1,4 @@
-(require 'python)
+;(require 'python)
 (setq ipython-command "/usr/local/bin/ipython")
 (setq py-python-command-args '( "--colors" "Linux"))
 (setq ipython-completion-command-string "print(';'.join(get_ipython().Completer.complete('%s')[1])) #PYTHON-MODE SILENT\n")
