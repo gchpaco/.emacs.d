@@ -31,6 +31,7 @@
 (setq el-get-sources
       '((:name elhome :after (elhome-init))
         (:name org-magit :type elpa)
+        (:name company :type elpa)
         (:name ack-and-a-half :type elpa)
         (:name all :type elpa)
         (:name evernote-mode :type elpa)
