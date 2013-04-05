@@ -31,3 +31,4 @@
 (define-key me-minor-mode-map (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (define-key me-minor-mode-map (kbd "C-c M-x") 'execute-extended-command)
+(define-key me-minor-mode-map (kbd "M-+") 'e2wm:start-management)
