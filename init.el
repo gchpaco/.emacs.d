@@ -66,7 +66,7 @@
                   mediawiki
                   p4
                   projectile
-                  pep8
+                  pep8 pretty-mode
                   minimap ri-emacs tail undo-tree ssh
                   xcscope xcscope+
                   virtualenv python ipython pymacs ropemacs
