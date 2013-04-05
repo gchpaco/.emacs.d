@@ -32,6 +32,7 @@
       '((:name elhome :after (elhome-init))
         (:name org-magit :type elpa)
         (:name company :type elpa)
+	(:name cl-lib :type elpa)
         (:name ack-and-a-half :type elpa)
         (:name all :type elpa)
         (:name evernote-mode :type elpa)
@@ -66,7 +67,8 @@
                   markdown-mode
                   mediawiki
                   p4
-                  projectile
+                  autopair smart-operator
+                  projectile python-mode
                   pep8 pretty-mode
                   minimap ri-emacs tail undo-tree ssh
                   xcscope xcscope+
