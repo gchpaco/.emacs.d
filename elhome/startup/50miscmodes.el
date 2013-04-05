@@ -5,6 +5,5 @@
 (require 'uniquify)
 (require 'zap-up-to-char)
 (require 'mac-local)
-(require 'wikipediafs)
 
 (dired-x-bind-find-file)

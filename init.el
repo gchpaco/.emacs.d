@@ -24,9 +24,8 @@
   (url-retrieve
    "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
    (lambda (s)
-     (let (el-get-master-branch)
-       (goto-char (point-max))
-       (eval-print-last-sexp)))))
+     (goto-char (point-max))
+     (eval-print-last-sexp))))
 
 ;; local sources
 (setq el-get-sources
@@ -36,15 +35,10 @@
         (:name all :type elpa)
         (:name evernote-mode :type elpa)
         (:name feature-mode :type elpa)
-        (:name helm :type elpa)
-        (:name helm-git :type elpa)
-        (:name helm-gtags :type elpa)
-        (:name helm-c-yasnippet :type elpa)
         (:name jenkins-watch :type elpa)
         (:name ipython :type elpa)
         (:name js2-mode :type elpa)
         (:name markdown-mode :type elpa)
-        (:name markdown-mode+ :type elpa)
         (:name mediawiki :type elpa)
         (:name p4 :type elpa)
         (:name projectile :type elpa)
@@ -58,32 +52,27 @@
 (setq my-packages
       (append
        '(anything apache-mode auctex
-                  cisco-router-mode cssh fic-ext-mode
+                  cssh fic-ext-mode
                   org-magit magit-gh-pulls
                   ack-and-a-half
                   all
                   evernote-mode
                   feature-mode
-                  helm
-                  helm-git
-                  helm-gtags
-                  helm-c-yasnippet
                   jenkins-watch
                   ipython
                   js2-mode
                   markdown-mode
-                  markdown-mode+
                   mediawiki
                   p4
                   projectile
                   pep8
                   minimap ri-emacs tail undo-tree ssh
-                  xcscope xcscope+ wikipedia-mode
+                  xcscope xcscope+
                   virtualenv python ipython pymacs ropemacs
                   clang-completion-mode clevercss coffee-mode
                   crontab-mode dig dired-toggle-sudo emms feature-mode
                   go-mode highlight-parentheses js2-mode magit haml-mode
-                  mmm-mode org-mode org-buffers org-fstree paredit
+                  mmm-mode org-buffers org-fstree paredit
                   puppet-mode quack rails-el rinari rspec-mode rst-mode
                   ruby-block smex ssh-config sudo-save tidy yasnippet sass-mode
                   yaml-mode elhome)
