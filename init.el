@@ -60,7 +60,8 @@
                   evernote-mode
                   feature-mode
                   jenkins-watch
-                  ipython
+                  ipython ein
+                  e2wm
                   js2-mode
                   markdown-mode
                   mediawiki
