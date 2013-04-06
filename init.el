@@ -32,7 +32,7 @@
       '((:name elhome :after (elhome-init))
         (:name org-magit :type elpa)
         (:name company :type elpa)
-	(:name cl-lib :type elpa)
+        (:name cl-lib :type elpa)
         (:name ack-and-a-half :type elpa)
         (:name all :type elpa)
         (:name evernote-mode :type elpa)
@@ -61,7 +61,6 @@
                   evernote-mode
                   feature-mode
                   jenkins-watch
-                  ipython ein
                   e2wm
                   js2-mode
                   markdown-mode
@@ -69,6 +68,7 @@
                   p4
                   autopair smart-operator
                   projectile python-mode
+                  ipython ein
                   pep8 pretty-mode
                   minimap ri-emacs tail undo-tree ssh
                   xcscope xcscope+
