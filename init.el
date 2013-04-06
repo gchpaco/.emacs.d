@@ -61,7 +61,7 @@
                   evernote-mode
                   feature-mode
                   jenkins-watch
-                  e2wm
+                  e2wm ne2wm
                   js2-mode
                   markdown-mode
                   mediawiki
