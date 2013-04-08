@@ -6,5 +6,7 @@
 (require 'uniquify)
 (require 'zap-up-to-char)
 (require 'mac-local)
+(require 'popwin)
+(popwin-mode 1)
 
 (dired-x-bind-find-file)
