@@ -4,8 +4,6 @@
 ;; evaluating this file and print errors in the *Messags* buffer.
 ;; Use this file in place of ~/.emacs (which is loaded as well.)
 
-(require 'cl)
-
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" .
@@ -33,7 +31,6 @@
         (:name org-magit :type elpa)
         (:name company :type elpa)
         (:name cl-lib :type elpa)
-        (:name ack-and-a-half :type elpa)
         (:name all :type elpa)
         (:name evernote-mode :type elpa)
         (:name feature-mode :type elpa)
@@ -53,15 +50,13 @@
 
 (setq my-packages
       (append
-       '(anything apache-mode auctex
+       '(anything apache-mode auctex ack
                   cssh fic-ext-mode
                   org-magit magit-gh-pulls
-                  ack-and-a-half
                   all
                   evernote-mode
                   feature-mode
                   jenkins-watch
-                  popwin e2wm ne2wm
                   js2-mode
                   markdown-mode
                   mediawiki
@@ -79,6 +74,7 @@
                   mmm-mode org-buffers org-fstree paredit
                   puppet-mode quack rails-el rinari rspec-mode rst-mode
                   ruby-block smex ssh-config sudo-save tidy yasnippet sass-mode
+                  popwin e2wm ne2wm
                   yaml-mode elhome)
        (mapcar 'el-get-source-name el-get-sources)))
 
