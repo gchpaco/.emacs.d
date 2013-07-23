@@ -8,5 +8,6 @@
 (require 'mac-local)
 (require 'popwin)
 (popwin-mode 1)
+(global-git-gutter+-mode 1)
 
 (dired-x-bind-find-file)

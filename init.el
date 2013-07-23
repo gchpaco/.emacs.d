@@ -30,7 +30,7 @@
       '((:name elhome :after (elhome-init))
         (:name ag :type github :url "https://github.com/Wilfred/ag.el.git")
         (:name org-magit :type elpa)
-        (:name git-gutter-fringe :type elpa)
+        (:name git-gutter+ :type elpa)
         (:name company :type elpa)
         (:name cl-lib :type elpa)
         (:name evernote-mode :type elpa)
