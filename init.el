@@ -31,7 +31,6 @@
         (:name org-magit :type elpa)
         (:name git-gutter-fringe :type elpa)
         (:name company :type elpa)
-        (:name all :type elpa)
         (:name cl-lib :type elpa)
         (:name evernote-mode :type elpa)
         (:name feature-mode :type elpa)
@@ -53,7 +52,6 @@
       (append
        '(anything apache-mode auctex ack
                   cssh fic-ext-mode
-                  all
                   org-magit magit-gh-pulls
                   evernote-mode
                   feature-mode
