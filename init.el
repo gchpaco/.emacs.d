@@ -29,9 +29,10 @@
 (setq el-get-sources
       '((:name elhome :after (elhome-init))
         (:name org-magit :type elpa)
+        (:name git-gutter-fringe :type elpa)
         (:name company :type elpa)
-        (:name cl-lib :type elpa)
         (:name all :type elpa)
+        (:name cl-lib :type elpa)
         (:name evernote-mode :type elpa)
         (:name feature-mode :type elpa)
         (:name jenkins-watch :type elpa)
@@ -52,8 +53,8 @@
       (append
        '(anything apache-mode auctex ack
                   cssh fic-ext-mode
-                  org-magit magit-gh-pulls
                   all
+                  org-magit magit-gh-pulls
                   evernote-mode
                   feature-mode
                   jenkins-watch
