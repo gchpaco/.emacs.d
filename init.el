@@ -69,7 +69,7 @@
                   xcscope xcscope+
                   virtualenv python ipython pymacs ropemacs
                   clang-completion-mode clevercss coffee-mode
-                  crontab-mode dig dired-toggle-sudo emms feature-mode
+                  crontab-mode dig dired-toggle-sudo feature-mode
                   go-mode highlight-parentheses js2-mode magit haml-mode
                   mmm-mode org-buffers org-fstree paredit
                   puppet-mode quack rails-el rinari rspec-mode rst-mode
