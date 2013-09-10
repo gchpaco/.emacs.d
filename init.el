@@ -43,7 +43,6 @@
         (:name p4 :type elpa)
         (:name projectile :type elpa)
         (:name pep8 :type elpa)
-        (:name auctex :type elpa)
         (:name ssh :type elpa)
         (:name yasnippet :type elpa)
         (:name magit-gh-pulls :type elpa)
@@ -51,7 +50,7 @@
 
 (setq my-packages
       (append
-       '(anything apache-mode auctex ack
+       '(anything apache-mode ack
                   cssh fic-ext-mode
                   org-magit magit-gh-pulls
                   evernote-mode
