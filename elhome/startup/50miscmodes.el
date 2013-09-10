@@ -7,6 +7,7 @@
 (require 'zap-up-to-char)
 (require 'mac-local)
 (require 'popwin)
+(require 'git-gutter+)
 (popwin-mode 1)
 (global-git-gutter+-mode 1)
 
