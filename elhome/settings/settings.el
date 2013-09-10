@@ -112,6 +112,8 @@
 " nil nil nil) ("Book" 98 "\\n* %^{Book Title} %t :READING: \\n
 " nil nil nil) ("Paper" 112 "\\n* TODO %^{Paper Title} %t :READING: \\n:PROPERTIES:\\n:Title: %?\\n:Author:\\n:Year:\\n:Book Title:\\n:END:\\nComments:\\n
 " nil "Citations" nil))))
+ '(org-todo-keyword-faces (quote (("TODO" . org-warning) ("DOING" . "yellow") ("BLOCKED" . "red") ("REVIEW" . "orange") ("DONE" . "green") ("ARCHIVED" . "blue"))))
+ '(org-todo-keywords (quote ((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED"))))
  '(outline-regexp "\\*+ ")
  '(puppet-indent-level 8)
  '(quack-default-program "mzscheme -i -l errortrace")
