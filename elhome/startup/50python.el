@@ -1,9 +1,9 @@
-;(require 'python)
+(require 'python)
 (setq ipython-command "/usr/local/bin/ipython")
 (setq py-python-command-args '( "--colors" "Linux"))
 (setq ipython-completion-command-string "print(';'.join(get_ipython().Completer.complete('%s')[1])) #PYTHON-MODE SILENT\n")
-(require 'python-mode)
-(require 'ipython)
+;(require 'python-mode)
+;(require 'ipython)
 (require 'ein)
 (setq
  python-shell-interpreter "ipython"
@@ -16,8 +16,8 @@
  "';'.join(module_completion('''%s'''))\n"
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
+;(require 'pymacs)
+;(pymacs-load "ropemacs" "rope-")
 (add-hook 'python-mode-hook
           '(lambda () (eldoc-mode 1)) t)
 

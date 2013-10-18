@@ -4,13 +4,192 @@
 ;; evaluating this file and print errors in the *Messags* buffer.
 ;; Use this file in place of ~/.emacs (which is loaded as well.)
 
+(defvar package--builtin-versions
+  ;; Mostly populated by loaddefs.el via autoload-builtin-package-versions.
+  (purecopy `((emacs . ,(version-to-list emacs-version))))
+  "Alist giving the version of each versioned builtin package.
+I.e. each element of the list is of the form (NAME . VERSION) where
+NAME is the package name as a symbol, and VERSION is its version
+as a list.")
+
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" .
                "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+             '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
+(unless (package-installed-p 'package+)
+  (package-install 'package+))
+
+(package-manifest
+ 'yasnippet
+ 'ack-and-a-half
+ 'align-cljlet
+ 'anything
+ 'anything-complete
+ 'anything-config
+ 'anything-el-swank-fuzzy
+ 'anything-extension
+ 'anything-exuberant-ctags
+ 'anything-git
+ 'anything-git-files
+ 'anything-git-goto
+ 'anything-git-grep
+ 'anything-ipython
+ 'anything-match-plugin
+ 'anything-obsolete
+ 'anything-show-completion
+ 'apache-mode
+ 'apt-utils
+ 'apt-utils-ido
+ 'auctex
+ 'auctex-latexmk
+ 'auctex-lua
+ 'auto-complete
+ 'auto-yasnippet
+ 'autopair
+ 'clojure-cheatsheet
+ 'clojure-mode
+ 'clojure-project-mode
+ 'clojure-snippets
+ 'color-theme
+ 'color-theme-sanityinc-solarized
+ 'company
+ 'company-inf-ruby
+ 'confluence
+ 'crontab-mode
+ 'csv-mode
+ 'dash
+ 'deferred
+ 'dired+
+ 'direx
+ 'e2wm
+ 'e2wm-R
+ 'e2wm-bookmark
+ 'ein
+ 'ess
+ 'evernote-mode
+ 'feature-mode
+ 'fic-mode
+ 'flymake
+ 'flymake-checkers
+ 'flymake-css
+ 'flymake-csslint
+ 'flymake-easy
+ 'flymake-go
+ 'flymake-jslint
+ 'flymake-json
+ 'flymake-lua
+ 'flymake-puppet
+ 'flymake-python-pyflakes
+ 'flymake-ruby
+ 'flymake-shell
+ 'flymake-yaml
+ 'fringe-helper
+ 'geiser
+ 'gh
+ 'git-annex
+ 'git-auto-commit-mode
+ 'git-commit-mode
+ 'git-gutter+
+ 'git-gutter-fringe+
+ 'git-rebase-mode
+ 'gitignore-mode
+ 'go-autocomplete
+ 'go-direx
+ 'go-eldoc
+ 'go-mode
+ 'go-snippets
+ 'helm
+ 'helm-R
+ 'helm-ack
+ 'helm-anything
+ 'helm-git
+ 'helm-git-grep
+ 'helm-go-package
+ 'helm-gtags
+ 'helm-helm-commands
+ 'helm-ls-git
+ 'helm-orgcard
+ 'hide-lines
+ 'icicles
+ 'inf-ruby
+ 'inlineR
+ 'instapaper
+ 'ipython
+ 'itail
+ 'js3-mode
+ 'json-mode
+ 'levenshtein
+ 'logito
+ 'lua-mode
+ 'magit
+ 'magit-find-file
+ 'magit-gh-pulls
+ 'magit-push-remote
+ 'magit-tramp
+ 'markdown-mode
+ 'markdown-mode+
+ 'mediawiki
+ 'minimap
+ 'nav
+ 'nginx-mode
+ 'nose
+ 'nrepl
+ 'org
+ 'org-blog
+ 'org-bullets
+ 'org-context
+ 'org-fstree
+ 'org-magit
+ 'package+
+ 'paredit
+ 'pcache
+ 'pep8
+ 'pkg-info
+ 'popup
+ 'popwin
+ 'pretty-mode
+ 'pretty-symbols
+ 'project-mode
+ 'project-persist
+ 'puppet-mode
+ 'puppetfile-mode
+ 'purty-mode
+ 'pymacs
+ 'python
+ 'python-environment
+ 'python-info
+ 'python-magic
+ 'python-mode
+ 'python-pep8
+ 'python-pylint
+ 'pyvirtualenv
+ 'quack
+ 'rbenv
+ 'rspec-mode
+ 's
+ 'session-manager
+ 'slamhound
+ 'slime
+ 'slime-clj
+ 'slime-fuzzy
+ 'smex
+ 'sparkline
+ 'ssh
+ 'ssh-config-mode
+ 'syslog-mode
+ 'tidy
+ 'top-mode
+ 'typopunct
+ 'unbound
+ 'virtualenv
+ 'virtualenvwrapper
+ 'window-layout
+ 'xml-rpc)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'inversion)
@@ -27,54 +206,12 @@
 
 ;; local sources
 (setq el-get-sources
-      '((:name elhome :after (elhome-init))
-        (:name ag :type github :url "https://github.com/Wilfred/ag.el.git")
-        (:name org-magit :type elpa)
-        (:name git-gutter+ :type elpa)
-        (:name company :type elpa)
-        (:name cl-lib :type elpa)
-        (:name evernote-mode :type elpa)
-        (:name feature-mode :type elpa)
-        (:name jenkins-watch :type elpa)
-        (:name ipython :type elpa)
-        (:name js2-mode :type elpa)
-        (:name markdown-mode :type elpa)
-        (:name mediawiki :type elpa)
-        (:name p4 :type elpa)
-        (:name projectile :type elpa)
-        (:name pep8 :type elpa)
-        (:name ssh :type elpa)
-        (:name yasnippet :type elpa)
-        (:name magit-gh-pulls :type elpa)
-        (:name feature-mode :type elpa)))
+      '((:name elhome :after (elhome-init))))
 
 (setq my-packages
       (append
-       '(anything apache-mode ack
-                  cssh fic-ext-mode
-                  org-magit magit-gh-pulls
-                  evernote-mode
-                  feature-mode
-                  jenkins-watch
-                  js2-mode
-                  markdown-mode
-                  mediawiki
-                  p4
-                  autopair smart-operator
-                  projectile python-mode
-                  ipython ein
-                  pep8 pretty-mode
-                  minimap ri-emacs tail undo-tree ssh
-                  xcscope xcscope+
-                  virtualenv python ipython pymacs ropemacs
-                  clang-completion-mode clevercss coffee-mode
-                  crontab-mode dig dired-toggle-sudo feature-mode
-                  go-mode highlight-parentheses js2-mode magit haml-mode
-                  mmm-mode org-buffers org-fstree paredit
-                  puppet-mode quack rails-el rinari rspec-mode rst-mode
-                  ruby-block smex ssh-config sudo-save tidy yasnippet sass-mode
-                  popwin e2wm ne2wm
-                  yaml-mode elhome)
+       '(cssh ropemacs clevercss dig dired-toggle-sudo
+              org-buffers sudo-save elhome)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
