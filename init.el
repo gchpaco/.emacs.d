@@ -69,6 +69,7 @@ as a list.")
  'e2wm
  'e2wm-R
  'e2wm-bookmark
+ 'elhome
  'ein
  'ess
  'evernote-mode
@@ -129,6 +130,7 @@ as a list.")
  'magit
  'magit-find-file
  'magit-gh-pulls
+ 'magit-log-edit
  'magit-push-remote
  'magit-tramp
  'markdown-mode
@@ -206,12 +208,12 @@ as a list.")
 
 ;; local sources
 (setq el-get-sources
-      '((:name elhome :after (elhome-init))))
+      '())
 
 (setq my-packages
       (append
        '(cssh ropemacs clevercss dig dired-toggle-sudo
-              org-buffers sudo-save elhome)
+              org-buffers sudo-save)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
