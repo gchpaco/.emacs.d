@@ -190,8 +190,9 @@ as a list.")
  'unbound
  'virtualenv
  'virtualenvwrapper
- 'window-layout
- 'xml-rpc)
+ 'window-layout)
+
+(require 'flymake-checkers)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'inversion)
@@ -212,7 +213,7 @@ as a list.")
 
 (setq my-packages
       (append
-       '(cssh ropemacs clevercss dig dired-toggle-sudo
+       '(cssh ropemacs clevercss dig dired-toggle-sudo initsplit
               org-buffers sudo-save)
        (mapcar 'el-get-source-name el-get-sources)))
 
