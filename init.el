@@ -26,7 +26,13 @@ as a list.")
 
 (package-manifest
  'yasnippet
+ 'ac-etags
+ 'ac-geiser
+ 'ac-js2
+ 'ac-math
+ 'ac-slime
  'ack-and-a-half
+ 'ada-mode
  'align-cljlet
  'anything
  'anything-complete
@@ -49,8 +55,13 @@ as a list.")
  'auctex-latexmk
  'auctex-lua
  'auto-complete
+ 'auto-complete-c-headers
+ 'auto-complete-nxml
  'auto-yasnippet
  'autopair
+ 'bubbleberry-theme
+ 'bundler
+ 'cedit
  'clojure-cheatsheet
  'clojure-mode
  'clojure-project-mode
@@ -61,11 +72,14 @@ as a list.")
  'company-inf-ruby
  'confluence
  'crontab-mode
+ 'cssh
  'csv-mode
  'dash
  'deferred
  'dired+
+ 'dired-imenu
  'direx
+ 'discover
  'e2wm
  'e2wm-R
  'e2wm-bookmark
@@ -99,11 +113,13 @@ as a list.")
  'git-gutter-fringe+
  'git-rebase-mode
  'gitignore-mode
+ 'gmail-message-mode
  'go-autocomplete
  'go-direx
  'go-eldoc
  'go-mode
  'go-snippets
+ 'golint
  'helm
  'helm-R
  'helm-ack
@@ -122,6 +138,7 @@ as a list.")
  'instapaper
  'ipython
  'itail
+ 'java-snippets
  'js3-mode
  'json-mode
  'levenshtein
@@ -133,6 +150,7 @@ as a list.")
  'magit-log-edit
  'magit-push-remote
  'magit-tramp
+ 'malabar-mode
  'markdown-mode
  'markdown-mode+
  'mediawiki
@@ -140,13 +158,16 @@ as a list.")
  'nav
  'nginx-mode
  'nose
+ 'nose-tests
  'nrepl
  'org
  'org-blog
  'org-bullets
  'org-context
  'org-fstree
+ 'org-gnome
  'org-magit
+ 'org-repo-todo
  'package+
  'paredit
  'pcache
@@ -161,6 +182,7 @@ as a list.")
  'puppet-mode
  'puppetfile-mode
  'purty-mode
+ 'pydoc-info
  'pymacs
  'python
  'python-environment
@@ -171,14 +193,18 @@ as a list.")
  'python-pylint
  'pyvirtualenv
  'quack
+ 'racket-mode
  'rbenv
+ 'rpm-spec-mode
  'rspec-mode
  's
+ 'scratch-ext
  'session-manager
  'slamhound
  'slime
  'slime-clj
  'slime-fuzzy
+ 'shell-current-directory
  'smex
  'sparkline
  'ssh
