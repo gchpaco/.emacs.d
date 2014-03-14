@@ -34,6 +34,8 @@ as a list.")
  'ack-and-a-half
  'ada-mode
  'align-cljlet
+ 'all
+ 'all-ext
  'anything
  'anything-complete
  'anything-config
@@ -55,6 +57,7 @@ as a list.")
  'auctex-latexmk
  'auctex-lua
  'auto-complete
+ 'auto-complete-auctex
  'auto-complete-c-headers
  'auto-complete-nxml
  'auto-yasnippet
@@ -76,6 +79,8 @@ as a list.")
  'csv-mode
  'dash
  'deferred
+ 'dired-filter
+ 'dired-hacks-utils
  'dired+
  'dired-imenu
  'direx
@@ -141,6 +146,7 @@ as a list.")
  'java-snippets
  'js3-mode
  'json-mode
+ 'json-reformat
  'levenshtein
  'logito
  'lua-mode
@@ -161,6 +167,7 @@ as a list.")
  'nose-tests
  'nrepl
  'org
+ 'org-ac
  'org-blog
  'org-bullets
  'org-context
@@ -182,6 +189,8 @@ as a list.")
  'puppet-mode
  'puppetfile-mode
  'purty-mode
+ 'py-autopep8
+ 'py-gnitset
  'pydoc-info
  'pymacs
  'python
@@ -216,6 +225,7 @@ as a list.")
  'unbound
  'virtualenv
  'virtualenvwrapper
+ 'w3m
  'window-layout)
 
 (require 'flymake-checkers)
