@@ -123,6 +123,7 @@ as a list.")
  'go-direx
  'go-eldoc
  'go-mode
+ 'go-projectile
  'go-snippets
  'golint
  'helm
@@ -162,6 +163,7 @@ as a list.")
  'mediawiki
  'minimap
  'nav
+ 'navigate
  'nginx-mode
  'nose
  'nose-tests
@@ -176,7 +178,10 @@ as a list.")
  'org-magit
  'org-repo-todo
  'package+
+ 'paradox
  'paredit
+ 'paredit-everywhere
+ 'paredit-menu
  'pcache
  'pep8
  'pkg-info
@@ -186,6 +191,7 @@ as a list.")
  'pretty-symbols
  'project-mode
  'project-persist
+ 'pt
  'puppet-mode
  'puppetfile-mode
  'purty-mode

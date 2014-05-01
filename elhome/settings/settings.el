@@ -78,7 +78,7 @@
  '(ido-use-url-at-point t)
  '(indent-region-mode t)
  '(indent-tabs-mode nil)
- '(inferior-lisp-program "/usr/local/bin/sbcl")
+ '(inferior-lisp-program "/usr/local/bin/sbcl" t)
  '(inhibit-startup-screen t)
  '(jde-ant-enable-find t)
  '(jde-build-function (quote (jde-ant-build)))
@@ -115,6 +115,7 @@
  '(org-todo-keyword-faces (quote (("TODO" . org-warning) ("DOING" . "yellow") ("BLOCKED" . "red") ("REVIEW" . "orange") ("DONE" . "green") ("ARCHIVED" . "blue"))))
  '(org-todo-keywords (quote ((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED"))))
  '(outline-regexp "\\*+ ")
+ '(paradox-github-token "3fc92a3e71a5381c6337de1221bd894c8a80cc33")
  '(puppet-indent-level 8)
  '(quack-default-program "mzscheme -i -l errortrace")
  '(quack-pretty-lambda-p t)
@@ -147,8 +148,7 @@
  '(which-function-mode t)
  '(woman-manpath (quote ("/usr/share/man/" "/usr/local/share/man/" "/usr/X11/man/" "/usr/local/teTeX/man" "/opt/local/man" "/Users/graham/man" "/Users/graham/share/man")))
  '(x-select-enable-clipboard t)
- '(yas-snippet-dirs (quote ("~/.emacs.d/snippets" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet))
- '(yas/snippet-dirs (quote ("~/.emacs.d/snippets" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet)))
+ '(yas-snippet-dirs (quote ("~/.emacs.d/snippets" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
