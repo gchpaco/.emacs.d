@@ -89,6 +89,7 @@ as a list.")
  'e2wm-R
  'e2wm-bookmark
  'elhome
+ 'elpy
  'ein
  'ess
  'evernote-mode
