@@ -21,7 +21,6 @@
  '(background-mode light)
  '(backup-directory-alist (quote (("\\`/home/ghughes/wiki/\\([^/]*/\\)*\\([^/]*\\)\\'" . "/tmp/wikibackup/\\2"))))
  '(bib-file "~/wd/git/citations/citations.bib")
- '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-generic-program "x-www-browser")
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(compilation-mode-hook nil)
