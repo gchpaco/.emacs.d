@@ -160,12 +160,12 @@ as a list.")
  'magit-push-remote
  'magit-tramp
  'malabar-mode
+ 'make-it-so
  'markdown-mode
  'markdown-mode+
  'mediawiki
  'minimap
  'nav
- 'navigate
  'nginx-mode
  'nose
  'nose-tests
@@ -187,6 +187,7 @@ as a list.")
  'paredit
  'paredit-everywhere
  'paredit-menu
+ 'pandoc-mode
  'pcache
  'pep8
  'pkg-info
