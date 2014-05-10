@@ -33,3 +33,13 @@
 (define-key me-minor-mode-map (kbd "C-c M-x") 'execute-extended-command)
 (define-key me-minor-mode-map (kbd "M-+") 'e2wm:start-management)
 (define-key me-minor-mode-map (kbd "C-z") popwin:keymap)
+
+(add-hook 'python-mode-hook
+          (lambda ()
+            (local-set-key "\C-cNa" 'nosetests-all)
+            (local-set-key "\C-cNm" 'nosetests-module)
+            (local-set-key "\C-cN." 'nosetests-one)
+            (local-set-key "\C-c\C-c" 'nosetests-again)
+            (local-set-key "\C-cNpa" 'nosetests-pdb-all)
+            (local-set-key "\C-cNpm" 'nosetests-pdb-module)
+            (local-set-key "\C-cNp." 'nosetests-pdb-one)))
