@@ -5,7 +5,8 @@
 (global-pretty-mode 1)
 (require 'uniquify)
 (require 'zap-up-to-char)
-(require 'mac-local)
+(case window-system
+  ((ns) (require 'mac-local)))
 (require 'popwin)
 (require 'git-gutter+)
 (require 'magit-annex)
