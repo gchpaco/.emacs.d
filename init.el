@@ -153,6 +153,7 @@ as a list.")
  'logito
  'lua-mode
  'magit
+ 'magit-annex
  'magit-find-file
  'magit-gh-pulls
  'magit-log-edit

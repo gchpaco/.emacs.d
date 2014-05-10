@@ -8,6 +8,7 @@
 (require 'mac-local)
 (require 'popwin)
 (require 'git-gutter+)
+(require 'magit-annex)
 (popwin-mode 1)
 (global-git-gutter+-mode 1)
 
