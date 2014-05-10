@@ -178,7 +178,10 @@ as a list.")
  'org-fstree
  'org-gnome
  'org-magit
+ ;'org-mobile-sync
  'org-repo-todo
+ 'osx-browse
+ 'osx-pseudo-daemon
  'package+
  'paradox
  'paredit
@@ -237,6 +240,7 @@ as a list.")
  'window-layout)
 
 (require 'flymake-checkers)
+(osx-browse-mode 1)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'inversion)
