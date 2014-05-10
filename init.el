@@ -241,7 +241,6 @@ as a list.")
  'window-layout)
 
 (require 'flymake-checkers)
-(osx-browse-mode 1)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'inversion)

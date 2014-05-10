@@ -1,6 +1,6 @@
 ;;; mac-local.el --- Local Macintosh configurations
 
-;; Copyright (C) 2008  Graham Hughes
+;; Copyright (C) 2008, 2014  Graham Hughes
 
 ;; Author: Graham Hughes <graham@sigwinch.org>
 ;; Keywords: local
@@ -22,7 +22,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -48,6 +48,8 @@
   (my-wrap-string
    (fortune)
    (floor (/ (frame-pixel-width) 8))))
+
+(osx-browse-mode 1)
 
 (provide 'mac-local)
 ;;; mac-local.el ends here
