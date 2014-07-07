@@ -28,6 +28,7 @@ tramp
 elpa/*
 el-get/*
 *.elc
+srecode-map.el
 
 org-clock-save.el
 eproject.lst
