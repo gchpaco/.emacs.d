@@ -105,6 +105,7 @@
  '(org-mobile-directory "~/Dropbox/MobileOrg/")
  '(org-mobile-files (quote (org-agenda-files "recipes.org")))
  '(org-mobile-inbox-for-pull "~/Dropbox/MobileOrg/index.org")
+ '(org-protocol-project-alist (quote (("http://sigwinch.org/Graham/" :base-url "http://sigwinch.org/Graham/" :working-directory "/Users/ghughes/wd/web-home/" :online-suffix ".html" :working-suffix ".org"))))
  '(org-refile-targets (quote ((org-agenda-files :level . 1))))
  '(org-remember-templates (quote (("Todo" 116 "* TODO %^{Brief Description} %^g\\nAdded: %U\\n %i\"
 " nil "Tasks" nil) ("Journal" 106 "\\n* %^{topic} %T \\n%i%?\\n\"
