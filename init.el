@@ -20,6 +20,9 @@ as a list.")
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
              '("gnu" . "http://elpa.gnu.org/packages/") t)
+(add-to-list 'package-archives
+             '("elpy" .
+               "http://jorgenschaefer.github.io/packages/"))
 (package-initialize)
 (unless (package-installed-p 'package+)
   (package-install 'package+))
@@ -36,6 +39,7 @@ as a list.")
  'align-cljlet
  'all
  'all-ext
+ 'ample-regexps
  'anything
  'anything-complete
  'anything-config
@@ -59,19 +63,25 @@ as a list.")
  'auto-complete
  'auto-complete-auctex
  'auto-complete-c-headers
+ 'auto-complete-etags
  'auto-complete-nxml
  'auto-yasnippet
  'autopair
+ 'bibtex-utils
+ 'bison-mode
  'bubbleberry-theme
  'bundler
  'cedit
  'clojure-cheatsheet
  'clojure-mode
+ 'clojure-mode-extra-font-locking
  'clojure-project-mode
  'clojure-snippets
  'color-theme
  'color-theme-sanityinc-solarized
  'company
+ 'company-c-headers
+ 'company-irony
  'company-inf-ruby
  'confluence
  'crontab-mode
@@ -95,8 +105,10 @@ as a list.")
  'evernote-mode
  'feature-mode
  'fic-mode
+ 'flycheck
+ 'flycheck-google-cpplint
+ 'flycheck-pyflakes
  'flymake
- 'flymake-checkers
  'flymake-css
  'flymake-csslint
  'flymake-easy
@@ -115,8 +127,6 @@ as a list.")
  'git-annex
  'git-auto-commit-mode
  'git-commit-mode
- 'git-gutter+
- 'git-gutter-fringe+
  'git-rebase-mode
  'gitignore-mode
  'gmail-message-mode
@@ -126,6 +136,8 @@ as a list.")
  'go-mode
  'go-projectile
  'go-snippets
+ 'google-c-style
+ 'google-this
  'golint
  'helm
  'helm-R
@@ -144,6 +156,7 @@ as a list.")
  'inlineR
  'instapaper
  'ipython
+ 'irony
  'itail
  'java-snippets
  'js3-mode
@@ -156,6 +169,7 @@ as a list.")
  'magit-annex
  'magit-find-file
  'magit-gh-pulls
+ 'magit-gitflow
  'magit-log-edit
  'magit-push-remote
  'magit-tramp
@@ -174,6 +188,7 @@ as a list.")
  'org-ac
  'org-blog
  'org-bullets
+ 'org-caldav
  'org-context
  'org-fstree
  'org-gnome
@@ -191,6 +206,7 @@ as a list.")
  'pcache
  'pep8
  'pkg-info
+ 'poporg
  'popup
  'popwin
  'pretty-mode
@@ -230,7 +246,10 @@ as a list.")
  'sparkline
  'ssh
  'ssh-config-mode
+ 'sqlup-mode
+ 'swift-mode
  'syslog-mode
+ 'tdd
  'tidy
  'top-mode
  'typopunct
@@ -239,8 +258,6 @@ as a list.")
  'virtualenvwrapper
  'w3m
  'window-layout)
-
-(require 'flymake-checkers)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'inversion)
