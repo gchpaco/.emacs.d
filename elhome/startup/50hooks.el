@@ -13,7 +13,6 @@
                              (add-to-list 'dired-omit-extensions ".pdfsync")
                              (add-to-list 'dired-omit-extensions ".log")))
 
-(add-hook 'c-mode-common-hook 'doc-mode)
 (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))
 (add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))
 (add-hook 'scheme-mode-hook (lambda () (paredit-mode +1)))

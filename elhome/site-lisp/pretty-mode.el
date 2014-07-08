@@ -1,1 +1,0 @@
-/home/ghughes/wd/EXTERNAL/pretty-mode/pretty-mode.el
