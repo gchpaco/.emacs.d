@@ -3,9 +3,9 @@
 ;; nuke trailing whitespaces when writing to a file
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
-;; display only tails of lines longer than 80 columns, tabs and
+;; display only tails of lines longer than 89 columns, tabs and
 ;; trailing whitespaces
-(setq whitespace-line-column 80
+(setq whitespace-line-column 89
       whitespace-style '(face tabs trailing lines-tail))
 
 ;; face for long lines' tails
