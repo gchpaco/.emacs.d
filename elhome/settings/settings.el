@@ -22,7 +22,7 @@
  '(backup-directory-alist (quote (("\\`/home/ghughes/wiki/\\([^/]*/\\)*\\([^/]*\\)\\'" . "/tmp/wikibackup/\\2"))))
  '(bib-file "~/wd/git/citations/citations.bib")
  '(browse-url-generic-program "x-www-browser")
- '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
+ '(c-default-style (quote ((c-mode . "k&r") (c++-mode . "ellemtel") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(compilation-mode-hook nil)
  '(copyright-names-regexp "\\(Graham Hughes\\|Citrix Systems Inc.\\|Citrix Online\\)")
  '(copyright-year-ranges t)
