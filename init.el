@@ -192,6 +192,7 @@ as a list.")
                   'org-repo-todo
                   'osx-browse
                   'osx-pseudo-daemon
+                  'ox-pandoc
                   'package+
                   'paradox
                   'paredit
@@ -247,13 +248,15 @@ as a list.")
                   'syslog-mode
                   'tdd
                   'tidy
+                  'toggle-quotes
                   'top-mode
                   'typopunct
                   'unbound
                   'virtualenv
                   'virtualenvwrapper
                   'w3m
-                  'window-layout))
+                  'window-layout
+                  'yaml-mode))
   (unless (package-installed-p package)
     (package-install package)))
 
