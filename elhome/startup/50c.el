@@ -15,3 +15,22 @@
 (add-hook 'c++-mode-hook 'my-override-parens)
 (add-hook 'c-mode-hook 'my-override-parens)
 (add-hook 'objc-mode-hook 'my-override-parens)
+
+(defun my-c-common-hook ()
+  (require 'ggtags)
+  (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+    (ggtags-mode 1)
+    (setq-local imenu-create-index-function
+                #'ggtags-build-imenu-index)
+    (setq-local eldoc-documentation-function
+                #'ggtags-eldoc-function)))
+
+(add-hook 'c-mode-common-hook 'my-c-common-hook)
+
+(add-hook 'c-mode-hook 'ede-minor-mode)
+(add-hook 'c++-mode-hook 'ede-minor-mode)
+
+(add-hook 'c-mode-common-hook 'hs-minor-mode)
+
+(setq gdb-many-windows t)
+(setq gdb-show-main t)

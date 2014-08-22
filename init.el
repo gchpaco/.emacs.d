@@ -120,6 +120,7 @@ as a list.")
                   'fringe-helper
                   'geiser
                   'gh
+                  'ggtags
                   'git-annex
                   'git-auto-commit-mode
                   'git-commit-mode

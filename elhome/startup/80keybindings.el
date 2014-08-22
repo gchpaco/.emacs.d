@@ -8,7 +8,6 @@
 (define-key me-minor-mode-map "\C-cc" 'org-capture)
 (define-key me-minor-mode-map "\C-cf" 'ffap)
 (define-key me-minor-mode-map "\C-cF" 'ido-find-file-in-tag-files)
-(define-key me-minor-mode-map "\C-cg" 'magit-status)
 (define-key me-minor-mode-map "\C-ch" 'anything)
 (define-key me-minor-mode-map "\C-ck" 'delete-pair)
 (define-key me-minor-mode-map "\C-cl" 'org-store-link)
@@ -43,3 +42,13 @@
             (local-set-key "\C-cNpa" 'nosetests-pdb-all)
             (local-set-key "\C-cNpm" 'nosetests-pdb-module)
             (local-set-key "\C-cNp." 'nosetests-pdb-one)))
+
+
+(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
+(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
+(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
+(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
+(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
+(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
+
+(define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
