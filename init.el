@@ -100,6 +100,7 @@ as a list.")
                   'evernote-mode
                   'feature-mode
                   'fic-mode
+                  'fixmee
                   'flycheck
                   'flycheck-google-cpplint
                   'flycheck-pyflakes
@@ -124,6 +125,7 @@ as a list.")
                   'git-auto-commit-mode
                   'git-commit-mode
                   'git-rebase-mode
+                  'git-timemachine
                   'gitignore-mode
                   'gmail-message-mode
                   'go-autocomplete
@@ -145,6 +147,7 @@ as a list.")
                   'helm-gtags
                   'helm-helm-commands
                   'helm-ls-git
+                  'helm-projectile
                   'helm-orgcard
                   'hide-lines
                   'icicles
