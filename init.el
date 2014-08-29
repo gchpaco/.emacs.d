@@ -64,7 +64,6 @@ as a list.")
                   'auto-complete-etags
                   'auto-complete-nxml
                   'auto-yasnippet
-                  'autopair
                   'bibtex-utils
                   'bison-mode
                   'bubbleberry-theme
@@ -196,12 +195,11 @@ as a list.")
                   'ox-pandoc
                   'package+
                   'paradox
-                  'paredit
-                  'paredit-everywhere
-                  'paredit-menu
                   'pandoc-mode
                   'pcache
                   'pep8
+                  'persp-mode
+                  'persp-projectile
                   'pkg-info
                   'poporg
                   'popup
@@ -240,6 +238,7 @@ as a list.")
                   'slime-clj
                   'slime-fuzzy
                   'shell-current-directory
+                  'smartparens
                   'smex
                   'sparkline
                   'ssh
