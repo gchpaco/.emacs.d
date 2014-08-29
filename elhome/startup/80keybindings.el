@@ -1,3 +1,5 @@
+(require 'ggtags)
+
 (define-key me-minor-mode-map [f2] 'jw-visit-source)
 (define-key me-minor-mode-map [f3] 'flymake-display-err-menu-for-current-line)
 (define-key me-minor-mode-map [f4] 'flymake-goto-next-error)
