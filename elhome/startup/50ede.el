@@ -1,7 +1,8 @@
 (require 'ede)
+(require 'ede/cpp-root)
 
 (ede-cpp-root-project "rethinkdb"
-                      :file "/Users/graham/wd/rethinkdb/configure"
+                      :file (expand-file-name "~/wd/rethinkdb/configure")
                       :include-path '("/external/gtest_1.6.0/include"
                                       "/external/re2_20140111"
                                       "/external/v8_3.22.24.17/include"

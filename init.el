@@ -178,7 +178,7 @@ as a list.")
                   'markdown-mode+
                   'mediawiki
                   'minimap
-                  'nav
+                  'nav-flash
                   'nginx-mode
                   'nose
                   'nrepl
