@@ -73,6 +73,8 @@ as a list.")
                   'clojure-mode
                   'clojure-mode-extra-font-locking
                   'clojure-snippets
+                  'codesearch
+                  'coffee-mode
                   'color-theme
                   'color-theme-sanityinc-solarized
                   'company
@@ -100,6 +102,7 @@ as a list.")
                   'evernote-mode
                   'feature-mode
                   'fic-mode
+                  'find-file-in-git-repo
                   'fixmee
                   'flycheck
                   'flycheck-google-cpplint
