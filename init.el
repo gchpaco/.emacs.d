@@ -198,6 +198,7 @@ as a list.")
                   ;;'org-mobile-sync
                   'org-repo-todo
                   'osx-browse
+                  'osx-clipboard
                   'osx-pseudo-daemon
                   'ox-pandoc
                   'package+
@@ -210,6 +211,7 @@ as a list.")
                   'pep8
                   'persp-mode
                   'persp-projectile
+                  'pip-requirements
                   'pkg-info
                   'poporg
                   'popup
@@ -261,6 +263,7 @@ as a list.")
                   'top-mode
                   'typopunct
                   'unbound
+                  'uuidgen
                   'virtualenv
                   'virtualenvwrapper
                   'w3m
