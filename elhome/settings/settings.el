@@ -226,6 +226,7 @@
      (TeX-master . "paper.tex")
      (TeX-master . t)
      (TeX-master . "paper"))))
+ '(sane-term-shell-command "/usr/local/bin/zsh")
  '(semanticdb-default-save-directory "~/.semantic")
  '(send-mail-function (quote smtpmail-send-it))
  '(server-done-hook nil)
