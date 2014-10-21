@@ -103,7 +103,6 @@ as a list.")
                   'evernote-mode
                   'feature-mode
                   'fic-mode
-                  'find-file-in-git-repo
                   'fixmee
                   'flycheck
                   'flycheck-google-cpplint
