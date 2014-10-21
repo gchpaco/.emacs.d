@@ -186,6 +186,7 @@ as a list.")
                   'nginx-mode
                   'nose
                   'nrepl
+		  'objc-font-lock
                   'org
                   'org-ac
                   'org-blog
