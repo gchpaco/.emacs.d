@@ -181,6 +181,7 @@ as a list.")
                   'markdown-mode+
                   'mediawiki
                   'minimap
+                  'multicolumn
                   'nav-flash
                   'nginx-mode
                   'nose

@@ -9,6 +9,8 @@
   ((ns) (require 'mac-local)))
 (require 'popwin)
 (require 'magit-annex)
+(require 'multicolumn)
 (popwin-mode 1)
+(multicolumn-global-mode 1)
 
 (dired-x-bind-find-file)
