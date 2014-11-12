@@ -51,6 +51,7 @@ as a list.")
                   'anything-ipython
                   'anything-match-plugin
                   'anything-obsolete
+                  'anything-project
                   'anything-show-completion
                   'apache-mode
                   'apt-utils
