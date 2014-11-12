@@ -193,6 +193,7 @@ as a list.")
                   'org-blog
                   'org-bullets
                   'org-caldav
+                  'org-cliplink
                   'org-context
                   'org-fstree
                   ;;'org-gnome
