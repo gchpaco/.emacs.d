@@ -210,6 +210,7 @@ as a list.")
                   'paredit-everywhere
                   'paredit-menu
                   'pandoc-mode
+                  'paxedit
                   'pcache
                   'pep8
                   'persp-mode
