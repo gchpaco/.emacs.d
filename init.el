@@ -183,6 +183,7 @@ as a list.")
                   'mediawiki
                   'minimap
                   'multicolumn
+                  'multiple-cursors
                   'nav-flash
                   'nginx-mode
                   'nose
