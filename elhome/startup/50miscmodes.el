@@ -10,6 +10,7 @@
 (require 'popwin)
 (require 'magit-annex)
 (require 'multicolumn)
+(require 'multiple-cursors)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 
