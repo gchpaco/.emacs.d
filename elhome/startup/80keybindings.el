@@ -26,6 +26,7 @@
 (define-key me-minor-mode-map "\C-\M-z" 'zap-up-to-char)
 (define-key me-minor-mode-map "\C-\M-y" 'kill-ring-search)
 (define-key me-minor-mode-map (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(define-key me-minor-mode-map (kbd "C-'") 'er/expand-region)
 (define-key me-minor-mode-map (kbd "C->") 'mc/mark-next-like-this)
 (define-key me-minor-mode-map (kbd "C-<") 'mc/mark-previous-like-this)
 (define-key me-minor-mode-map (kbd "C-c C-<") 'mc/mark-all-like-this)

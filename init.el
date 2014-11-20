@@ -103,6 +103,7 @@ as a list.")
                   'ess
                   'evernote-mode
                   'feature-mode
+                  'expand-region
                   'fic-mode
                   'fixmee
                   'flycheck
