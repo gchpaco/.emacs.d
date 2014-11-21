@@ -83,6 +83,7 @@ as a list.")
                   'company-c-headers
                   'company-irony
                   'company-inf-ruby
+                  'company-math
                   'confluence
                   'crontab-mode
                   'cssh
@@ -177,6 +178,7 @@ as a list.")
                   'magit-push-remote
                   'magit-tramp
                   'malabar-mode
+                  'math-symbol-lists
                   'make-it-so
                   'markdown-mode
                   'markdown-mode+
