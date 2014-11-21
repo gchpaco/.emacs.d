@@ -116,7 +116,7 @@
  '(ido-use-url-at-point t)
  '(indent-region-mode t)
  '(indent-tabs-mode nil)
- '(inferior-lisp-program "/usr/local/bin/sbcl")
+ '(inferior-lisp-program "/usr/local/bin/sbcl" t)
  '(inhibit-startup-screen t)
  '(jde-ant-enable-find t)
  '(jde-build-function (quote (jde-ant-build)))
@@ -141,7 +141,7 @@
  '(ns-tool-bar-size-mode (quote regular) t)
  '(org-agenda-files
    (quote
-    ("~/wd/org/agenda.org" "~/wd/org/main.org" "~/wd/org/gtd.org" "~/wd/org/cloudstack.org")))
+    ("~/wd/org/agenda.org" "~/wd/org/main.org" "~/wd/org/gtd.org")))
  '(org-agenda-include-diary t)
  '(org-capture-templates
    (quote
