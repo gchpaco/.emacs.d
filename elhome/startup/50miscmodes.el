@@ -8,9 +8,10 @@
 (case window-system
   ((ns) (require 'mac-local)))
 (require 'popwin)
-(require 'paxedit)
 (require 'magit-annex)
 (require 'multicolumn)
+(require 'multiple-cursors)
+(require 'expand-region)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 

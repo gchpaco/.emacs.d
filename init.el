@@ -101,8 +101,10 @@ as a list.")
                   'elhome
                   'elpy
                   'ein
+                  'eproject
                   'ess
                   'evernote-mode
+                  'expand-region
                   'feature-mode
                   'fic-mode
                   'fixmee
@@ -139,6 +141,7 @@ as a list.")
                   'go-mode
                   'go-projectile
                   'go-snippets
+                  'go-stacktracer
                   'google-c-style
                   'google-this
                   'golint
@@ -155,6 +158,7 @@ as a list.")
                   'helm-projectile
                   'helm-orgcard
                   'hide-lines
+                  'ical-pull
                   'icicles
                   'inf-ruby
                   'inlineR
@@ -248,6 +252,7 @@ as a list.")
                   'quack
                   'racket-mode
                   'rbenv
+                  'restclient
                   'rpm-spec-mode
                   'rspec-mode
                   's
