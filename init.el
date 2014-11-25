@@ -207,6 +207,7 @@ as a list.")
                   'org-magit
                   ;;'org-mobile-sync
                   'org-repo-todo
+                  'orgit
                   'osx-browse
                   'osx-clipboard
                   'osx-pseudo-daemon
@@ -281,6 +282,7 @@ as a list.")
                   'virtualenvwrapper
                   'w3m
                   'window-layout
+                  'with-editor
                   'yaml-mode))
   (unless (package-installed-p package)
     (package-install package)))
