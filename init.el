@@ -259,6 +259,7 @@ as a list.")
                   's
                   'scratch-ext
                   'session-manager
+                  'shelldoc
                   'slamhound
                   'slime
                   'slime-clj

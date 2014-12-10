@@ -12,6 +12,7 @@
 (require 'multicolumn)
 (require 'multiple-cursors)
 (require 'expand-region)
+(require 'shelldoc)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 
