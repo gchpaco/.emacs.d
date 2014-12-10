@@ -98,6 +98,7 @@ as a list.")
                   'discover
                   'e2wm
                   'e2wm-bookmark
+                  'e2wm-term
                   'elhome
                   'elpy
                   'ein
