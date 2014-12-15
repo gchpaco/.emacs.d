@@ -159,8 +159,10 @@ as a list.")
                   'helm-projectile
                   'helm-orgcard
                   'hide-lines
+                  'highlight-thing
                   'ical-pull
                   'icicles
+                  'inf-clojure
                   'inf-ruby
                   'inlineR
                   'instapaper
@@ -207,6 +209,7 @@ as a list.")
                   ;;'org-gnome
                   'org-magit
                   ;;'org-mobile-sync
+                  'org-projectile
                   'org-repo-todo
                   'orgit
                   'osx-browse
@@ -273,6 +276,7 @@ as a list.")
                   'sqlup-mode
                   'swift-mode
                   'syslog-mode
+                  'template
                   'tdd
                   'tidy
                   'toggle-quotes
