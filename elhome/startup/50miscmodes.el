@@ -14,6 +14,7 @@
 (require 'expand-region)
 (require 'shelldoc)
 (require 'emr)
+(require 'sx-load)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 
