@@ -147,6 +147,7 @@ as a list.")
                   'google-c-style
                   'google-this
                   'golint
+                  'graphviz-dot-mode
                   'helm
                   'helm-R
                   'helm-ack
