@@ -291,6 +291,7 @@ as a list.")
                   'w3m
                   'window-layout
                   'with-editor
+                  'wsd-mode
                   'yaml-mode))
   (unless (package-installed-p package)
     (package-install package)))
