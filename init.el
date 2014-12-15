@@ -102,6 +102,7 @@ as a list.")
                   'elhome
                   'elpy
                   'ein
+                  'emr
                   'eproject
                   'ess
                   'evernote-mode

@@ -13,7 +13,10 @@
 (require 'multiple-cursors)
 (require 'expand-region)
 (require 'shelldoc)
+(require 'emr)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 
 (dired-x-bind-find-file)
+
+(add-hook 'prog-mode-hook 'emr-initialize)
