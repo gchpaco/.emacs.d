@@ -12,6 +12,7 @@
 (require 'multicolumn)
 (require 'multiple-cursors)
 (require 'expand-region)
+(require 'sx-load)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 

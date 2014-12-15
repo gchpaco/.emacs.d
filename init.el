@@ -270,6 +270,7 @@ as a list.")
                   'ssh-config-mode
                   'sqlup-mode
                   'swift-mode
+                  'sx
                   'syslog-mode
                   'tdd
                   'tidy
