@@ -160,10 +160,10 @@
  '(org-clock-idle-time 10)
  '(org-clock-persist (quote history))
  '(org-default-notes-file "~/wd/org/main.org")
- '(org-directory "~/wd/org")
- '(org-mobile-directory "~/Dropbox/MobileOrg/")
+ '(org-directory "~/Dropbox/org")
+ '(org-mobile-directory "~/Dropbox/Apps/MobileOrg/")
  '(org-mobile-files (quote (org-agenda-files "recipes.org")))
- '(org-mobile-inbox-for-pull "~/Dropbox/MobileOrg/index.org")
+ '(org-mobile-inbox-for-pull "~/Dropbox/Apps/MobileOrg/index.org")
  '(org-protocol-project-alist
    (quote
     (("http://sigwinch.org/Graham/" :base-url "http://sigwinch.org/Graham/" :working-directory "/Users/ghughes/wd/web-home/" :online-suffix ".html" :working-suffix ".org"))))
