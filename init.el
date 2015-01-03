@@ -33,6 +33,8 @@ as a list.")
                   'ac-math
                   'ac-slime
                   'ack-and-a-half
+                  'ace-jump-mode
+                  'ace-window
                   'ada-mode
                   'align-cljlet
                   'all
@@ -126,6 +128,7 @@ as a list.")
                   'flymake-ruby
                   'flymake-shell
                   'flymake-yaml
+                  'form-feed
                   'fringe-helper
                   'geiser
                   'gh

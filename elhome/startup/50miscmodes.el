@@ -21,3 +21,7 @@
 (dired-x-bind-find-file)
 
 (add-hook 'prog-mode-hook 'emr-initialize)
+(add-hook 'prog-mode-hook 'form-feed-mode)
+(add-hook 'prog-mode-hook 'hl-indent-mode)
+
+(setq aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))

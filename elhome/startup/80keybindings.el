@@ -41,6 +41,7 @@
 (define-key me-minor-mode-map (kbd "C-c M-x") 'execute-extended-command)
 (define-key me-minor-mode-map (kbd "M-+") 'e2wm:start-management)
 (define-key me-minor-mode-map (kbd "C-z") popwin:keymap)
+(define-key me-minor-mode-map (kbd "M-p") 'ace-window)
 
 (add-hook 'python-mode-hook
           (lambda ()
