@@ -166,6 +166,7 @@ as a list.")
                   'helm-orgcard
                   'hide-lines
                   'highlight-thing
+                  'hl-indent
                   'ical-pull
                   'icicles
                   'inf-clojure

@@ -15,6 +15,7 @@
 (require 'shelldoc)
 (require 'emr)
 (require 'sx-load)
+(require 'hl-indent)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 
