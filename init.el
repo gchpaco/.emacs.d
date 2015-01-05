@@ -66,6 +66,7 @@ as a list.")
                   'auto-complete-c-headers
                   'auto-complete-etags
                   'auto-complete-nxml
+                  'auto-package-update
                   'auto-yasnippet
                   'autopair
                   'bibtex-utils
