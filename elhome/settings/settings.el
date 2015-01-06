@@ -45,7 +45,7 @@
    (quote
     ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
  '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
- '(debug-on-error t)
+ '(debug-on-error nil)
  '(default-frame-alist
     (quote
      ((menu-bar-lines . 1)
