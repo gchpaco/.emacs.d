@@ -3,3 +3,5 @@
 (helm-projectile-on)
 (setq projectile-switch-project-action 'helm-projectile)
 (setq projectile-enable-caching t)
+(add-to-list 'projectile-globally-ignored-directories "build")
+(add-to-list 'projectile-globally-ignored-directories "external")
