@@ -71,6 +71,7 @@ as a list.")
                   'autopair
                   'bibtex-utils
                   'bison-mode
+                  'bookmark+
                   'bubbleberry-theme
                   'bundler
                   'cedit
