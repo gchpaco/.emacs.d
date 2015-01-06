@@ -24,8 +24,6 @@
    (quote
     (("\\`/[^/]*:\\([^/]*/\\)*\\([^/]*\\)\\'" "/tmp/\\2" t)
      ("^/home/ghughes/wiki/\\([^/]*/\\)*\\([^/]*\\)\\'" "/tmp/wiki/\\2" t))))
- '(background-color "#fcf4dc")
- '(background-mode light)
  '(backup-directory-alist
    (quote
     (("\\`/home/ghughes/wiki/\\([^/]*/\\)*\\([^/]*\\)\\'" . "/tmp/wikibackup/\\2"))))
@@ -42,7 +40,6 @@
  '(copyright-names-regexp "\\(Graham Hughes\\|Citrix Systems Inc.\\|Citrix Online\\)")
  '(copyright-year-ranges t)
  '(current-language-environment "UTF-8")
- '(cursor-color "#52676f")
  '(custom-enabled-themes (quote (sanityinc-solarized-light)))
  '(custom-safe-themes
    (quote
@@ -92,7 +89,6 @@
  '(erc-track-minor-mode t)
  '(erc-track-mode t)
  '(erc-track-when-inactive t)
- '(foreground-color "#52676f")
  '(glasses-separator "-")
  '(glasses-uncapitalize-p t)
  '(gnus-message-archive-group "Sent")
@@ -200,6 +196,25 @@
  '(outline-regexp "\\*+ " t)
  '(paradox-automatically-star t)
  '(paradox-github-token "3fc92a3e71a5381c6337de1221bd894c8a80cc33")
+ '(projectile-other-file-alist
+   (quote
+    (("cc" "cpp" "h" "hpp" "ipp")
+     ("ipp" "h" "hpp" "cpp" "cc")
+     ("hpp" "h" "ipp" "cpp" "cc")
+     ("cxx" "hxx" "ixx")
+     ("ixx" "cxx" "hxx")
+     ("hxx" "ixx" "cxx")
+     ("c" "h")
+     ("m" "h")
+     ("mm" "h")
+     ("h" "c" "cpp" "ipp" "hpp" "m" "mm")
+     ("cc" "hh")
+     ("hh" "cc")
+     ("vert" "frag")
+     ("frag" "vert")
+     (nil "lock" "gpg")
+     ("lock" "")
+     ("gpg" ""))))
  '(puppet-indent-level 8)
  '(quack-default-program "mzscheme -i -l errortrace")
  '(quack-pretty-lambda-p t)
@@ -275,7 +290,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "Black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Menlo"))))
  '(autoface-default ((t (:inherit default))) t)
  '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Inconsolata"))) t))
 
