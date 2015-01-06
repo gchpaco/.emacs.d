@@ -33,6 +33,7 @@ as a list.")
                   'ac-math
                   'ac-slime
                   'ack-and-a-half
+                  'ace-jump-buffer
                   'ace-jump-mode
                   'ace-window
                   'ada-mode
@@ -57,7 +58,6 @@ as a list.")
                   'anything-show-completion
                   'apache-mode
                   'apt-utils
-                  'apt-utils-ido
                   'auctex
                   'auctex-latexmk
                   'auctex-lua
@@ -156,14 +156,24 @@ as a list.")
                   'helm-R
                   'helm-ack
                   'helm-anything
+                  'helm-bibtex
+                  'helm-c-yasnippet
+                  'helm-company
                   'helm-git
+                  'helm-git-files
                   'helm-git-grep
                   'helm-go-package
+                  'helm-google
                   'helm-gtags
                   'helm-helm-commands
+                  'helm-itunes
                   'helm-ls-git
                   'helm-projectile
+                  'helm-projectile-all
+                  'helm-open-github
                   'helm-orgcard
+                  'helm-package
+                  'helm-pydoc
                   'hide-lines
                   'highlight-thing
                   'hl-indent
@@ -295,6 +305,9 @@ as a list.")
                   'virtualenv
                   'virtualenvwrapper
                   'w3m
+                  'wgrep
+                  'wgrep-pt
+                  'wgrep-helm
                   'window-layout
                   'with-editor
                   'wsd-mode

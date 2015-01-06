@@ -104,9 +104,12 @@
                (directory-files nnheader-directory-files-safe)
                (get-new-mail nil))))
  '(gnus-update-message-archive-method t)
+ '(helm-M-x-fuzzy-match t)
+ '(helm-buffers-fuzzy-matching t)
+ '(helm-recentf-fuzzy-match t)
  '(ido-enable-flex-matching t)
  '(ido-enable-tramp-completion nil)
- '(ido-everywhere t)
+ '(ido-everywhere nil)
  '(ido-ignore-directories (quote ("\\`\\.git/" "\\`CVS/" "\\`\\.\\./" "\\`\\./")))
  '(ido-ignore-files
    (quote

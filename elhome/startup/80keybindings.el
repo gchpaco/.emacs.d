@@ -10,7 +10,6 @@
 (define-key me-minor-mode-map "\C-cc" 'org-capture)
 (define-key me-minor-mode-map "\C-cf" 'ffap)
 (define-key me-minor-mode-map "\C-cF" 'ido-find-file-in-tag-files)
-(define-key me-minor-mode-map "\C-ch" 'anything)
 (define-key me-minor-mode-map "\C-ck" 'delete-pair)
 (define-key me-minor-mode-map "\C-cl" 'org-store-link)
 (define-key me-minor-mode-map "\C-cx" 'org-agenda)
@@ -23,6 +22,7 @@
 (define-key me-minor-mode-map "\C-ct" 'sane-term)
 (define-key me-minor-mode-map "\C-cT" 'sane-term-create)
 (define-key me-minor-mode-map "\C-cu" 'browse-url-at-point)
+(define-key me-minor-mode-map "\C-cz" 'ace-jump-buffer)
 (define-key me-minor-mode-map "\C-\M-z" 'zap-up-to-char)
 (define-key me-minor-mode-map "\C-\M-y" 'kill-ring-search)
 (define-key me-minor-mode-map (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -35,13 +35,17 @@
 (define-key me-minor-mode-map "\C-cii" 'iso8879-character-insert)
 (define-key me-minor-mode-map "\C-ci'" 'unicode-smart-single-quote)
 (define-key me-minor-mode-map "\C-ci\"" 'unicode-smart-double-quote)
-(define-key me-minor-mode-map (kbd "M-x") 'smex)
-(define-key me-minor-mode-map (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
+(define-key me-minor-mode-map (kbd "M-x") 'helm-M-x)
+(define-key me-minor-mode-map (kbd "M-y") 'helm-show-kill-ring)
+(define-key me-minor-mode-map (kbd "C-x b") 'helm-mini)
 (define-key me-minor-mode-map (kbd "C-c M-x") 'execute-extended-command)
 (define-key me-minor-mode-map (kbd "M-+") 'e2wm:start-management)
 (define-key me-minor-mode-map (kbd "C-z") popwin:keymap)
 (define-key me-minor-mode-map (kbd "M-p") 'ace-window)
+(define-key me-minor-mode-map (kbd "C-x C-f") 'helm-find-files)
+(define-key me-minor-mode-map (kbd "C-c h o") 'helm-occur)
+(define-key me-minor-mode-map (kbd "C-h SPC") 'helm-all-mark-rings)
+
 
 (add-hook 'python-mode-hook
           (lambda ()
