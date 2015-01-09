@@ -202,7 +202,6 @@ as a list.")
                   'magit-log-edit
                   'magit-push-remote
                   'magit-tramp
-                  'malabar-mode
                   'math-symbol-lists
                   'make-it-so
                   'markdown-mode
