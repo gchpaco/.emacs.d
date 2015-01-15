@@ -209,6 +209,7 @@ as a list.")
                   'markdown-mode+
                   'mediawiki
                   'minimap
+                  'mwim
                   'multicolumn
                   'multiple-cursors
                   'nav-flash
@@ -255,6 +256,7 @@ as a list.")
                   'pretty-mode-plus
                   'pretty-symbols
                   'project-persist
+                  'projectile-speedbar
                   'protobuf-mode
                   'pt
                   'puppet-mode
@@ -289,6 +291,7 @@ as a list.")
                   'shell-current-directory
                   'smex
                   'sparkline
+                  'sr-speedbar
                   'ssh
                   'ssh-config-mode
                   'sqlup-mode
