@@ -156,6 +156,7 @@ as a list.")
                   'helm
                   'helm-R
                   'helm-ack
+                  'helm-ag
                   'helm-anything
                   'helm-bibtex
                   'helm-c-yasnippet
