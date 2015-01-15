@@ -1,5 +1,6 @@
 (require 'projectile)
 (require 'helm-projectile)
+(require 'projectile-speedbar)
 
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
