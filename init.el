@@ -208,6 +208,7 @@ as a list.")
                   'markdown-mode+
                   'mediawiki
                   'minimap
+                  'mwim
                   'multicolumn
                   'multiple-cursors
                   'nav-flash
