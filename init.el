@@ -280,6 +280,7 @@ as a list.")
                   'restclient
                   'rpm-spec-mode
                   'rspec-mode
+                  'runner
                   's
                   'scratch-ext
                   'session-manager
@@ -305,6 +306,7 @@ as a list.")
                   'top-mode
                   'typopunct
                   'unbound
+                  'unify-opening
                   'uuidgen
                   'virtualenv
                   'virtualenvwrapper

@@ -15,6 +15,9 @@
 (require 'shelldoc)
 (require 'emr)
 (require 'hl-indent)
+(require 'mwim)
+(require 'runner)
+(require 'unify-opening)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 
