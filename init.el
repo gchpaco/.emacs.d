@@ -27,6 +27,7 @@ as a list.")
 
 (dolist (package (list
                   'yasnippet
+                  'ac-clang
                   'ac-etags
                   'ac-geiser
                   'ac-js2
