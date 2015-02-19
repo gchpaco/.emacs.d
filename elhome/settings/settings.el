@@ -268,6 +268,7 @@
       (directory-files "~/.clojure" t ".jar$"))))
  '(swank-clojure-jar-path "/Users/graham/wd/EXTERNAL/clojure/trunk/clojure.jar")
  '(swank-clojure-library-paths nil)
+ '(symon-sparkline-type (quote symon-sparkline-type-plain))
  '(todochiku-command "/Users/graham/bin/growlnotify")
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote reverse) nil (uniquify))

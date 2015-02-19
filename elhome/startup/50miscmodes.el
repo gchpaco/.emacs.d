@@ -18,8 +18,10 @@
 (require 'mwim)
 (require 'runner)
 (require 'unify-opening)
+(require 'symon)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
+(symon-mode)
 
 (dired-x-bind-find-file)
 

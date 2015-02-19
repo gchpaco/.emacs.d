@@ -297,6 +297,7 @@ as a list.")
                   'ssh-config-mode
                   'sqlup-mode
                   'swift-mode
+                  'symon
                   'sx
                   'syslog-mode
                   'template
