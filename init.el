@@ -318,6 +318,7 @@ as a list.")
                   'wgrep-pt
                   'wgrep-helm
                   'window-layout
+                  'winner-mode-enable
                   'with-editor
                   'wsd-mode
                   'yaml-mode))
