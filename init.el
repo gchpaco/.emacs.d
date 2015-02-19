@@ -294,6 +294,7 @@ as a list.")
                   'smex
                   'sparkline
                   'sr-speedbar
+                  'srefactor
                   'ssh
                   'ssh-config-mode
                   'sqlup-mode
