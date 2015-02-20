@@ -195,6 +195,7 @@
     ((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED"))))
  '(outline-regexp "\\*+ " t)
  '(paradox-automatically-star t)
+ '(paradox-execute-asynchronously t)
  '(paradox-github-token "3fc92a3e71a5381c6337de1221bd894c8a80cc33")
  '(projectile-other-file-alist
    (quote
