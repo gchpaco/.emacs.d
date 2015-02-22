@@ -269,6 +269,9 @@
       (directory-files "~/.clojure" t ".jar$"))))
  '(swank-clojure-jar-path "/Users/graham/wd/EXTERNAL/clojure/trunk/clojure.jar")
  '(swank-clojure-library-paths nil)
+ '(symon-monitors
+   (quote
+    (symon-darwin-cpu-monitor symon-darwin-network-rx-monitor symon-darwin-network-tx-monitor)))
  '(symon-sparkline-type (quote symon-sparkline-type-plain))
  '(todochiku-command "/Users/graham/bin/growlnotify")
  '(tool-bar-mode nil)
