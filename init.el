@@ -86,6 +86,7 @@ as a list.")
                   'color-theme-sanityinc-solarized
                   'company
                   'company-c-headers
+                  'company-go
                   'company-irony
                   'company-inf-ruby
                   'company-math
