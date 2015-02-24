@@ -194,6 +194,7 @@ as a list.")
                   'json-mode
                   'json-reformat
                   'levenshtein
+                  'list-unicode-display
                   'logito
                   'lua-mode
                   'magit
