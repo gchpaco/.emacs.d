@@ -66,6 +66,9 @@
  '(ebib-preload-bib-files
    (quote
     ("~/wd/citations/IEEEfull.bib" "~/wd/citations/citations.bib")))
+ '(elpy-modules
+   (quote
+    (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
  '(emms-player-mpd-music-directory "~/Music")
  '(enh-ruby-program "/home/ghughes/.rbenv/versions/1.9.3-p194/bin/ruby")
  '(erc-auto-query (quote frame))
