@@ -19,6 +19,7 @@
 (require 'runner)
 (require 'unify-opening)
 (require 'symon)
+(require 'git-wip-mode)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
 (symon-mode)

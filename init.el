@@ -142,6 +142,7 @@ as a list.")
                   'git-commit-mode
                   'git-rebase-mode
                   'git-timemachine
+                  'git-wip-timemachine
                   'gitignore-mode
                   'gmail-message-mode
                   'go-autocomplete
