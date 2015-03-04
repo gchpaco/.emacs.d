@@ -324,7 +324,8 @@ as a list.")
                   'winner-mode-enable
                   'with-editor
                   'wsd-mode
-                  'yaml-mode))
+                  'yaml-mode
+                  'yatemplate))
   (unless (package-installed-p package)
     (package-install package)))
 
