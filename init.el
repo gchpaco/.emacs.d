@@ -188,6 +188,7 @@ as a list.")
                   'inf-ruby
                   'inlineR
                   'instapaper
+                  'interleave
                   'ipython
                   'irony
                   'itail
