@@ -269,6 +269,7 @@ as a list.")
                   'purty-mode
                   'py-autopep8
                   'py-gnitset
+                  'pydoc
                   'pydoc-info
                   'pymacs
                   'python
