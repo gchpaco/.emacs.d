@@ -89,6 +89,7 @@ as a list.")
                   'company-go
                   'company-irony
                   'company-inf-ruby
+                  'company-jedi
                   'company-math
                   'confluence
                   'crontab-mode
