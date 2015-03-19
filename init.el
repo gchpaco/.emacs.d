@@ -75,6 +75,7 @@ as a list.")
                   'bookmark+
                   'bubbleberry-theme
                   'bundler
+                  'bury-successful-compilation
                   'cedit
                   'clojure-cheatsheet
                   'clojure-mode
