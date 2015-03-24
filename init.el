@@ -273,6 +273,7 @@ as a list.")
                   'py-gnitset
                   'pydoc
                   'pydoc-info
+                  'pyenv-mode
                   'pymacs
                   'python
                   'python-environment
