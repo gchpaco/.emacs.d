@@ -240,6 +240,7 @@ as a list.")
                   'osx-browse
                   'osx-clipboard
                   'osx-pseudo-daemon
+                  'ox-gfm
                   'ox-pandoc
                   'package+
                   'paradox
@@ -305,6 +306,7 @@ as a list.")
                   'ssh-config-mode
                   'sqlup-mode
                   'swift-mode
+                  'swiper
                   'symon
                   'sx
                   'syslog-mode
