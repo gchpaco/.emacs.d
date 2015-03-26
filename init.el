@@ -74,6 +74,7 @@ as a list.")
                   'bison-mode
                   'bookmark+
                   'bubbleberry-theme
+                  'bug-hunter
                   'bundler
                   'bury-successful-compilation
                   'cedit
