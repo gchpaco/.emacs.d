@@ -40,10 +40,10 @@
  '(copyright-names-regexp "\\(Graham Hughes\\|Citrix Systems Inc.\\|Citrix Online\\)")
  '(copyright-year-ranges t)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (late-night sanityinc-solarized-light)))
+ '(custom-enabled-themes (quote (eltbus sanityinc-solarized-light)))
  '(custom-safe-themes
    (quote
-    ("fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
+    ("780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
  '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
  '(debug-on-error nil)
  '(default-frame-alist
