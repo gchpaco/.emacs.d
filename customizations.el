@@ -20,7 +20,7 @@
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(compilation-mode-hook nil)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (solarized-light)))
+ '(custom-enabled-themes (quote (late-night)))
  '(custom-safe-themes (quote ("117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" "0174d99a8f1fdc506fa54403317072982656f127" "5600dc0bb4a2b72a613175da54edb4ad770105aa" default)))
  '(custom-theme-load-path (quote (custom-theme-directory t)))
  '(default-frame-alist (quote ((menu-bar-lines . 1) (foreground-color . "Black") (background-color . "White") (cursor-type . box) (cursor-color . "Red") (vertical-scroll-bars . right) (internal-border-width . 0) (left-fringe . 1) (right-fringe) (fringe))))
