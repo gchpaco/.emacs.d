@@ -378,3 +378,5 @@ as a list.")
 (put 'with-state 'scheme-indent-function 2)
 (put 'scroll-left 'disabled nil)
 (put 'dired-find-alternate-file 'disabled nil)
+
+(setq magit-last-seen-setup-instructions "1.4.0")
