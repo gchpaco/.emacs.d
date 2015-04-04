@@ -28,6 +28,7 @@ as a list.")
 (dolist (package (list
                   'yasnippet
                   'ac-clang
+                  'ac-cider
                   'ac-etags
                   'ac-geiser
                   'ac-js2
@@ -78,6 +79,9 @@ as a list.")
                   'bundler
                   'bury-successful-compilation
                   'cedit
+                  'cider
+                  'cider-decompile
+                  'cider-profile
                   'clj-refactor
                   'clojure-cheatsheet
                   'clojure-env
