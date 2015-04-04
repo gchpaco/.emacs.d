@@ -78,9 +78,12 @@ as a list.")
                   'bundler
                   'bury-successful-compilation
                   'cedit
+                  'clj-refactor
                   'clojure-cheatsheet
+                  'clojure-env
                   'clojure-mode
                   'clojure-mode-extra-font-locking
+                  'clojure-lint-mode
                   'clojure-snippets
                   'codesearch
                   'coffee-mode
