@@ -83,7 +83,6 @@ as a list.")
                   'clojure-env
                   'clojure-mode
                   'clojure-mode-extra-font-locking
-                  'clojure-lint-mode
                   'clojure-snippets
                   'codesearch
                   'coffee-mode
