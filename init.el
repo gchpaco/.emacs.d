@@ -25,6 +25,8 @@ as a list.")
                "http://jorgenschaefer.github.io/packages/"))
 (package-initialize)
 
+(add-to-list 'package-pinned-packages '(cider . "marmalade") t)
+
 (dolist (package (list
                   'yasnippet
                   'ac-clang
@@ -229,7 +231,6 @@ as a list.")
                   'nav-flash
                   'nginx-mode
                   'nose
-                  'nrepl
                   'objc-font-lock
                   'org
                   'org-ac
@@ -263,6 +264,7 @@ as a list.")
                   'persp-projectile
                   'pip-requirements
                   'pkg-info
+                  'plan9-theme
                   'poporg
                   'popup
                   'popwin

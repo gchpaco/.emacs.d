@@ -13,6 +13,10 @@
  '(abbrev-mode t t)
  '(ack-and-a-half-executable "ack-grep")
  '(ag-highlight-search t)
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#fdf6e3"))
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 215 t)
  '(aquamacs-tool-bar-user-customization
@@ -40,10 +44,10 @@
  '(copyright-names-regexp "\\(Graham Hughes\\|Citrix Systems Inc.\\|Citrix Online\\)")
  '(copyright-year-ranges t)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (eltbus sanityinc-solarized-light)))
+ '(custom-enabled-themes (quote (plan9)))
  '(custom-safe-themes
    (quote
-    ("780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
+    ("fb7b5b24d459ccf40f44659506a111ff0df9a07117a00aaee4999952a92f056a" "cfc2fbe694e2bbd083509168f8905d232bdc99fb35ec3e98ac83baec4bbfa1ba" "780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
  '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
  '(debug-on-error nil)
  '(default-frame-alist
@@ -289,6 +293,28 @@
  '(uniquify-separator "/")
  '(unread-bib-file "~/wd/citations/to-be-read.bib")
  '(user-mail-address "graham.hughes@citrix.com")
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#dc322f")
+     (40 . "#cb4b16")
+     (60 . "#b58900")
+     (80 . "#859900")
+     (100 . "#2aa198")
+     (120 . "#268bd2")
+     (140 . "#d33682")
+     (160 . "#6c71c4")
+     (180 . "#dc322f")
+     (200 . "#cb4b16")
+     (220 . "#b58900")
+     (240 . "#859900")
+     (260 . "#2aa198")
+     (280 . "#268bd2")
+     (300 . "#d33682")
+     (320 . "#6c71c4")
+     (340 . "#dc322f")
+     (360 . "#cb4b16"))))
+ '(vc-annotate-very-old-color nil)
  '(visual-line-mode nil t)
  '(which-function-mode t)
  '(woman-manpath
