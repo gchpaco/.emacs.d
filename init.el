@@ -332,7 +332,6 @@ as a list.")
                   'uuidgen
                   'virtualenv
                   'virtualenvwrapper
-                  'w3m
                   'wgrep
                   'wgrep-pt
                   'wgrep-helm
