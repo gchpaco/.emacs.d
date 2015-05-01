@@ -190,6 +190,7 @@ as a list.")
                   'helm-orgcard
                   'helm-package
                   'helm-pydoc
+                  'helm-unicode
                   'hide-lines
                   'highlight-thing
                   'hl-indent
@@ -248,6 +249,7 @@ as a list.")
                   'orgit
                   'osx-browse
                   'osx-clipboard
+                  'osx-lib
                   'osx-pseudo-daemon
                   'ox-gfm
                   'ox-pandoc
@@ -274,6 +276,7 @@ as a list.")
                   'pretty-symbols
                   'project-persist
                   'projectile-speedbar
+                  'projectile-codesearch
                   'protobuf-mode
                   'pt
                   'puppet-mode
