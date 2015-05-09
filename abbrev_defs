@@ -154,12 +154,6 @@
 
 (define-abbrev-table 'python-mode-abbrev-table
   '(
-    ("class" "" python-skeleton-class 0)
-    ("def" "" python-skeleton-def 0)
-    ("for" "" python-skeleton-for 0)
-    ("if" "" python-skeleton-if 0)
-    ("try" "" python-skeleton-try 0)
-    ("while" "" python-skeleton-while 0)
    ))
 
 (define-abbrev-table 'rst-mode-abbrev-table
@@ -222,4 +216,3 @@
 (define-abbrev-table 'vc-svn-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'wikipedia-mode-abbrev-table '())
-
