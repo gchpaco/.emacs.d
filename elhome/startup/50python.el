@@ -2,7 +2,7 @@
 (require 'pyenv-mode)
 
 (elpy-enable)
-(elpy-use-ipython)
+(elpy-use-cpython)
 (add-to-list 'company-backends 'company-jedi)
 (pyenv-mode)
 

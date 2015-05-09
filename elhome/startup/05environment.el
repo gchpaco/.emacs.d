@@ -2,6 +2,8 @@
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path (expand-file-name "~/.rbenv/bin"))
 (add-to-list 'exec-path (expand-file-name "~/.rbenv/shims"))
+(add-to-list 'exec-path (expand-file-name "~/.pyenv/shims"))
+(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
 (add-to-list 'exec-path (expand-file-name "~/bin"))
 
