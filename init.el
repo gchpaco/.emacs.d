@@ -233,6 +233,7 @@ as a list.")
                   'nginx-mode
                   'nose
                   'objc-font-lock
+                  'omni-tags
                   'org
                   'org-ac
                   'org-blog
