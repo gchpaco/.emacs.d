@@ -114,6 +114,7 @@ as a list.")
                   'dired-imenu
                   'direx
                   'discover
+                  'docker
                   'e2wm
                   'e2wm-bookmark
                   'e2wm-term
@@ -292,6 +293,7 @@ as a list.")
                   'pyenv-mode
                   'pymacs
                   'python
+                  'python-docstring
                   'python-environment
                   'python-info
                   'python-magic
