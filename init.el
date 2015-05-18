@@ -167,6 +167,7 @@ as a list.")
                   'google-this
                   'golint
                   'graphviz-dot-mode
+                  'green-phosphor-theme
                   'helm
                   'helm-R
                   'helm-ack
