@@ -255,6 +255,7 @@ as a list.")
                   'osx-clipboard
                   'osx-lib
                   'osx-pseudo-daemon
+                  'osx-trash
                   'ox-gfm
                   'ox-pandoc
                   'package+
