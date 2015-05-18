@@ -47,6 +47,11 @@
 (define-key me-minor-mode-map (kbd "C-x C-f") 'helm-find-files)
 (define-key me-minor-mode-map (kbd "C-c h o") 'helm-occur)
 (define-key me-minor-mode-map (kbd "C-h SPC") 'helm-all-mark-rings)
+(define-key me-minor-mode-map (kbd "M-9") 'corral-parentheses-backward)
+(define-key me-minor-mode-map (kbd "M-0") 'corral-parentheses-forward)
+(define-key me-minor-mode-map (kbd "M-[") 'corral-brackets-backward)
+(define-key me-minor-mode-map (kbd "M-]") 'corral-brackets-forward)
+(define-key me-minor-mode-map (kbd "M-\"") 'corral-double-quotes-backward)
 
 
 (add-hook 'python-mode-hook

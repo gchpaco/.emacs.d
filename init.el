@@ -102,6 +102,7 @@ as a list.")
                   'company-jedi
                   'company-math
                   'confluence
+                  'corral
                   'crontab-mode
                   'cssh
                   'csv-mode
