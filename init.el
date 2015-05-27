@@ -115,6 +115,7 @@ as a list.")
                   'direx
                   'discover
                   'docker
+                  'docker-tramp
                   'e2wm
                   'e2wm-bookmark
                   'e2wm-term
@@ -259,6 +260,7 @@ as a list.")
                   'ox-gfm
                   'ox-pandoc
                   'package+
+                  'package-safe-delete
                   'paradox
                   'paredit
                   'paredit-everywhere
@@ -292,6 +294,7 @@ as a list.")
                   'pydoc
                   'pydoc-info
                   'pyenv-mode
+                  'pyfmt
                   'pymacs
                   'python
                   'python-docstring
