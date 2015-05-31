@@ -94,6 +94,7 @@ as a list.")
                   'coffee-mode
                   'color-theme
                   'color-theme-sanityinc-solarized
+                  'common-lisp-snippets
                   'company
                   'company-c-headers
                   'company-go
