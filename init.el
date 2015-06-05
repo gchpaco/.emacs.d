@@ -214,6 +214,7 @@ as a list.")
                   'js3-mode
                   'json-mode
                   'json-reformat
+                  'jst
                   'levenshtein
                   'list-unicode-display
                   'logito
