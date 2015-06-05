@@ -73,6 +73,7 @@ as a list.")
                   'auto-package-update
                   'auto-yasnippet
                   'autopair
+                  'beginend
                   'bibtex-utils
                   'bison-mode
                   'bookmark+
