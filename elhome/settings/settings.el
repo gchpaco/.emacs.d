@@ -343,3 +343,7 @@ Errors may occur.  Save Options to overwrite the customization file. The origina
           (x-popup-dialog t (list msg '("OK" . nil) 'no-cancel) "Warning")
         (message msg)))))
 ;; End compatibility check
+ '(js-indent-level 2)
+ '(js2-basic-offset 2)
+ '(js2-strict-trailing-comma-warning nil)
+ '(parens-require-spaces nil)
