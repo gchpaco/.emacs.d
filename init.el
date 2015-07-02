@@ -211,7 +211,8 @@ as a list.")
                   'irony
                   'itail
                   'java-snippets
-                  'js3-mode
+                  'js2-mode
+                  'js2-refactor
                   'json-mode
                   'json-reformat
                   'jst
