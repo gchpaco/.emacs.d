@@ -13,11 +13,13 @@ NAME is the package name as a symbol, and VERSION is its version
 as a list.")
 
 (require 'package)
+;; (add-to-list 'package-archives
+;;              '("marmalade" .
+;;                "http://marmalade-repo.org/packages/"))
+;; (add-to-list 'package-archives
+;;              '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
-             '("marmalade" .
-               "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("gnu" . "http://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives
@@ -155,8 +157,6 @@ as a list.")
                   'ggtags
                   'git-annex
                   'git-auto-commit-mode
-                  'git-commit-mode
-                  'git-rebase-mode
                   'git-timemachine
                   'git-wip-timemachine
                   'gitignore-mode
@@ -224,7 +224,6 @@ as a list.")
                   'magit-find-file
                   'magit-gh-pulls
                   'magit-gitflow
-                  'magit-log-edit
                   'magit-push-remote
                   'magit-tramp
                   'math-symbol-lists

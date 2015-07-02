@@ -19,7 +19,6 @@
 (require 'runner)
 (require 'unify-opening)
 (require 'symon)
-(require 'git-wip-mode)
 (require 'bury-successful-compilation)
 (bury-successful-compilation 1)
 (popwin-mode 1)
