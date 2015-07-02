@@ -337,6 +337,8 @@ as a list.")
                   'sx
                   'syslog-mode
                   'template
+                  'tern
+                  'tern-auto-complete
                   'tdd
                   'tidy
                   'toggle-quotes
