@@ -199,6 +199,7 @@ as a list.")
                   'helm-unicode
                   'hide-lines
                   'highlight-thing
+                  'highlight-parentheses
                   'hl-indent
                   'ical-pull
                   'icicles

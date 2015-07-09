@@ -20,6 +20,7 @@
 (require 'unify-opening)
 (require 'symon)
 (require 'bury-successful-compilation)
+(require 'highlight-parentheses)
 (bury-successful-compilation 1)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
@@ -30,5 +31,6 @@
 (add-hook 'prog-mode-hook 'emr-initialize)
 (add-hook 'prog-mode-hook 'form-feed-mode)
 (add-hook 'prog-mode-hook 'hl-indent-mode)
+(add-hook 'prog-mode-hook 'highlight-parentheses-mode)
 
 (setq aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
