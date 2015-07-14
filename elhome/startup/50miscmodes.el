@@ -32,5 +32,6 @@
 (add-hook 'prog-mode-hook 'form-feed-mode)
 (add-hook 'prog-mode-hook 'hl-indent-mode)
 (add-hook 'prog-mode-hook 'highlight-parentheses-mode)
+(add-hook 'prog-mode-hook 'flycheck-mode)
 
 (setq aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
