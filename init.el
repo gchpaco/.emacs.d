@@ -41,7 +41,6 @@ as a list.")
                   'ac-cider
                   'ac-etags
                   'ac-geiser
-                  'ac-js2
                   'ac-math
                   'ac-slime
                   'ack-and-a-half
@@ -80,7 +79,6 @@ as a list.")
                   'auto-complete-nxml
                   'auto-package-update
                   'auto-yasnippet
-                  'autopair
                   'beginend
                   'bibtex-utils
                   'bison-mode
