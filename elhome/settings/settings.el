@@ -70,6 +70,7 @@
  '(ebib-preload-bib-files
    (quote
     ("~/wd/citations/IEEEfull.bib" "~/wd/citations/citations.bib")))
+ '(electric-pair-mode t)
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-sane-defaults)))
