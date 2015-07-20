@@ -182,6 +182,9 @@
  '(org-mobile-directory "~/Dropbox/Apps/MobileOrg/")
  '(org-mobile-files (quote (org-agenda-files "recipes.org")))
  '(org-mobile-inbox-for-pull "~/Dropbox/Apps/MobileOrg/index.org")
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-id org-info org-irc org-mhe org-protocol org-rmail org-w3m org-checklist org-git-link org-mac-iCal org-mac-link org-man org-panel)))
  '(org-protocol-project-alist
    (quote
     (("http://sigwinch.org/Graham/" :base-url "http://sigwinch.org/Graham/" :working-directory "/Users/ghughes/wd/web-home/" :online-suffix ".html" :working-suffix ".org"))))
