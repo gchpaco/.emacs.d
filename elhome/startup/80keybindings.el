@@ -12,6 +12,7 @@
 (define-key me-minor-mode-map "\C-cc" 'org-capture)
 (define-key me-minor-mode-map "\C-cf" 'ffap)
 (define-key me-minor-mode-map "\C-cF" 'ido-find-file-in-tag-files)
+(define-key me-minor-mode-map "\C-cj" 'avy-goto-word-or-subword-1)
 (define-key me-minor-mode-map "\C-ck" 'delete-pair)
 (define-key me-minor-mode-map "\C-cl" 'org-store-link)
 (define-key me-minor-mode-map "\C-cx" 'org-agenda)
