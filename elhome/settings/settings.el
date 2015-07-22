@@ -63,6 +63,7 @@
       (right-fringe)
       (fringe))))
  '(delete-by-moving-to-trash t)
+ '(diary-file "~/Dropbox/org/diary.org")
  '(dired-dwim-target t)
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|^\\.git$")
  '(display-time-mode t)
@@ -159,37 +160,125 @@
  '(ns-tool-bar-size-mode (quote regular) t)
  '(org-agenda-files
    (quote
-    ("~/wd/org/agenda.org" "~/wd/org/main.org" "~/wd/org/gtd.org")))
+    ("~/Dropbox/org/agenda.org" "~/Dropbox/org/main.org" "~/Dropbox/org/gtd.org")))
  '(org-agenda-include-diary t)
+ '(org-agenda-tags-todo-honor-ignore-options t)
  '(org-capture-templates
    (quote
-    (("t" "Todo" entry
-      (file+headline "~/wd/org/gtd.org" "Tasks")
-      (file "~/.emacs.d/templates/todo.org"))
-     ("j" "Journal" entry
-      (file+datetree "~/wd/org/journal.org")
-      (file "~/.emacs.d/templates/journal.org"))
-     ("w" "Web page" entry
-      (file+headline "~/wd/org/refile.org" "Web capture")
-      (file "~/.emacs.d/templates/webpage.org"))
-     ("n" "Quick note to refile later" entry
-      (file+headline "~/wd/org/refile.org" "Notes To Refile")
-      (file "~/.emacs.d/templates/note.org")))))
+    (("t" "task" entry
+      (file "~/Dropbox/org/refile.org")
+      "* NEXT %?
+%U
+%a
+" :clock-in t :clock-resume t)
+     ("i" "interupt" entry
+      (file "~/Dropbox/org/refile.org")
+      "* %?
+%U
+%a
+" :clock-in t :clock-keep t :clock-resume t)
+     ("p" "New Project" entry
+      (file "~/Dropbox/org/refile.org")
+      "* PLANNING %?
+%a
+" :clock-in t :clock-resume f)
+     ("P" "Phone call" entry
+      (file "~/Dropbox/org/refile.org")
+      "* PHONE Phone call with %? :PHONE:
+%U" :clock-in t :clock-resume t)
+     ("m" "Meeting" entry
+      (file "~/Dropbox/org/refile.org")
+      "* MEETING with %? :MEETING:
+%U" :clock-in t :clock-resume t)
+     ("s" "Scheduled Action" entry
+      (file+datetree "~/Dropbox/org/diary.org")
+      "* %?
+%U
+" :clock-in t :clock-resume t)
+     ("R" "Reading Link" entry
+      (file "~/Dropbox/org/refile.org")
+      "* DONE Read %c :IDLE:
+%U
+" :clock-in t :clock-resume f)
+     ("b" "Bookmark link" entry
+      (file "~/Dropbox/org/refile.org")
+      "* NEXT Read %c :BOOKMARK:IDLE:
+%U
+" :immediate-finish t)
+     ("r" "Read later" entry
+      (file "~/Dropbox/org/refile.org")
+      "* NEXT Read %c :IDLE:
+%U
+" :immediate-finish t)
+     ("e" "respond" entry
+      (file "~/Dropbox/org/refile.org")
+      "* NEXT Respond to %:from on %:subject
+SCHEDULED: %t
+%U
+%a
+" :immediate-finish t :clock-in t :clock-resume t)
+     ("W" "Emacs Buffer (eww or w3m)" entry
+      (file "~/Dropbox/org/refile.org")
+      "* NEXT Read %a
+%U" :clock-in t :clock-resume f)
+     ("w" "org-protocol" entry
+      (file "~/Dropbox/org/refile.org")
+      "* NEXT Review %c
+%U
+" :immediate-finish t)
+     ("I" "New RIA" entry
+      (file "~/Dropbox/org/refile.org")
+      "* IDLE %? :IDLE:
+%U
+%a
+SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
+:PROPERTIES:
+:REPEAT_TO_STATE: IDLE
+:END:
+")
+     ("n" "note" entry
+      (file "~/Dropbox/org/refile.org")
+      "* %? :NOTE:
+%U
+%a
+" :clock-in t :clock-resume t)
+     ("h" "Habit" entry
+      (file "~/Dropbox/org/refile.org")
+      "* NEXT %?
+%U
+%a
+SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+"))))
  '(org-clock-idle-time 10)
+ '(org-clock-into-drawer "LOGBOOK")
  '(org-clock-persist (quote history))
- '(org-default-notes-file "~/wd/org/main.org")
+ '(org-default-notes-file "~/Dropbox/org/refile.org")
  '(org-directory "~/Dropbox/org")
  '(org-export-backends (quote (ascii html icalendar latex md)))
+ '(org-export-with-timestamps nil)
+ '(org-fast-tag-selection-single-key (quote expert))
+ '(org-insert-heading-hook nil)
  '(org-mobile-directory "~/Dropbox/Apps/MobileOrg/")
  '(org-mobile-files (quote (org-agenda-files "recipes.org")))
  '(org-mobile-inbox-for-pull "~/Dropbox/Apps/MobileOrg/index.org")
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-id org-info org-irc org-mhe org-protocol org-rmail org-w3m org-checklist org-git-link org-mac-iCal org-mac-link org-man org-panel)))
+ '(org-outline-path-complete-in-steps nil)
  '(org-protocol-project-alist
    (quote
     (("http://sigwinch.org/Graham/" :base-url "http://sigwinch.org/Graham/" :working-directory "/Users/ghughes/wd/web-home/" :online-suffix ".html" :working-suffix ".org"))))
- '(org-refile-targets (quote ((org-agenda-files :level . 1))))
+ '(org-refile-allow-creating-parent-nodes (quote confirm))
+ '(org-refile-target-verify-function (quote bh/verify-refile-target))
+ '(org-refile-targets
+   (quote
+    ((nil :maxlevel . 9)
+     (org-agenda-files :maxlevel . 9))))
+ '(org-refile-use-outline-path t)
  '(org-remember-templates
    (quote
     (("Todo" 116 "* TODO %^{Brief Description} %^g\\nAdded: %U\\n %i\"
@@ -200,6 +289,22 @@
 " nil nil nil)
      ("Paper" 112 "\\n* TODO %^{Paper Title} %t :READING: \\n:PROPERTIES:\\n:Title: %?\\n:Author:\\n:Year:\\n:Book Title:\\n:END:\\nComments:\\n
 " nil "Citations" nil))))
+ '(org-tag-alist
+   (quote
+    ((:startgroup)
+     ("@ERRANDS" . 101)
+     ("@OFFICE" . 111)
+     ("@HOME" . 72)
+     (:endgroup)
+     ("WAITING" . 119)
+     ("HOLD" . 104)
+     ("PERSONAL" . 80)
+     ("WORK" . 87)
+     ("HEALTH" . 70)
+     ("SHOPPING" . 83)
+     ("NOTE" . 110)
+     ("CANCELLED" . 99)
+     ("FLAGGED" . 63))))
  '(org-todo-keyword-faces
    (quote
     (("TODO" . org-warning)
@@ -210,7 +315,9 @@
      ("ARCHIVED" . "blue"))))
  '(org-todo-keywords
    (quote
-    ((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED"))))
+    ((sequence "NEXT(n)" "PLANNING(P)" "INPROGRESS(i)" "WAITING(w)" "|" "ICEBOX(x)" "DONE(d)")
+     (sequence "PHONE(p)" "MEETING(m)" "|" "CANCELLED(c)")
+     (sequence "IDLE(a)"))))
  '(outline-regexp "\\*+ " t)
  '(package-selected-packages
    (quote
