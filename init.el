@@ -319,6 +319,7 @@ as a list.")
                   'racket-mode
                   'rbenv
                   'restclient
+                  'reveal-in-osx-finder
                   'rpm-spec-mode
                   'rspec-mode
                   'runner
