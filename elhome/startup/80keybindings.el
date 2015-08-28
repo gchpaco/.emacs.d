@@ -53,6 +53,13 @@
 (define-key me-minor-mode-map (kbd "M-[") 'corral-brackets-backward)
 (define-key me-minor-mode-map (kbd "M-]") 'corral-brackets-forward)
 (define-key me-minor-mode-map (kbd "M-\"") 'corral-double-quotes-backward)
+(define-key me-minor-mode-map (kbd "C-c <down>") 'elwm-shift-down)
+(define-key me-minor-mode-map (kbd "C-c <up>") 'elwm-shift-up)
+(define-key me-minor-mode-map (kbd "C-c <left>") 'elwm-shift-left)
+(define-key me-minor-mode-map (kbd "C-c <right>") 'elwm-shift-right)
+(define-key me-minor-mode-map (kbd "C-c <next>") 'elwm-swap-down)
+(define-key me-minor-mode-map (kbd "C-c <prior>") 'elwm-swap-up)
+(define-key me-minor-mode-map (kbd "C-c w 2") 'elwm-split-window)
 
 
 (add-hook 'python-mode-hook

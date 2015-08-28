@@ -21,6 +21,9 @@
 (require 'symon)
 (require 'bury-successful-compilation)
 (require 'highlight-parentheses)
+(require 'elwm)
+(require 'golden-ratio)
+(golden-ratio-mode 1)
 (bury-successful-compilation 1)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
@@ -35,5 +38,6 @@
 (add-hook 'prog-mode-hook 'highlight-parentheses-mode)
 (add-hook 'prog-mode-hook 'flycheck-mode)
 
+(setq-default golden-ratio-auto-scale t)
 (setq-default aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
 (setq-default avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))

@@ -129,6 +129,7 @@ as a list.")
                   'e2wm-term
                   'elhome
                   'elpy
+                  'elwm
                   'ein
                   'emr
                   'eproject
@@ -174,6 +175,7 @@ as a list.")
                   'go-stacktracer
                   'google-c-style
                   'google-this
+                  'golden-ratio
                   'golint
                   'graphviz-dot-mode
                   'green-phosphor-theme
