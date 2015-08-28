@@ -2,6 +2,7 @@
 (require 'org)
 (require 'org-protocol)
 (require 'org-checklist)
+(require 'org-trello)
 (require 'ox-gfm)
 
 (org-clock-persistence-insinuate)

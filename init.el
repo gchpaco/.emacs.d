@@ -260,6 +260,7 @@ as a list.")
                   'org-plus-contrib
                   'org-projectile
                   'org-repo-todo
+                  'org-trello
                   'orgit
                   'osx-browse
                   'osx-clipboard

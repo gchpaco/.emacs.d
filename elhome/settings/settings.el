@@ -160,7 +160,7 @@
  '(ns-tool-bar-size-mode (quote regular) t)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/org/agenda.org" "~/Dropbox/org/main.org" "~/Dropbox/org/gtd.org")))
+    ("~/Dropbox/org/trello.org" "~/Dropbox/org/agenda.org" "~/Dropbox/org/main.org" "~/Dropbox/org/gtd.org")))
  '(org-agenda-include-diary t)
  '(org-agenda-tags-todo-honor-ignore-options t)
  '(org-capture-templates
@@ -291,10 +291,14 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 " nil "Citations" nil))))
  '(org-tag-alist
    (quote
-    ((:startgroup)
+    ((:startgroup "Location")
      ("@ERRANDS" . 101)
      ("@OFFICE" . 111)
      ("@HOME" . 72)
+     (:endgroup)
+     (:startgroup "Goal type")
+     ("Stretch" . 115)
+     ("Firm" . 102)
      (:endgroup)
      ("WAITING" . 119)
      ("HOLD" . 104)
@@ -318,6 +322,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
     ((sequence "NEXT(n)" "PLANNING(P)" "INPROGRESS(i)" "WAITING(w)" "|" "ICEBOX(x)" "DONE(d)")
      (sequence "PHONE(p)" "MEETING(m)" "|" "CANCELLED(c)")
      (sequence "IDLE(a)"))))
+ '(org-trello-files (quote ("~/Dropbox/org/trello.org")) nil (org-trello))
  '(outline-regexp "\\*+ " t)
  '(package-selected-packages
    (quote
