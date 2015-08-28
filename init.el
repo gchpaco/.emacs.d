@@ -207,6 +207,7 @@ as a list.")
                   'highlight-thing
                   'highlight-parentheses
                   'hl-indent
+                  'homebrew-mode
                   'ical-pull
                   'icicles
                   'inf-clojure
