@@ -18,7 +18,6 @@
 (require 'mwim)
 (require 'runner)
 (require 'unify-opening)
-(require 'symon)
 (require 'bury-successful-compilation)
 (require 'highlight-parentheses)
 (require 'elwm)
@@ -27,7 +26,6 @@
 (bury-successful-compilation 1)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
-(symon-mode)
 
 (dired-x-bind-find-file)
 

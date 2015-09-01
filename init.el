@@ -344,7 +344,6 @@ as a list.")
                   'sqlup-mode
                   'swift-mode
                   'swiper
-                  'symon
                   'sx
                   'syslog-mode
                   'template
