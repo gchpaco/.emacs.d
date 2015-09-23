@@ -39,3 +39,4 @@
 (setq-default golden-ratio-auto-scale t)
 (setq-default aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
 (setq-default avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
+(require 'alfred-org-capture)
