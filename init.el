@@ -116,6 +116,7 @@ as a list.")
                   'csv-mode
                   'dash
                   'deferred
+                  'desktop+
                   'dired-filter
                   'dired-hacks-utils
                   'dired+
@@ -249,6 +250,7 @@ as a list.")
                   'nose
                   'objc-font-lock
                   'omni-tags
+                  'offlineimap
                   'org
                   'org-ac
                   'org-blog

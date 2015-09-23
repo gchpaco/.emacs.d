@@ -262,12 +262,13 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(org-export-with-timestamps nil)
  '(org-fast-tag-selection-single-key (quote expert))
  '(org-insert-heading-hook nil)
+ '(org-mac-mail-account "Meteor")
  '(org-mobile-directory "~/Dropbox/Apps/MobileOrg/")
  '(org-mobile-files (quote (org-agenda-files "recipes.org")))
  '(org-mobile-inbox-for-pull "~/Dropbox/Apps/MobileOrg/index.org")
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-docview org-gnus org-habit org-id org-info org-irc org-mhe org-protocol org-rmail org-w3m org-checklist org-git-link org-mac-iCal org-mac-link org-man org-panel)))
+    (org-eshell org-eww org-git-link org-mac-iCal org-mac-link org-mac-message org-bbdb org-bibtex org-docview org-gnus org-habit org-id org-info org-irc org-mhe org-protocol org-rmail org-w3m org-checklist org-git-link org-mac-iCal org-mac-link org-man org-panel)))
  '(org-outline-path-complete-in-steps nil)
  '(org-protocol-project-alist
    (quote
@@ -449,6 +450,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#f8fced" :foreground "#282828" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Source Code Pro"))))
  '(autoface-default ((t (:inherit default))) t)
  '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Inconsolata"))) t))
 
