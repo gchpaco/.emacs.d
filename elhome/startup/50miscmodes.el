@@ -28,6 +28,11 @@
 (bury-successful-compilation 1)
 (popwin-mode 1)
 (multicolumn-global-mode 1)
+(require 'spaceline-config)
+(setq-default spaceline-workspace-numbers-unicode t)
+(spaceline-emacs-theme)
+(eyebrowse-mode 1)
+(display-battery-mode 1)
 
 (dired-x-bind-find-file)
 

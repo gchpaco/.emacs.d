@@ -99,6 +99,7 @@
  '(erc-track-minor-mode t)
  '(erc-track-mode t)
  '(erc-track-when-inactive t)
+ '(flyspell-mode-line-string nil)
  '(glasses-separator "-")
  '(glasses-uncapitalize-p t)
  '(gnus-message-archive-group "Sent")
@@ -323,6 +324,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
     ((sequence "NEXT(n)" "PLANNING(P)" "INPROGRESS(i)" "WAITING(w)" "|" "ICEBOX(x)" "DONE(d)")
      (sequence "PHONE(p)" "MEETING(m)" "|" "CANCELLED(c)")
      (sequence "IDLE(a)"))))
+ '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
  '(org-trello-files (quote ("~/Dropbox/org/trello.org")) nil (org-trello))
  '(outline-regexp "\\*+ " t)
  '(package-selected-packages
@@ -332,6 +334,11 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(paradox-execute-asynchronously t)
  '(paradox-github-token t)
  '(parens-require-spaces nil)
+ '(projectile-mode-line
+   (quote
+    (:eval
+     (format " Prj[%s]"
+             (projectile-project-name)))))
  '(projectile-other-file-alist
    (quote
     (("cc" "cpp" "h" "hpp" "ipp")
@@ -452,7 +459,11 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#f8fced" :foreground "#282828" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Source Code Pro"))))
  '(autoface-default ((t (:inherit default))) t)
- '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Inconsolata"))) t))
+ '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Inconsolata"))) t)
+ '(powerline-active1 ((t (:inherit mode-line :background "gray90"))))
+ '(powerline-active2 ((t (:inherit mode-line :background "gray80"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "gray60"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey40")))))
 
 ;; Check custom-file compatibility
 (when (and (boundp 'aquamacs-version-id)

@@ -117,6 +117,7 @@ as a list.")
                   'dash
                   'deferred
                   'desktop+
+                  'diminish
                   'dired-filter
                   'dired-hacks-utils
                   'dired+
@@ -137,6 +138,8 @@ as a list.")
                   'ess
                   'evernote-mode
                   'expand-region
+                  'eyebrowse
+                  'fancy-battery
                   'feature-mode
                   'fic-mode
                   'fixmee
@@ -301,6 +304,7 @@ as a list.")
                   'projectile-codesearch
                   'protobuf-mode
                   'pt
+                  'puml-mode
                   'puppet-mode
                   'puppetfile-mode
                   'purty-mode
@@ -338,6 +342,7 @@ as a list.")
                   'slime-fuzzy
                   'shell-current-directory
                   'smex
+                  'spaceline
                   'sparkline
                   'sr-speedbar
                   'srefactor
