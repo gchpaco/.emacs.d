@@ -35,6 +35,8 @@
   (diminish 'magit-wip-after-save-local-mode))
 (with-eval-after-load 'js2-refactor
   (diminish 'js2-refactor-mode))
+(with-eval-after-load 'golden-ratio
+  (diminish 'golden-ratio-mode))
 
 (spaceline-toggle-buffer-encoding-abbrev-off)
 (spaceline-toggle-hud-off)
