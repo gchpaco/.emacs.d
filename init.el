@@ -130,8 +130,8 @@ as a list.")
                   'e2wm-bookmark
                   'e2wm-term
                   'editorconfig
-                  'editorconfig-core
-                  'editorconfig-fnmatch
+;                  'editorconfig-core
+;                  'editorconfig-fnmatch
                   'elhome
                   'elpy
                   'elwm
