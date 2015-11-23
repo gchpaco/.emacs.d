@@ -176,6 +176,7 @@ as a list.")
                   'go-autocomplete
                   'go-direx
                   'go-eldoc
+                  'go-errcheck
                   'go-mode
                   'go-projectile
                   'go-snippets
