@@ -7,8 +7,9 @@
 (add-to-list 'go-mode-hook (lambda ()
                              (setq-local tab-width 4)
                              (whitespace-mode 0)
-                             (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
-(add-to-list 'go-mode-hook 'go-eldoc-setup)
+                             (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
+                             (local-set-key (kbd "C-c C-k") 'godoc)))
+(add-hook 'go-mode-hook #'go-eldoc-setup)
 (add-hook 'before-save-hook #'gofmt-before-save)
 
 (add-to-list 'exec-path "/usr/local/go/bin")
