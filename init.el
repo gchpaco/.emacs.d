@@ -1,8 +1,10 @@
-;; This is the Aquamacs Preferences file.
-;; Add Emacs-Lisp code here that should be executed whenever
-;; you start Aquamacs Emacs. If errors occur, Aquamacs will stop
-;; evaluating this file and print errors in the *Messags* buffer.
-;; Use this file in place of ~/.emacs (which is loaded as well.)
+;; Yes, it's disgusting, but it's a portable way to disable that silly
+;; message
+(put 'inhibit-startup-echo-area-message 'saved-value
+     (setq inhibit-startup-echo-area-message (user-login-name)))
+
+;; and now for the startup screen
+(setq inhibit-startup-screen t)
 
 (defvar package--builtin-versions
   ;; Mostly populated by loaddefs.el via autoload-builtin-package-versions.
