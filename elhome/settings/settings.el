@@ -99,6 +99,9 @@
  '(erc-track-minor-mode t)
  '(erc-track-mode t)
  '(erc-track-when-inactive t)
+ '(eshell-modules-list
+   (quote
+    (eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-script eshell-smart eshell-term eshell-tramp eshell-unix)))
  '(flyspell-mode-line-string nil)
  '(glasses-separator "-")
  '(glasses-uncapitalize-p t)
