@@ -1,7 +1,7 @@
 (require 'speedbar)
 (speedbar-add-supported-extension ".rb")
 (defun my-get-module-from-ruby-file ()
-  (flet ((strip-slash (string) (substring string 0 -1))
+  (cl-flet ((strip-slash (string) (substring string 0 -1))
          (rubyify (filename)
                   (apply #'concat (mapcar #'capitalize
                                           (split-string filename "[_-]")))))
@@ -20,11 +20,11 @@
   (my-get-module-from-ruby-file)
   "# === Authors" \n
   "#" \n
-  "# Graham Hughes <graham.hughes@citrixonline.com>" \n
+  "# Graham Hughes <ghughes@meteor.com>" \n
   "#" \n
   "# === Copyright" \n
   "#" \n
-  "# Copyright 2012 Citrix Systems Inc, unless otherwise noted." \n
+  "# Copyright 2012, 2016 Citrix Systems Inc, unless otherwise noted." \n
   "#" \n
   "module " str " #:nodoc:"\n
   > "# " _ \n
