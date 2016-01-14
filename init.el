@@ -1,8 +1,3 @@
-;; Yes, it's disgusting, but it's a portable way to disable that silly
-;; message
-(put 'inhibit-startup-echo-area-message 'saved-value
-     (setq inhibit-startup-echo-area-message (user-login-name)))
-
 ;; and now for the startup screen
 (setq inhibit-startup-screen t)
 
