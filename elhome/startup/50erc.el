@@ -1,3 +1,5 @@
+(require 'erc)
+
 ;; URL handing stuff from http://inkedmn.infogami.com/blog/
 (defun erc-open-last-url-in-channel ()
   "Open Last Url Pasted in Browser"
@@ -48,4 +50,4 @@
              (local-set-key (kbd "\C-c u") 'print-urls)))
 
 ;; timestamps should not pop out so much
-(set-face-foreground `erc-timestamp-face "dimgrey")
+(set-face-foreground 'erc-timestamp-face "dimgrey")

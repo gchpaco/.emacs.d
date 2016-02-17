@@ -1,6 +1,6 @@
 (require 'elpy)
 (require 'pyenv-mode)
-(require 'py-smart-operator)
+;(require 'py-smart-operator)
 
 (elpy-enable)
 (elpy-use-cpython)

@@ -30,8 +30,6 @@ as a list.")
 (add-to-list 'package-pinned-packages '(org . "org") t)
 (add-to-list 'package-pinned-packages '(org-plus-contrib . "org") t)
 
-
-
 (dolist (package (list
                   'yasnippet
                   'ac-clang
@@ -280,7 +278,6 @@ as a list.")
                   'ox-pandoc
                   'package+
                   'package-safe-delete
-                  'paradox
                   'paredit
                   'paredit-everywhere
                   'paredit-menu
@@ -311,6 +308,7 @@ as a list.")
                   'purty-mode
                   'py-autopep8
                   'py-gnitset
+;                  'py-smart-operator
                   'pydoc
                   'pydoc-info
                   'pyenv-mode
@@ -375,6 +373,7 @@ as a list.")
                   'with-editor
                   'wsd-mode
                   'yaml-mode))
+  (add-to-list 'package-selected-packages package)
   (unless (package-installed-p package)
     (package-install package)))
 
