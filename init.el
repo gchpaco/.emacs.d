@@ -1,3 +1,7 @@
+;;; init.el --- gchpaco's Emacs init file
+
+;;; Code:
+
 ;; and now for the startup screen
 (setq inhibit-startup-screen t)
 
@@ -406,7 +410,7 @@ as a list.")
 (elhome-init)
 
 (defun djcb-snip (b e summ)
-  "remove selected lines, and replace it with [snip:summary (n lines)]"
+  "Remove selected lines, and replace them with `[snip:SUMM (n lines)]'."
   (interactive "r\nsSummary:")
   (let ((n (count-lines b e)))
     (delete-region b e)
@@ -422,3 +426,5 @@ as a list.")
 (put 'dired-find-alternate-file 'disabled nil)
 
 (setq magit-last-seen-setup-instructions "1.4.0")
+
+;;; init.el ends here
