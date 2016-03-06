@@ -72,6 +72,13 @@
             (local-set-key "\C-cNpm" 'nosetests-pdb-module)
             (local-set-key "\C-cNp." 'nosetests-pdb-one)))
 
+(add-hook 'paredit-mode-hook
+          (lambda ()
+            (define-key paredit-mode-map (kbd "<prior>") 'paredit-forward-slurp-sexp)
+            (define-key paredit-mode-map (kbd "<next>") 'paredit-backward-slurp-sexp)
+            (define-key paredit-mode-map (kbd "<home>") 'paredit-backward-barf-sexp)
+            (define-key paredit-mode-map (kbd "<end>") 'paredit-forward-barf-sexp)))
+
 
 (define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
 (define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
