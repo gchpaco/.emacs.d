@@ -325,6 +325,7 @@ as a list.")
                   'pyvirtualenv
                   'quack
                   'racket-mode
+                  'rainbow-delimiters
                   'rbenv
                   'restclient
                   'reveal-in-osx-finder

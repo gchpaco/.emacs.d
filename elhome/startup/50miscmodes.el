@@ -42,6 +42,7 @@
 (add-hook 'prog-mode-hook 'hl-indent-mode)
 (add-hook 'prog-mode-hook 'highlight-parentheses-mode)
 (add-hook 'prog-mode-hook 'flycheck-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 (setq-default golden-ratio-auto-scale t)
 (setq-default aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
