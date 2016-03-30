@@ -332,11 +332,10 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
      (sequence "PHONE(p)" "MEETING(m)" "|" "CANCELLED(c)")
      (sequence "IDLE(a)"))))
  '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
- '(org-trello-files (quote ("~/Dropbox/org/trello.org")) nil (org-trello))
  '(outline-regexp "\\*+ " t)
  '(package-selected-packages
    (quote
-    (rainbow-delimiters late-night-theme yaml-mode wsd-mode workgroups with-editor wisi winner-mode-enable widget-mvc wgrep-pt wgrep-helm w3m virtualenvwrapper virtualenv uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy template tdd syslog-mode symon sx swift-mode ssh-config-mode ssh srefactor sr-speedbar sqlup-mode sparkline smex smartparens slime-fuzzy slime-clj slamhound shelldoc shell-current-directory session-manager scratch-ext runner rspec-mode rpm-spec-mode restclient rbenv racket-mode quack pyvirtualenv python-pylint python-pep8 python-mode python-magic python-info python-environment pymacs pydoc-info py-gnitset py-autopep8 purty-mode puppetfile-mode puppet-mode pt protobuf-mode projectile-speedbar project-persist pretty-symbols pretty-mode-plus pretty-mode preproc-font-lock pos-tip popwin poporg pip-requirements persp-projectile persp-mode pep8 paxedit paredit-menu paredit-everywhere pandoc-mode package+ ox-pandoc osx-pseudo-daemon osx-dictionary osx-clipboard osx-browse orgit org-repo-todo org-projectile org-magit org-gnome org-fstree org-context org-cliplink org-caldav org-bullets org-blog org-ac objc-font-lock nrepl nose nginx-mode mwim multiple-cursors multicolumn minimap mediawiki markdown-mode+ malabar-mode make-it-so magit-tramp magit-push-remote magit-log-edit magit-gitflow magit-gh-pulls magit-find-file magit-annex lua-mode json-mode js3-mode java-snippets itail ipython instapaper inf-clojure iedit idomenu icicles ical-pull hl-indent highlight-thing helm-pydoc helm-projectile-all helm-projectile helm-package helm-orgcard helm-open-github helm-ls-git helm-itunes helm-helm-commands helm-gtags helm-google helm-go-package helm-git-grep helm-git-files helm-git helm-company helm-c-yasnippet helm-bibtex helm-anything helm-ag helm-ack helm-R graphviz-dot-mode google-this google-c-style golint go-stacktracer go-snippets go-projectile go-direx go-autocomplete gmail-message-mode gitignore-mode git-timemachine git-auto-commit-mode git-annex ggtags fuzzy form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-jslint flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fixmee fic-mode feature-mode expand-region evernote-mode eproject emr elpy elhome ein e2wm-term e2wm-bookmark e2wm-R discover dired-imenu dired-filter dired+ csv-mode cssh crontab-mode confluence company-math company-irony company-inf-ruby company-c-headers color-theme-sanityinc-solarized color-theme coffee-mode codesearch clojure-snippets clojure-project-mode clojure-mode-extra-font-locking clojure-cheatsheet cedit bundler bubbleberry-theme bookmark+ bison-mode bibtex-utils autopair auto-yasnippet auto-package-update auto-complete-nxml auto-complete-etags auto-complete-c-headers auto-complete-auctex auctex-lua auctex-latexmk apt-utils apache-mode anything-show-completion anything-project anything-obsolete anything-match-plugin anything-ipython anything-git-grep anything-git-goto anything-git-files anything-git anything-exuberant-ctags anything-extension anything-el-swank-fuzzy anything-config anything-complete ample-regexps all-ext align-cljlet ack-and-a-half ace-window ace-jump-buffer ac-slime ac-math ac-js2 ac-geiser ac-etags ac-clang)))
+    (magit-popup rainbow-delimiters late-night-theme yaml-mode wsd-mode workgroups with-editor wisi winner-mode-enable widget-mvc wgrep-pt wgrep-helm w3m virtualenvwrapper virtualenv uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy template tdd syslog-mode symon sx swift-mode ssh-config-mode ssh srefactor sr-speedbar sqlup-mode sparkline smex smartparens slime-fuzzy slime-clj slamhound shelldoc shell-current-directory session-manager scratch-ext runner rspec-mode rpm-spec-mode restclient rbenv racket-mode quack pyvirtualenv python-pylint python-pep8 python-mode python-magic python-info python-environment pymacs pydoc-info py-gnitset py-autopep8 purty-mode puppetfile-mode puppet-mode pt protobuf-mode projectile-speedbar project-persist pretty-symbols pretty-mode-plus pretty-mode preproc-font-lock pos-tip popwin poporg pip-requirements persp-projectile persp-mode pep8 paxedit paredit-menu paredit-everywhere pandoc-mode package+ ox-pandoc osx-pseudo-daemon osx-dictionary osx-clipboard osx-browse org-repo-todo org-projectile org-magit org-gnome org-fstree org-context org-cliplink org-caldav org-bullets org-blog org-ac objc-font-lock nrepl nose nginx-mode mwim multiple-cursors multicolumn minimap mediawiki malabar-mode make-it-so magit-tramp magit-push-remote magit-log-edit lua-mode json-mode js3-mode java-snippets itail ipython instapaper inf-clojure iedit idomenu icicles ical-pull hl-indent highlight-thing helm-pydoc helm-projectile-all helm-projectile helm-package helm-orgcard helm-open-github helm-ls-git helm-itunes helm-helm-commands helm-gtags helm-google helm-go-package helm-git-grep helm-git-files helm-git helm-company helm-c-yasnippet helm-bibtex helm-anything helm-ag helm-ack helm-R graphviz-dot-mode google-this google-c-style golint go-stacktracer go-snippets go-projectile go-direx go-autocomplete gmail-message-mode gitignore-mode git-timemachine git-auto-commit-mode git-annex ggtags fuzzy form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-jslint flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fixmee fic-mode feature-mode expand-region evernote-mode eproject emr elpy elhome ein e2wm-term e2wm-bookmark e2wm-R discover dired-imenu dired-filter dired+ csv-mode cssh crontab-mode confluence company-math company-irony company-inf-ruby company-c-headers color-theme-sanityinc-solarized color-theme coffee-mode codesearch clojure-snippets clojure-project-mode clojure-mode-extra-font-locking clojure-cheatsheet cedit bundler bubbleberry-theme bookmark+ bison-mode bibtex-utils autopair auto-yasnippet auto-package-update auto-complete-nxml auto-complete-etags auto-complete-c-headers auto-complete-auctex auctex-lua auctex-latexmk apt-utils apache-mode anything-show-completion anything-project anything-obsolete anything-match-plugin anything-ipython anything-git-grep anything-git-goto anything-git-files anything-git anything-exuberant-ctags anything-extension anything-el-swank-fuzzy anything-config anything-complete ample-regexps ac-math ac-js2)))
  '(paradox-automatically-star t)
  '(paradox-execute-asynchronously t)
  '(paradox-github-token t)
@@ -424,8 +423,6 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
     (symon-darwin-cpu-monitor symon-darwin-network-rx-monitor symon-darwin-network-tx-monitor)))
  '(symon-sparkline-type (quote symon-sparkline-type-plain))
  '(todochiku-command "/Users/graham/bin/growlnotify")
- '(tool-bar-mode nil)
- '(uniquify-buffer-name-style (quote reverse) nil (uniquify))
  '(uniquify-ignore-buffers-re "^\\*")
  '(uniquify-min-dir-content 3)
  '(uniquify-separator "/")
@@ -454,23 +451,9 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
      (360 . "#cb4b16"))))
  '(vc-annotate-very-old-color nil)
  '(visual-line-mode nil t)
- '(which-function-mode t)
  '(woman-manpath
    (quote
-    ("/usr/share/man/" "/usr/local/share/man/" "/usr/X11/man/" "/usr/local/teTeX/man" "/opt/local/man" "/Users/graham/man" "/Users/graham/share/man")))
- '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#f8fced" :foreground "#282828" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Source Code Pro"))))
- '(autoface-default ((t (:inherit default))) t)
- '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Inconsolata"))) t)
- '(powerline-active1 ((t (:inherit mode-line :background "gray90"))))
- '(powerline-active2 ((t (:inherit mode-line :background "gray80"))))
- '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "gray60"))))
- '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey40")))))
+    ("/usr/share/man/" "/usr/local/share/man/" "/usr/X11/man/" "/usr/local/teTeX/man" "/opt/local/man" "/Users/graham/man" "/Users/graham/share/man"))))
 
 ;; Check custom-file compatibility
 (when (and (boundp 'aquamacs-version-id)

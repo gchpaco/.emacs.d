@@ -42,14 +42,11 @@ as a list.")
                   'ac-geiser
                   'ac-math
                   'ac-slime
-                  'ack-and-a-half
                   'ace-jump-buffer
                   'ace-jump-mode
                   'ace-window
                   'ada-mode
-                  'align-cljlet
                   'all
-                  'all-ext
                   'ample-regexps
                   'anything
                   'anything-complete
@@ -424,6 +421,9 @@ as a list.")
 (put 'with-state 'scheme-indent-function 2)
 (put 'scroll-left 'disabled nil)
 (put 'dired-find-alternate-file 'disabled nil)
+
+;; Efficiency hack on find file.
+(remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 

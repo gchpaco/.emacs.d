@@ -13,7 +13,8 @@
   "Regexp to disable `checkdoc' processing for matching filenames.")
 
 (defun my-flycheck-checkdoc-disabler ()
-  (unless (null (string-match my-disabled-filenames buffer-file-truename))
+  (unless (null (string-match my-disabled-filenames (or buffer-file-truename
+                                                       "")))
     (add-to-list 'flycheck-disabled-checkers 'emacs-lisp-checkdoc)))
 
 (add-hook 'flycheck-mode-hook 'my-flycheck-checkdoc-disabler)
