@@ -17,8 +17,6 @@ as a list.")
 ;; (add-to-list 'package-archives
 ;;              '("marmalade" .
 ;;                "http://marmalade-repo.org/packages/"))
-;; (add-to-list 'package-archives
-;;              '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives
@@ -27,17 +25,22 @@ as a list.")
              '("elpy" .
                "http://jorgenschaefer.github.io/packages/"))
 (add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives
              '("org" . "http://orgmode.org/elpa/") t)
-(package-initialize)
 
-(add-to-list 'package-pinned-packages '(cider . "marmalade") t)
+(add-to-list 'package-archive-priorities '("melpa-stable" . 2))
+
+(add-to-list 'package-pinned-packages '(cider . "melpa") t)
+(add-to-list 'package-pinned-packages '(yasnippet . "melpa") t)
 (add-to-list 'package-pinned-packages '(org . "org") t)
 (add-to-list 'package-pinned-packages '(org-plus-contrib . "org") t)
+(package-initialize)
 
 (dolist (package (list
                   'yasnippet
-                  'ac-clang
                   'ac-cider
+                  'ac-clang
                   'ac-etags
                   'ac-geiser
                   'ac-math
