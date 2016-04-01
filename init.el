@@ -67,7 +67,6 @@ as a list.")
                   'anything-project
                   'anything-show-completion
                   'apache-mode
-                  'apt-utils
                   'auctex
                   'auctex-latexmk
                   'auctex-lua
@@ -96,6 +95,7 @@ as a list.")
                   'clojure-mode
                   'clojure-mode-extra-font-locking
                   'clojure-snippets
+                  'code-library
                   'codesearch
                   'coffee-mode
                   'color-theme
@@ -104,11 +104,10 @@ as a list.")
                   'company
                   'company-c-headers
                   'company-go
-                  'company-irony
                   'company-inf-ruby
+                  'company-irony
                   'company-jedi
                   'company-math
-                  'confluence
                   'corral
                   'crontab-mode
                   'cssh
@@ -117,9 +116,9 @@ as a list.")
                   'deferred
                   'desktop+
                   'diminish
+                  'dired+
                   'dired-filter
                   'dired-hacks-utils
-                  'dired+
                   'dired-imenu
                   'direx
                   'discover
@@ -129,12 +128,10 @@ as a list.")
                   'e2wm-bookmark
                   'e2wm-term
                   'editorconfig
-;                  'editorconfig-core
-;                  'editorconfig-fnmatch
+                  'ein
                   'elhome
                   'elpy
                   'elwm
-                  'ein
                   'emr
                   'eproject
                   'ess
@@ -164,8 +161,8 @@ as a list.")
                   'form-feed
                   'fringe-helper
                   'geiser
-                  'gh
                   'ggtags
+                  'gh
                   'git-annex
                   'git-auto-commit-mode
                   'git-timemachine
@@ -180,10 +177,10 @@ as a list.")
                   'go-projectile
                   'go-snippets
                   'go-stacktracer
-                  'google-c-style
-                  'google-this
                   'golden-ratio
                   'golint
+                  'google-c-style
+                  'google-this
                   'graphviz-dot-mode
                   'green-phosphor-theme
                   'helm
@@ -203,16 +200,16 @@ as a list.")
                   'helm-helm-commands
                   'helm-itunes
                   'helm-ls-git
-                  'helm-projectile
-                  'helm-projectile-all
                   'helm-open-github
+                  'helm-org-rifle
                   'helm-orgcard
                   'helm-package
+                  'helm-projectile
                   'helm-pydoc
                   'helm-unicode
                   'hide-lines
-                  'highlight-thing
                   'highlight-parentheses
+                  'highlight-thing
                   'hl-indent
                   'homebrew-mode
                   'ical-pull
@@ -237,39 +234,52 @@ as a list.")
                   'lua-mode
                   'magit
                   'magit-annex
+                  'magit-filenotify
                   'magit-find-file
                   'magit-gh-pulls
                   'magit-gitflow
-                  'magit-push-remote
-                  'magit-tramp
-                  'math-symbol-lists
                   'make-it-so
                   'markdown-mode
                   'markdown-mode+
+                  'math-symbol-lists
                   'mediawiki
                   'minimap
-                  'mwim
                   'multicolumn
                   'multiple-cursors
+                  'mwim
                   'nav-flash
                   'nginx-mode
                   'nose
+                  'ob-go
+                  'ob-http
+                  'ob-ipython
+                  'ob-mongo
+                  'ob-redis
+                  'ob-restclient
                   'objc-font-lock
-                  'omni-tags
                   'offlineimap
+                  'omni-tags
                   'org
                   'org-ac
+                  'org-alert
+                  'org-beautify-theme
                   'org-blog
+                  'org-bookmark-heading
                   'org-bullets
                   'org-caldav
                   'org-cliplink
                   'org-context
+                  'org-dropbox
                   'org-fstree
-                  ;;'org-gnome
-                  'org-magit
-                  ;;'org-mobile-sync
+                  'org-gcal
+                  'org-gnome
+                  'org-journal
+                  'org-mac-iCal
+                  'org-mac-link
+                  'org-mobile-sync
                   'org-plus-contrib
                   'org-projectile
+                  'org-ref
                   'org-repo-todo
                   'org-trello
                   'orgit
@@ -282,10 +292,10 @@ as a list.")
                   'ox-pandoc
                   'package+
                   'package-safe-delete
+                  'pandoc-mode
                   'paredit
                   'paredit-everywhere
                   'paredit-menu
-                  'pandoc-mode
                   'paxedit
                   'pcache
                   'pep8
@@ -302,17 +312,16 @@ as a list.")
                   'pretty-mode-plus
                   'pretty-symbols
                   'project-persist
-                  'projectile-speedbar
                   'projectile-codesearch
+                  'projectile-speedbar
                   'protobuf-mode
                   'pt
                   'puml-mode
                   'puppet-mode
-                  'puppetfile-mode
                   'purty-mode
                   'py-autopep8
                   'py-gnitset
-;                  'py-smart-operator
+                  'py-smart-operator
                   'pydoc
                   'pydoc-info
                   'pyenv-mode
@@ -322,7 +331,6 @@ as a list.")
                   'python-docstring
                   'python-environment
                   'python-info
-                  'python-magic
                   'python-mode
                   'python-pep8
                   'python-pylint
@@ -339,28 +347,26 @@ as a list.")
                   's
                   'scratch-ext
                   'session-manager
+                  'shell-current-directory
                   'shelldoc
                   'slamhound
                   'slime
-                  'slime-clj
-                  'slime-fuzzy
-                  'shell-current-directory
                   'smex
                   'spaceline
                   'sparkline
+                  'sqlup-mode
                   'sr-speedbar
                   'srefactor
                   'ssh
                   'ssh-config-mode
-                  'sqlup-mode
                   'swift-mode
                   'swiper
                   'sx
                   'syslog-mode
+                  'tdd
                   'template
                   'tern
                   'tern-auto-complete
-                  'tdd
                   'tidy
                   'toggle-quotes
                   'top-mode
@@ -371,8 +377,8 @@ as a list.")
                   'virtualenv
                   'virtualenvwrapper
                   'wgrep
-                  'wgrep-pt
                   'wgrep-helm
+                  'wgrep-pt
                   'window-layout
                   'winner-mode-enable
                   'with-editor
