@@ -40,6 +40,7 @@
      (java-mode . "java")
      (awk-mode . "awk")
      (other . "gnu"))))
+ '(code-library-directory "~/wd/code/library/")
  '(compilation-mode-hook nil)
  '(copyright-names-regexp "\\(Graham Hughes\\|Citrix Systems Inc.\\|Citrix Online\\)")
  '(copyright-year-ranges t)

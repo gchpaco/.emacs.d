@@ -4,6 +4,7 @@
 (require 'org-checklist)
 (require 'org-trello)
 (require 'ox-gfm)
+(require 'helm-org-rifle)
 
 (org-clock-persistence-insinuate)
 
