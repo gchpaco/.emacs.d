@@ -99,7 +99,6 @@ as a list.")
                   'codesearch
                   'coffee-mode
                   'color-theme
-                  'color-theme-sanityinc-solarized
                   'common-lisp-snippets
                   'company
                   'company-c-headers
@@ -355,6 +354,7 @@ as a list.")
                   'spaceline
                   'sparkline
                   'sqlup-mode
+                  'solarized-theme
                   'sr-speedbar
                   'srefactor
                   'ssh
