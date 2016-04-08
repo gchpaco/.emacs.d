@@ -41,11 +41,16 @@
      (awk-mode . "awk")
      (other . "gnu"))))
  '(code-library-directory "~/wd/code/library/")
+ '(compilation-message-face (quote default))
  '(compilation-mode-hook nil)
  '(copyright-names-regexp "\\(Graham Hughes\\|Citrix Systems Inc.\\|Citrix Online\\)")
  '(copyright-year-ranges t)
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (solarized-dark)))
+ '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
     ("bb7b7e7a09a02b1f9682f5d3b530a2e20ea058285c16452e2dc19af42aace5e0" "01b2b30ded8ecb3a07996cc7cdbb0a4e526d0722e56ac2847512613a3e1284c9" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c58382b9c4fff1aa94b8e3f0f81b0212bb554e83f76957bab735f960a4c441b1" "ce6046de29b8334433c9109b256a846391c47656fcdb4c8d64b1c643c655ddb7" "72c1070a1c8101f1bfc0adc5e7f4190a380b81666897eb1a17ea2973d58fc659" "c7b050e0d698f16a188a5834572ac4a6297f909bc7db4fda49e4dfcfc1ad1076" "43963925d90085d563fa21e62623a44ce2b4d8327e6e3814fdf28179865fd730" "96936d76f48be40d64721e6a069fedc2ed1adbab71f8447016277599ddd75313" "6eaebdc2426b0edfff9fd9a7610f2fe7ddc70e01ceb869aaaf88b5ebe326a0cd" "c158c2a9f1c5fcf27598d313eec9f9dceadf131ccd10abc6448004b14984767c" "39f98624caf410e66c4e03f36a1c373ea8ed9177cd9d12dfd6c0a53825599f60" "fb7b5b24d459ccf40f44659506a111ff0df9a07117a00aaee4999952a92f056a" "cfc2fbe694e2bbd083509168f8905d232bdc99fb35ec3e98ac83baec4bbfa1ba" "780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
@@ -103,6 +108,7 @@
  '(eshell-modules-list
    (quote
     (eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-script eshell-smart eshell-term eshell-tramp eshell-unix)))
+ '(fci-rule-color "#073642")
  '(flyspell-mode-line-string nil)
  '(glasses-separator "-")
  '(glasses-uncapitalize-p t)
@@ -126,6 +132,29 @@
  '(helm-recentf-fuzzy-match t)
  '(helm-scroll-amount 8)
  '(helm-split-window-in-side-p t)
+ '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-symbol-colors
+   (--map
+    (solarized-color-blend it "#002b36" 0.25)
+    (quote
+     ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
+ '(highlight-symbol-foreground-color "#93a1a1")
+ '(highlight-tail-colors
+   (quote
+    (("#073642" . 0)
+     ("#546E00" . 20)
+     ("#00736F" . 30)
+     ("#00629D" . 50)
+     ("#7B6000" . 60)
+     ("#8B2C02" . 70)
+     ("#93115C" . 85)
+     ("#073642" . 100))))
+ '(hl-bg-colors
+   (quote
+    ("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00")))
+ '(hl-fg-colors
+   (quote
+    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(hl-paren-background-colors (quote ("#e8fce8" "#c1e7f8" "#f8e8e8")))
  '(hl-paren-colors (quote ("#40883f" "#0287c8" "#b85c57")))
  '(ido-enable-flex-matching t)
@@ -154,6 +183,7 @@
  '(js2-basic-offset 2)
  '(js2-strict-trailing-comma-warning nil)
  '(js2-use-font-lock-faces t)
+ '(magit-diff-use-overlays nil)
  '(magit-wip-after-apply-mode t)
  '(magit-wip-after-save-mode t)
  '(magit-wip-before-change-mode t)
@@ -338,11 +368,13 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(outline-regexp "\\*+ " t)
  '(package-selected-packages
    (quote
-    (color-theme-solarized solarized-theme pandoc-mode paredit org-ref org-mobile-sync org-mac-link org-mac-iCal org-journal org-gcal org-dropbox org-bookmark-heading org-beautify-theme org-alert magit-filenotify helm ess cider anything yasnippet ob-go ob-http ob-ipython ob-mongo ob-redis ob-restclient helm-org-rifle code-library py-smart-operator java-snippets helm-anything go-snippets cider-profile cider-decompile bury-successful-compilation bundler bibtex-utils beginend ace-jump-mode ace-jump-buffer ac-cider common-lisp-snippets clojure-snippets org-trello window-layout wgrep tern-auto-complete tern swiper spaceline slime s reveal-in-osx-finder python-docstring python pyfmt pyenv-mode pydoc puml-mode projectile-codesearch popup plan9-theme pkg-info pcache package-safe-delete ox-gfm osx-trash osx-lib orgit org-plus-contrib org offlineimap omni-tags nav-flash markdown-mode+ markdown-mode math-symbol-lists magit-gitflow magit-gh-pulls magit-find-file magit-annex magit logito list-unicode-display levenshtein jst json-reformat js2-refactor js2-mode irony interleave inlineR inf-ruby homebrew-mode highlight-parentheses hide-lines helm-unicode green-phosphor-theme golden-ratio go-mode go-errcheck go-eldoc git-wip-timemachine gh geiser fringe-helper flymake-easy flymake flycheck fancy-battery eyebrowse elwm editorconfig e2wm-term e2wm docker-tramp docker discover direx dired-imenu dired-hacks-utils diminish desktop+ deferred dash corral company-math company-jedi company-irony company-go company color-theme-sanityinc-solarized coffee-mode clojure-mode-extra-font-locking clojure-mode clojure-env clj-refactor bug-hunter auto-yasnippet auto-package-update auto-complete-nxml auto-complete auctex anything-exuberant-ctags all ada-mode ace-window ac-slime ac-geiser ac-etags ac-clang gmail2bbdb magit-popup rainbow-delimiters late-night-theme yaml-mode wsd-mode workgroups with-editor wisi winner-mode-enable widget-mvc wgrep-pt wgrep-helm w3m virtualenvwrapper virtualenv uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy template tdd syslog-mode symon sx swift-mode ssh-config-mode ssh srefactor sr-speedbar sqlup-mode sparkline smex smartparens slime-fuzzy slime-clj slamhound shelldoc shell-current-directory session-manager scratch-ext runner rspec-mode rpm-spec-mode restclient rbenv racket-mode quack pyvirtualenv python-pylint python-pep8 python-mode python-magic python-info python-environment pymacs pydoc-info py-gnitset py-autopep8 purty-mode puppetfile-mode puppet-mode pt protobuf-mode projectile-speedbar project-persist pretty-symbols pretty-mode-plus pretty-mode preproc-font-lock pos-tip popwin poporg pip-requirements persp-projectile persp-mode pep8 paxedit paredit-menu paredit-everywhere package+ ox-pandoc osx-pseudo-daemon osx-dictionary osx-clipboard osx-browse org-repo-todo org-projectile org-magit org-gnome org-fstree org-context org-cliplink org-caldav org-bullets org-blog org-ac objc-font-lock nrepl nose nginx-mode mwim multiple-cursors multicolumn minimap mediawiki malabar-mode make-it-so magit-tramp magit-push-remote magit-log-edit lua-mode json-mode js3-mode itail ipython instapaper inf-clojure iedit idomenu icicles ical-pull hl-indent highlight-thing helm-pydoc helm-projectile-all helm-projectile helm-package helm-orgcard helm-open-github helm-ls-git helm-itunes helm-helm-commands helm-gtags helm-google helm-go-package helm-git-grep helm-git-files helm-git helm-company helm-c-yasnippet helm-bibtex helm-ag helm-ack helm-R graphviz-dot-mode google-this google-c-style golint go-stacktracer go-projectile go-direx go-autocomplete gmail-message-mode gitignore-mode git-timemachine git-auto-commit-mode git-annex ggtags fuzzy form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-jslint flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fixmee fic-mode feature-mode expand-region evernote-mode eproject emr elpy elhome ein e2wm-bookmark dired-filter dired+ csv-mode cssh crontab-mode confluence company-inf-ruby company-c-headers color-theme codesearch clojure-project-mode clojure-cheatsheet cedit bubbleberry-theme bookmark+ bison-mode autopair auto-complete-etags auto-complete-c-headers auto-complete-auctex auctex-lua auctex-latexmk apt-utils apache-mode anything-show-completion anything-project anything-obsolete anything-match-plugin anything-ipython anything-git-grep anything-git-goto anything-git-files anything-git anything-extension anything-el-swank-fuzzy anything-config anything-complete ample-regexps ac-math ac-js2)))
+    (gotest go-complete go-dlv go-guru color-theme-solarized solarized-theme pandoc-mode paredit org-ref org-mobile-sync org-mac-link org-mac-iCal org-journal org-gcal org-dropbox org-bookmark-heading org-beautify-theme org-alert magit-filenotify helm cider anything yasnippet ob-go ob-http ob-ipython ob-mongo ob-redis ob-restclient helm-org-rifle code-library py-smart-operator java-snippets helm-anything go-snippets cider-profile cider-decompile bury-successful-compilation bundler bibtex-utils beginend ace-jump-mode ace-jump-buffer ac-cider common-lisp-snippets clojure-snippets org-trello window-layout wgrep tern-auto-complete tern swiper spaceline slime s reveal-in-osx-finder python-docstring python pyfmt pyenv-mode pydoc puml-mode projectile-codesearch popup plan9-theme pkg-info pcache package-safe-delete ox-gfm osx-trash osx-lib orgit org-plus-contrib org offlineimap omni-tags nav-flash markdown-mode+ markdown-mode math-symbol-lists magit-gitflow magit-gh-pulls magit-find-file magit-annex magit logito list-unicode-display levenshtein jst json-reformat js2-refactor js2-mode irony interleave inlineR inf-ruby homebrew-mode highlight-parentheses hide-lines helm-unicode green-phosphor-theme golden-ratio go-mode go-errcheck go-eldoc git-wip-timemachine gh geiser fringe-helper flymake-easy flymake flycheck fancy-battery eyebrowse elwm editorconfig e2wm-term e2wm docker-tramp docker discover direx dired-imenu dired-hacks-utils diminish desktop+ deferred dash corral company-math company-jedi company-irony company-go company color-theme-sanityinc-solarized coffee-mode clojure-mode-extra-font-locking clojure-mode clojure-env clj-refactor bug-hunter auto-yasnippet auto-package-update auto-complete-nxml auto-complete auctex anything-exuberant-ctags all ada-mode ace-window ac-slime ac-geiser ac-etags ac-clang gmail2bbdb magit-popup rainbow-delimiters late-night-theme yaml-mode wsd-mode workgroups with-editor wisi winner-mode-enable widget-mvc wgrep-pt wgrep-helm w3m virtualenvwrapper virtualenv uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy template tdd syslog-mode symon sx swift-mode ssh-config-mode ssh srefactor sr-speedbar sqlup-mode sparkline smex smartparens slime-fuzzy slime-clj slamhound shelldoc shell-current-directory session-manager scratch-ext runner rspec-mode rpm-spec-mode restclient rbenv racket-mode quack pyvirtualenv python-pylint python-pep8 python-mode python-magic python-info python-environment pymacs pydoc-info py-gnitset py-autopep8 purty-mode puppetfile-mode puppet-mode pt protobuf-mode projectile-speedbar project-persist pretty-symbols pretty-mode-plus pretty-mode preproc-font-lock pos-tip popwin poporg pip-requirements persp-projectile persp-mode pep8 paxedit paredit-menu paredit-everywhere package+ ox-pandoc osx-pseudo-daemon osx-dictionary osx-clipboard osx-browse org-repo-todo org-projectile org-magit org-gnome org-fstree org-context org-cliplink org-caldav org-bullets org-blog org-ac objc-font-lock nrepl nose nginx-mode mwim multiple-cursors multicolumn minimap mediawiki malabar-mode make-it-so magit-tramp magit-push-remote magit-log-edit lua-mode json-mode js3-mode itail ipython instapaper inf-clojure iedit idomenu icicles ical-pull hl-indent highlight-thing helm-pydoc helm-projectile-all helm-projectile helm-package helm-orgcard helm-open-github helm-ls-git helm-itunes helm-helm-commands helm-gtags helm-google helm-go-package helm-git-grep helm-git-files helm-git helm-company helm-c-yasnippet helm-bibtex helm-ag helm-ack graphviz-dot-mode google-this google-c-style golint go-stacktracer go-projectile go-direx go-autocomplete gmail-message-mode gitignore-mode git-timemachine git-auto-commit-mode git-annex ggtags fuzzy form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-jslint flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fixmee fic-mode feature-mode expand-region evernote-mode eproject emr elpy elhome ein e2wm-bookmark dired-filter dired+ csv-mode cssh crontab-mode confluence company-inf-ruby company-c-headers color-theme codesearch clojure-project-mode clojure-cheatsheet cedit bubbleberry-theme bookmark+ bison-mode autopair auto-complete-etags auto-complete-c-headers auto-complete-auctex auctex-lua auctex-latexmk apt-utils apache-mode anything-show-completion anything-project anything-obsolete anything-match-plugin anything-ipython anything-git-grep anything-git-goto anything-git-files anything-git anything-extension anything-el-swank-fuzzy anything-config anything-complete ample-regexps ac-math ac-js2)))
  '(paradox-automatically-star t)
  '(paradox-execute-asynchronously t)
  '(paradox-github-token t)
  '(parens-require-spaces nil)
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
  '(projectile-mode-line
    (quote
     (:eval
@@ -408,6 +440,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(server-done-hook nil)
  '(server-switch-hook nil)
  '(server-window (quote pop-to-buffer))
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(sml/active-background-color "#98ece8")
  '(sml/active-foreground-color "#424242")
  '(sml/inactive-background-color "#4fa8a8")
@@ -429,6 +462,8 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
    (quote
     (symon-darwin-cpu-monitor symon-darwin-network-rx-monitor symon-darwin-network-tx-monitor)))
  '(symon-sparkline-type (quote symon-sparkline-type-plain))
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
  '(todochiku-command "/Users/graham/bin/growlnotify")
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
@@ -460,6 +495,9 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
      (360 . "#cb4b16"))))
  '(vc-annotate-very-old-color nil)
  '(visual-line-mode nil t)
+ '(weechat-color-list
+   (quote
+    (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
  '(which-function-mode t)
  '(woman-manpath
    (quote
