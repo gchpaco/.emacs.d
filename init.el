@@ -168,9 +168,12 @@ as a list.")
                   'gitignore-mode
                   'gmail-message-mode
                   'go-autocomplete
+                  'go-complete
                   'go-direx
+                  'go-dlv
                   'go-eldoc
                   'go-errcheck
+                  'go-guru
                   'go-mode
                   'go-projectile
                   'go-snippets
@@ -179,6 +182,7 @@ as a list.")
                   'golint
                   'google-c-style
                   'google-this
+                  'gotest
                   'graphviz-dot-mode
                   'green-phosphor-theme
                   'helm
