@@ -133,7 +133,6 @@ as a list.")
                   'elwm
                   'emr
                   'eproject
-                  'ess
                   'evernote-mode
                   'expand-region
                   'eyebrowse
@@ -183,7 +182,6 @@ as a list.")
                   'graphviz-dot-mode
                   'green-phosphor-theme
                   'helm
-                  'helm-R
                   'helm-ack
                   'helm-ag
                   'helm-anything
