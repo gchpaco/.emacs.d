@@ -5,3 +5,5 @@
               (switch-to-buffer-other-frame server-buf))))
 
 (add-hook 'server-done-hook 'delete-frame)
+
+(edit-server-start)

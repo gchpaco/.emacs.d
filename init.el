@@ -129,6 +129,8 @@ as a list.")
                   'e2wm
                   'e2wm-bookmark
                   'e2wm-term
+                  'edit-server
+                  'edit-server-htmlize
                   'editorconfig
                   'ein
                   'elhome
