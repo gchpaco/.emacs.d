@@ -51,6 +51,7 @@ as a list.")
                   'ada-mode
                   'all
                   'ample-regexps
+                  'anaconda-mode
                   'anything
                   'anything-complete
                   'anything-config
@@ -101,6 +102,8 @@ as a list.")
                   'color-theme
                   'common-lisp-snippets
                   'company
+                  'company-anaconda
+                  'company-auctex
                   'company-c-headers
                   'company-go
                   'company-inf-ruby
@@ -253,7 +256,6 @@ as a list.")
                   'nose
                   'ob-go
                   'ob-http
-                  'ob-ipython
                   'ob-mongo
                   'ob-redis
                   'ob-restclient

@@ -1,9 +1,8 @@
 (add-to-list 'exec-path "/opt/local/bin")
 (add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'exec-path (expand-file-name "~/.rbenv/bin"))
-(add-to-list 'exec-path (expand-file-name "~/.rbenv/shims"))
+(add-to-list 'exec-path "/usr/local/opt/pyenv/bin")
+(add-to-list 'exec-path "/usr/local/opt/pyenv/shims")
 (add-to-list 'exec-path (expand-file-name "~/.pyenv/shims"))
-(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
 (add-to-list 'exec-path (expand-file-name "~/bin"))
 
@@ -28,6 +27,8 @@
 
 
 
+(setenv "PYENV_ROOT" "/usr/local/opt/pyenv")
+(setenv "WORKON_HOME" "/usr/local/opt/pyenv/versions")
 (setenv "P4USER" "ghughes")
 (setenv "P4CLIENT" (with-temp-buffer
                      (call-process "hostname" nil t)
