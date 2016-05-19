@@ -137,6 +137,7 @@ as a list.")
                   'elpy
                   'elwm
                   'emr
+                  'epkg
                   'eproject
                   'evernote-mode
                   'expand-region
