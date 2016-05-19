@@ -2,7 +2,7 @@
 (require 'sgml-mode)
 (require 'info-look)
 (require 'pretty-mode)
-(global-pretty-mode 1)
+(global-pretty-mode 0)
 (require 'uniquify)
 (require 'zap-up-to-char)
 (case window-system
