@@ -115,6 +115,7 @@ as a list.")
                   'cssh
                   'csv-mode
                   'dash
+                  'dash-at-point
                   'deferred
                   'desktop+
                   'diminish

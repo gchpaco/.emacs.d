@@ -10,6 +10,7 @@
 (define-key me-minor-mode-map "\C-cb" 'org-iswitchb)
 (define-key me-minor-mode-map "\C-cB" 'speedbar-get-focus)
 (define-key me-minor-mode-map "\C-cc" 'org-capture)
+(define-key me-minor-mode-map "\C-cd" 'dash-at-point)
 (define-key me-minor-mode-map "\C-cf" 'ffap)
 (define-key me-minor-mode-map "\C-cF" 'ido-find-file-in-tag-files)
 (define-key me-minor-mode-map "\C-cj" 'avy-goto-word-or-subword-1)
