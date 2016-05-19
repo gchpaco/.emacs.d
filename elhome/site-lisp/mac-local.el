@@ -1,6 +1,6 @@
 ;;; mac-local.el --- Local Macintosh configurations
 
-;; Copyright (C) 2008, 2014  Graham Hughes
+;; Copyright (C) 2008, 2014, 2016  Graham Hughes
 
 ;; Author: Graham Hughes <graham@sigwinch.org>
 ;; Keywords: local
@@ -42,6 +42,8 @@
     (let ((fill-column width))
       (fill-region (point-min) (point-max)))
     (buffer-string)))
+
+(setq-default insert-directory-program (executable-find "gls"))
 
 ;; Override standard startup message
 (defun startup-echo-area-message ()

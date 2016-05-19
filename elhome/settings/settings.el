@@ -72,6 +72,7 @@
  '(diary-file "~/Dropbox/org/diary.org")
  '(dired-dwim-target t)
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|^\\.git$")
+ '(dired-use-ls-dired t)
  '(display-time-mode t)
  '(ebib-latex-preamble (quote ("\\usepackage{url}" "\\bibliographystyle{plain}")))
  '(ebib-preload-bib-files
