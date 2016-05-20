@@ -45,8 +45,6 @@ as a list.")
                   'ac-geiser
                   'ac-math
                   'ac-slime
-                  'ace-jump-buffer
-                  'ace-jump-mode
                   'ace-window
                   'ada-mode
                   'all
@@ -78,6 +76,7 @@ as a list.")
                   'auto-complete-nxml
                   'auto-package-update
                   'auto-yasnippet
+                  'avy
                   'beginend
                   'bibtex-utils
                   'bison-mode

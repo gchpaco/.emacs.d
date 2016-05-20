@@ -26,7 +26,7 @@
 (define-key me-minor-mode-map "\C-ct" 'sane-term)
 (define-key me-minor-mode-map "\C-cT" 'sane-term-create)
 (define-key me-minor-mode-map "\C-cu" 'browse-url-at-point)
-(define-key me-minor-mode-map "\C-cz" 'ace-jump-buffer)
+(define-key me-minor-mode-map "\C-cz" 'ace-window)
 (define-key me-minor-mode-map "\C-\M-z" 'zap-up-to-char)
 (define-key me-minor-mode-map "\C-\M-y" 'kill-ring-search)
 (define-key me-minor-mode-map (kbd "C-S-c C-S-c") 'mc/edit-lines)
