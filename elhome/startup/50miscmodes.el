@@ -70,6 +70,7 @@
 (use-package dired-imenu :ensure t)
 (use-package direx :ensure t)
 (use-package make-it-so :ensure t)
+(use-package runner :ensure t)
 
 (use-package markdown-mode :ensure t)
 (use-package markdown-mode+ :ensure t)
@@ -104,7 +105,14 @@
   :if (eq window-system 'ns)
   :ensure t)
 
+(use-package osx-lib
+  :if (eq window-system 'ns)
+  :ensure t)
+
 (use-package osx-trash
+  :if (eq window-system 'ns)
+  :ensure t)
+(use-package reveal-in-osx-finder
   :if (eq window-system 'ns)
   :ensure t)
 
@@ -137,18 +145,6 @@
 (use-package uniquify)
 (use-package zap-up-to-char
   :bind "C-M-z")
-(use-package magit
-  :ensure t
-  :bind ("C-c s" . magit-status))
-(use-package magit-annex :ensure t)
-(use-package magit-filenotify :ensure t)
-;(use-package magit-gh-pulls :ensure t)
-(use-package magit-gitflow :ensure t)
-(use-package magit-wip
-  :disabled t
-  :ensure t
-  :diminish (magit-wip-before-change-mode magit-wip-after-apply-mode
-                                          magit-wip-after-save-local-mode))
 (use-package multiple-cursors
   :bind
   ("C-S-c C-S-c" . mc/edit-lines)
@@ -157,12 +153,14 @@
   ("C-c C-<" . mc/mark-all-like-this))
 (use-package expand-region
   :bind ("C-'" . er/expand-region))
-(use-package shelldoc)
-(use-package runner)
-(use-package unify-opening)
+(use-package shelldoc :ensure t)
+(use-package unify-opening :ensure t)
 (use-package e2wm
   :ensure t
   :bind ("M-+" . e2wm:start-management))
+(use-package window-layout :ensure t)
+(use-package e2wm-bookmark :ensure t)
+(use-package e2wm-term :ensure t)
 (use-package elwm
   :ensure t
   :bind
@@ -174,13 +172,22 @@
   ("C-c <prior>" . elwm-swap-up)
   ("C-c w 2" . elwm-split-window))
 (use-package alfred-org-capture)
-(use-package desktop+)
 
 (use-package browse-url
   :bind ("C-c u" . browse-url-at-point))
 
 (use-package eshell
   :bind ("C-c a". eshell))
+
+(use-package sqlup-mode :ensure t)
+
+(use-package cssh :ensure t)
+(use-package ssh :ensure t)
+(use-package ssh-config-mode :ensure t)
+
+(use-package tidy :ensure t)
+
+(use-package unbound :ensure t)
 
 (use-package dash :ensure t)
 (use-package dash-at-point
@@ -217,7 +224,26 @@
 (use-package solarized-theme :ensure t :disabled t)
 (use-package plan9-theme :ensure t)
 
-(use-package fixmee
-  :disabled t
-  :ensure t
-  :config (global-fixmee-mode 1))
+(use-package csv-mode
+  :mode "\\.csv\\'"
+  :ensure t)
+
+(use-package editorconfig :ensure t)
+
+(use-package epkg :ensure t)
+
+(use-package git-annex :ensure t)
+
+(use-package gitignore-mode
+  :mode "\\.gitignore\\'"
+  :ensure t)
+
+(use-package graphviz-dot-mode
+  :mode "\\.dot\\'"
+  :ensure t)
+
+(use-package package-safe-delete :ensure t)
+
+(use-package window-purpose :ensure t)
+
+(use-package yaml-mode :ensure t)

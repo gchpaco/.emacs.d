@@ -9,3 +9,5 @@
                  '(("\\.cc" . "C++ file") . my-cc-module-default))
     (add-to-list 'auto-insert-alist
                  '(("\\.hpp" . "C++ interface file") . my-cc-header-default))))
+
+(use-package auto-yasnippet :ensure t)

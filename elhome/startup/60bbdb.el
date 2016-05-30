@@ -6,3 +6,5 @@
   (use-package bbdb-migrate)
   (use-package bbdb-mua)
   (bbdb-initialize 'gnus 'message))
+
+(use-package gmail2bbdb :ensure t)

@@ -12,6 +12,8 @@
   :config
   (pyenv-mode)
   (add-hook 'projectile-switch-project-hook 'projectile-pyenv-mode-set))
+(use-package pyenv-mode-auto :ensure t)
+(use-package pyfmt :ensure t)
 
 (use-package anaconda-mode
   :ensure t
@@ -19,6 +21,9 @@
 
 (use-package company-anaconda :ensure t)
 
+(use-package pip-requirements
+  :ensure t
+  :mode "requirements.txt\\'")
 (use-package pydoc :ensure t)
 (use-package pydoc-info :ensure t)
 (use-package python-info :ensure t)
@@ -52,3 +57,8 @@
               ("C-c N p a" . nosetests-pdb-all)
               ("C-c N p m" . nosetests-pdb-module)
               ("C-c N p ." . nosetests-pdb-one)))
+
+(use-package ein
+  :ensure t)
+
+(use-package python-docstring :ensure t)

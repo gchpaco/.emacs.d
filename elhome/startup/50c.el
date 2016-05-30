@@ -13,6 +13,8 @@
 
 (use-package company-irony :ensure t)
 (use-package company-c-headers :ensure t)
+(use-package java-snippets :ensure t)
+(use-package preproc-font-lock :ensure t)
 
 (defun my-override-parens ()
   "Override normal insert-space-before-M-( behavior."

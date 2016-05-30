@@ -84,6 +84,9 @@
 
 (use-package org-bookmark-heading :ensure t)
 (use-package org-caldav :ensure t)
+(use-package org-context
+  :ensure t
+  :config (add-hook 'after-init-hook #'org-context-activate))
 (use-package org-dropbox :ensure t)
 (use-package org-fstree :ensure t)
 (use-package org-gcal :ensure t)
@@ -92,8 +95,8 @@
 (use-package org-mac-link :ensure t)
 (use-package org-projectile :ensure t)
 (use-package org-ref :ensure t)
-(use-package ox-gfm :ensure t)
 (use-package ox-pandoc :ensure t)
+(use-package orgit :ensure t)
 
 (use-package org-capture
   :bind (("\C-cr" . org-capture)

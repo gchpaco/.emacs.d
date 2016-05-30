@@ -42,3 +42,5 @@
          ("M-[" . corral-brackets-backward)
          ("M-]" . corral-brackets-forward)
          ("M-\"" . corral-double-quotes-backward)))
+
+(use-package srefactor :ensure t)

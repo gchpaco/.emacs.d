@@ -23,3 +23,4 @@
 (use-package clojure-mode-extra-font-locking :ensure t)
 (use-package clojure-mode-snippets :ensure t :disabled t)
 (use-package common-lisp-snippets :ensure t)
+(use-package macrostep :ensure t)

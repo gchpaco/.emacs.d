@@ -6,5 +6,7 @@
 
 (use-package bibtex-utils :ensure t)
 
+(use-package biblio :ensure t)
+
 (use-package company-auctex :ensure t)
 (use-package company-math :ensure t)
