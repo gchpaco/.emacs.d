@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package whitespace
   :diminish whitespace-mode
   :init
@@ -24,7 +27,7 @@
 
 (defun progmodes-hooks ()
   "Hooks for programming modes"
-  (yas/minor-mode-on)
+  (yas-minor-mode-on)
   (add-hook 'before-save-hook 'progmodes-write-hooks))
 
 (defun progmodes-write-hooks ()

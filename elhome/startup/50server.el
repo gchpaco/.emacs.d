@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (defun bury-server-buffer ()
   (let ((server-buf (current-buffer)))
     (bury-buffer)

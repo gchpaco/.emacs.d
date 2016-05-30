@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package flymake
   :ensure t
   :bind (([f3] . flymake-display-err-menu-for-current-line)

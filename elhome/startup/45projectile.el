@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package projectile
   :ensure t
   :init
@@ -14,6 +17,7 @@
                       projectile-switch-project-action 'helm-projectile)
   :config (helm-projectile-on))
 
+(use-package sr-speedbar :ensure t)
 (use-package projectile-speedbar :ensure t)
 (use-package persp-mode :ensure t)
 (use-package persp-projectile :ensure t)

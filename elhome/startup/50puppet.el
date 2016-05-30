@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package align
   :config
   (add-to-list 'align-rules-list

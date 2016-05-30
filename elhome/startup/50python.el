@@ -1,5 +1,9 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package elpy
   :ensure t
+  :functions elpy-use-cpython
   :diminish elpy-mode
   :pin elpy
   :init (setq-default python-shell-exec-path '("/usr/local/opt/pyenv/shims"))
@@ -9,6 +13,7 @@
 
 (use-package pyenv-mode
   :ensure t
+  :functions pyenv-mode-versions
   :config
   (pyenv-mode)
   (add-hook 'projectile-switch-project-hook 'projectile-pyenv-mode-set))

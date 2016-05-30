@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (when (string= system-type "gnu/linux")
   (defun x-urgency-hint (frame arg &optional source)
     (let* ((wm-hints (append (x-window-property

@@ -1,4 +1,7 @@
-(eval-when-compile (require 'rx))
+(eval-when-compile
+  (require 'use-package)
+  (require 'rx))
+
 (use-package flycheck
   :diminish flycheck-mode
   :config (progn (add-hook 'flycheck-mode-hook 'my-flycheck-checkdoc-disabler)

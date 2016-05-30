@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (add-to-list 'exec-path "/opt/local/bin")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/usr/local/opt/pyenv/bin")

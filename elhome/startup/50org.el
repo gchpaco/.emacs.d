@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package org-install
   :ensure org-plus-contrib
   :pin org)
@@ -79,6 +82,7 @@
                   org-insert-heading-hook nil)))
 
 (use-package org-alert
+  :functions org-alert-enable
   :ensure t
   :init (add-hook 'after-init-hook #'org-alert-enable))
 

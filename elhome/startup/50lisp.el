@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package redshank
   :commands (asdf-mode)
   :mode ("\\.asdf?\\'" . asdf-mode))

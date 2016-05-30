@@ -1,8 +1,7 @@
 (require 'package)
 (package-initialize)
 
-(eval-when-compile
-  (require 'use-package))
+(require 'use-package)
 (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
 
@@ -426,6 +425,6 @@ as a list.")
 ;; Efficiency hack on find file.
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
-(setq magit-last-seen-setup-instructions "1.4.0")
+(setq-default magit-last-seen-setup-instructions "1.4.0")
 
 ;;; init.el ends here

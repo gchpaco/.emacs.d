@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (defun my-go-mode-hook ()
   (setq-local tab-width 4)
   (whitespace-mode 0))

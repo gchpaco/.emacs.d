@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package electric-pair-mode
   :commands electric-pair-mode
   :init (add-hook 'prog-mode-hook 'electric-pair-mode))
@@ -58,7 +61,7 @@
   :diminish emr-c-mode
   :ensure t
   :bind (:map prog-mode-map
-              ("M-RET" . emr-show-refactor-menu))
+              ("M-<return>" . emr-show-refactor-menu))
   :config (add-hook 'prog-mode-hook 'emr-initialize))
 
 (use-package dired-x
@@ -70,7 +73,7 @@
 (use-package dired-imenu :ensure t)
 (use-package direx :ensure t)
 (use-package make-it-so :ensure t)
-(use-package runner :ensure t)
+(use-package runner :disabled t :ensure t)
 
 (use-package markdown-mode :ensure t)
 (use-package markdown-mode+ :ensure t)
@@ -160,6 +163,7 @@
   :bind ("M-+" . e2wm:start-management))
 (use-package window-layout :ensure t)
 (use-package e2wm-bookmark :ensure t)
+(use-package term)
 (use-package e2wm-term :ensure t)
 (use-package elwm
   :ensure t

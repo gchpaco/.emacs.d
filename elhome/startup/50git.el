@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package magit
   :ensure t
   :bind ("C-c s" . magit-status))

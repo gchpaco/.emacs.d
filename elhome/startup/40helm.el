@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package helm
   :diminish helm-mode
   :bind (("M-x" . helm-M-x)

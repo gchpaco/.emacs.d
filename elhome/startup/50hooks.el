@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)

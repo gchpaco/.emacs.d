@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package js2-mode
   :mode "\\.js\\'"
   :ensure t

@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (defun my-irony-mode-hook ()
   (define-key irony-mode-map [remap completion-at-point]
     'irony-completion-at-point-async)
@@ -18,7 +21,7 @@
 
 (defun my-override-parens ()
   "Override normal insert-space-before-M-( behavior."
-  (make-variable-buffer-local 'parens-require-spaces)
+  (make-local-variable 'parens-require-spaces)
   (setq parens-require-spaces nil))
 
 (defun my-c-common-hook ()
@@ -44,7 +47,7 @@
                       (concat (projectile-project-root) "src")))
 
 (defun my-alternate-file (name)
-  (concat (file-name-sans-extension (name)) ".hpp"))
+  (concat (file-name-sans-extension name) ".hpp"))
 
 (define-skeleton my-cc-module-default
   "C++ implementation file contents, per RethinkDB"

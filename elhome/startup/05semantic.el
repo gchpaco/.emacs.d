@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (use-package semantic
   :diminish semantic-mode
   :init (setq-default semantic-load-turn-useful-things-on t)

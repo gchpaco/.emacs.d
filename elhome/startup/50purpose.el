@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'use-package))
+
 (require 'window-purpose)
 
 (defun uniquified-rx-for-name (filename)

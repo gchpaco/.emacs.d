@@ -1,8 +1,5 @@
-(use-package erc
-  :bind (:map erc-mode-map
-         ("C-c o" . erc-open-last-url-in-channel)
-         ("C-c u" . print-urls))
-  :config (set-face-foreground 'erc-timestamp-face "dimgrey"))
+(eval-when-compile
+  (require 'use-package))
 
 ;; URL handing stuff from http://inkedmn.infogami.com/blog/
 (defun erc-open-last-url-in-channel ()
@@ -44,3 +41,9 @@
      (dolist (url urls)
        (insert (url-normalize-url url) "\n"))
      (goto-char 1))))
+
+(use-package erc
+  :bind (:map erc-mode-map
+         ("C-c o" . erc-open-last-url-in-channel)
+         ("C-c u" . print-urls))
+  :config (set-face-foreground 'erc-timestamp-face "dimgrey"))
