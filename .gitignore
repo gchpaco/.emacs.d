@@ -57,3 +57,6 @@ el-get-backup-3.stable/
 /desktops
 /gotools
 /request
+/.python-environments
+/anaconda-mode
+/epkgs
