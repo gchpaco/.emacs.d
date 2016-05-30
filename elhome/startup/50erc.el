@@ -1,4 +1,8 @@
-(require 'erc)
+(use-package erc
+  :bind (:map erc-mode-map
+         ("C-c o" . erc-open-last-url-in-channel)
+         ("C-c u" . print-urls))
+  :config (set-face-foreground 'erc-timestamp-face "dimgrey"))
 
 ;; URL handing stuff from http://inkedmn.infogami.com/blog/
 (defun erc-open-last-url-in-channel ()
@@ -40,14 +44,3 @@
      (dolist (url urls)
        (insert (url-normalize-url url) "\n"))
      (goto-char 1))))
-
-;; A couple custom ERC keybindings
-(add-hook 'erc-mode-hook
-          '(lambda ()
-             (local-set-key (kbd "\C-c o") 'erc-open-last-url-in-channel)))
-(add-hook 'erc-mode-hook
-          '(lambda ()
-             (local-set-key (kbd "\C-c u") 'print-urls)))
-
-;; timestamps should not pop out so much
-(set-face-foreground 'erc-timestamp-face "dimgrey")

@@ -1,16 +1,24 @@
-(require 'align)
-(add-to-list 'align-rules-list
-             '(puppet-resources
-               (regexp . "\\(\\s-*\\)=>")
-               (modes quote (puppet-mode))
-               (group . 1)
-               (spacing . 1)))
-(require 'speedbar)
-(speedbar-add-supported-extension ".pp")
-(add-to-list 'speedbar-fetch-etags-parse-list
-             '("\\.rb" . "\\(\\(class\\|def\\)\\s-+\\([a-zA-Z0-9_.:]+\\)\\)\\s-*(?^?"))
-(add-to-list 'speedbar-fetch-etags-parse-list
-             '("\\.pp" . "\\(\\(class\\|site\\|node\\|define\\)\\s-+\\([a-zA-Z0-9_\-]+\\)\\)\\s-*\\(([^)]*)\\)?^?"))
+(use-package align
+  :config
+  (add-to-list 'align-rules-list
+               '(puppet-resources
+                 (regexp . "\\(\\s-*\\)=>")
+                 (modes quote (puppet-mode))
+                 (group . 1)
+                 (spacing . 1))))
+
+(use-package puppet-mode
+  :commands puppet-mode
+  :mode "\\.pp\\'"
+  :ensure t
+  :init (setq-default puppet-indent-level 8)
+  :config
+  (progn (speedbar-add-supported-extension ".pp")
+         (add-to-list 'speedbar-fetch-etags-parse-list
+                      '("\\.pp" . "\\(\\(class\\|site\\|node\\|define\\)\\s-+\\([a-zA-Z0-9_\-]+\\)\\)\\s-*\\(([^)]*)\\)?^?"))))
+
+(use-package flymake-puppet :ensure t)
+
 (defun my-get-class-from-puppet-module ()
   (let ((module-name (file-name-nondirectory
                       (expand-file-name (concat
@@ -65,5 +73,3 @@
   "class " str " {" \n
   > _ \n
   "}" > \n)
-(add-to-list 'auto-insert-alist
-             '(("\\.pp" . "Puppet module") . my-puppet-module-default))

@@ -1,9 +1,16 @@
-(add-hook 'server-switch-hook
-          (lambda nil
-            (let ((server-buf (current-buffer)))
-              (bury-buffer)
-              (switch-to-buffer-other-frame server-buf))))
+(defun bury-server-buffer ()
+  (let ((server-buf (current-buffer)))
+    (bury-buffer)
+    (switch-to-buffer-other-frame server-buf)))
 
-(add-hook 'server-done-hook 'delete-frame)
+(use-package edit-server
+  :if window-system
+  :init
+  (add-hook 'after-init-hook 'server-start t)
+  (add-hook 'after-init-hook 'edit-server-start t)
+  (add-hook 'server-switch-hook 'bury-server-buffer)
+  (add-hook 'server-done-hook 'delete-frame))
 
-(edit-server-start)
+(use-package edit-server-htmlize
+  :if window-system
+  :ensure t)

@@ -1,8 +1,14 @@
+(eval-when-compile (require 'rx))
+(use-package flycheck
+  :diminish flycheck-mode
+  :config (progn (add-hook 'flycheck-mode-hook 'my-flycheck-checkdoc-disabler)
+                 (add-hook 'prog-mode-hook 'flycheck-mode))
+  :ensure t)
+(use-package flycheck-google-cpplint :ensure t)
+(use-package flycheck-pyflakes :ensure t)
+
 ;; Goal: disable checkdoc when in .emacs.d/init.el and
 ;; .emacs.d/elhome/startup/*.
-
-(require 'rx)
-(require 'flycheck)
 
 (defvar my-disabled-filenames
   (rx bos (or "~/.emacs.d/init.el"
@@ -13,8 +19,7 @@
   "Regexp to disable `checkdoc' processing for matching filenames.")
 
 (defun my-flycheck-checkdoc-disabler ()
+  "Disable elisp checkdoc when in startup files."
   (unless (null (string-match my-disabled-filenames (or buffer-file-truename
                                                        "")))
     (add-to-list 'flycheck-disabled-checkers 'emacs-lisp-checkdoc)))
-
-(add-hook 'flycheck-mode-hook 'my-flycheck-checkdoc-disabler)

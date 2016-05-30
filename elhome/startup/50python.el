@@ -1,12 +1,39 @@
-(require 'elpy)
-(require 'pyenv-mode)
-(require 'anaconda-mode)
-(require 'pungi)
+(use-package elpy
+  :ensure t
+  :diminish elpy-mode
+  :pin elpy
+  :init (setq-default python-shell-exec-path '("/usr/local/opt/pyenv/shims"))
+  :config
+  (elpy-enable)
+  (elpy-use-cpython))
 
-(elpy-enable)
-(elpy-use-cpython)
-(add-to-list 'company-backends 'company-jedi)
-(pyenv-mode)
+(use-package pyenv-mode
+  :ensure t
+  :config
+  (pyenv-mode)
+  (add-hook 'projectile-switch-project-hook 'projectile-pyenv-mode-set))
+
+(use-package anaconda-mode
+  :ensure t
+  :config (add-hook 'python-mode-hook 'anaconda-mode))
+
+(use-package company-anaconda :ensure t)
+
+(use-package pydoc :ensure t)
+(use-package pydoc-info :ensure t)
+(use-package python-info :ensure t)
+
+(use-package company-jedi
+  :ensure t
+  :commands company-jedi
+  :init
+  (add-to-list 'company-backends 'company-jedi))
+
+(use-package pungi
+  :ensure t
+  :commands pungi:setup-jedi
+  :init
+  (add-hook 'python-mode-hook 'pungi:setup-jedi))
 
 (defun projectile-pyenv-mode-set ()
   "Set pyenv version matching project name."
@@ -15,6 +42,13 @@
         (pyenv-mode-set project)
       (pyenv-mode-unset))))
 
-(add-hook 'python-mode-hook 'anaconda-mode)
-(add-hook 'python-mode-hook 'pungi:setup-jedi)
-(add-hook 'projectile-switch-project-hook 'projectile-pyenv-mode-set)
+(use-package nose
+  :ensure t
+  :bind (:map python-mode-map
+              ("C-c N a" . nosetests-all)
+              ("C-c N m" . nosetests-module)
+              ("C-c N ." . nosetests-one)
+              ("C-c C-c" . nosetests-again)
+              ("C-c N p a" . nosetests-pdb-all)
+              ("C-c N p m" . nosetests-pdb-module)
+              ("C-c N p ." . nosetests-pdb-one)))

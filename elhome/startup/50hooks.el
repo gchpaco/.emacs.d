@@ -32,7 +32,10 @@
                             (make-local-variable 'parens-require-spaces)
                             (setq parens-require-spaces nil)))
 (add-hook 'org-mode-hook (lambda () (electric-indent-mode -1)))
-(add-hook 'progmodes-hooks 'abbrev-mode)
+
+(use-package abbrev
+  :diminish abbrev-mode
+  :init (add-hook 'progmodes-hooks 'abbrev-mode))
 
 (defun my-dired-browser-find-file ()
   "Dired function to view a file in a web browser"
