@@ -65,6 +65,7 @@
   :config (add-hook 'prog-mode-hook 'emr-initialize))
 
 (use-package dired-x
+  :functions dired-x-bind-find-file
   :config (dired-x-bind-find-file))
 
 (use-package dired+ :ensure t)
@@ -84,6 +85,9 @@
 
 (use-package spaceline-config
   :ensure spaceline
+  :functions (spaceline-emacs-theme
+              spaceline-toggle-buffer-encoding-abbrev-off
+              spaceline-toggle-hud-off)
   :init (setq-default spaceline-workspace-numbers-unicode t)
   :config
   (spaceline-emacs-theme)
@@ -126,6 +130,8 @@
 
 (use-package popwin
   :ensure t
+  :functions popwin-mode
+  :bind ("C-z" . popwin:keymap)
   :config (popwin-mode 1))
 
 (use-package eyebrowse
@@ -219,10 +225,6 @@
   :bind "M-p"
   :init (setq-default aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s)))
 
-(use-package popwin
-  :ensure t
-  :bind ("C-z" . popwin:keymap))
-
 (use-package list-unicode-display :ensure t)
 (use-package math-symbol-lists :ensure t)
 (use-package solarized-theme :ensure t :disabled t)
@@ -251,3 +253,15 @@
 (use-package window-purpose :ensure t)
 
 (use-package yaml-mode :ensure t)
+
+(use-package inversion :ensure t)
+
+(defun djcb-snip (b e summ)
+  "Remove selected lines, and replace them with `[snip:SUMM (n lines)]'."
+  (interactive "r\nsSummary:")
+  (let ((n (count-lines b e)))
+    (delete-region b e)
+    (insert (format "[snip%s (%d line%s)]"
+              (if (= 0 (length summ)) "" (concat ": " summ))
+              n
+              (if (= 1 n) "" "s")))))

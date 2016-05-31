@@ -404,18 +404,6 @@ as a list.")
 ;;   (unless (package-installed-p package)
 ;;     (package-install package)))
 
-(require 'inversion)
-
-(defun djcb-snip (b e summ)
-  "Remove selected lines, and replace them with `[snip:SUMM (n lines)]'."
-  (interactive "r\nsSummary:")
-  (let ((n (count-lines b e)))
-    (delete-region b e)
-    (insert (format "[snip%s (%d line%s)]"
-              (if (= 0 (length summ)) "" (concat ": " summ))
-              n
-              (if (= 1 n) "" "s")))))
-
 (put 'set-goal-column 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 (put 'with-state 'scheme-indent-function 2)
