@@ -9,10 +9,13 @@
 
 (use-package irony
   :commands (irony-mode)
-  :init (progn (add-hook 'c++-mode-hook 'irony-mode)
-               (add-hook 'c-mode-hook 'irony-mode)
-               (add-hook 'objc-mode-hook 'irony-mode)
-               (add-hook 'irony-mode-hook 'my-irony-mode-hook)))
+  :defer t
+  :init
+  (autoload 'irony-mode "irony" nil t)
+  (add-hook 'c++-mode-hook 'irony-mode)
+  (add-hook 'c-mode-hook 'irony-mode)
+  (add-hook 'objc-mode-hook 'irony-mode)
+  (add-hook 'irony-mode-hook 'my-irony-mode-hook))
 
 (use-package company-irony :ensure t)
 (use-package company-c-headers :ensure t)
@@ -33,11 +36,10 @@
                 #'ggtags-eldoc-function)))
 
 (use-package cc-mode
-  :config (progn (add-hook 'c++-mode-hook 'my-override-parens)
-                 (add-hook 'c-mode-hook 'my-override-parens)
-                 (add-hook 'objc-mode-hook 'my-override-parens)
-                 (add-hook 'c-mode-common-hook 'my-c-common-hook)
-                 (add-hook 'c-mode-common-hook 'hs-minor-mode)))
+  :defer t
+  :init (progn (add-hook 'c-mode-common-hook 'my-c-common-hook)
+               (add-hook 'c-mode-common-hook 'my-override-parens)
+               (add-hook 'c-mode-common-hook 'hs-minor-mode)))
 
 (setq-default gdb-many-windows t)
 (setq-default gdb-show-main t)
