@@ -265,3 +265,8 @@
               (if (= 0 (length summ)) "" (concat ": " summ))
               n
               (if (= 1 n) "" "s")))))
+
+(use-package winner
+  :ensure nil
+  :if (fboundp 'winner-mode)
+  :init (winner-mode 1))
