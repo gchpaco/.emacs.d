@@ -41,6 +41,11 @@
                (add-hook 'c-mode-common-hook 'my-override-parens)
                (add-hook 'c-mode-common-hook 'hs-minor-mode)))
 
+(use-package modern-cpp-font-lock
+  :commands modern-c++-font-lock-mode
+  :ensure t
+  :init (add-hook 'c++-mode-hook #'modern-c++-font-lock-mode))
+
 (setq-default gdb-many-windows t)
 (setq-default gdb-show-main t)
 
