@@ -67,3 +67,7 @@
   :ensure t)
 
 (use-package python-docstring :ensure t)
+
+(use-package yapfify
+  :ensure t
+  :config (add-hook 'python-mode-hook 'yapf-mode))
