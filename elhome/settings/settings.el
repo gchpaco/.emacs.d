@@ -53,7 +53,7 @@
  '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
-    ("338e99b0482a49d5c4f1e75f3bb69c8193c9c229bfd52bbc53e11b03a789812e" "bb7b7e7a09a02b1f9682f5d3b530a2e20ea058285c16452e2dc19af42aace5e0" "01b2b30ded8ecb3a07996cc7cdbb0a4e526d0722e56ac2847512613a3e1284c9" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c58382b9c4fff1aa94b8e3f0f81b0212bb554e83f76957bab735f960a4c441b1" "ce6046de29b8334433c9109b256a846391c47656fcdb4c8d64b1c643c655ddb7" "72c1070a1c8101f1bfc0adc5e7f4190a380b81666897eb1a17ea2973d58fc659" "c7b050e0d698f16a188a5834572ac4a6297f909bc7db4fda49e4dfcfc1ad1076" "43963925d90085d563fa21e62623a44ce2b4d8327e6e3814fdf28179865fd730" "96936d76f48be40d64721e6a069fedc2ed1adbab71f8447016277599ddd75313" "6eaebdc2426b0edfff9fd9a7610f2fe7ddc70e01ceb869aaaf88b5ebe326a0cd" "c158c2a9f1c5fcf27598d313eec9f9dceadf131ccd10abc6448004b14984767c" "39f98624caf410e66c4e03f36a1c373ea8ed9177cd9d12dfd6c0a53825599f60" "fb7b5b24d459ccf40f44659506a111ff0df9a07117a00aaee4999952a92f056a" "cfc2fbe694e2bbd083509168f8905d232bdc99fb35ec3e98ac83baec4bbfa1ba" "780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
+    ("1079a2e9eff0b09ac5aad88a661a76179fac52966a1e00943cdec616f0ba71de" "338e99b0482a49d5c4f1e75f3bb69c8193c9c229bfd52bbc53e11b03a789812e" "bb7b7e7a09a02b1f9682f5d3b530a2e20ea058285c16452e2dc19af42aace5e0" "01b2b30ded8ecb3a07996cc7cdbb0a4e526d0722e56ac2847512613a3e1284c9" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c58382b9c4fff1aa94b8e3f0f81b0212bb554e83f76957bab735f960a4c441b1" "ce6046de29b8334433c9109b256a846391c47656fcdb4c8d64b1c643c655ddb7" "72c1070a1c8101f1bfc0adc5e7f4190a380b81666897eb1a17ea2973d58fc659" "c7b050e0d698f16a188a5834572ac4a6297f909bc7db4fda49e4dfcfc1ad1076" "43963925d90085d563fa21e62623a44ce2b4d8327e6e3814fdf28179865fd730" "96936d76f48be40d64721e6a069fedc2ed1adbab71f8447016277599ddd75313" "6eaebdc2426b0edfff9fd9a7610f2fe7ddc70e01ceb869aaaf88b5ebe326a0cd" "c158c2a9f1c5fcf27598d313eec9f9dceadf131ccd10abc6448004b14984767c" "39f98624caf410e66c4e03f36a1c373ea8ed9177cd9d12dfd6c0a53825599f60" "fb7b5b24d459ccf40f44659506a111ff0df9a07117a00aaee4999952a92f056a" "cfc2fbe694e2bbd083509168f8905d232bdc99fb35ec3e98ac83baec4bbfa1ba" "780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default)))
  '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
  '(debug-on-error nil)
  '(default-frame-alist
@@ -178,9 +178,9 @@
    (quote
     (("1.6.0" . "/System/Library/Frameworks/JavaVM.framework"))))
  '(jde-mvn-nexus-url "http://acelot8/nexus")
- '(js-indent-level 2)
- '(js2-basic-offset 2)
- '(js2-strict-trailing-comma-warning nil)
+ '(js-indent-level 2 t)
+ '(js2-basic-offset 2 t)
+ '(js2-strict-trailing-comma-warning nil t)
  '(js2-use-font-lock-faces t t)
  '(magit-diff-use-overlays nil)
  '(magit-wip-after-apply-mode t)
@@ -398,7 +398,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
      (nil "lock" "gpg")
      ("lock" "")
      ("gpg" ""))))
- '(puppet-indent-level 8)
+ '(puppet-indent-level 8 t)
  '(python-shell-exec-path (quote ("/usr/local/opt/pyenv/shims/")))
  '(quack-default-program "mzscheme -i -l errortrace")
  '(quack-pretty-lambda-p t)
