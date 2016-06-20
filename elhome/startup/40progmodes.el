@@ -7,7 +7,7 @@
          ([f4] . flymake-goto-next-error)))
 
 (use-package flymake-css :ensure t)
-(use-package flymake-csslint :ensure t)
+(use-package flymake-csslint :ensure t :disabled t)
 (use-package flymake-easy :ensure t)
 (use-package flymake-lua :ensure t)
 (use-package flymake-python-pyflakes :ensure t)

@@ -78,7 +78,7 @@
 
 (use-package markdown-mode :ensure t)
 (use-package markdown-mode+ :ensure t)
-(use-package markdown-mac-link :ensure t)
+(use-package markdown-mac-link :ensure t :disabled t)
 
 (use-package docker :ensure t)
 (use-package docker-tramp :ensure t)

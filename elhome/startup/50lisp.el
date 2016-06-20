@@ -21,7 +21,7 @@
 (use-package cider-profile :ensure t)
 (use-package clj-refactor :ensure t)
 (use-package clojure-cheatsheet :ensure t)
-(use-package clojure-env :ensure t)
+(use-package clojure-env :ensure t :disabled t)
 (use-package clojure-mode :ensure t)
 (use-package clojure-mode-extra-font-locking :ensure t)
 (use-package clojure-mode-snippets :ensure t :disabled t)

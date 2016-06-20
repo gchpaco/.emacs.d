@@ -19,6 +19,6 @@
 
 (use-package sr-speedbar :ensure t)
 (use-package projectile-speedbar :ensure t)
-(use-package persp-mode :ensure t :pin "melpa")
-(use-package persp-projectile :ensure t)
+(use-package persp-mode :ensure t :pin "melpa" :disabled t)
+(use-package persp-projectile :ensure t :disabled t)
 (use-package projectile-codesearch :ensure t)
