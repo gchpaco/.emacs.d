@@ -18,7 +18,9 @@
                       :foreground "yellow"
                       :weight 'bold)
   (add-hook 'write-file-hooks 'delete-trailing-whitespace)
-  (add-hook 'prog-mode-hook 'whitespace-mode))
+  (add-hook 'prog-mode-hook 'whitespace-mode)
+  (add-hook 'makefile-mode-hook (lambda ()
+                                  (whitespace-mode 0))))
 
 (defun untabify-buffer ()
   "Untabify current buffer"
