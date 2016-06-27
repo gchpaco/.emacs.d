@@ -71,3 +71,9 @@
 (use-package yapfify
   :ensure t
   :config (add-hook 'python-mode-hook 'yapf-mode))
+
+(use-package python-test
+  :ensure t)
+
+(use-package pyimport
+  :ensure t)
