@@ -122,6 +122,9 @@
 (use-package reveal-in-osx-finder
   :if (eq window-system 'ns)
   :ensure t)
+(use-package grab-mac-link
+  :if (eq window-system 'ns)
+  :ensure t)
 
 (use-package golden-ratio
   :disabled t
