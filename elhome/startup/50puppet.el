@@ -14,7 +14,7 @@
   :commands puppet-mode
   :mode "\\.pp\\'"
   :ensure t
-  :init (setq-default puppet-indent-level 8)
+  :init (setq-default puppet-indent-level 2)
   :config
   (progn (speedbar-add-supported-extension ".pp")
          (add-to-list 'speedbar-fetch-etags-parse-list
@@ -61,17 +61,18 @@
   "# === Examples" \n
   "#" \n
   "# " _ \n
+  "# @example" \n
   "#  class { 'example_class':" \n
   "#    ntp_servers => [ 'pool.ntp.org', 'ntp.local.company.com' ]" \n
   "#  }" \n
   "#" \n
   "# === Authors" \n
   "#" \n
-  "# Graham Hughes <graham.hughes@citrixonline.com>" \n
+  "# Graham Hughes <graham@cloudvelox.com>" \n
   "#" \n
   "# === Copyright" \n
   "#" \n
-  "# Copyright 2012 Citrix Systems Inc, unless otherwise noted." \n
+  "# Copyright 2016 CloudVelox.com, unless otherwise noted." \n
   "#" \n
   "class " str " {" \n
   > _ \n
