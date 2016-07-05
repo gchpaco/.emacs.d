@@ -230,14 +230,7 @@
 
 (use-package list-unicode-display :ensure t)
 (use-package math-symbol-lists :ensure t)
-(use-package color-theme-solarized :ensure t
-  :init
-  (add-hook 'after-make-frame-functions
-            (lambda (frame)
-              (let ((mode (if (display-graphic-p frame) 'light 'dark)))
-                (set-frame-parameter frame 'background-mode mode)
-                (set-terminal-parameter frame 'background-mode mode))
-              (enable-theme 'solarized))))
+(use-package solarized-theme :ensure t)
 (use-package plan9-theme :ensure t :disabled t)
 
 (use-package csv-mode
