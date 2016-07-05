@@ -5,7 +5,15 @@
   :config
   (progn (speedbar-add-supported-extension ".rb")
          (add-to-list 'speedbar-fetch-etags-parse-list
-             '("\\.rb" . "\\(\\(class\\|def\\)\\s-+\\([a-zA-Z0-9_.:]+\\)\\)\\s-*(?^?"))))
+                      '("\\.rb" . "\\(\\(class\\|def\\)\\s-+\\([a-zA-Z0-9_.:]+\\)\\)\\s-*(?^?"))))
+
+(use-package rbenv
+  :ensure t
+  :init
+  (setq-default rbenv-installation-dir "/usr/local/opt/rbenv/")
+  :config
+  (global-rbenv-mode 1)
+  (rbenv-use-global))
 
 (defun my-get-module-from-ruby-file ()
   (cl-flet ((strip-slash (string) (substring string 0 -1))
