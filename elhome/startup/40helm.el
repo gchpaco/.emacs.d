@@ -47,5 +47,5 @@
 (use-package helm-orgcard :ensure t)
 (use-package helm-package :ensure t)
 (use-package helm-projectile :ensure t)
-(use-package helm-pydoc :ensure t)
+(use-package helm-pydoc :disabled t :ensure t)
 (use-package helm-unicode :ensure t)

@@ -96,7 +96,7 @@
 (use-package org-gcal :ensure t)
 (use-package org-journal :ensure t)
 (use-package org-mac-iCal :ensure t)
-(use-package org-mac-link :ensure t)
+(use-package org-mac-link :ensure t :disabled t)
 (use-package org-projectile :ensure t)
 (use-package org-ref :ensure t)
 (use-package ox-pandoc :ensure t)
