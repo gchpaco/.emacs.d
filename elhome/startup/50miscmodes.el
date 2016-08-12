@@ -273,3 +273,6 @@
   :ensure nil
   :if (fboundp 'winner-mode)
   :init (winner-mode 1))
+
+(use-package blackboard-bold-mode
+  :ensure t)
