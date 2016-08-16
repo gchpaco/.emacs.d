@@ -1,6 +1,9 @@
 (eval-when-compile
   (require 'use-package))
 
+(when (eq system-type 'darwin)
+ (setq-default insert-directory-program "/usr/local/bin/gls"))
+
 (use-package electric-pair-mode
   :commands electric-pair-mode
   :init (add-hook 'prog-mode-hook 'electric-pair-mode))
