@@ -276,3 +276,17 @@
 
 (use-package blackboard-bold-mode
   :ensure t)
+
+(use-package fix-muscle-memory
+  :init
+  (setq fix-muscle-memory-use-emoji t)
+  :config
+  (fix-muscle-memory-load-problem-words 'foo
+                                        '(("teh" . "the")
+                                          ("comptuer" . "computer")
+                                          ("destory" . "destroy")
+                                          ("occured" . "occurred")))
+  (add-hook 'text-mode-hook 'abbrev-mode)
+  (add-hook 'prog-mode-hook 'abbrev-mode)
+
+  (turn-on-fix-muscle-memory-on-extended-command))
