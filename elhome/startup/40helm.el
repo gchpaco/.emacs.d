@@ -40,7 +40,7 @@
 (use-package helm-google :ensure t)
 (use-package helm-gtags :ensure t)
 (use-package helm-helm-commands :ensure t)
-(use-package helm-itunes :ensure t)
+(use-package helm-itunes :disabled t :ensure t)
 (use-package helm-ls-git :ensure t)
 (use-package helm-open-github :disabled t :ensure t)
 (use-package helm-org-rifle :ensure t)
