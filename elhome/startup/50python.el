@@ -70,7 +70,12 @@
 
 (use-package yapfify
   :ensure t
+  :disabled t
   :config (add-hook 'python-mode-hook 'yapf-mode))
+
+(use-package py-autopep8
+  :ensure t
+  :config (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
 
 (use-package python-test
   :ensure t)

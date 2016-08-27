@@ -7,6 +7,7 @@
 (add-to-list 'exec-path "/usr/local/opt/pyenv/shims")
 (add-to-list 'exec-path (expand-file-name "~/.pyenv/shims"))
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
+(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
 (add-to-list 'exec-path (expand-file-name "~/bin"))
 
 (defun add-tex-input-dirs (basename)
