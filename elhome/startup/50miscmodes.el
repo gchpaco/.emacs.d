@@ -285,8 +285,29 @@
                                         '(("teh" . "the")
                                           ("comptuer" . "computer")
                                           ("destory" . "destroy")
-                                          ("occured" . "occurred")))
+                                          ("occured" . "occurred")
+                                          ("heira" . "hiera")))
   (add-hook 'text-mode-hook 'abbrev-mode)
   (add-hook 'prog-mode-hook 'abbrev-mode)
 
   (turn-on-fix-muscle-memory-on-extended-command))
+
+(use-package with-editor
+  :ensure t
+  :config
+  (add-hook 'shell-mode-hook 'with-editor-export-editor)
+  (add-hook 'shell-mode-hook 'with-editor-export-git-editor)
+  (add-hook 'term-exec-hook 'with-editor-export-editor)
+  (add-hook 'term-exec-hook 'with-editor-export-git-editor)
+  (add-hook 'eshell-mode-hook 'with-editor-export-editor)
+  (add-hook 'eshell-mode-hook 'with-editor-export-git-editor))
+
+(use-package rc-mode
+  :ensure t
+  :mode "\\.rc\\'")
+
+(use-package ibuffer-git
+  :ensure t)
+
+(use-package ibuffer-projectile
+  :ensure t)

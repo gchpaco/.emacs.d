@@ -93,6 +93,8 @@
 
 (define-abbrev-table 'conf-xdefaults-mode-abbrev-table '())
 
+(define-abbrev-table 'context-mode-abbrev-table '())
+
 (define-abbrev-table 'css-mode-abbrev-table '())
 
 (define-abbrev-table 'cssh-mode-abbrev-table '())
@@ -157,6 +159,8 @@
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
 
+(define-abbrev-table 'emr-buffer-report-mode-abbrev-table '())
+
 (define-abbrev-table 'epkg-list-mode-abbrev-table '())
 
 (define-abbrev-table 'erc-list-menu-mode-abbrev-table '())
@@ -185,11 +189,14 @@
   '(
     ("comptuer" "computer" nil 0)
     ("destory" "destroy" nil 0)
+    ("heira" "hiera" nil 0)
     ("occured" "occurred" nil 0)
     ("teh" "the" nil 0)
    ))
 
 (define-abbrev-table 'gnus-article-edit-mode-abbrev-table '())
+
+(define-abbrev-table 'gnus-group-mode-abbrev-table '())
 
 (define-abbrev-table 'gnus-sticky-article-mode-abbrev-table '())
 
@@ -310,6 +317,8 @@
 
 (define-abbrev-table 'magit-refs-mode-abbrev-table '())
 
+(define-abbrev-table 'magit-repolist-mode-abbrev-table '())
+
 (define-abbrev-table 'magit-revision-mode-abbrev-table '())
 
 (define-abbrev-table 'magit-stash-mode-abbrev-table '())
@@ -370,6 +379,8 @@
   '(
    ))
 
+(define-abbrev-table 'plain-tex-mode-abbrev-table '())
+
 (define-abbrev-table 'process-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
@@ -385,6 +396,8 @@
    ))
 
 (define-abbrev-table 'python-test-mode-abbrev-table '())
+
+(define-abbrev-table 'rc-mode-abbrev-table '())
 
 (define-abbrev-table 'restclient-mode-abbrev-table '())
 
@@ -430,11 +443,21 @@
 
 (define-abbrev-table 'speedbar-mode-abbrev-table '())
 
+(define-abbrev-table 'sql-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'srecode-template-mode-abbrev-table '())
+
 (define-abbrev-table 'tablist-mode-abbrev-table '())
 
 (define-abbrev-table 'tabulated-list-mode-abbrev-table '())
 
+(define-abbrev-table 'tar-mode-abbrev-table '())
+
 (define-abbrev-table 'term-mode-abbrev-table '())
+
+(define-abbrev-table 'texinfo-mode-abbrev-table '())
 
 (define-abbrev-table 'text-mode-abbrev-table
   '(
