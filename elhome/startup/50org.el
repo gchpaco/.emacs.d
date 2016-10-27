@@ -12,6 +12,11 @@
 (use-package org
   :bind ("\C-cb" . org-iswitchb)
   :mode ("\\.org\\'" . org-mode)
+  :init
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   (append org-babel-load-languages '((dot . t))))
+  (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
   :config
   (progn (defun bh/verify-refile-target ()
            "Exclude todo keywords with a done state from refile targets"
