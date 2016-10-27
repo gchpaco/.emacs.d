@@ -18,3 +18,5 @@
                                           magit-wip-after-save-local-mode))
 
 (add-to-list 'completion-ignored-extensions ".git/")
+
+(use-package magithub :ensure t)
