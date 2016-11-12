@@ -9,7 +9,7 @@
                        '(:eval (format " Prj[%s]" (projectile-project-name))))
          (add-to-list 'projectile-globally-ignored-directories "build")
          (add-to-list 'projectile-globally-ignored-directories "external"))
-  :config (projectile-global-mode))
+  :config (projectile-mode))
 
 (use-package helm-projectile
   :ensure t
@@ -17,8 +17,10 @@
                       projectile-switch-project-action 'helm-projectile)
   :config (helm-projectile-on))
 
-(use-package sr-speedbar :ensure t)
-(use-package projectile-speedbar :ensure t)
+(use-package projectile-speedbar :ensure t :disabled t)
 (use-package persp-mode :ensure t :pin "melpa" :disabled t)
 (use-package persp-projectile :ensure t :disabled t)
-(use-package projectile-codesearch :ensure t)
+(use-package projectile-codesearch :ensure t
+  :config
+  (bind-keys :map projectile-command-map
+             ("s c" . projectile-codesearch-search)))

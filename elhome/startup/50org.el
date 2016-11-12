@@ -104,7 +104,7 @@
 (use-package org-mac-link :ensure t :disabled t)
 (use-package org-projectile :ensure t)
 (use-package org-ref :ensure t)
-(use-package ox-pandoc :ensure t)
+(use-package ox-pandoc :ensure t :disabled t)
 (use-package orgit :ensure t)
 
 (use-package org-capture
