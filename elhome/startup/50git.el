@@ -3,10 +3,10 @@
 
 (use-package magit
   :ensure t
-  :bind (("C-c g b" . magit-blame)
-         ("C-c g l" . magit-log)
-         ("C-c g p" . magit-pull)
-         ("C-c g s" . magit-status)
+  :bind (("C-c C-g b" . magit-blame)
+         ("C-c C-g l" . magit-log)
+         ("C-c C-g p" . magit-pull)
+         ("C-c C-g s" . magit-status)
          ("C-c s" . magit-status)))
 (use-package magit-annex :ensure t)
 (use-package magit-filenotify :ensure t)

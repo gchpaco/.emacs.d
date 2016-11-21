@@ -82,3 +82,7 @@
 
 (use-package pyimport
   :ensure t)
+
+(use-package pygen
+  :ensure t
+  :config (add-hook 'python-mode-hook 'pygen-mode))
