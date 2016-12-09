@@ -1,11 +1,14 @@
 (eval-when-compile
   (require 'use-package))
 
+(setenv "PYENV_ROOT" (expand-file-name "~/.pyenv"))
+(setenv "WORKON_HOME" (concat (getenv "PYENV_ROOT")) "/versions")
+
 (add-to-list 'exec-path "/opt/local/bin")
-(add-to-list 'exec-path "/usr/local/bin")
+(push "/usr/local/bin" exec-path)
+(add-to-list 'exec-path (expand-file-name "~/.pyenv/shims"))
 (add-to-list 'exec-path "/usr/local/opt/pyenv/bin")
 (add-to-list 'exec-path "/usr/local/opt/pyenv/shims")
-(add-to-list 'exec-path (expand-file-name "~/.pyenv/shims"))
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
 (add-to-list 'exec-path (expand-file-name "~/.local/bin"))
 (add-to-list 'exec-path (expand-file-name "~/bin"))
@@ -45,6 +48,3 @@
                                              (concat (expand-file-name x) ":"))
                                            exec-path))
                    0 -1))
-
-(setenv "PYENV_ROOT" "/usr/local/opt/pyenv")
-(setenv "WORKON_HOME" "/usr/local/opt/pyenv/versions")

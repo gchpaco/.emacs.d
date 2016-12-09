@@ -294,3 +294,13 @@
 
 (use-package ibuffer-projectile
   :ensure t)
+
+(use-package protobuf-mode :ensure t
+  :mode "\\.proto\\'"
+  :config
+  (setq-mode-local protobuf-mode
+                   c-basic-offset 4))
+
+(use-package string-inflection
+  :ensure t
+  :bind ("C-c i" . string-inflection-cycle))

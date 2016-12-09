@@ -1,12 +1,17 @@
 (eval-when-compile
   (require 'use-package))
 
+(use-package python-mode
+  :disabled t
+  :ensure t)
+
 (use-package elpy
   :ensure t
   :functions elpy-use-cpython
   :diminish elpy-mode
   :pin elpy
-  :init (setq-default python-shell-exec-path '("/usr/local/opt/pyenv/shims"))
+  :init (setq-default python-shell-exec-path (list (expand-file-name "~/.pyenv/shims")
+                                                   "/usr/local/opt/pyenv/shims"))
   :config
   (elpy-enable)
   (elpy-use-cpython))
@@ -85,4 +90,5 @@
 
 (use-package pygen
   :ensure t
+  :disabled t
   :config (add-hook 'python-mode-hook 'pygen-mode))
