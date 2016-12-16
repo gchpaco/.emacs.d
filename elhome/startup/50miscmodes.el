@@ -304,3 +304,5 @@
 (use-package string-inflection
   :ensure t
   :bind ("C-c i" . string-inflection-cycle))
+
+(add-hook 'before-save-hook 'copyright-update)

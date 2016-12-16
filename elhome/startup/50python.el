@@ -92,3 +92,7 @@
   :ensure t
   :disabled t
   :config (add-hook 'python-mode-hook 'pygen-mode))
+
+(use-package importmagic
+  :ensure t
+  :config (add-hook 'python-mode-hook 'importmagic-mode))
