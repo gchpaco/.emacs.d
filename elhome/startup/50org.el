@@ -15,7 +15,10 @@
   :init
   (org-babel-do-load-languages
    'org-babel-load-languages
-   (append org-babel-load-languages '((dot . t))))
+   (append org-babel-load-languages '((dot . t)
+                                      (emacs-lisp . t)
+                                      (sh . t)
+                                      (python . t))))
   (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
   :config
   (progn (defun bh/verify-refile-target ()
@@ -31,6 +34,9 @@
                                     org-checklist org-git-link org-mac-iCal
                                     org-mac-link org-man org-panel)
                        org-outline-path-complete-in-steps nil
+                       org-edit-src-content-indentation 0
+                       org-src-tab-acts-natively t
+                       org-src-preserve-indentation t
                        org-refile-allow-creating-parent-nodes 'confirm
                        org-refile-target-verify-function 'bh/verify-refile-target
                        org-refile-targets '((nil :maxlevel . 9)
