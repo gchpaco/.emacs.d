@@ -14,3 +14,9 @@
                  '(("\\.hpp" . "C++ interface file") . my-cc-header-default))))
 
 (use-package auto-yasnippet :ensure t)
+
+(use-package yasnippet
+  :ensure t
+  :bind (:map yas-minor-mode-map
+         ("<tab>" . nil)
+         ("TAB" . nil)))
