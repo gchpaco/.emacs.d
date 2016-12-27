@@ -100,3 +100,12 @@
 (use-package indent-tools
   :ensure t
   :bind ("C-c >" . indent-tools-hydra/body))
+
+(use-package pylint
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook 'pylint-add-menu-items)
+  (add-hook 'python-mode-hook 'pylint-add-key-bindings))
+
+(use-package python-docstring
+  :bind ("C-c c" . gpolonkai/python-add-docstring))
