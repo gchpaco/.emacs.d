@@ -96,3 +96,7 @@
 (use-package importmagic
   :ensure t
   :config (add-hook 'python-mode-hook 'importmagic-mode))
+
+(use-package indent-tools
+  :ensure t
+  :bind ("C-c >" . indent-tools-hydra/body))
