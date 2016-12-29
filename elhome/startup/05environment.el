@@ -3,6 +3,7 @@
 
 (setenv "PYENV_ROOT" (expand-file-name "~/.pyenv"))
 (setenv "WORKON_HOME" (concat (getenv "PYENV_ROOT")) "/versions")
+(setenv "PYTHONPATH" (expand-file-name "~/lib/python"))
 
 (add-to-list 'exec-path "/opt/local/bin")
 (push "/usr/local/bin" exec-path)
