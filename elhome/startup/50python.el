@@ -108,4 +108,10 @@
   (add-hook 'python-mode-hook 'pylint-add-key-bindings))
 
 (use-package python-docstring
-  :bind ("C-c c" . gpolonkai/python-add-docstring))
+  :bind (:map python-mode-map
+              ("C-c c" . gpolonkai/python-add-docstring)))
+
+(use-package python-switch-quotes
+  :ensure t
+  :bind (:map python-mode-map
+              ("C-c '" . python-switch-quotes)))
