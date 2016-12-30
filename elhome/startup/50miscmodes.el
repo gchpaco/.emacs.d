@@ -213,8 +213,14 @@
 
 (use-package list-unicode-display :ensure t)
 (use-package math-symbol-lists :ensure t)
-(use-package solarized-theme :ensure t)
-(use-package plan9-theme :ensure t :disabled t)
+(use-package solarized-theme :ensure t :disabled t)
+
+(defun force-plan9-theme (frame)
+  (load-theme 'plan9 t))
+
+(use-package plan9-theme
+  :ensure t
+  :config (add-hook 'after-make-frame-functions 'force-plan9-theme))
 
 (use-package csv-mode
   :mode "\\.csv\\'"
