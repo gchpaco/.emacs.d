@@ -73,7 +73,6 @@
  '(dired-dwim-target t)
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|^\\.git$")
  '(dired-use-ls-dired t)
- '(display-battery-mode t)
  '(display-time-mode t)
  '(ebib-latex-preamble (quote ("\\usepackage{url}" "\\bibliographystyle{plain}")))
  '(ebib-preload-bib-files
@@ -84,7 +83,7 @@
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-sane-defaults)))
  '(elpy-rpc-backend "jedi")
- '(elpy-rpc-python-command "python")
+ '(elpy-rpc-python-command "/usr/local/opt/pyenv/shims/python")
  '(emms-player-mpd-music-directory "~/Music")
  '(enh-ruby-program "/home/ghughes/.rbenv/versions/1.9.3-p194/bin/ruby")
  '(erc-auto-query (quote frame))
@@ -195,6 +194,7 @@
     (("Wikipedia" "http://en.wikipedia.org/w/" "username" "password" "Main Page")
      ("Ops Wiki" "https://opswiki1.ops.expertcity.com/wiki/" "ghughes" "" "Main Page"))))
  '(mediawiki-site-default "Ops Wiki")
+ '(menu-bar-mode t)
  '(message-send-mail-function (quote smtpmail-send-it))
  '(nnmail-expiry-target "Archived")
  '(ns-alternate-modifier nil)
@@ -520,9 +520,3 @@ Errors may occur.  Save Options to overwrite the customization file. The origina
           (x-popup-dialog t (list msg '("OK" . nil) 'no-cancel) "Warning")
         (message msg)))))
 ;; End compatibility check
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Fira Code" :foundry "nil" :slant normal :weight normal :height 120 :width normal)))))
