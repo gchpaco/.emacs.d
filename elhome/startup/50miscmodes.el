@@ -216,7 +216,7 @@
 (use-package solarized-theme :ensure t :disabled t)
 
 (defun force-plan9-theme (frame)
-  (load-theme 'plan9 t))
+  (enable-theme 'plan9))
 
 (use-package plan9-theme
   :ensure t
