@@ -312,3 +312,5 @@
   :bind ("C-c i" . string-inflection-cycle))
 
 (add-hook 'before-save-hook 'copyright-update)
+
+(use-package ztree :ensure t)
