@@ -314,3 +314,12 @@
 (add-hook 'before-save-hook 'copyright-update)
 
 (use-package ztree :ensure t)
+
+(use-package tramp
+  :config
+  (add-to-list 'tramp-default-proxies-alist
+               '("\\." nil nil))
+  (add-to-list 'tramp-default-proxies-alist
+               '("\\`cunningham\\.local\\'" nil "/ssh:sc.denali-systems.com:"))
+  (add-to-list 'tramp-default-proxies-alist
+               '("\\`ec2cloner\\'" nil "/ssh:cunningham.local:")))
