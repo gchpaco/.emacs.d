@@ -317,9 +317,14 @@
 
 (use-package tramp
   :config
+  (setq tramp-default-method "ssh")
+  (defalias 'exit-tramp 'tramp-cleanup-all-buffers)
   (add-to-list 'tramp-default-proxies-alist
                '("\\." nil nil))
   (add-to-list 'tramp-default-proxies-alist
                '("\\`cunningham\\.local\\'" nil "/ssh:sc.denali-systems.com:"))
   (add-to-list 'tramp-default-proxies-alist
                '("\\`ec2cloner\\'" nil "/ssh:cunningham.local:")))
+
+(use-package anything-tramp
+  :ensure t)
