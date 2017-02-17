@@ -95,6 +95,7 @@
 
 (use-package importmagic
   :ensure t
+  :disabled t
   :config (add-hook 'python-mode-hook 'importmagic-mode))
 
 (use-package indent-tools
