@@ -96,3 +96,8 @@
   "#endif  // " str "_" \n)
 
 (use-package objc-font-lock :ensure t)
+
+(use-package flycheck-flawfinder :ensure t
+  :config
+  (flycheck-flawfinder-setup)
+  (flycheck-add-next-checker 'c/c++-cppcheck '(warning . flawfinder)))
