@@ -328,3 +328,5 @@
 
 (use-package anything-tramp
   :ensure t)
+
+(use-package literal-string :ensure t)

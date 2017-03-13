@@ -20,3 +20,4 @@
 (add-to-list 'completion-ignored-extensions ".git/")
 
 (use-package magithub :ensure t)
+(use-package magit-lfs :ensure t)
