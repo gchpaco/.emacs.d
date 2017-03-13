@@ -22,6 +22,7 @@
                  (bind-key "C-c h o" #'helm-occur))
   :ensure t)
 
+(use-package eshell)
 (use-package helm-eshell
   :commands (helm-eshell-history helm-comint-input-ring helm-minibuffer-history)
   :bind (:map eshell-mode-map
