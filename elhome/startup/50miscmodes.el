@@ -330,3 +330,5 @@
   :ensure t)
 
 (use-package literal-string :ensure t)
+
+(use-package kubernetes :ensure t)
