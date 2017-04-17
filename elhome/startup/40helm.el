@@ -36,7 +36,6 @@
 (use-package helm-c-yasnippet :ensure t)
 (use-package helm-company :ensure t)
 (use-package helm-git-files :ensure t)
-(use-package helm-git-grep :ensure t)
 (use-package helm-go-package :ensure t)
 (use-package helm-google :ensure t)
 (use-package helm-gtags :ensure t)
