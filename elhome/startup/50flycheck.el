@@ -7,7 +7,7 @@
   :config (progn (add-hook 'flycheck-mode-hook 'my-flycheck-checkdoc-disabler)
                  (add-hook 'prog-mode-hook 'flycheck-mode))
   :ensure t)
-(use-package flycheck-google-cpplint :ensure t)
+(use-package flycheck-google-cpplint :ensure t :disabled t)
 (use-package flycheck-pyflakes :ensure t)
 
 ;; Goal: disable checkdoc when in .emacs.d/init.el and
