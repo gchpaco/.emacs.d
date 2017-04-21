@@ -1,17 +1,6 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package electric-pair-mode
-  :commands electric-pair-mode
-  :init (add-hook 'prog-mode-hook 'electric-pair-mode))
-
-(use-package electric-indent-mode
-  :commands electric-indent-mode
-  :init (add-hook 'prog-mode-hook 'electric-indent-mode))
-
-(use-package ispell
-  :diminish ispell-minor-mode)
-
 (use-package form-feed
   :diminish form-feed-mode
   :commands form-feed-mode
@@ -21,31 +10,6 @@
 (use-package all :ensure t)
 
 (use-package beginend :ensure t)
-
-(use-package hl-indent
-  :diminish hl-indent-mode
-  :commands hl-indent-mode
-  :ensure t
-  :init (add-hook 'prog-mode-hook 'hl-indent-mode))
-
-(use-package highlight-parentheses
-  :diminish highlight-parentheses-mode
-  :commands highlight-parentheses-mode
-  :ensure t
-  :init (add-hook 'prog-mode-hook 'highlight-parentheses-mode))
-
-(use-package rainbow-delimiters
-  :diminish rainbow-delimiters-mode
-  :commands rainbow-delimiters-mode
-  :ensure t
-  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
-
-(use-package pretty-mode
-  :ensure t
-  :config (global-pretty-mode 1))
-
-(use-package restclient :ensure t)
-(use-package syslog-mode :ensure t)
 
 (use-package toggle-quotes
   :ensure t
@@ -57,31 +21,7 @@
 (use-package wgrep-helm :ensure t)
 (use-package wsd-mode :ensure t)
 
-(use-package emr
-  :diminish emr-c-mode
-  :ensure t
-  :bind (:map prog-mode-map
-              ("M-<return>" . emr-show-refactor-menu))
-  :config (add-hook 'prog-mode-hook 'emr-initialize))
-
-(use-package dired-x
-  :functions dired-x-bind-find-file
-  :config (dired-x-bind-find-file))
-
-(use-package dired+ :ensure t)
-(use-package dired-filter :ensure t)
-(use-package dired-hacks-utils :ensure t)
-(use-package dired-imenu :ensure t)
-(use-package direx :ensure t)
 (use-package make-it-so :ensure t)
-(use-package runner :disabled t :ensure t)
-
-(use-package markdown-mode :ensure t)
-(use-package markdown-mode+ :ensure t)
-(use-package markdown-mac-link :ensure t :disabled t)
-
-(use-package docker :ensure t)
-(use-package docker-tramp :ensure t)
 
 (use-package spaceline-config
   :ensure spaceline
@@ -97,9 +37,6 @@
 (use-package bury-successful-compilation
   :ensure t
   :config (bury-successful-compilation 1))
-
-(use-package battery
-  :config (display-battery-mode 1))
 
 (use-package mac-local
   :if (eq window-system 'ns))
@@ -152,59 +89,31 @@
 (use-package time
   :config (add-hook 'after-init-hook #'display-time))
 
-(use-package sgml-mode)
-(use-package info-look)
-(use-package uniquify)
-(use-package zap-up-to-char
-  :bind "C-M-z")
-(use-package multiple-cursors
-  :bind
-  ("C-S-c C-S-c" . mc/edit-lines)
-  ("C->" . mc/mark-next-like-this)
-  ("C-<" . mc/mark-previous-like-this)
-  ("C-c C-<" . mc/mark-all-like-this))
-(use-package expand-region
-  :bind ("C-'" . er/expand-region))
 (use-package shelldoc :ensure t)
 (use-package unify-opening :ensure t)
-(use-package alfred-org-capture)
-
-(use-package browse-url
-  :bind ("C-c u" . browse-url-at-point))
-
-(use-package eshell
-  :bind ("C-c a". eshell))
+(use-package alfred-org-capture
+  :if (eq window-system 'ns))
 
 (use-package sqlup-mode :ensure t)
 
 (use-package cssh :ensure t)
 (use-package ssh :ensure t)
-(use-package ssh-config-mode :ensure t)
+(use-package ssh-config-mode :ensure t :disabled t)
 
 (use-package tidy :ensure t)
 
 (use-package unbound :ensure t)
 
-(use-package dash :ensure t)
 (use-package dash-at-point
   :bind "C-c d"
   :ensure t)
 (use-package counsel-dash :ensure t)
-
-(use-package ffap
-  :bind "C-c f")
-
-(use-package find-file
-  :bind ("C-c o" . ff-find-other-file))
 
 (use-package avy
   :ensure t
   :init (setq-default avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
   :bind (("C-c j" . avy-goto-word-or-subword-1)
          ("C-c z" . avy-goto-char-2)))
-
-(use-package woman
-  :bind "C-c m")
 
 (use-package ace-window
   :ensure t
@@ -222,29 +131,15 @@
   :ensure t
   :config (add-hook 'after-make-frame-functions 'force-plan9-theme))
 
-(use-package csv-mode
-  :mode "\\.csv\\'"
-  :ensure t)
-
 (use-package editorconfig :ensure t)
 
 (use-package epkg :ensure t)
 
 (use-package git-annex :ensure t)
 
-(use-package gitignore-mode
-  :mode "\\.gitignore\\'"
-  :ensure t)
-
-(use-package graphviz-dot-mode
-  :mode "\\.dot\\'"
-  :ensure t)
-
 (use-package package-safe-delete :ensure t)
 
 (use-package window-purpose :ensure t)
-
-(use-package yaml-mode :ensure t)
 
 (use-package inversion :ensure t)
 
@@ -267,6 +162,7 @@
   :ensure t)
 
 (use-package fix-muscle-memory
+  :disabled t
   :init
   (setq fix-muscle-memory-use-emoji t)
   :config
@@ -291,44 +187,15 @@
   (add-hook 'eshell-mode-hook 'with-editor-export-editor)
   (add-hook 'eshell-mode-hook 'with-editor-export-git-editor))
 
-(use-package rc-mode
-  :ensure t
-  :mode "\\.rc\\'")
-
 (use-package ibuffer-git
   :ensure t)
 
 (use-package ibuffer-projectile
   :ensure t)
 
-(use-package protobuf-mode :ensure t
-  :mode "\\.proto\\'"
-  :config
-  (setq-mode-local protobuf-mode
-                   c-basic-offset 4))
-
-(use-package string-inflection
-  :ensure t
-  :bind ("C-c i" . string-inflection-cycle))
-
 (add-hook 'before-save-hook 'copyright-update)
 
 (use-package ztree :ensure t)
 
-(use-package tramp
-  :config
-  (setq tramp-default-method "ssh")
-  (defalias 'exit-tramp 'tramp-cleanup-all-buffers)
-  (add-to-list 'tramp-default-proxies-alist
-               '("\\." nil nil))
-  (add-to-list 'tramp-default-proxies-alist
-               '("\\`cunningham\\.local\\'" nil "/ssh:sc.denali-systems.com:"))
-  (add-to-list 'tramp-default-proxies-alist
-               '("\\`ec2cloner\\'" nil "/ssh:cunningham.local:")))
-
 (use-package anything-tramp
   :ensure t)
-
-(use-package literal-string :ensure t)
-
-(use-package kubernetes :ensure t)

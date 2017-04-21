@@ -47,3 +47,75 @@
          ("M-\"" . corral-double-quotes-backward)))
 
 (use-package srefactor :ensure t)
+
+(use-package literal-string :ensure t)
+
+(use-package kubernetes :ensure t)
+
+(use-package protobuf-mode :ensure t
+  :mode "\\.proto\\'"
+  :config
+  (setq-mode-local protobuf-mode
+                   c-basic-offset 4))
+
+(use-package string-inflection
+  :ensure t
+  :bind ("C-c i" . string-inflection-cycle))
+
+(use-package rc-mode
+  :ensure t
+  :mode "\\.rc\\'")
+
+(use-package yaml-mode :ensure t)
+
+(use-package gitignore-mode
+  :mode "\\.gitignore\\'"
+  :ensure t)
+
+(use-package graphviz-dot-mode
+  :mode "\\.dot\\'"
+  :ensure t)
+
+(use-package csv-mode
+  :mode "\\.csv\\'"
+  :ensure t)
+
+(use-package markdown-mode :ensure t)
+(use-package markdown-mode+ :ensure t)
+(use-package markdown-mac-link :ensure t :disabled t)
+
+(use-package docker :ensure t)
+(use-package docker-tramp :ensure t)
+
+(use-package emr
+  :diminish emr-c-mode
+  :ensure t
+  :bind (:map prog-mode-map
+              ("M-<return>" . emr-show-refactor-menu))
+  :config (add-hook 'prog-mode-hook 'emr-initialize))
+
+(use-package pretty-mode
+  :ensure t
+  :config (global-pretty-mode 1))
+
+(use-package syslog-mode :ensure t)
+
+(use-package restclient :ensure t)
+
+(use-package hl-indent
+  :diminish hl-indent-mode
+  :commands hl-indent-mode
+  :ensure t
+  :init (add-hook 'prog-mode-hook 'hl-indent-mode))
+
+(use-package highlight-parentheses
+  :diminish highlight-parentheses-mode
+  :commands highlight-parentheses-mode
+  :ensure t
+  :init (add-hook 'prog-mode-hook 'highlight-parentheses-mode))
+
+(use-package rainbow-delimiters
+  :diminish rainbow-delimiters-mode
+  :commands rainbow-delimiters-mode
+  :ensure t
+  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
