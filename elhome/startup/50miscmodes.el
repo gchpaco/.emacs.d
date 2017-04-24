@@ -199,3 +199,5 @@
 
 (use-package anything-tramp
   :ensure t)
+
+(use-package ini-mode :ensure t)

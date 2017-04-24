@@ -36,6 +36,7 @@ as a list.")
 
     (add-to-list 'package-pinned-packages '(cider . "melpa") t)
     (add-to-list 'package-pinned-packages '(yasnippet . "melpa") t)
+    (add-to-list 'package-pinned-packages '(jabber . "melpa") t)
     (add-to-list 'package-pinned-packages '(org . "org") t)
     (add-to-list 'package-pinned-packages '(org-plus-contrib . "org") t)
 
@@ -45,6 +46,10 @@ as a list.")
   :ensure t)
 
 (elhome-init)
+
+(let ((secrets-file (locate-user-emacs-file "secrets.el" ".emacs.secrets.el")))
+ (when (file-exists-p secrets-file)
+   (load secrets-file)))
 
 ;; (dolist (package (list
 ;;                   'yasnippet
