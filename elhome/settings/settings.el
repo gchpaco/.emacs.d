@@ -44,7 +44,7 @@
  '(code-library-directory "~/wd/code/library/")
  '(compilation-message-face (quote default))
  '(compilation-mode-hook nil)
- '(copyright-names-regexp "\\(Graham Hughes\\|Citrix Systems Inc.\\|Citrix Online\\)")
+ '(copyright-names-regexp "\\(Graham Hughes\\|Farmers Edge\\)")
  '(copyright-year-ranges t)
  '(cua-global-mark-cursor-color "#2aa198")
  '(cua-normal-cursor-color "#839496")

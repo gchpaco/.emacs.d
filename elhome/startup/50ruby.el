@@ -39,7 +39,7 @@
   "#" \n
   "# === Copyright" \n
   "#" \n
-  "# Copyright 2012, 2016 Citrix Systems Inc, unless otherwise noted." \n
+  "# Copyright 2017 Farmers Edge, unless otherwise noted." \n
   "#" \n
   "module " str " #:nodoc:"\n
   > "# " _ \n
