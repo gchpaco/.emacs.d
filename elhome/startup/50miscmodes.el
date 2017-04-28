@@ -201,3 +201,5 @@
   :ensure t)
 
 (use-package ini-mode :ensure t)
+
+(use-package terraform-mode :ensure t)
