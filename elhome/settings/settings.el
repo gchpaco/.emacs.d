@@ -175,6 +175,7 @@
  '(inferior-lisp-program "/usr/local/bin/sbcl" t)
  '(inhibit-startup-echo-area-message "ghughes")
  '(inhibit-startup-screen t)
+ '(jabber-auto-reconnect t)
  '(jde-ant-enable-find t)
  '(jde-build-function (quote (jde-ant-build)))
  '(jde-jdk (quote ("1.6.0")))
