@@ -203,3 +203,5 @@
 (use-package ini-mode :ensure t)
 
 (use-package terraform-mode :ensure t)
+
+(use-package password-store :ensure t)
