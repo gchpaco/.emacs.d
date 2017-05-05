@@ -35,7 +35,7 @@
   (my-get-module-from-ruby-file)
   "# === Authors" \n
   "#" \n
-  "# Graham Hughes <ghughes@meteor.com>" \n
+  "# Graham Hughes <graham.hughes@farmersedge.ca>"
   "#" \n
   "# === Copyright" \n
   "#" \n
@@ -47,3 +47,15 @@
                           (file-name-nondirectory buffer-file-name) 0 -3)) \n
   > "end" \n
   > "end" \n)
+(defun my-get-cookbook-from-ruby-file ()
+  (file-name-nondirectory (expand-file-name ".."
+                                            (file-name-directory buffer-file-name))))
+(define-skeleton my-chef-cookbook-default
+  "Ruby module initial contents"
+  (my-get-cookbook-from-ruby-file)
+  "#" \n
+  "# Cookbook:: " str \n
+  "# Recipe:: " (substring (file-name-nondirectory buffer-file-name) 0 -3) \n
+  "#" \n
+  "# Copyright 2017 Farmers Edge, All Rights Reserved" \n
+  _)
