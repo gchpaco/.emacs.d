@@ -32,7 +32,8 @@
                                     org-id org-info org-irc org-mhe
                                     org-protocol org-rmail org-w3m
                                     org-checklist org-git-link org-mac-iCal
-                                    org-mac-link org-man org-panel)
+                                    org-mac-link org-man org-panel
+                                    ox-confluence)
                        org-outline-path-complete-in-steps nil
                        org-edit-src-content-indentation 0
                        org-src-tab-acts-natively t
