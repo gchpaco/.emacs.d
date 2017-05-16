@@ -51,11 +51,29 @@
   (file-name-nondirectory (expand-file-name ".."
                                             (file-name-directory buffer-file-name))))
 (define-skeleton my-chef-cookbook-default
-  "Ruby module initial contents"
+  "Ruby cookbook initial contents"
   (my-get-cookbook-from-ruby-file)
   "#" \n
   "# Cookbook:: " str \n
   "# Recipe:: " (substring (file-name-nondirectory buffer-file-name) 0 -3) \n
+  "#" \n
+  "# Copyright 2017 Farmers Edge, All Rights Reserved" \n
+  _)
+(define-skeleton my-chef-resource-default
+  "Ruby resource initial contents"
+  (my-get-cookbook-from-ruby-file)
+  "#" \n
+  "# Cookbook:: " str \n
+  "# Resource:: " (substring (file-name-nondirectory buffer-file-name) 0 -3) \n
+  "#" \n
+  "# Copyright 2017 Farmers Edge, All Rights Reserved" \n
+  _)
+(define-skeleton my-chef-attributes-default
+  "Ruby attributes initial contents"
+  (my-get-cookbook-from-ruby-file)
+  "#" \n
+  "# Cookbook:: " str \n
+  "# Attributes:: " (substring (file-name-nondirectory buffer-file-name) 0 -3) \n
   "#" \n
   "# Copyright 2017 Farmers Edge, All Rights Reserved" \n
   _)

@@ -7,6 +7,10 @@
     (add-to-list 'auto-insert-alist
                  '(("/recipes/.*\\.rb" . "Chef cookbook") . my-chef-cookbook-default))
     (add-to-list 'auto-insert-alist
+                 '(("/resources/.*\\.rb" . "Chef resource") . my-chef-resource-default))
+    (add-to-list 'auto-insert-alist
+                 '(("/attributes/.*\\.rb" . "Chef attributes") . my-chef-attributes-default))
+    (add-to-list 'auto-insert-alist
                  '(("\\.rb" . "Ruby file") . my-ruby-module-default))
     (add-to-list 'auto-insert-alist
                  '(("\\.pp" . "Puppet module") . my-puppet-module-default))
