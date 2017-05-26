@@ -104,10 +104,14 @@
 
 (use-package unbound :ensure t)
 
-(use-package dash-at-point
-  :bind "C-c d"
-  :ensure t)
-(use-package counsel-dash :ensure t)
+(case system-type
+  (darwin (use-package dash-at-point
+            :bind "C-c d"
+            :ensure t)
+          (use-package counsel-dash :ensure t))
+  (otherwise (use-package zeal-at-point
+               :bind "C-c d"
+               :ensure t)))
 
 (use-package avy
   :ensure t
