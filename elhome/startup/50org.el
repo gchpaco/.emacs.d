@@ -247,3 +247,12 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 (use-package restclient :ensure t)
 (use-package ob-restclient :ensure t)
 (use-package org-edit-latex :ensure t)
+(use-package org-projectile :ensure t
+  :bind (("C-c c" . org-capture)
+         ("C-c n p" . org-projectile-project-todo-completing-read))
+  :config
+  (setq-default org-projectile-projects-file
+                (expand-file-name "~/Dropbox/org/projects.org"))
+  (push (org-projectile-project-todo-entry) org-capture-templates)
+  (push (org-projectile-todo-files) org-agenda-files))
+(use-package org-projectile-helm :ensure t)

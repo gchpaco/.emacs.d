@@ -209,3 +209,6 @@
 (use-package terraform-mode :ensure t)
 
 (use-package password-store :ensure t)
+
+(use-package scratch :ensure t)
+(use-package scratch-ext :ensure t)

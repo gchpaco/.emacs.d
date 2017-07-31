@@ -21,3 +21,6 @@
 
 (use-package magithub :ensure t)
 (use-package magit-lfs :ensure t)
+(use-package gited :ensure t
+  :bind (:map dired-mode-map
+              ("C-x C-g" . gited-list-branches)))
