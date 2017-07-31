@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: auto-data-object
+# key: ado
+# contributor: gchpaco
+# --
+package ${1:`(mapconcat 'identity (split-string (replace-regexp-in-string ".*src\\(/\\(main\\|test\\)\\)?\\(/java\\)?" "" default-directory) "/" t) ".")`};
+
+import com.google.auto.value.AutoValue;
+
+@AutoValue
+public abstract class ${2:`(file-name-sans-extension (file-name-nondirectory (buffer-file-name)))`}$3 {
+    public abstract $4 $5();
+    $0
+
+    public static $2 create($4 $5) {
+        return builder()
+            .$5($5)
+            .build();
+    }
+
+    public static Builder builder() {
+        return new AutoValue_$2.Builder();
+    }
+
+    @AutoValue.Builder
+    public abstract class Builder {
+        public abstract Builder $5($4 $5);
+
+        public abstract $2 build();
+    }
+}

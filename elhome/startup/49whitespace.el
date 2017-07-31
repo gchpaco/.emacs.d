@@ -19,6 +19,8 @@
                       :weight 'bold)
   (add-hook 'write-file-hooks 'delete-trailing-whitespace)
   (add-hook 'prog-mode-hook 'whitespace-mode)
+  (define-hook-helper java-mode ()
+    (setq-mode-local java-mode whitespace-line-column 140))
   (define-hook-helper makefile-mode ()
     (whitespace-mode 0)))
 

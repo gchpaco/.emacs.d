@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name : data-object
+# contributor : gchpaco
+# key: dato
+# --
+package ${1:`(mapconcat 'identity (split-string (replace-regexp-in-string ".*src\\(/\\(main\\|test\\)\\)?\\(/java\\)?" "" default-directory) "/" t) ".")`};
+
+import java.util.Objects;
+
+public class ${2:`(file-name-sans-extension (file-name-nondirectory (buffer-file-name)))`}$3 {
+    public final $4 $5;
+    $0
+    public $2($4 $5) {
+        this.$5 = $5;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof $2)) {
+            return false;
+        }
+        $2 that = ($2) o;
+        return Objects.equals($5, that.$5);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash($5);
+    }
+}

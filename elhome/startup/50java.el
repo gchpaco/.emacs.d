@@ -16,3 +16,7 @@
   :functions company-emacs-eclim-setup
   :config (company-emacs-eclim-setup)
   :disabled t)
+
+(use-package meghanada :ensure t
+  :init
+  (add-hook 'java-mode-hook 'meghanada-mode))
