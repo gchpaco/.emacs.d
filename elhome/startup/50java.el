@@ -20,3 +20,12 @@
 (use-package meghanada :ensure t
   :init
   (add-hook 'java-mode-hook 'meghanada-mode))
+
+(defun my-disable-spaces-for-java (endp delimiter)
+  "`paredit-mode' shouldn't insert space before characters in Java.
+
+This function is a suitable element for the list variable
+ `paredit-space-for-delimiter-predicates'"
+  (not (eq major-mode 'java-mode)))
+
+(add-hook 'paredit-space-for-delimiter-predicates #'my-disable-spaces-for-java)
