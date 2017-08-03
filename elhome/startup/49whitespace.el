@@ -20,7 +20,7 @@
   (add-hook 'write-file-hooks 'delete-trailing-whitespace)
   (add-hook 'prog-mode-hook 'whitespace-mode)
   (define-hook-helper java-mode ()
-    (setq-mode-local java-mode whitespace-line-column 140))
+    (setq-mode-local java-mode whitespace-line-column 180))
   (define-hook-helper makefile-mode ()
     (whitespace-mode 0)))
 
@@ -40,6 +40,7 @@
     (set-buffer-file-coding-system 'utf-8-unix)
     ;(untabify-buffer)
     (copyright-update)
+    (yafolding-show-all)
     (delete-trailing-whitespace)))
 
 (add-hook 'prog-mode-hook 'progmodes-hooks)
