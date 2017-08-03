@@ -210,7 +210,26 @@
  '(org-agenda-tags-todo-honor-ignore-options t)
  '(org-capture-templates
    (quote
-    (("t" "task" entry
+    (("p" "Project Todo" entry
+      (function
+       (closure
+        ((capture-heading . "Project Todo")
+         (capture-template . "* TODO %?
+")
+         (capture-character . "p")
+         (additional-options)
+         t)
+        nil
+        (occ-capture-goto-marker
+         (make-instance
+          (quote occ-context)
+          :category
+          (org-projectile-category-from-file
+           (org-capture-get :original-file))
+          :template capture-template :strategy org-projectile-strategy :options additional-options))))
+      "* TODO %?
+")
+     ("t" "task" entry
       (file "~/Dropbox/org/refile.org")
       "* NEXT %?
 %U
@@ -373,7 +392,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(outline-regexp "\\*+ " t)
  '(package-selected-packages
    (quote
-    (org-projectile-helm copy-as-format jira-markup-mode ox-jira yatemplate yasnippet scratch-ext scratch megahanda gited meghanada ob-http ob-go ox-gfm org-trello org-plus-contrib tern magithub helm-projectile helm-company helm-ag password-store terraform-mode ini-mode ztree make-it-so dired-toggle-sudo hook-helpers indent-tools pylint python-docstring protobuf-mode pyimport kubernetes org-edit-latex literal-string magit-lfs anything-tramp flycheck-flawfinder anaconda-mode python-switch-quotes blackboard-theme importmagic wand string-inflection protocol-buffer forth-mode ag ibuffer-projectile ibuffer-git rc-mode py-autopep8 fix-muscle-memory blackboard-bold-mode hyperbole grab-mac-link rbenv rbenv-mode solarized-theme python-test company-ansible ansible-doc ansible emacs-clim emacs-eclim groovy-mode yapfify modern-cpp-font-lock geiser macrostep use-package smex cssh yaml-mode wsd-mode window-purpose wgrep-pt wgrep-helm uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy syslog-mode ssh-config-mode ssh srefactor sqlup-mode spaceline shelldoc runner reveal-in-osx-finder rainbow-delimiters python-pylint python-pep8 python-info python pymacs pyfmt pyenv-mode-auto pydoc-info pydoc puppet-mode pungi projectile-speedbar projectile-codesearch pretty-mode preproc-font-lock popwin plan9-theme pip-requirements persp-projectile paredit-menu paredit-everywhere pandoc-mode package-safe-delete package+ ox-pandoc osx-trash osx-lib osx-clipboard osx-browse orgit org-ref org-projectile org-mobile-sync org-mac-link org-mac-iCal org-journal org-gcal org-fstree org-dropbox org-context org-cliplink org-caldav org-bullets org-bookmark-heading org-alert objc-font-lock ob-restclient nose multicolumn markdown-mode+ markdown-mac-link magit-gitflow magit-find-file magit-filenotify magit-annex list-unicode-display jst json-mode js2-refactor java-snippets interleave ical-pull hl-indent highlight-parentheses helm-unicode helm-pydoc helm-package helm-orgcard helm-org-rifle helm-open-github helm-ls-git helm-helm-commands helm-gtags helm-go-package helm-git-files helm-git helm-c-yasnippet helm-ack graphviz-dot-mode gotest golint golden-ratio go-stacktracer go-snippets go-projectile go-errcheck go-dlv go-direx go-complete gmail2bbdb gitignore-mode git-annex ggtags form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fic-mode feature-mode eyebrowse expand-region evernote-mode eproject epkg emr elwm elpy elhome ein editorconfig edit-server-htmlize e2wm-term e2wm-bookmark docker-tramp docker dired-imenu dired-filter dired+ dash-at-point csv-mode counsel-dash corral company-math company-jedi company-irony company-inf-ruby company-go company-c-headers company-auctex company-anaconda common-lisp-snippets code-library clojure-snippets clojure-project-mode clojure-mode-extra-font-locking clojure-env clojure-cheatsheet clj-refactor cider-profile cider-decompile cedit bury-successful-compilation bibtex-utils beginend bbdb auto-yasnippet auctex-lua auctex-latexmk all ace-window)))
+    (zeal-at-point org-projectile-helm copy-as-format jira-markup-mode ox-jira yatemplate yasnippet scratch-ext scratch megahanda gited meghanada ob-http ob-go ox-gfm org-trello org-plus-contrib tern magithub helm-projectile helm-company helm-ag password-store terraform-mode ini-mode ztree make-it-so dired-toggle-sudo hook-helpers indent-tools pylint python-docstring protobuf-mode pyimport kubernetes org-edit-latex literal-string magit-lfs anything-tramp flycheck-flawfinder anaconda-mode python-switch-quotes blackboard-theme importmagic wand string-inflection protocol-buffer forth-mode ag ibuffer-projectile ibuffer-git rc-mode py-autopep8 fix-muscle-memory blackboard-bold-mode hyperbole grab-mac-link rbenv rbenv-mode solarized-theme python-test company-ansible ansible-doc ansible emacs-clim emacs-eclim groovy-mode yapfify modern-cpp-font-lock geiser macrostep use-package smex cssh yaml-mode wsd-mode window-purpose wgrep-pt wgrep-helm uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy syslog-mode ssh-config-mode ssh srefactor sqlup-mode spaceline shelldoc runner reveal-in-osx-finder rainbow-delimiters python-pylint python-pep8 python-info python pymacs pyfmt pyenv-mode-auto pydoc-info pydoc puppet-mode pungi projectile-speedbar projectile-codesearch pretty-mode preproc-font-lock popwin plan9-theme pip-requirements persp-projectile paredit-menu paredit-everywhere pandoc-mode package-safe-delete package+ ox-pandoc osx-trash osx-lib osx-clipboard osx-browse orgit org-ref org-projectile org-mobile-sync org-mac-link org-mac-iCal org-journal org-gcal org-fstree org-dropbox org-context org-cliplink org-caldav org-bullets org-bookmark-heading org-alert objc-font-lock ob-restclient nose multicolumn markdown-mode+ markdown-mac-link magit-gitflow magit-find-file magit-filenotify magit-annex list-unicode-display jst json-mode js2-refactor java-snippets interleave ical-pull hl-indent highlight-parentheses helm-unicode helm-pydoc helm-package helm-orgcard helm-org-rifle helm-open-github helm-ls-git helm-helm-commands helm-gtags helm-go-package helm-git-files helm-git helm-c-yasnippet helm-ack graphviz-dot-mode gotest golint golden-ratio go-stacktracer go-snippets go-projectile go-errcheck go-dlv go-direx go-complete gmail2bbdb gitignore-mode git-annex ggtags form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fic-mode feature-mode eyebrowse expand-region evernote-mode eproject epkg emr elwm elpy elhome ein editorconfig edit-server-htmlize e2wm-term e2wm-bookmark docker-tramp docker dired-imenu dired-filter dired+ dash-at-point csv-mode counsel-dash corral company-math company-jedi company-irony company-inf-ruby company-go company-c-headers company-auctex company-anaconda common-lisp-snippets code-library clojure-snippets clojure-project-mode clojure-mode-extra-font-locking clojure-env clojure-cheatsheet clj-refactor cider-profile cider-decompile cedit bury-successful-compilation bibtex-utils beginend bbdb auto-yasnippet auctex-lua auctex-latexmk all ace-window)))
  '(paradox-automatically-star t)
  '(paradox-execute-asynchronously t)
  '(paradox-github-token t)
