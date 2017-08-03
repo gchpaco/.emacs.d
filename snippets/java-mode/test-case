@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: test-case
+# key: test
+# --
+package ${1:`(mapconcat 'identity (split-string (replace-regexp-in-string ".*src\\(/\\(main\\|test\\)\\)?\\(/java\\)?" "" default-directory) "/" t) ".")`};
+
+import org.junit.Test;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+public class ${2:`(file-name-sans-extension (file-name-nondirectory (buffer-file-name)))`}$3 {
+    @Test
+    public void $4() {
+        $0
+    }
+}
