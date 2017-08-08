@@ -60,6 +60,7 @@ el-get-backup-3.stable/
 /.python-environments
 /anaconda-mode
 /epkgs
+/straight
 
 # Eclipse?
 elhome/startup/workbench.xmi
