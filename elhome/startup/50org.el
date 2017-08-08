@@ -254,5 +254,6 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
   (setq-default org-projectile-projects-file
                 (expand-file-name "~/Dropbox/org/projects.org"))
   (pushnew (org-projectile-project-todo-entry) org-capture-templates)
-  (setq-default org-agenda-files (append (org-projectile-todo-files) org-agenda-files)))
+  (dolist (file (org-projectile-todo-files))
+    (pushnew file org-agenda-files)))
 (use-package org-projectile-helm :ensure t)
