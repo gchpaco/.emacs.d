@@ -1,10 +1,6 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package org-install
-  :ensure org-plus-contrib
-  :pin org)
-
 (use-package code-library
   :init (setq-default code-library-directory "~/wd/code/library/")
   :ensure t)
@@ -12,16 +8,15 @@
 (use-package org
   :bind ("\C-cb" . org-iswitchb)
   :mode ("\\.org\\'" . org-mode)
-  :init
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   (append org-babel-load-languages '((dot . t)
-                                      (emacs-lisp . t)
-                                      (sh . t)
-                                      (python . t))))
-  (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
   :config
-  (progn (defun bh/verify-refile-target ()
+  (progn (org-babel-do-load-languages
+          'org-babel-load-languages
+          (append org-babel-load-languages '((dot . t)
+                                             (emacs-lisp . t)
+                                             (sh . t)
+                                             (python . t))))
+         (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
+         (defun bh/verify-refile-target ()
            "Exclude todo keywords with a done state from refile targets"
            (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
@@ -31,7 +26,7 @@
                                     org-bibtex org-docview org-gnus org-habit
                                     org-id org-info org-irc org-mhe
                                     org-protocol org-rmail org-w3m
-                                    org-checklist org-git-link org-mac-iCal
+                                    org-git-link org-mac-iCal
                                     org-mac-link org-man org-panel
                                     ox-confluence)
                        org-outline-path-complete-in-steps nil
@@ -99,19 +94,14 @@
   :init (add-hook 'after-init-hook #'org-alert-enable))
 
 (use-package org-bookmark-heading :ensure t)
-(use-package org-caldav :ensure t)
 (use-package org-context
   :ensure t
   :config (add-hook 'after-init-hook #'org-context-activate))
 (use-package org-dropbox :ensure t)
 (use-package org-fstree :ensure t)
-(use-package org-gcal :ensure t)
 (use-package org-journal :ensure t)
 (use-package org-mac-iCal :ensure t)
-(use-package org-mac-link :ensure t :disabled t)
 (use-package org-projectile :ensure t)
-(use-package org-ref :ensure t)
-(use-package ox-pandoc :ensure t :disabled t)
 (use-package orgit :ensure t)
 
 (use-package org-capture
@@ -226,12 +216,6 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
                    :working-directory "/Users/ghughes/wd/web-home/"
                    :online-suffix ".html" :working-suffix ".org"))))
 
-(use-package org-checklist)
-(use-package org-trello
-  :ensure t
-  :config
-  (setq-default org-trello-current-prefix-keybinding "C-c o"))
-(use-package ox-gfm :ensure t)
 (use-package helm-org-rifle :ensure t)
 
 (use-package org-bullets
@@ -239,14 +223,10 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
   :ensure t
   :config (add-hook 'org-mode-hook 'org-bullets-mode))
 
-(use-package appt
-  :config (progn (appt-activate t)))
-
 (use-package ob-go :ensure t)
 (use-package ob-http :ensure t)
 (use-package restclient :ensure t)
 (use-package ob-restclient :ensure t)
-(use-package org-edit-latex :ensure t)
 (use-package org-projectile :ensure t
   :bind (("C-c c" . org-capture)
          ("C-c n p" . org-projectile-project-todo-completing-read))

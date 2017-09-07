@@ -9,9 +9,9 @@
   :ensure t
   :functions elpy-use-cpython
   :diminish elpy-mode
-  :pin elpy
-  :init (setq-default python-shell-exec-path (list (expand-file-name "~/.pyenv/shims")
-                                                   "/usr/local/opt/pyenv/shims"))
+  :init (setq-default python-shell-exec-path
+                      (list (expand-file-name "~/.pyenv/shims")
+                            "/usr/local/opt/pyenv/shims"))
   :config
   (elpy-enable)
   (elpy-use-cpython))
@@ -35,7 +35,6 @@
   :ensure t
   :mode "requirements.txt\\'")
 (use-package pydoc :ensure t)
-(use-package pydoc-info :ensure t)
 (use-package python-info :ensure t)
 
 (use-package company-jedi
@@ -57,16 +56,18 @@
         (pyenv-mode-set project)
       (pyenv-mode-unset))))
 
-(use-package nose
-  :ensure t
-  :bind (:map python-mode-map
-              ("C-c N a" . nosetests-all)
-              ("C-c N m" . nosetests-module)
-              ("C-c N ." . nosetests-one)
-              ("C-c C-c" . nosetests-again)
-              ("C-c N p a" . nosetests-pdb-all)
-              ("C-c N p m" . nosetests-pdb-module)
-              ("C-c N p ." . nosetests-pdb-one)))
+(setq-default python-mode-map nil)
+
+;; (use-package nose
+;;   :ensure t
+;;   :bind (:map python-mode-map
+;;               ("C-c N a" . nosetests-all)
+;;               ("C-c N m" . nosetests-module)
+;;               ("C-c N ." . nosetests-one)
+;;               ("C-c C-c" . nosetests-again)
+;;               ("C-c N p a" . nosetests-pdb-all)
+;;               ("C-c N p m" . nosetests-pdb-module)
+;;               ("C-c N p ." . nosetests-pdb-one)))
 
 (use-package ein
   :ensure t)

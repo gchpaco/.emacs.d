@@ -1,8 +1,6 @@
 (eval-when-compile
   (require 'use-package))
 
-(require 'window-purpose)
-
 (defun uniquified-rx-for-name (filename)
   (cl-case uniquify-buffer-name-style
     ;; "name" -> "dir/name"
@@ -44,4 +42,7 @@
 ;(push (cons (uniquified-rx-for-name "foo.txt") 'txt) purpose-user-regexp-purposes)
 ;; will match "foo.txt", "foo.txt<bar>" and "baz.txt<bar>"
 ;(push (cons (uniquified-rx-for-regexp "\\.txt$") 'txt) purpose-user-regexp-purposes)
-(purpose-compile-user-configuration)
+(use-package window-purpose
+  :ensure t
+  :config
+  (purpose-compile-user-configuration))

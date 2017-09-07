@@ -6,10 +6,11 @@
   :init
   (progn (setq-default projectile-enable-caching t
                        projectile-mode-line
-                       '(:eval (format " Prj[%s]" (projectile-project-name))))
-         (add-to-list 'projectile-globally-ignored-directories "build")
-         (add-to-list 'projectile-globally-ignored-directories "external"))
-  :config (projectile-mode))
+                       '(:eval (format " Prj[%s]" (projectile-project-name)))))
+  :config
+  (progn (add-to-list 'projectile-globally-ignored-directories "build")
+         (add-to-list 'projectile-globally-ignored-directories "external")
+         (projectile-mode)))
 
 (use-package helm-projectile
   :ensure t

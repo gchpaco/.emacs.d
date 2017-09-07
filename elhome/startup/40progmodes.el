@@ -3,7 +3,7 @@
 
 (use-package flymake
   :ensure t
-  :bind (([f3] . flymake-display-err-menu-for-current-line)
+  :bind (([f3] . flymake-popup-current-error-menu)
          ([f4] . flymake-goto-next-error)))
 
 (use-package flymake-css :ensure t)

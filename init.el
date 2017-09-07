@@ -1,15 +1,3 @@
-(require 'package)
-(package-initialize)
-
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
-
-(require 'use-package)
-(require 'diminish)                ;; if you use :diminish
-(require 'bind-key)                ;; if you use any :bind variant
-
-(setq inhibit-startup-screen t)
-
 (let ((bootstrap-file (concat user-emacs-directory "straight/bootstrap.el"))
       (bootstrap-version 2))
   (unless (file-exists-p bootstrap-file)
@@ -22,6 +10,24 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
+(require 'use-package)
+(straight-use-package 'elhome)
+(require 'elhome)
+(straight-use-package
+ '(hook-helpers :type git
+                :repo "https://git.savannah.nongnu.org/git/hook-helpers-el.git"))
+(use-package hook-helpers)
+
+;; (require 'package)
+;; (package-initialize)
+
+;; (unless (package-installed-p 'use-package)
+;;   (package-install 'use-package))
+
+(require 'diminish)                ;; if you use :diminish
+(require 'bind-key)                ;; if you use any :bind variant
+
+(setq inhibit-startup-screen t)
 
 (defvar package--builtin-versions
   ;; Mostly populated by loaddefs.el via autoload-builtin-package-versions.
@@ -31,34 +37,35 @@ I.e. each element of the list is of the form (NAME . VERSION) where
 NAME is the package name as a symbol, and VERSION is its version
 as a list.")
 
-(use-package package
-  :config
-  (progn
-    (add-to-list 'package-archives
-                 '("melpa-stable" . "http://stable.melpa.org/packages/"))
-    (add-to-list 'package-archives
-                 '("gnu" . "http://elpa.gnu.org/packages/"))
-    (add-to-list 'package-archives
-                 '("elpy" . "http://jorgenschaefer.github.io/packages/"))
-    (add-to-list 'package-archives
-                 '("melpa" . "http://melpa.org/packages/"))
-    (add-to-list 'package-archives
-                 '("org" . "http://orgmode.org/elpa/"))
+;; (use-package package
+;;   :config
+;;   (progn
+;;     (add-to-list 'package-archives
+;;                  '("melpa-stable" . "http://stable.melpa.org/packages/"))
+;;     (add-to-list 'package-archives
+;;                  '("gnu" . "http://elpa.gnu.org/packages/"))
+;;     (add-to-list 'package-archives
+;;                  '("elpy" . "http://jorgenschaefer.github.io/packages/"))
+;;     (add-to-list 'package-archives
+;;                  '("melpa" . "http://melpa.org/packages/"))
+;;     (add-to-list 'package-archives
+;;                  '("org" . "http://orgmode.org/elpa/"))
 
-    (add-to-list 'package-archive-priorities '("melpa-stable" . 2))
+;;     (add-to-list 'package-archive-priorities '("melpa-stable" . 2))
 
-    (add-to-list 'package-pinned-packages '(cider . "melpa") t)
-    (add-to-list 'package-pinned-packages '(yasnippet . "melpa") t)
-    (add-to-list 'package-pinned-packages '(jabber . "melpa") t)
-    (add-to-list 'package-pinned-packages '(org . "org") t)
-    (add-to-list 'package-pinned-packages '(org-plus-contrib . "org") t)
+;;     (add-to-list 'package-pinned-packages '(cider . "melpa") t)
+;;     (add-to-list 'package-pinned-packages '(yasnippet . "melpa") t)
+;;     (add-to-list 'package-pinned-packages '(jabber . "melpa") t)
+;;     (add-to-list 'package-pinned-packages '(org . "org") t)
+;;     (add-to-list 'package-pinned-packages '(org-plus-contrib . "org") t)
 
-    (package-initialize)))
+;;     (package-initialize)))
 
 (use-package elhome
   :ensure t)
 
-(elhome-init)
+(straight-transaction
+  (elhome-init))
 
 (let ((secrets-file (locate-user-emacs-file "secrets.el" ".emacs.secrets.el")))
  (when (file-exists-p secrets-file)

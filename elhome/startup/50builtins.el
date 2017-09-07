@@ -19,7 +19,7 @@
 (use-package info-look)
 (use-package uniquify)
 (use-package zap-up-to-char
-  :bind "C-M-z")
+  :bind ("C-M-z" . zap-up-to-char))
 (use-package multiple-cursors
   :bind
   ("C-S-c C-S-c" . mc/edit-lines)
@@ -36,13 +36,13 @@
   :bind ("C-c a". eshell))
 
 (use-package ffap
-  :bind "C-c f")
+  :bind ("C-c f" . ffap))
 
 (use-package find-file
   :bind ("C-c o" . ff-find-other-file))
 
 (use-package woman
-  :bind "C-c m")
+  :bind ("C-c m" . woman))
 
 (use-package tramp
   :config

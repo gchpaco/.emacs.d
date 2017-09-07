@@ -13,7 +13,7 @@
 
 (use-package toggle-quotes
   :ensure t
-  :bind "C-\"")
+  :bind ("C-\"" . toggle-quotes))
 
 (use-package uuidgen :ensure t)
 
@@ -106,11 +106,11 @@
 
 (case system-type
   (darwin (use-package dash-at-point
-            :bind "C-c d"
+            :bind ("C-c d" . dash-at-point)
             :ensure t)
           (use-package counsel-dash :ensure t))
   (otherwise (use-package zeal-at-point
-               :bind "C-c d"
+               :bind ("C-c d" . zeal-at-point)
                :ensure t)))
 
 (use-package avy
@@ -121,19 +121,12 @@
 
 (use-package ace-window
   :ensure t
-  :bind "M-p"
+  :bind ("M-p" . ace-window)
   :init (setq-default aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s)))
 
 (use-package list-unicode-display :ensure t)
 (use-package math-symbol-lists :ensure t)
 (use-package solarized-theme :ensure t :disabled t)
-
-(defun force-plan9-theme (frame)
-  (enable-theme 'plan9))
-
-(use-package plan9-theme
-  :ensure t
-  :config (add-hook 'after-make-frame-functions 'force-plan9-theme))
 
 (use-package editorconfig :ensure t)
 
