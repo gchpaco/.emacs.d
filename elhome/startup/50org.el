@@ -21,13 +21,12 @@
            (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
          (setq-default org-modules
-                       '(org-eshell org-eww org-git-link org-mac-iCal
+                       '(org-eshell org-eww org-git-link
                                     org-mac-link org-mac-message org-bbdb
                                     org-bibtex org-docview org-gnus org-habit
                                     org-id org-info org-irc org-mhe
                                     org-protocol org-rmail org-w3m
-                                    org-git-link org-mac-iCal
-                                    org-mac-link org-man org-panel
+                                    org-man org-panel
                                     ox-confluence)
                        org-outline-path-complete-in-steps nil
                        org-edit-src-content-indentation 0
@@ -91,6 +90,7 @@
 (use-package org-alert
   :functions org-alert-enable
   :ensure t
+  :disabled t
   :init (add-hook 'after-init-hook #'org-alert-enable))
 
 (use-package org-bookmark-heading :ensure t)
@@ -100,7 +100,6 @@
 (use-package org-dropbox :ensure t)
 (use-package org-fstree :ensure t)
 (use-package org-journal :ensure t)
-(use-package org-mac-iCal :ensure t)
 (use-package org-projectile :ensure t)
 (use-package orgit :ensure t)
 
