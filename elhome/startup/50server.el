@@ -7,6 +7,7 @@
     (switch-to-buffer-other-frame server-buf)))
 
 (use-package edit-server
+  :straight t
   :if window-system
   :init
   (add-hook 'after-init-hook 'server-start t)
@@ -16,4 +17,4 @@
 
 (use-package edit-server-htmlize
   :if window-system
-  :ensure t)
+  :straight t)

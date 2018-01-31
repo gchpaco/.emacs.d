@@ -8,7 +8,7 @@
                       '("\\.rb" . "\\(\\(class\\|def\\)\\s-+\\([a-zA-Z0-9_.:]+\\)\\)\\s-*(?^?"))))
 
 (use-package rbenv
-  :ensure t
+  :straight t
   :init
   (setq-default rbenv-installation-dir "/usr/local/opt/rbenv/")
   :config

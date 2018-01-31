@@ -3,10 +3,9 @@
 
 (use-package code-library
   :init (setq-default code-library-directory "~/wd/code/library/")
-  :ensure t)
+  :straight t)
 
 (use-package org
-  :bind ("\C-cb" . org-iswitchb)
   :mode ("\\.org\\'" . org-mode)
   :config
   (progn (org-babel-do-load-languages
@@ -89,19 +88,19 @@
 
 (use-package org-alert
   :functions org-alert-enable
-  :ensure t
+  :straight t
   :disabled t
   :init (add-hook 'after-init-hook #'org-alert-enable))
 
-(use-package org-bookmark-heading :ensure t)
+(use-package org-bookmark-heading :straight t)
 (use-package org-context
-  :ensure t
+  :straight t
   :config (add-hook 'after-init-hook #'org-context-activate))
-(use-package org-dropbox :ensure t)
-(use-package org-fstree :ensure t)
-(use-package org-journal :ensure t)
-(use-package org-projectile :ensure t)
-(use-package orgit :ensure t)
+(use-package org-dropbox :straight t)
+(use-package org-fstree :straight t)
+(use-package org-journal :straight t)
+(use-package org-projectile :straight t)
+(use-package orgit :straight t)
 
 (use-package org-capture
   :bind (("\C-cr" . org-capture)
@@ -215,18 +214,18 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
                    :working-directory "/Users/ghughes/wd/web-home/"
                    :online-suffix ".html" :working-suffix ".org"))))
 
-(use-package helm-org-rifle :ensure t)
+(use-package helm-org-rifle :straight t)
 
 (use-package org-bullets
   :commands (org-bullets-mode)
-  :ensure t
+  :straight t
   :config (add-hook 'org-mode-hook 'org-bullets-mode))
 
-(use-package ob-go :ensure t)
-(use-package ob-http :ensure t)
-(use-package restclient :ensure t)
-(use-package ob-restclient :ensure t)
-(use-package org-projectile :ensure t
+(use-package ob-go :straight t)
+(use-package ob-http :straight t)
+(use-package restclient :straight t)
+(use-package ob-restclient :straight t)
+(use-package org-projectile :straight t
   :bind (("C-c c" . org-capture)
          ("C-c n p" . org-projectile-project-todo-completing-read))
   :config
@@ -235,4 +234,4 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
   (pushnew (org-projectile-project-todo-entry) org-capture-templates)
   (dolist (file (org-projectile-todo-files))
     (pushnew file org-agenda-files)))
-(use-package org-projectile-helm :ensure t)
+(use-package org-projectile-helm :straight t)

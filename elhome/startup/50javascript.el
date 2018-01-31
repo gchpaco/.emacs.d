@@ -3,7 +3,7 @@
 
 (use-package js2-mode
   :mode "\\.js\\'"
-  :ensure t
+  :straight t
   :init
   (setq-default js-indent-level 2
                 js2-basic-offset 2
@@ -12,17 +12,17 @@
 (use-package js2-refactor
   :diminish js2-refactor-mode
   :commands js2-refactor-mode
-  :ensure t
+  :straight t
   :init (progn (add-hook 'js2-mode-hook 'js2-refactor-mode))
   :config (js2r-add-keybindings-with-prefix "C-c C-m"))
 (use-package json-mode
   :mode "\\.json\\'"
-  :ensure t)
+  :straight t)
 (use-package jst
-  :ensure t)
+  :straight t)
 (use-package tern
   :diminish tern-mode
   :commands tern-mode
-  :ensure t
+  :straight t
   :init (add-hook 'js2-mode-hook 'tern-mode))
-(use-package flymake-json :ensure t)
+(use-package flymake-json :straight t)

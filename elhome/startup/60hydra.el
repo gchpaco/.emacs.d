@@ -1,10 +1,10 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package ag :ensure t)
+(use-package ag :straight t)
 
 (use-package hydra
-  :ensure t
+  :straight t
   :config
   (defhydra hydra-projectile-other-window (:color teal)
     "projectile-other-window"

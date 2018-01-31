@@ -19,10 +19,10 @@
     (add-to-list 'auto-insert-alist
                  '(("\\.hpp" . "C++ interface file") . my-cc-header-default))))
 
-(use-package auto-yasnippet :ensure t)
+(use-package auto-yasnippet :straight t)
 
 (use-package yasnippet
-  :ensure t
+  :straight t
   :bind (:map yas-minor-mode-map
          ("<tab>" . nil)
          ("TAB" . nil)))

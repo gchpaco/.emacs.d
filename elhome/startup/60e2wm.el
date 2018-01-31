@@ -2,14 +2,14 @@
   (require 'use-package))
 
 (use-package e2wm
-  :ensure t
+  :straight t
   :bind ("M-+" . e2wm:start-management))
-(use-package window-layout :ensure t)
-(use-package e2wm-bookmark :ensure t)
+(use-package window-layout :straight t)
+(use-package e2wm-bookmark :straight t)
 (use-package term)
-(use-package e2wm-term :ensure t)
+(use-package e2wm-term :straight t)
 (use-package elwm
-  :ensure t
+  :straight t
   :bind
   ("C-c <down>" . elwm-shift-down)
   ("C-c <up>" . elwm-shift-up)

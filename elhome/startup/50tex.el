@@ -1,15 +1,15 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package tex-site
-  :ensure auctex)
+(use-package tex
+  :straight auctex)
 
-(use-package auctex-latexmk :ensure t)
-(use-package auctex-lua :ensure t)
+(use-package auctex-latexmk :straight t)
+(use-package auctex-lua :straight t)
 
-(use-package bibtex-utils :ensure t)
+(use-package bibtex-utils :straight t)
 
-(use-package biblio :ensure t)
+(use-package biblio :straight t)
 
-(use-package company-auctex :ensure t)
-(use-package company-math :ensure t)
+(use-package company-auctex :straight t)
+(use-package company-math :straight t)

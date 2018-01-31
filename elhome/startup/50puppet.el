@@ -13,14 +13,14 @@
 (use-package puppet-mode
   :commands puppet-mode
   :mode "\\.pp\\'"
-  :ensure t
+  :straight t
   :init (setq-default puppet-indent-level 2)
   :config
   (progn (speedbar-add-supported-extension ".pp")
          (add-to-list 'speedbar-fetch-etags-parse-list
                       '("\\.pp" . "\\(\\(class\\|site\\|node\\|define\\)\\s-+\\([a-zA-Z0-9_\-]+\\)\\)\\s-*\\(([^)]*)\\)?^?"))))
 
-(use-package flymake-puppet :ensure t)
+(use-package flymake-puppet :straight t)
 
 (defun my-get-class-from-puppet-module ()
   (let ((module-name (file-name-nondirectory

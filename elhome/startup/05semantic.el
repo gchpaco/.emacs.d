@@ -8,7 +8,7 @@
                  (global-semantic-idle-scheduler-mode 1)
                  (global-semantic-stickyfunc-mode 1)
                  (semantic-mode 1))
-  :ensure t)
+  :straight t)
 
 (use-package speedbar
   :bind ("C-c B" . speedbar-get-focus))

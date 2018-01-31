@@ -2,7 +2,7 @@
   (require 'use-package))
 
 (use-package projectile
-  :ensure t
+  :straight t
   :init
   (progn (setq-default projectile-enable-caching t
                        projectile-mode-line
@@ -13,15 +13,15 @@
          (projectile-mode)))
 
 (use-package helm-projectile
-  :ensure t
+  :straight t
   :init (setq-default projectile-completion-system 'helm
                       projectile-switch-project-action 'helm-projectile)
   :config (helm-projectile-on))
 
-(use-package projectile-speedbar :ensure t :disabled t)
-(use-package persp-mode :ensure t :pin "melpa" :disabled t)
-(use-package persp-projectile :ensure t :disabled t)
-(use-package projectile-codesearch :ensure t
+(use-package projectile-speedbar :straight t :disabled t)
+(use-package persp-mode :straight t :pin "melpa" :disabled t)
+(use-package persp-projectile :straight t :disabled t)
+(use-package projectile-codesearch :straight t
   :config
   (bind-keys :map projectile-command-map
              ("s c" . projectile-codesearch-search)))

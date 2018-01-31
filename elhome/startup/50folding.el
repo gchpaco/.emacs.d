@@ -2,6 +2,6 @@
   (require 'use-package))
 
 (use-package yafolding
-  :ensure t
+  :straight t
   :config
   (add-hook 'prog-mode-hook 'yafolding-mode))

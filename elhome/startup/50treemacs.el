@@ -2,7 +2,7 @@
   (require 'use-package))
 
 (use-package treemacs
-  :ensure t
+  :straight t
   :defer t
   :config
   (progn
@@ -31,7 +31,7 @@
         ("C-c t C-t" . treemacs-find-file)))
 (use-package treemacs-projectile
   :defer t
-  :ensure t
+  :straight t
   :config
   (setq treemacs-header-function #'treemacs-projectile-create-header)
   :bind (:map global-map

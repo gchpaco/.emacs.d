@@ -4,27 +4,27 @@
 (use-package form-feed
   :diminish form-feed-mode
   :commands form-feed-mode
-  :ensure t
+  :straight t
   :init (add-hook 'prog-mode-hook 'form-feed-mode))
 
-(use-package all :ensure t)
+(use-package all :straight t)
 
-(use-package beginend :ensure t)
+(use-package beginend :straight t)
 
 (use-package toggle-quotes
-  :ensure t
+  :straight t
   :bind ("C-\"" . toggle-quotes))
 
-(use-package uuidgen :ensure t)
+(use-package uuidgen :straight t)
 
-(use-package wgrep :ensure t)
-(use-package wgrep-helm :ensure t)
-(use-package wsd-mode :ensure t)
+(use-package wgrep :straight t)
+(use-package wgrep-helm :straight t)
+(use-package wsd-mode :straight t)
 
-(use-package make-it-so :ensure t)
+(use-package make-it-so :straight t)
 
 (use-package spaceline-config
-  :ensure spaceline
+  :straight spaceline
   :functions (spaceline-emacs-theme
               spaceline-toggle-buffer-encoding-abbrev-off
               spaceline-toggle-hud-off)
@@ -35,7 +35,7 @@
   (spaceline-toggle-hud-off))
 
 (use-package bury-successful-compilation
-  :ensure t
+  :straight t
   :config (bury-successful-compilation 1))
 
 (use-package mac-local
@@ -43,102 +43,103 @@
 
 (use-package osx-browse
   :if (eq window-system 'ns)
-  :ensure t)
+  :straight t)
 
 (use-package osx-clipboard
   :if (eq window-system 'ns)
-  :ensure t)
+  :straight t)
 
 (use-package osx-lib
   :if (eq window-system 'ns)
-  :ensure t)
+  :straight t)
 
 (use-package osx-trash
   :if (eq window-system 'ns)
-  :ensure t)
+  :straight t)
 (use-package reveal-in-osx-finder
   :if (eq window-system 'ns)
-  :ensure t)
+  :straight t)
 (use-package grab-mac-link
   :if (eq window-system 'ns)
-  :ensure t)
+  :straight t)
 
 (use-package golden-ratio
   :disabled t
-  :ensure t
+  :straight t
   :config (golden-ratio-mode 1))
 
 (use-package popwin
-  :ensure t
+  :straight t
   :functions popwin-mode
   :bind ("C-z" . popwin:keymap)
   :config (popwin-mode 1))
 
 (use-package eyebrowse
-  :ensure t
+  :straight t
   :config (eyebrowse-mode 1))
 
 (use-package multicolumn
-  :ensure t
+  :straight t
   :config (multicolumn-global-mode 1))
 
 (use-package smex
-  :ensure t
+  :straight t
   :config (add-hook 'after-init-hook #'smex-initialize))
 
 (use-package time
   :config (add-hook 'after-init-hook #'display-time))
 
-(use-package shelldoc :ensure t)
-(use-package unify-opening :ensure t)
+(use-package shelldoc :straight t)
+(use-package unify-opening :straight t)
 (use-package alfred-org-capture
   :if (eq window-system 'ns))
 
-(use-package sqlup-mode :ensure t)
+(use-package sqlup-mode :straight t)
 
-(use-package cssh :ensure t)
-(use-package ssh :ensure t)
-(use-package ssh-config-mode :ensure t :disabled t)
+(use-package cssh :straight t)
+(use-package ssh :straight t)
+(use-package ssh-config-mode :straight t :disabled t)
 
-(use-package tidy :ensure t)
+(use-package tidy :straight t)
 
-(use-package unbound :ensure t)
+(use-package unbound :straight t)
 
 (case system-type
   (darwin (use-package dash-at-point
             :bind ("C-c d" . dash-at-point)
-            :ensure t)
-          (use-package counsel-dash :ensure t))
+            :straight t)
+          (use-package counsel-dash :straight t))
   (otherwise (use-package zeal-at-point
                :bind ("C-c d" . zeal-at-point)
-               :ensure t)))
+               :straight t)))
 
 (use-package avy
-  :ensure t
+  :straight t
   :init (setq-default avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s))
   :bind (("C-c j" . avy-goto-word-or-subword-1)
          ("C-c z" . avy-goto-char-2)))
 
 (use-package ace-window
-  :ensure t
+  :straight t
   :bind ("M-p" . ace-window)
   :init (setq-default aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s)))
 
-(use-package list-unicode-display :ensure t)
-(use-package math-symbol-lists :ensure t)
-(use-package solarized-theme :ensure t :disabled t)
+(use-package list-unicode-display :straight t)
+(use-package math-symbol-lists :straight t)
+(use-package solarized-theme :straight t :disabled t)
+(use-package plan9-theme :straight t)
 
-(use-package editorconfig :ensure t)
+(use-package editorconfig :straight t)
 
-(use-package epkg :ensure t)
+(use-package epkg :straight t)
 
-(use-package git-annex :ensure t)
+(use-package git-annex :straight t)
 
-(use-package package-safe-delete :ensure t)
+(use-package package-safe-delete :straight t)
 
-(use-package window-purpose :ensure t)
+(use-package window-purpose :straight t)
 
-(use-package inversion :ensure t)
+(use-package inversion :straight t)
 
 (defun djcb-snip (b e summ)
   "Remove selected lines, and replace them with `[snip:SUMM (n lines)]'."
@@ -151,12 +152,12 @@
               (if (= 1 n) "" "s")))))
 
 (use-package winner
-  :ensure nil
+  :straight nil
   :if (fboundp 'winner-mode)
   :init (winner-mode 1))
 
 (use-package blackboard-bold-mode
-  :ensure t)
+  :straight t)
 
 (use-package fix-muscle-memory
   :disabled t
@@ -175,7 +176,7 @@
   (turn-on-fix-muscle-memory-on-extended-command))
 
 (use-package with-editor
-  :ensure t
+  :straight t
   :config
   (add-hook 'shell-mode-hook 'with-editor-export-editor)
   (add-hook 'shell-mode-hook 'with-editor-export-git-editor)
@@ -185,24 +186,26 @@
   (add-hook 'eshell-mode-hook 'with-editor-export-git-editor))
 
 (use-package ibuffer-git
-  :ensure t)
+  :straight t)
 
 (use-package ibuffer-projectile
-  :ensure t)
+  :straight t)
 
 (add-hook 'before-save-hook 'copyright-update)
 
-(use-package ztree :ensure t)
+(use-package ztree :straight t)
 
 (use-package anything-tramp
-  :ensure t)
+  :straight t)
 
-(use-package ini-mode :ensure t)
+(use-package ini-mode :straight t)
 
-(use-package terraform-mode :ensure t)
-(use-package company-terraform :ensure t)
+(use-package terraform-mode :straight t)
+(use-package company-terraform :straight t)
 
-(use-package password-store :ensure t)
+(use-package password-store :straight t)
 
-(use-package scratch :ensure t)
-(use-package scratch-ext :ensure t)
+(use-package scratch :straight t)
+(use-package scratch-ext :straight t)
+
+(use-package nxml-mode)

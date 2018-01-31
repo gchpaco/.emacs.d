@@ -1,4 +1,4 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package jabber :ensure t :disabled t)
+(use-package jabber :straight t :disabled t)

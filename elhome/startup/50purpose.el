@@ -43,6 +43,6 @@
 ;; will match "foo.txt", "foo.txt<bar>" and "baz.txt<bar>"
 ;(push (cons (uniquified-rx-for-regexp "\\.txt$") 'txt) purpose-user-regexp-purposes)
 (use-package window-purpose
-  :ensure t
+  :straight t
   :config
   (purpose-compile-user-configuration))

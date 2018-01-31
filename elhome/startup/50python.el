@@ -2,49 +2,48 @@
   (require 'use-package))
 
 (use-package python-mode
-  :disabled t
-  :ensure t)
+  :straight t :disabled t)
 
 (use-package elpy
-  :ensure t
-  :functions elpy-use-cpython
+  :straight t
   :diminish elpy-mode
   :init (setq-default python-shell-exec-path
                       (list (expand-file-name "~/.pyenv/shims")
                             "/usr/local/opt/pyenv/shims"))
   :config
-  (elpy-enable)
-  (elpy-use-cpython))
+  (setq-default python-shell-interpreter "python"
+                python-shell-interpreter-args "-i")
+  (elpy-enable))
 
 (use-package pyenv-mode
-  :ensure t
+  :straight t
   :functions pyenv-mode-versions
   :config
   (pyenv-mode)
   (add-hook 'projectile-switch-project-hook 'projectile-pyenv-mode-set))
-(use-package pyenv-mode-auto :ensure t)
-(use-package pyfmt :ensure t)
+(use-package pyenv-mode-auto :straight t)
+(use-package pyfmt :straight t)
 
 (use-package anaconda-mode
-  :ensure t
+  :straight t
   :config (add-hook 'python-mode-hook 'anaconda-mode))
 
-(use-package company-anaconda :ensure t)
+(use-package company-anaconda :straight t)
 
 (use-package pip-requirements
-  :ensure t
+  :straight t
   :mode "requirements.txt\\'")
-(use-package pydoc :ensure t)
-(use-package python-info :ensure t)
+(use-package pydoc :straight t)
+(use-package python-info :straight t)
 
 (use-package company-jedi
-  :ensure t
+  :straight t
   :commands company-jedi
   :init
   (add-to-list 'company-backends 'company-jedi))
 
 (use-package pungi
-  :ensure t
+  :straight t
   :commands pungi:setup-jedi
   :init
   (add-hook 'python-mode-hook 'pungi:setup-jedi))
@@ -56,64 +55,53 @@
         (pyenv-mode-set project)
       (pyenv-mode-unset))))
 
-(setq-default python-mode-map nil)
-
-;; (use-package nose
-;;   :ensure t
-;;   :bind (:map python-mode-map
-;;               ("C-c N a" . nosetests-all)
-;;               ("C-c N m" . nosetests-module)
-;;               ("C-c N ." . nosetests-one)
-;;               ("C-c C-c" . nosetests-again)
-;;               ("C-c N p a" . nosetests-pdb-all)
-;;               ("C-c N p m" . nosetests-pdb-module)
-;;               ("C-c N p ." . nosetests-pdb-one)))
-
 (use-package ein
-  :ensure t)
+  :straight t)
 
-(use-package python-docstring :ensure t)
+(use-package python-docstring :straight t)
 
 (use-package yapfify
-  :ensure t
+  :straight t
   :disabled t
   :config (add-hook 'python-mode-hook 'yapf-mode))
 
 (use-package py-autopep8
-  :ensure t
+  :straight t
   :config (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
 
 (use-package python-test
-  :ensure t)
+  :straight t)
 
 (use-package pyimport
-  :ensure t)
+  :straight t)
 
 (use-package pygen
-  :ensure t
+  :straight t
   :disabled t
   :config (add-hook 'python-mode-hook 'pygen-mode))
 
 (use-package importmagic
-  :ensure t
+  :straight t
   :disabled t
   :config (add-hook 'python-mode-hook 'importmagic-mode))
 
 (use-package indent-tools
-  :ensure t
+  :straight t
   :bind ("C-c >" . indent-tools-hydra/body))
 
 (use-package pylint
-  :ensure t
+  :straight t
   :config
   (add-hook 'python-mode-hook 'pylint-add-menu-items)
   (add-hook 'python-mode-hook 'pylint-add-key-bindings))
+
+(require 'python)
 
 (use-package python-docstring
   :bind (:map python-mode-map
               ("C-c c" . gpolonkai/python-add-docstring)))
 
 (use-package python-switch-quotes
-  :ensure t
+  :straight t
   :bind (:map python-mode-map
               ("C-c '" . python-switch-quotes)))

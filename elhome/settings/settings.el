@@ -22,6 +22,9 @@
  '(aquamacs-tool-bar-user-customization
    (quote
     ((16777249 new-file open-file recent-files aquamacs-print nil copy isearch-forward nil customize help))) t)
+ '(auth-sources
+   (quote
+    ("~/.authinfo.gpg" "~/.authinfo" "~/.netrc" macos-keychain-internet)))
  '(auto-insert-directory "~/wd/code/insert/")
  '(auto-insert-mode t)
  '(auto-save-file-name-transforms
@@ -126,6 +129,7 @@
  '(go-oracle-command "/Users/ghughes/lib/go/bin/oracle")
  '(go-oracle-scope
    "github.com/meteor/amsterdam github.com/meteor/amsterdam/aws github.com/meteor/amsterdam/aws/draining github.com/meteor/amsterdam/awsutil github.com/meteor/amsterdam/clocktools github.com/meteor/amsterdam/cloudformation github.com/meteor/amsterdam/cloudformation/ami github.com/meteor/amsterdam/cloudformation/ami/bastion github.com/meteor/amsterdam/cloudformation/ami/instance github.com/meteor/amsterdam/cloudformation/ami/mongo github.com/meteor/amsterdam/cmds github.com/meteor/amsterdam/cmds/dockeriptablesfix github.com/meteor/amsterdam/cmds/dockernetworkcheck github.com/meteor/amsterdam/cmds/galaxyconfig github.com/meteor/amsterdam/cmds/galaxydeploy github.com/meteor/amsterdam/cmds/galaxyssh github.com/meteor/amsterdam/cmds/galaxyupload github.com/meteor/amsterdam/cmds/tailtasks github.com/meteor/amsterdam/config github.com/meteor/amsterdam/containers github.com/meteor/amsterdam/containers/aggregator github.com/meteor/amsterdam/containers/apprunner github.com/meteor/amsterdam/containers/collector github.com/meteor/amsterdam/containers/datadog github.com/meteor/amsterdam/containers/galaxydeploy github.com/meteor/amsterdam/containers/proxy github.com/meteor/amsterdam/containers/scheduler github.com/meteor/amsterdam/containers/service-base github.com/meteor/amsterdam/db github.com/meteor/amsterdam/db/metricsdb github.com/meteor/amsterdam/docs github.com/meteor/amsterdam/healthcheck github.com/meteor/amsterdam/names github.com/meteor/amsterdam/scheduler github.com/meteor/amsterdam/scheduler/planning github.com/meteor/amsterdam/selfcheck github.com/meteor/amsterdam/services github.com/meteor/amsterdam/services/aggregator github.com/meteor/amsterdam/services/collector github.com/meteor/amsterdam/services/proxy github.com/meteor/amsterdam/services/scheduler github.com/meteor/amsterdam/stats github.com/meteor/amsterdam/travis github.com/meteor/amsterdam/types github.com/meteor/amsterdam/usermetrics")
+ '(gradle-mode t)
  '(helm-M-x-fuzzy-match t)
  '(helm-buffers-fuzzy-matching t)
  '(helm-ff-file-name-history-use-recentf t)
@@ -322,7 +326,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(org-default-notes-file "~/Dropbox/org/refile.org")
  '(org-directory "~/Dropbox/org")
  '(org-export-backends (quote (ascii html icalendar latex md)))
- '(org-export-with-timestamps nil)
+ '(org-export-with-timestamps nil t)
  '(org-fast-tag-selection-single-key (quote expert))
  '(org-insert-heading-hook nil)
  '(org-mac-mail-account "Meteor")
@@ -489,6 +493,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
  '(todochiku-command "/Users/graham/bin/growlnotify")
+ '(treemacs-show-hidden-files nil)
  '(uniquify-ignore-buffers-re "^\\*")
  '(uniquify-min-dir-content 3)
  '(uniquify-separator "/")
@@ -537,9 +542,3 @@ Errors may occur.  Save Options to overwrite the customization file. The origina
           (x-popup-dialog t (list msg '("OK" . nil) 'no-cancel) "Warning")
         (message msg)))))
 ;; End compatibility check
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

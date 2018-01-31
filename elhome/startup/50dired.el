@@ -5,10 +5,10 @@
   :functions dired-x-bind-find-file
   :config (dired-x-bind-find-file))
 
-(use-package dired-toggle-sudo :ensure t)
-(use-package dired+ :ensure t)
-(use-package dired-hacks-utils :ensure t)
-(use-package dired-filter :ensure t)
-(use-package dired-imenu :ensure t)
-(use-package direx :ensure t)
-(use-package runner :disabled t :ensure t)
+(use-package dired-toggle-sudo :straight t)
+(use-package dired+ :straight t)
+(use-package dired-hacks-utils :straight t)
+(use-package dired-filter :straight t)
+(use-package dired-imenu :straight t)
+(use-package direx :straight t)
+(use-package runner :disabled t :straight t)

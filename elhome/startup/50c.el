@@ -17,10 +17,10 @@
   (add-hook 'objc-mode-hook 'irony-mode)
   (add-hook 'irony-mode-hook 'my-irony-mode-hook))
 
-(use-package company-irony :ensure t)
-(use-package company-c-headers :ensure t)
-(use-package java-snippets :ensure t)
-(use-package preproc-font-lock :ensure t)
+(use-package company-irony :straight t)
+(use-package company-c-headers :straight t)
+(use-package java-snippets :straight t)
+(use-package preproc-font-lock :straight t)
 
 (defun my-override-parens ()
   "Override normal insert-space-before-M-( behavior."
@@ -43,7 +43,7 @@
 
 (use-package modern-cpp-font-lock
   :commands modern-c++-font-lock-mode
-  :ensure t
+  :straight t
   :init (add-hook 'c++-mode-hook #'modern-c++-font-lock-mode))
 
 (setq-default gdb-many-windows t)
@@ -95,9 +95,9 @@
   \n
   "#endif  // " str "_" \n)
 
-(use-package objc-font-lock :ensure t)
+(use-package objc-font-lock :straight t)
 
-(use-package flycheck-flawfinder :ensure t
+(use-package flycheck-flawfinder :straight t
   :config
   (flycheck-flawfinder-setup)
   (flycheck-add-next-checker 'c/c++-cppcheck '(warning . flawfinder)))

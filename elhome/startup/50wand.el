@@ -2,7 +2,7 @@
   (require 'use-package))
 
 (use-package wand
-  :ensure t
+  :straight t
   :commands wand:execute
   :functions (wand:add-rule popup-shell-command add-bracket-and-eval)
   :config

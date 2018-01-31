@@ -2,7 +2,7 @@
   (require 'use-package))
 
 (use-package emacs-eclim
-  :ensure t
+  :straight t
   :disabled t
   :init
   (setq-default eclim-eclipse-dirs '("/Applications/Eclipse.app/Contents/Eclipse/")
@@ -17,7 +17,7 @@
   :config (company-emacs-eclim-setup)
   :disabled t)
 
-(use-package meghanada :ensure t
+(use-package meghanada :straight t
   :init
   (add-hook 'java-mode-hook 'meghanada-mode))
 
@@ -29,3 +29,13 @@ This function is a suitable element for the list variable
   (not (eq major-mode 'java-mode)))
 
 (add-hook 'paredit-space-for-delimiter-predicates #'my-disable-spaces-for-java)
+
+(use-package javadoc-lookup :straight t
+  :bind ("C-h j" . javadoc-lookup)
+  :config
+  (javadoc-add-artifacts [net.minecraftforge forge "1.12.1-14.22.1.2478"]
+                         [args4j args4j "2.33"]
+                         [org.slf4j slf4j-nop "1.7.7"]
+                         [com.google.guava guava "19.0"]
+                         [commons-lang commons-lang "2.6"]
+                         [org.ini4j ini4j "0.5.2"]))

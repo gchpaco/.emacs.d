@@ -1,5 +1,5 @@
 (let ((bootstrap-file (concat user-emacs-directory "straight/bootstrap.el"))
-      (bootstrap-version 2))
+      (bootstrap-version 3))
   (unless (file-exists-p bootstrap-file)
     (with-current-buffer
         (url-retrieve-synchronously
@@ -13,6 +13,8 @@
 (require 'use-package)
 (straight-use-package 'elhome)
 (require 'elhome)
+(straight-use-package 'python-mode)
+(require 'python-mode)
 (straight-use-package
  '(hook-helpers :type git
                 :repo "https://git.savannah.nongnu.org/git/hook-helpers-el.git"))
@@ -23,6 +25,8 @@
 
 ;; (unless (package-installed-p 'use-package)
 ;;   (package-install 'use-package))
+
+(straight-use-package 'diminish)
 
 (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
@@ -61,8 +65,8 @@ as a list.")
 
 ;;     (package-initialize)))
 
-(use-package elhome
-  :ensure t)
+(straight-use-package 'elhome)
+(require 'elhome)
 
 (straight-transaction
   (elhome-init))
