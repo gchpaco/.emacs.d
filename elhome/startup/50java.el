@@ -18,6 +18,7 @@
   :disabled t)
 
 (use-package meghanada :straight t
+  :diminish meghanada-mode
   :init
   (add-hook 'java-mode-hook 'meghanada-mode))
 

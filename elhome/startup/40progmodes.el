@@ -30,9 +30,12 @@
 
 (use-package codesearch :straight t)
 
-(use-package paredit-everywhere
+(use-package smartparens
   :straight t
-  :init (add-hook 'prog-mode-hook 'paredit-everywhere-mode))
+  :bind ("C-c k" . sp-unwrap-sexp)
+  :init
+  (require 'smartparens-config)
+  (add-hook 'prog-mode-hook 'smartparens-mode))
 
 (use-package fic-mode
   :straight t
@@ -98,7 +101,7 @@
   :straight t
   :config (global-pretty-mode 1))
 
-(use-package syslog-mode :straight t)
+;(use-package syslog-mode :straight t)
 
 (use-package restclient :straight t)
 
@@ -119,3 +122,9 @@
   :commands rainbow-delimiters-mode
   :straight t
   :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+
+(use-package unicode-troll-stopper
+  :diminish unicode-troll-stopper-mode
+  :commands unicode-troll-stopper-mode
+  :straight t
+  :init (add-hook 'prog-mode-hook 'unicode-troll-stopper-mode))

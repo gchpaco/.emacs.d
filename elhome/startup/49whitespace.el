@@ -18,9 +18,9 @@
                       :foreground "yellow"
                       :weight 'bold)
   (add-hook 'write-file-hooks 'delete-trailing-whitespace)
-  (add-hook 'prog-mode-hook 'whitespace-mode)
   (define-hook-helper java-mode ()
     (setq-mode-local java-mode whitespace-line-column 180))
+  (add-hook 'prog-mode-hook 'whitespace-mode)
   (define-hook-helper makefile-mode ()
     (whitespace-mode 0)))
 

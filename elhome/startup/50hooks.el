@@ -16,10 +16,10 @@
   (add-to-list 'dired-omit-extensions ".pdfsync")
   (add-to-list 'dired-omit-extensions ".log"))
 
-(add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode +1)))
-(add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))
-(add-hook 'scheme-mode-hook (lambda () (paredit-mode +1)))
-(add-hook 'text-mode-hook (lambda () (footnote-mode +1)))
+(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(add-hook 'lisp-mode-hook 'smartparens-mode)
+(add-hook 'scheme-mode-hook 'smartparens-mode)
+(add-hook 'text-mode-hook 'footnote-mode)
 (define-hook-helper puppet-mode ()
   (setq imenu-generic-expression
         '(("*Classes*" "^class\\s-*\\([:a-zA-Z0-9_-]+\\)\\s-*" 1)

@@ -8,6 +8,8 @@
          ("C-c C-g p" . magit-pull)
          ("C-c C-g s" . magit-status)
          ("C-c s" . magit-status)))
+(define-hook-helper git-rebase-mode ()
+  (remove-hook 'git-rebase-mode-hook 'delete-trailing-whitespace))
 (use-package magit-annex :straight t)
 (use-package magit-filenotify :straight t)
 (use-package magit-gitflow :straight t)

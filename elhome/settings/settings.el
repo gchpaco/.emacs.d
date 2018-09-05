@@ -185,7 +185,7 @@
    (quote
     (("1.6.0" . "/System/Library/Frameworks/JavaVM.framework"))))
  '(jde-mvn-nexus-url "http://acelot8/nexus")
- '(js-indent-level 2 t)
+ '(js-indent-level 2)
  '(js2-basic-offset 2 t)
  '(js2-strict-trailing-comma-warning nil t)
  '(js2-use-font-lock-faces t t)

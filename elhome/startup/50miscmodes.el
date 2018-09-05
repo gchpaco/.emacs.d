@@ -1,6 +1,9 @@
 (eval-when-compile
   (require 'use-package))
 
+(use-package which-key :straight t
+  :init (which-key-mode t))
+
 (use-package form-feed
   :diminish form-feed-mode
   :commands form-feed-mode
@@ -126,6 +129,11 @@
 
 (use-package list-unicode-display :straight t)
 (use-package math-symbol-lists :straight t)
+
+(defadvice load-theme (before clear-previous-themes activate)
+  "Clear existing theme settings instead of layering them"
+  (mapc #'disable-theme custom-enabled-themes))
+
 (use-package solarized-theme :straight t :disabled t)
 (use-package plan9-theme :straight t)
 
@@ -200,7 +208,9 @@
 
 (use-package ini-mode :straight t)
 
-(use-package terraform-mode :straight t)
+(use-package terraform-mode :straight t
+  :config
+  (add-hook 'terraform-mode-hook 'terraform-format-on-save-mode))
 (use-package company-terraform :straight t)
 
 (use-package password-store :straight t)
@@ -209,3 +219,5 @@
 (use-package scratch-ext :straight t)
 
 (use-package nxml-mode)
+
+(use-package prodigy :straight t)

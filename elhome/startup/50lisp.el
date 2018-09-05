@@ -6,6 +6,7 @@
   :mode ("\\.asdf?\\'" . asdf-mode))
 
 (use-package paredit
+  :disabled t
   :diminish paredit-mode
   :straight t
   :bind ("C-c k" . delete-pair)
@@ -18,7 +19,7 @@
 
 (use-package cider :straight t)
 (use-package cider-decompile :straight t)
-(use-package cider-profile :straight t)
+;(use-package cider-profile :straight t)
 (use-package clj-refactor :straight t :disabled t)
 (use-package clojure-cheatsheet :straight t)
 (use-package clojure-env :straight t :disabled t)
