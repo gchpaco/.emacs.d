@@ -66,3 +66,7 @@ el-get-backup-3.stable/
 elhome/startup/workbench.xmi
 secrets.el
 /meghanada
+/.cache
+/image-dired
+/javadoc-cache
+/magithub
