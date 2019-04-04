@@ -4,7 +4,8 @@
 (use-package projectile
   :straight t
   :init
-  (progn (setq-default projectile-enable-caching t
+  (progn (bind-keys ("C-c p" . projectile-command-map))
+         (setq-default projectile-enable-caching t
                        projectile-mode-line
                        '(:eval (format " Prj[%s]" (projectile-project-name)))))
   :config
