@@ -21,7 +21,7 @@
 (use-package cider-decompile :straight t)
 ;(use-package cider-profile :straight t)
 (use-package clj-refactor :straight t :disabled t)
-(use-package clojure-cheatsheet :straight t)
+(use-package clojure-cheatsheet :straight t :disabled t)
 (use-package clojure-env :straight t :disabled t)
 (use-package clojure-mode :straight t)
 (use-package clojure-mode-extra-font-locking :straight t)

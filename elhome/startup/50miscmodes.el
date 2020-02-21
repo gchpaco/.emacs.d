@@ -136,6 +136,7 @@
 
 (use-package solarized-theme :straight t :disabled t)
 (use-package plan9-theme :straight t)
+(use-package parchment-theme :straight t)
 
 (use-package editorconfig :straight t)
 

@@ -12,7 +12,6 @@
           'org-babel-load-languages
           (append org-babel-load-languages '((dot . t)
                                              (emacs-lisp . t)
-                                             (sh . t)
                                              (python . t))))
          (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
          (defun bh/verify-refile-target ()
@@ -225,6 +224,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 (use-package ob-http :straight t)
 (use-package restclient :straight t)
 (use-package ob-restclient :straight t)
+(use-package ob-markdown :straight t)
 (use-package org-projectile :straight t
   :bind (("C-c c" . org-capture)
          ("C-c n p" . org-projectile-project-todo-completing-read))
