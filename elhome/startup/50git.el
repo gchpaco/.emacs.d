@@ -23,6 +23,6 @@
 
 (use-package magithub :straight t)
 (use-package magit-lfs :straight t)
-(use-package org-magit :straight t)
+(use-package orgit :straight t)
 (use-package magit-todos :straight t)
 (use-package forge :straight t)

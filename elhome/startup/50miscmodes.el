@@ -92,7 +92,6 @@
 (use-package time
   :config (add-hook 'after-init-hook #'display-time))
 
-(use-package shelldoc :straight t)
 (use-package unify-opening :straight t)
 (use-package alfred-org-capture
   :if (eq window-system 'ns))

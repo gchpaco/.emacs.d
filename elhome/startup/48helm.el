@@ -46,7 +46,6 @@
 (use-package helm-open-github :disabled t :straight t)
 (use-package helm-org-rifle :straight t)
 (use-package helm-orgcard :straight t)
-(use-package helm-package :straight t)
 (use-package helm-projectile :straight t)
 (use-package helm-pydoc :disabled t :straight t)
 (use-package helm-unicode :straight t)

@@ -1,8 +1,7 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package tex
-  :straight auctex)
+(use-package tex-site :straight auctex)
 
 (use-package auctex-latexmk :straight t)
 (use-package auctex-lua :straight t)
