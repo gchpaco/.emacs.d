@@ -92,10 +92,12 @@
   :init (add-hook 'after-init-hook #'org-alert-enable))
 
 (use-package org-bookmark-heading :straight t)
+(use-package org-cliplink :straight t)
 (use-package org-context
   :straight t
   :config (add-hook 'after-init-hook #'org-context-activate))
 (use-package org-dropbox :straight t)
+(use-package org-download :straight t)
 (use-package org-fstree :straight t)
 (use-package org-journal :straight t)
 (use-package org-projectile :straight t)
@@ -236,3 +238,10 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
     (pushnew file org-agenda-files)))
 (use-package helm-org :straight t)
 (use-package org-projectile-helm :straight t)
+
+(use-package deft
+  :straight t
+  :bind ("<f8>" . deft)
+  :commands (deft)
+  :config (setq deft-directory "~/Dropbox/org"
+                deft-extensions '("md" "org")))
