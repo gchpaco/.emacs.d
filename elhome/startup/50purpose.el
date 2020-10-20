@@ -44,5 +44,5 @@
 ;(push (cons (uniquified-rx-for-regexp "\\.txt$") 'txt) purpose-user-regexp-purposes)
 (use-package window-purpose
   :straight t
-  :config
-  (purpose-compile-user-configuration))
+  :init
+  (purpose-mode 1))

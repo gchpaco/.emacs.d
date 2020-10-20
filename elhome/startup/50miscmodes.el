@@ -77,10 +77,6 @@
   :bind ("C-z" . popwin:keymap)
   :config (popwin-mode 1))
 
-(use-package eyebrowse
-  :straight t
-  :config (eyebrowse-mode 1))
-
 (use-package multicolumn
   :straight t
   :config (multicolumn-global-mode 1))

@@ -238,6 +238,16 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
     (pushnew file org-agenda-files)))
 (use-package helm-org :straight t)
 (use-package org-projectile-helm :straight t)
+(use-package org-roam :straight t
+  :hook (after-init . org-roam-mode)
+  :custom (org-roam-directory "~/Dropbox/org")
+  :bind (:map org-roam-mode-map
+              (("C-c n l" . org-roam)
+               ("C-c n f" . org-roam-find-file)
+               ("C-c n g" . org-roam-graph))
+              :map org-mode-map
+              (("C-c n i" . org-roam-insert))
+              (("C-c n I" . org-roam-insert-immediate))))
 
 (use-package deft
   :straight t

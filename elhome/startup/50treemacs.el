@@ -23,12 +23,7 @@
     (treemacs-filewatch-mode t))
   :bind
   (:map global-map
-        ([f8]        . treemacs-toggle)
-        ("M-0"       . treemacs-select-window)
-        ("C-c 1"     . treemacs-delete-other-windows)
-        ("C-c t t"   . treemacs-toggle)
-        ("C-c t T"   . treemacs)
-        ("C-c t C-t" . treemacs-find-file)))
+        ("C-c t t"   . treemacs)))
 (use-package treemacs-projectile
   :defer t
   :straight t
