@@ -40,7 +40,7 @@
     (set-buffer-file-coding-system 'utf-8-unix)
     ;(untabify-buffer)
     (copyright-update)
-    (yafolding-show-all)
+    (origami-open-all-nodes)
     (delete-trailing-whitespace)))
 
 (add-hook 'prog-mode-hook 'progmodes-hooks)
