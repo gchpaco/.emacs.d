@@ -28,3 +28,7 @@
 (use-package clojure-mode-snippets :straight t :disabled t)
 (use-package common-lisp-snippets :straight t)
 (use-package macrostep :straight t)
+(use-package nameless
+  :straight t
+  :commands (nameless-mode)
+  :config (add-hook 'emacs-lisp-mode-hook #'nameless-mode))
