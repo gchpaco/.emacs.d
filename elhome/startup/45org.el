@@ -11,6 +11,7 @@
   (progn (org-babel-do-load-languages
           'org-babel-load-languages
           (append org-babel-load-languages '((dot . t)
+                                             (ditaa . t)
                                              (emacs-lisp . t)
                                              (python . t))))
          (add-to-list 'org-src-lang-modes '("dot" . graphviz-dot))
