@@ -35,6 +35,7 @@
   :bind ("C-c k" . sp-unwrap-sexp)
   :init
   (require 'smartparens-config)
+  (add-to-list 'sp-ignore-modes-list 'org-mode)
   (add-hook 'prog-mode-hook 'smartparens-mode))
 
 (use-package fic-mode

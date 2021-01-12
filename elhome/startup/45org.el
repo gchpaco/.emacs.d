@@ -258,3 +258,27 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
   :commands (deft)
   :config (setq deft-directory "~/Dropbox/org"
                 deft-extensions '("md" "org")))
+
+(use-package olivetti :straight t
+  :config
+  (setq-default fill-column 100)
+  ;; The original value is "\f\\|[ ]*$", so we add the bullets (-),
+  ;; (+), and (*).  There is no need for "^" as the regexp is matched
+  ;; at the beginning of line.
+  (setq paragraph-start "\f\\|[ \t]*$\\|[ \t]*[-+*] "))
+
+(defun gch/org-mode-hook ()
+  (olivetti-mode)
+  (git-gutter-mode 0)
+  (flyspell-mode)
+  (setq-local flyspell-generic-check-word-predicate
+              (lambda ()
+                (if (-contains-p
+                     (let ((face (get-char-property (point) 'face)))
+                       (if (listp face) face (list face)))
+                     'org-link)
+                    nil
+                  ;; not in an org link, do the usual thing:
+                  (org-mode-flyspell-verify)))))
+
+(add-hook 'org-mode-hook 'gch/org-mode-hook)

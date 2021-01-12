@@ -217,5 +217,3 @@
 (use-package nxml-mode)
 
 (use-package prodigy :straight t)
-
-(use-package olivetti :straight t)
