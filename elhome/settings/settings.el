@@ -166,8 +166,8 @@
    '(("1.6.0" . "/System/Library/Frameworks/JavaVM.framework")))
  '(jde-mvn-nexus-url "http://acelot8/nexus")
  '(js-indent-level 2)
- '(js2-basic-offset 2 t)
- '(js2-strict-trailing-comma-warning nil t)
+ '(js2-basic-offset 2)
+ '(js2-strict-trailing-comma-warning nil)
  '(js2-use-font-lock-faces t t)
  '(lsp-java-import-order ["java" "javax" "com" "org" "" "ca.skipthedishes" "#"])
  '(magit-diff-use-overlays nil)
@@ -303,7 +303,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(org-default-notes-file "~/Dropbox/org/refile.org")
  '(org-directory "~/Dropbox/org")
  '(org-export-backends '(ascii html icalendar latex md))
- '(org-export-with-timestamps nil t)
+ '(org-export-with-timestamps nil)
  '(org-fast-tag-selection-single-key 'expert)
  '(org-insert-heading-hook nil)
  '(org-mac-mail-account "Meteor")
@@ -328,6 +328,17 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 " nil nil nil)
      ("Paper" 112 "\\n* TODO %^{Paper Title} %t :READING: \\n:PROPERTIES:\\n:Title: %?\\n:Author:\\n:Year:\\n:Book Title:\\n:END:\\nComments:\\n
 " nil "Citations" nil)) t)
+ '(org-roam-capture-templates
+   '(("d" "default" plain #'org-roam-capture--get-point "%?" :file-name "%<%Y%m%d%H%M%S>-${slug}" :head "#+title: ${title}
+" :unnarrowed t)
+     ("c" "CoH RP character" plain #'org-roam-capture--get-point "%?" :file-name "coh/character/%<%Y%m%d%H%M%S>-${slug}" :head "#+title: ${title}
+
+* Description
+
+* Background
+
+* Interactions" :unnarrowed t)))
+ '(org-roam-tag-sources '(prop all-directories))
  '(org-tag-alist
    '((:startgroup "Location")
      ("@ERRANDS" . 101)

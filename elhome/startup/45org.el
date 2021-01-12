@@ -250,6 +250,8 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
               (("C-c n i" . org-roam-insert))
               (("C-c n I" . org-roam-insert-immediate))))
 
+(require 'org-roam-protocol)
+
 (use-package deft
   :straight t
   :bind ("<f8>" . deft)
