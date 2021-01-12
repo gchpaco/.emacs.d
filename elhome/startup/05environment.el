@@ -4,6 +4,7 @@
 (setenv "PYENV_ROOT" (expand-file-name "~/.pyenv"))
 (setenv "WORKON_HOME" (concat (getenv "PYENV_ROOT")) "/versions")
 (setenv "PYTHONPATH" (expand-file-name "~/lib/python"))
+(setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home")
 
 (add-to-list 'exec-path "/opt/local/bin")
 (push "/usr/local/bin" exec-path)
