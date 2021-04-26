@@ -269,7 +269,6 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 
 (defun gch/org-mode-hook ()
   (olivetti-mode)
-  (git-gutter-mode 0)
   (flyspell-mode)
   (setq-local flyspell-generic-check-word-predicate
               (lambda ()

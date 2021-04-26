@@ -8,13 +8,11 @@
 (use-package lsp-treemacs :straight t)
 (use-package lsp-java
   :straight t
-  :disabled t
   :after lsp
   :config
   (add-hook 'java-mode-hook #'lsp))
 (use-package dap-mode
   :straight t
-  :disabled t
   :after lsp-mode
   :config
   (dap-mode t)
