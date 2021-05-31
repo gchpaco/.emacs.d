@@ -1,6 +1,6 @@
 ;;; fortune.el --- Emacs fortune file
 
-;; Copyright (C) 2008  Graham Hughes
+;; Copyright (C) 2008, 2021  Graham Hughes
 
 ;; Author: Graham Hughes <graham@sigwinch.org>
 ;; Keywords: games
@@ -27,7 +27,6 @@
 
 ;;; Code:
 
-(require 'cl)
 (defvar fortune-file "~/.fortune.txt"
   "The file that fortunes come from.")
 
