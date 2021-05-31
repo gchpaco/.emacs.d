@@ -9,10 +9,23 @@
   :init
   (setq popper-group-function #'popper-group-by-projectile)
   (setq popper-reference-buffers
-        '("\\*Messages\\*"
-          "Output\\*$"
+        '(Custom-mode
+          compilation-mode
+          messages-mode
           help-mode
-          compilation-mode))
+          occur-mode
+          "\\*Warnings\\*"
+          "\\*Compile-Log\\*"
+          "\\*Messages\\*"
+          "\\*Backtrace\\*"
+          "\\*Apropos"
+          "^Calc:"
+          "\\*TeX Help\\*"
+          "\\*Shell Command Output\\*"
+          "\\*Async Shell Command\\*"
+          "\\*Completions\\*"
+          "[oO]utput\\*"
+          ))
   (popper-mode +1))
 
 (winner-mode 1)
