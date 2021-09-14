@@ -242,17 +242,25 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 (use-package helm-org :straight t)
 (use-package org-projectile-helm :straight t)
 (use-package org-roam :straight t
-  :hook (after-init . org-roam-mode)
-  :custom (org-roam-directory gch/org-dir)
-  :bind (:map org-roam-mode-map
-              (("C-c n l" . org-roam)
-               ("C-c n f" . org-roam-find-file)
-               ("C-c n g" . org-roam-graph))
-              :map org-mode-map
-              (("C-c n i" . org-roam-insert))
-              (("C-c n I" . org-roam-insert-immediate))))
-
-(require 'org-roam-protocol)
+  :init (setq org-roam-v2-ack t)
+  :custom
+  (org-roam-directory gch/org-dir)
+  (org-roam-completion-everywhere t)
+  (org-roam-capture-templates
+   '(("d" "default" plain
+      "%?"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}" "#+title: ${title}")
+      :unnarrowed t)
+     ("c" "CoH RP character" plain
+      "%?" :if-new (file+head "coh/character/%<%Y%m%d%H%M%S>-${slug}"
+                              "#+title: ${title}\n\n* Description\n\n* Background\n\n* Interactions")
+      :unnarrowed t)))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert)
+         :map org-mode-map
+         ("C-M-i" . completion-at-point))
+  :config (org-roam-setup))
 
 (use-package deft
   :straight t
