@@ -1,6 +1,8 @@
 (eval-when-compile
   (require 'use-package))
 
+(defvar gch/org-dir (file-name-as-directory "/Volumes/GoogleDrive/My Drive/org"))
+
 (use-package code-library
   :init (setq-default code-library-directory "~/wd/code/library/")
   :straight t)
@@ -73,14 +75,14 @@
     (org-clock-persistence-insinuate)
     (setq-default org-agenda-tags-todo-honor-ignore-options t
                   org-agenda-files (file-expand-wildcards
-                                    "~/Dropbox/org/*.org")
+                                    (concat gch/org-dir "*.org"))
                   org-agenda-include-diary t
                   org-agenda-tags-todo-honor-ignore-options t
                   org-clock-idle-time 10
                   org-clock-into-drawer "LOGBOOK"
                   org-clock-persist 'history
-                  org-default-notes-file "~/Dropbox/org/refile.org"
-                  org-directory "~/Dropbox/org"
+                  org-default-notes-file (concat gch/org-dir "refile.org")
+                  org-directory gch/org-dir
                   org-export-backends '(ascii html icalendar latex md)
                   org-export-with-timestamps nil
                   org-fast-tag-selection-single-key 'expert
@@ -110,69 +112,69 @@
   :config
   (progn
     (setq-default org-capture-templates
-                  '(("t" "task" entry
-                     (file "~/Dropbox/org/refile.org")
+                  `(("t" "task" entry
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* NEXT %?
 %U
 %a
 " :clock-in t :clock-resume t)
                     ("i" "interupt" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* %?
 %U
 %a
 " :clock-in t :clock-keep t :clock-resume t)
                     ("p" "New Project" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* PLANNING %?
 %a
 " :clock-in t :clock-resume f)
                     ("P" "Phone call" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* PHONE Phone call with %? :PHONE:
 %U" :clock-in t :clock-resume t)
                     ("m" "Meeting" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* MEETING with %? :MEETING:
 %U" :clock-in t :clock-resume t)
                     ("s" "Scheduled Action" entry
-                     (file+datetree "~/Dropbox/org/diary.org")
+                     (file+datetree ,(concat gch/org-dir "diary.org"))
                      "* %?
 %U
 " :clock-in t :clock-resume t)
                     ("R" "Reading Link" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* DONE Read %c :IDLE:
 %U
 " :clock-in t :clock-resume f)
                     ("b" "Bookmark link" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* NEXT Read %c :BOOKMARK:IDLE:
 %U
 " :immediate-finish t)
                     ("r" "Read later" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* NEXT Read %c :IDLE:
 %U
 " :immediate-finish t)
                     ("e" "respond" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* NEXT Respond to %:from on %:subject
 SCHEDULED: %t
 %U
 %a
 " :immediate-finish t :clock-in t :clock-resume t)
                     ("W" "Emacs Buffer (eww or w3m)" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* NEXT Read %a
 %U" :clock-in t :clock-resume f)
                     ("w" "org-protocol" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* NEXT Review %c
 %U
 " :immediate-finish t)
                     ("I" "New RIA" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* IDLE %? :IDLE:
 %U
 %a
@@ -182,13 +184,13 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 :END:
 ")
                     ("n" "note" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* %? :NOTE:
 %U
 %a
 " :clock-in t :clock-resume t)
                     ("h" "Habit" entry
-                     (file "~/Dropbox/org/refile.org")
+                     (file ,(concat gch/org-dir "refile.org"))
                      "* NEXT %?
 %U
 %a
@@ -233,7 +235,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
          ("C-c n p" . org-projectile-project-todo-completing-read))
   :config
   (setq-default org-projectile-projects-file
-                (expand-file-name "~/Dropbox/org/projects.org"))
+                (expand-file-name (concat gch/org-dir "projects.org")))
   (pushnew (org-projectile-project-todo-entry) org-capture-templates)
   (dolist (file (org-projectile-todo-files))
     (pushnew file org-agenda-files)))
@@ -241,7 +243,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 (use-package org-projectile-helm :straight t)
 (use-package org-roam :straight t
   :hook (after-init . org-roam-mode)
-  :custom (org-roam-directory "~/Dropbox/org")
+  :custom (org-roam-directory gch/org-dir)
   :bind (:map org-roam-mode-map
               (("C-c n l" . org-roam)
                ("C-c n f" . org-roam-find-file)
@@ -256,7 +258,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
   :straight t
   :bind ("<f8>" . deft)
   :commands (deft)
-  :config (setq deft-directory "~/Dropbox/org"
+  :config (setq deft-directory gch/org-dir
                 deft-extensions '("md" "org")))
 
 (use-package olivetti :straight t
