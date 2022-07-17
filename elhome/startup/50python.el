@@ -67,7 +67,7 @@
 
 (use-package py-autopep8
   :straight t
-  :config (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
+  :config (add-hook 'python-mode-hook 'py-autopep8-mode))
 
 (use-package python-test
   :straight t)

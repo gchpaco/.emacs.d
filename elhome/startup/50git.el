@@ -1,6 +1,7 @@
 (eval-when-compile
   (require 'use-package))
 
+(use-package hook-helpers :straight t)
 (use-package magit
   :straight t
   :bind (("C-c C-g b" . magit-blame)
@@ -8,8 +9,10 @@
          ("C-c C-g p" . magit-pull)
          ("C-c C-g s" . magit-status)
          ("C-c s" . magit-status)))
-(define-hook-helper git-rebase-mode ()
+(defun gch/git-rebase-postinit ()
   (remove-hook 'git-rebase-mode-hook 'delete-trailing-whitespace))
+(add-hook 'git-rebase-mode-hook 'gch/git-rebase-postinit)
+
 (use-package magit-annex :straight t)
 (use-package magit-filenotify :straight t)
 (use-package magit-gitflow :straight t)

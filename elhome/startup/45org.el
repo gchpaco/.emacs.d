@@ -1,6 +1,8 @@
 (eval-when-compile
   (require 'use-package))
 
+(require 'cl-lib)
+
 (defvar gch/org-dir (file-name-as-directory "/Volumes/GoogleDrive/My Drive/org"))
 
 (use-package code-library
@@ -91,7 +93,6 @@
 (use-package org-alert
   :functions org-alert-enable
   :straight t
-  :disabled t
   :init (add-hook 'after-init-hook #'org-alert-enable))
 
 (use-package org-bookmark-heading :straight t)
@@ -99,11 +100,9 @@
 (use-package org-context
   :straight t
   :config (add-hook 'after-init-hook #'org-context-activate))
-(use-package org-dropbox :straight t)
 (use-package org-download :straight t)
 (use-package org-fstree :straight t)
 (use-package org-journal :straight t)
-(use-package org-projectile :straight t)
 (use-package orgit :straight t)
 
 (use-package org-capture
@@ -236,9 +235,9 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
   :config
   (setq-default org-projectile-projects-file
                 (expand-file-name (concat gch/org-dir "projects.org")))
-  (pushnew (org-projectile-project-todo-entry) org-capture-templates)
+  (add-to-list 'org-capture-templates (org-projectile-project-todo-entry))
   (dolist (file (org-projectile-todo-files))
-    (pushnew file org-agenda-files)))
+    (add-to-list 'org-agenda-files file)))
 (use-package helm-org :straight t)
 (use-package org-projectile-helm :straight t)
 (use-package org-roam :straight t

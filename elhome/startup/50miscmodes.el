@@ -143,8 +143,6 @@
 
 (use-package window-purpose :straight t)
 
-(use-package inversion :straight t)
-
 (defun djcb-snip (b e summ)
   "Remove selected lines, and replace them with `[snip:SUMM (n lines)]'."
   (interactive "r\nsSummary:")

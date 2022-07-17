@@ -74,6 +74,7 @@
 
 (use-package gitignore-mode
   :mode "\\.gitignore\\'"
+  :disabled
   :straight t)
 
 (use-package graphviz-dot-mode
