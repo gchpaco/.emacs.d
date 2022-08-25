@@ -1,6 +1,8 @@
 (eval-when-compile
   (require 'use-package))
 
+(require 'cl)
+
 (use-package whitespace
   :diminish whitespace-mode
   :init

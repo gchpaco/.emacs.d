@@ -99,7 +99,7 @@
 (use-package org-cliplink :straight t)
 (use-package org-context
   :straight t
-  :config (add-hook 'after-init-hook #'org-context-activate))
+  :init (org-context-mode +1))
 (use-package org-download :straight t)
 (use-package org-fstree :straight t)
 (use-package org-journal :straight t)
