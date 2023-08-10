@@ -37,9 +37,9 @@
 (defun gch/no-space-parens ()
   (make-local-variable 'parens-require-spaces)
   (setq parens-require-spaces nil))
-(add-hook 'ruby-mode-hook 'gch/no-space-parens)
-(add-hook 'python-mode-hook 'gch/no-space-parens)
-(add-hook 'c-mode-common-hook 'gch/no-space-parens)
+(add-hook 'ruby-mode-hook #'gch/no-space-parens)
+(add-hook 'python-mode-hook #'gch/no-space-parens)
+(add-hook 'c-mode-common-hook #'gch/no-space-parens)
 
 (defun gch/org-hook ()
   (electric-indent-mode -1))

@@ -11,7 +11,7 @@
                       (list (expand-file-name "~/.pyenv/shims")
                             "/usr/local/opt/pyenv/shims"))
   :config
-  (setq-default python-shell-interpreter "python"
+  (setq-default python-shell-interpreter "python3"
                 python-shell-interpreter-args "-i")
   (elpy-enable))
 
@@ -90,6 +90,7 @@
   :bind ("C-c >" . indent-tools-hydra/body))
 
 (use-package pylint
+  :disabled t
   :straight t
   :config
   (add-hook 'python-mode-hook 'pylint-add-menu-items)

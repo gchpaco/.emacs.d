@@ -15,7 +15,7 @@
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
-   (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#fdf6e3"))
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 215 t)
  '(aquamacs-tool-bar-user-customization
@@ -49,7 +49,7 @@
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes '(parchment))
  '(custom-safe-themes
-   '("c8774324bb0b08dd35f077f6a1c760ea4ea0bb60d1332a2c7feaaeb830db0090" "5a45c8bf60607dfa077b3e23edfb8df0f37c4759356682adf7ab762ba6b10600" "2cf7f9d1d8e4d735ba53facdc3c6f3271086b6906c4165b12e4fd8e3865469a6" "43ab774fdaf34c431af3b5445eb6790f1a0b8f55d49f6fc43275aa4245730c7e" "dd1cf47034b1c20f5f43cd91ae76f00abef05f91b7be57d94653c493bcf41dda" "d5b121d69e48e0f2a84c8e4580f0ba230423391a78fcb4001ccb35d02494d79e" "4ddbbccc0c15d18ef73228f2f71a33fac8c892f22889d2a460e29fe58177edfd" "ebfa8d0654af120fff174bc7ec08bf1fef63df97bdeff63161dbff6f61cef747" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "1079a2e9eff0b09ac5aad88a661a76179fac52966a1e00943cdec616f0ba71de" "338e99b0482a49d5c4f1e75f3bb69c8193c9c229bfd52bbc53e11b03a789812e" "bb7b7e7a09a02b1f9682f5d3b530a2e20ea058285c16452e2dc19af42aace5e0" "01b2b30ded8ecb3a07996cc7cdbb0a4e526d0722e56ac2847512613a3e1284c9" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c58382b9c4fff1aa94b8e3f0f81b0212bb554e83f76957bab735f960a4c441b1" "ce6046de29b8334433c9109b256a846391c47656fcdb4c8d64b1c643c655ddb7" "72c1070a1c8101f1bfc0adc5e7f4190a380b81666897eb1a17ea2973d58fc659" "c7b050e0d698f16a188a5834572ac4a6297f909bc7db4fda49e4dfcfc1ad1076" "43963925d90085d563fa21e62623a44ce2b4d8327e6e3814fdf28179865fd730" "96936d76f48be40d64721e6a069fedc2ed1adbab71f8447016277599ddd75313" "6eaebdc2426b0edfff9fd9a7610f2fe7ddc70e01ceb869aaaf88b5ebe326a0cd" "c158c2a9f1c5fcf27598d313eec9f9dceadf131ccd10abc6448004b14984767c" "39f98624caf410e66c4e03f36a1c373ea8ed9177cd9d12dfd6c0a53825599f60" "fb7b5b24d459ccf40f44659506a111ff0df9a07117a00aaee4999952a92f056a" "cfc2fbe694e2bbd083509168f8905d232bdc99fb35ec3e98ac83baec4bbfa1ba" "780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default))
+   '("4c56af497ddf0e30f65a7232a8ee21b3d62a8c332c6b268c81e9ea99b11da0d3" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" "c8774324bb0b08dd35f077f6a1c760ea4ea0bb60d1332a2c7feaaeb830db0090" "5a45c8bf60607dfa077b3e23edfb8df0f37c4759356682adf7ab762ba6b10600" "2cf7f9d1d8e4d735ba53facdc3c6f3271086b6906c4165b12e4fd8e3865469a6" "43ab774fdaf34c431af3b5445eb6790f1a0b8f55d49f6fc43275aa4245730c7e" "dd1cf47034b1c20f5f43cd91ae76f00abef05f91b7be57d94653c493bcf41dda" "d5b121d69e48e0f2a84c8e4580f0ba230423391a78fcb4001ccb35d02494d79e" "4ddbbccc0c15d18ef73228f2f71a33fac8c892f22889d2a460e29fe58177edfd" "ebfa8d0654af120fff174bc7ec08bf1fef63df97bdeff63161dbff6f61cef747" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "1079a2e9eff0b09ac5aad88a661a76179fac52966a1e00943cdec616f0ba71de" "338e99b0482a49d5c4f1e75f3bb69c8193c9c229bfd52bbc53e11b03a789812e" "bb7b7e7a09a02b1f9682f5d3b530a2e20ea058285c16452e2dc19af42aace5e0" "01b2b30ded8ecb3a07996cc7cdbb0a4e526d0722e56ac2847512613a3e1284c9" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c58382b9c4fff1aa94b8e3f0f81b0212bb554e83f76957bab735f960a4c441b1" "ce6046de29b8334433c9109b256a846391c47656fcdb4c8d64b1c643c655ddb7" "72c1070a1c8101f1bfc0adc5e7f4190a380b81666897eb1a17ea2973d58fc659" "c7b050e0d698f16a188a5834572ac4a6297f909bc7db4fda49e4dfcfc1ad1076" "43963925d90085d563fa21e62623a44ce2b4d8327e6e3814fdf28179865fd730" "96936d76f48be40d64721e6a069fedc2ed1adbab71f8447016277599ddd75313" "6eaebdc2426b0edfff9fd9a7610f2fe7ddc70e01ceb869aaaf88b5ebe326a0cd" "c158c2a9f1c5fcf27598d313eec9f9dceadf131ccd10abc6448004b14984767c" "39f98624caf410e66c4e03f36a1c373ea8ed9177cd9d12dfd6c0a53825599f60" "fb7b5b24d459ccf40f44659506a111ff0df9a07117a00aaee4999952a92f056a" "cfc2fbe694e2bbd083509168f8905d232bdc99fb35ec3e98ac83baec4bbfa1ba" "780d1fcce152d3a417c5fdcf6eda99ad07653a82bbd69bcdcf2a12821beaae4a" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "fa942713c74b5ad27893e72ed8dccf791c9d39e5e7336e52d76e7125bfa51d4c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0b2e94037dbb1ff45cc3cd89a07901eeed93849524b574fa8daa79901b2bfdcf" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "5debeb813b180bd1c3756306cd8c83ac60fda55f85fb27249a0f2d55817e3cab" "117284df029007a8012cae1f01c3156d54a0de4b9f2f381feab47809b8a1caef" default))
  '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
  '(debug-on-error nil)
  '(default-frame-alist
@@ -61,8 +61,8 @@
       (right-fringe)
       (fringe)))
  '(delete-by-moving-to-trash t)
- '(diary-file "~/Dropbox/org/diary.org")
- '(dired-bind-jump t)
+ '(diary-file "~/Library/CloudStorage/Dropbox/org/diary.org")
+ '(dired-bind-jump t t)
  '(dired-dwim-target t)
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|^\\.git$")
  '(dired-use-ls-dired t)
@@ -100,6 +100,8 @@
  '(eshell-modules-list
    '(eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-script eshell-smart eshell-term eshell-tramp eshell-unix))
  '(fci-rule-color "#f8fce8")
+ '(flycheck-python-flake8-executable "~/.emacs.d/elpy/rpc-venv/bin/flake8")
+ '(flycheck-python-pyflakes-executable "~/.emacs.d/elpy/rpc-venv/bin/pyflakes")
  '(flyspell-mode-line-string nil)
  '(glasses-separator "-")
  '(glasses-uncapitalize-p t)
@@ -125,7 +127,7 @@
  '(helm-split-window-in-side-p t)
  '(highlight-changes-colors '("#d33682" "#6c71c4"))
  '(highlight-parentheses-background-colors '("#e8fce8" "#c1e7f8" "#f8e8e8"))
- '(highlight-parentheses-colors '("#40883f" "#0287c8" "#b85c57"))
+ '(highlight-parentheses-colors '("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900"))
  '(highlight-symbol-colors
    (--map
     (solarized-color-blend it "#002b36" 0.25)
@@ -189,8 +191,7 @@
  '(ns-command-modifier 'meta)
  '(ns-tool-bar-display-mode 'both t)
  '(ns-tool-bar-size-mode 'regular t)
- '(org-agenda-files
-   '("/Users/ghughes/Dropbox/org/projects.org" "~/Dropbox/org/agenda.org" "~/Dropbox/org/cloudvelox.org" "~/Dropbox/org/diary.org" "~/Dropbox/org/gtd.org" "~/Dropbox/org/main.org" "~/Dropbox/org/notes.org" "~/Dropbox/org/projects.org" "~/Dropbox/org/recipes.org" "~/Dropbox/org/refile.org" "~/Dropbox/org/skip.org" "~/Dropbox/org/trello.org" "~/Dropbox/org/quotes.org" "~/Dropbox/org/exalted.org" "~/Dropbox/org/worklog.org" "~/Dropbox/org/politics.org" "~/Dropbox/org/"))
+ '(org-agenda-files nil)
  '(org-agenda-include-diary t)
  '(org-agenda-tags-todo-honor-ignore-options t)
  '(org-capture-templates
@@ -203,19 +204,19 @@
       "* TODO %?
 ")
      ("t" "task" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* NEXT %?
 %U
 %a
 ")
      ("i" "interrupt" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* %?
 %U
 %a
 ")
      ("q" "quote" entry
-      (file "~/Dropbox/org/quotes.org")
+      (file "~/Library/CloudStorage/Dropbox/org/quotes.org")
       "* %?
 #+begin_quote
 %x
@@ -223,56 +224,56 @@
 - %a
 ")
      ("p" "New Project" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* PLANNING %?
 %a
 ")
      ("P" "Phone call" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* PHONE Phone call with %? :PHONE:
 %U")
      ("m" "Meeting" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* MEETING with %? :MEETING:
 %U")
      ("s" "Scheduled Action" entry
-      (file+datetree "~/Dropbox/org/diary.org")
+      (file+datetree "~/Library/CloudStorage/Dropbox/org/diary.org")
       "* %?
 %U
 ")
      ("R" "Reading Link" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* DONE Read %c :IDLE:
 %U
 ")
      ("b" "Bookmark link" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* NEXT Read %c :BOOKMARK:IDLE:
 %U
 " :immediate-finish t)
      ("r" "Read later" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* NEXT Read %c :IDLE:
 %U
 " :immediate-finish t)
      ("e" "respond" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* NEXT Respond to %:from on %:subject
 SCHEDULED: %t
 %U
 %a
 " :immediate-finish t)
      ("W" "Emacs Buffer (eww or w3m)" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* NEXT Read %a
 %U")
      ("w" "org-protocol" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* NEXT Review %c
 %U
 " :immediate-finish t)
      ("I" "New RIA" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* IDLE %? :IDLE:
 %U
 %a
@@ -282,13 +283,13 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 :END:
 ")
      ("n" "note" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* %? :NOTE:
 %U
 %a
 ")
      ("h" "Habit" entry
-      (file "~/Dropbox/org/refile.org")
+      (file "~/Library/CloudStorage/Dropbox/org/refile.org")
       "* NEXT %?
 %U
 %a
@@ -301,16 +302,16 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(org-clock-idle-time 10)
  '(org-clock-into-drawer "LOGBOOK")
  '(org-clock-persist 'history)
- '(org-default-notes-file "~/Dropbox/org/refile.org")
- '(org-directory "~/Dropbox/org")
+ '(org-default-notes-file "~/Library/CloudStorage/Dropbox/org/refile.org")
+ '(org-directory "~/Library/CloudStorage/Dropbox/org")
  '(org-export-backends '(ascii html icalendar latex md))
  '(org-export-with-timestamps nil t)
  '(org-fast-tag-selection-single-key 'expert)
  '(org-insert-heading-hook nil)
  '(org-mac-mail-account "Meteor")
- '(org-mobile-directory "~/Dropbox/Apps/MobileOrg/")
+ '(org-mobile-directory "~/Library/CloudStorage/Dropbox/Apps/MobileOrg/")
  '(org-mobile-files '(org-agenda-files "recipes.org"))
- '(org-mobile-inbox-for-pull "~/Dropbox/Apps/MobileOrg/index.org")
+ '(org-mobile-inbox-for-pull "~/Library/CloudStorage/Dropbox/Apps/MobileOrg/index.org")
  '(org-modules
    '(org-eshell org-eww org-git-link org-mac-iCal org-mac-link org-mac-message org-bbdb org-bibtex org-docview org-gnus org-habit org-id org-info org-irc org-mhe org-protocol org-rmail org-w3m org-checklist org-git-link org-mac-iCal org-mac-link org-man org-panel))
  '(org-outline-path-complete-in-steps nil)

@@ -129,7 +129,7 @@
   "Clear existing theme settings instead of layering them"
   (mapc #'disable-theme custom-enabled-themes))
 
-(use-package solarized-theme :straight t :disabled t)
+(use-package solarized-theme :straight t)
 (use-package plan9-theme :straight t)
 (use-package parchment-theme :straight t)
 

@@ -90,7 +90,8 @@
 (use-package markdown-mac-link :straight t :disabled t)
 
 (use-package docker :straight t)
-(use-package docker-tramp :straight t)
+(use-package tramp-container)
+(use-package dockerfile-mode :straight t)
 
 (use-package emr
   :diminish emr-c-mode

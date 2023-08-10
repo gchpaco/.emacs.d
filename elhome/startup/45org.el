@@ -3,7 +3,7 @@
 
 (require 'cl-lib)
 
-(defvar gch/org-dir (file-name-as-directory "/Volumes/GoogleDrive/My Drive/org"))
+(defvar gch/org-dir (file-name-as-directory "~/Library/CloudStorage/Dropbox/org"))
 
 (use-package code-library
   :init (setq-default code-library-directory "~/wd/code/library/")
@@ -270,7 +270,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 
 (use-package olivetti :straight t
   :config
-  (setq-default fill-column 100)
+  (setq-default fill-column 78)
   ;; The original value is "\f\\|[ ]*$", so we add the bullets (-),
   ;; (+), and (*).  There is no need for "^" as the regexp is matched
   ;; at the beginning of line.

@@ -9,8 +9,6 @@
 
 (use-package rbenv
   :straight t
-  :init
-  (setq-default rbenv-installation-dir "/usr/local/opt/rbenv/")
   :config
   (global-rbenv-mode 1)
   (rbenv-use-global))
@@ -23,23 +21,23 @@
     (reduce
      (lambda (x y) (concat x "::" y))
      (nreverse
-      (loop for dir = (file-name-directory buffer-file-name)
-            then (file-name-directory (strip-slash dir))
-            for stub = (file-name-nondirectory (strip-slash dir))
-            then (file-name-nondirectory (strip-slash dir))
-            until (or (string= dir "/")
-                      (string= stub "lib"))
-            collect (rubyify stub))))))
+      (cl-loop for dir = (file-name-directory buffer-file-name)
+               then (file-name-directory (strip-slash dir))
+               for stub = (file-name-nondirectory (strip-slash dir))
+               then (file-name-nondirectory (strip-slash dir))
+               until (or (string= dir "/")
+                        (string= stub "lib"))
+               collect (rubyify stub))))))
 (define-skeleton my-ruby-module-default
   "Ruby module initial contents"
   (my-get-module-from-ruby-file)
   "# === Authors" \n
   "#" \n
-  "# Graham Hughes <graham.hughes@farmersedge.ca>"
+  "# Graham Hughes <graham.h@getjobber.com>"
   "#" \n
   "# === Copyright" \n
   "#" \n
-  "# Copyright 2017 Farmers Edge, unless otherwise noted." \n
+  "# Copyright 2022 Jobber Inc., unless otherwise noted." \n
   "#" \n
   "module " str " #:nodoc:"\n
   > "# " _ \n
@@ -57,7 +55,7 @@
   "# Cookbook:: " str \n
   "# Recipe:: " (substring (file-name-nondirectory buffer-file-name) 0 -3) \n
   "#" \n
-  "# Copyright 2017 Farmers Edge, All Rights Reserved" \n
+  "# Copyright 2022 Jobber, All Rights Reserved" \n
   _)
 (define-skeleton my-chef-resource-default
   "Ruby resource initial contents"
@@ -66,7 +64,7 @@
   "# Cookbook:: " str \n
   "# Resource:: " (substring (file-name-nondirectory buffer-file-name) 0 -3) \n
   "#" \n
-  "# Copyright 2017 Farmers Edge, All Rights Reserved" \n
+  "# Copyright 2022 Jobber, All Rights Reserved" \n
   _)
 (define-skeleton my-chef-attributes-default
   "Ruby attributes initial contents"
@@ -75,5 +73,9 @@
   "# Cookbook:: " str \n
   "# Attributes:: " (substring (file-name-nondirectory buffer-file-name) 0 -3) \n
   "#" \n
-  "# Copyright 2017 Farmers Edge, All Rights Reserved" \n
+  "# Copyright 2022 Jobber, All Rights Reserved" \n
   _)
+
+(use-package rubocop
+  :straight t
+  :config (add-hook 'ruby-mode-hook #'rubocop-mode))

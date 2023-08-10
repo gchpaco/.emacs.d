@@ -19,7 +19,7 @@
                (< n count))
         (re-search-backward "\\(http://.*?\\)[,;:<>\n\s]" 0 t)
         (add-to-list 'urls (thing-at-point 'url))
-        (incf n))
+        (cl-incf n))
     urls)))
 
 (defun handle-url-select ()

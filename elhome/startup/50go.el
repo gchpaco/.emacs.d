@@ -10,15 +10,16 @@
               ("C-c C-r" . go-remove-unused-imports)
               ("C-c C-k" . godoc))
   :config (progn (add-hook 'go-mode-hook #'my-go-mode-hook)
+                 (add-hook 'go-ts-mode-hook #'my-go-mode-hook)
                  (add-hook 'before-save-hook #'gofmt-before-save))
   :straight t)
 (use-package go-complete :straight t)
-(use-package go-direx :straight t)
 (use-package go-dlv :straight t)
 (use-package go-eldoc
   :commands (go-eldoc-setup)
   :straight t
-  :init (add-hook 'go-mode-hook #'go-eldoc-setup))
+  :init (progn (add-hook 'go-mode-hook #'go-eldoc-setup)
+               (add-hook 'go-ts-mode-hook #'go-eldoc-setup)))
 (use-package go-errcheck :straight t)
 (use-package go-guru :straight t)
 (use-package go-projectile :straight t)
