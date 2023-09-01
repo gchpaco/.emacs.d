@@ -53,13 +53,13 @@
  '(custom-theme-directory "~/.emacs.d/elhome/site-lisp/")
  '(debug-on-error nil)
  '(default-frame-alist
-    '((menu-bar-lines . 1)
-      (cursor-type . box)
-      (vertical-scroll-bars . right)
-      (internal-border-width . 0)
-      (left-fringe . 1)
-      (right-fringe)
-      (fringe)))
+   '((menu-bar-lines . 1)
+     (cursor-type . box)
+     (vertical-scroll-bars . right)
+     (internal-border-width . 0)
+     (left-fringe . 1)
+     (right-fringe)
+     (fringe)))
  '(delete-by-moving-to-trash t)
  '(diary-file "~/Library/CloudStorage/Dropbox/org/diary.org")
  '(dired-bind-jump t t)
@@ -168,12 +168,13 @@
  '(jde-jdk-registry
    '(("1.6.0" . "/System/Library/Frameworks/JavaVM.framework")))
  '(jde-mvn-nexus-url "http://acelot8/nexus")
- '(js-indent-level 2)
+ '(js-indent-level 2 t)
  '(js2-basic-offset 2 t)
  '(js2-strict-trailing-comma-warning nil t)
  '(js2-use-font-lock-faces t t)
  '(lsp-java-import-order ["java" "javax" "com" "org" "" "ca.skipthedishes" "#"])
  '(magit-diff-use-overlays nil)
+ '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
  '(magit-wip-after-apply-mode t)
  '(magit-wip-after-save-mode t)
  '(magit-wip-before-change-mode t)
@@ -196,109 +197,58 @@
  '(org-agenda-tags-todo-honor-ignore-options t)
  '(org-capture-templates
    '(("p" "Project Todo" entry
-      #'#[0 "\303\304\305\306\307\310\311!!\312\301\313
-\314\300&	!\207"
-            [nil "* TODO %?
-" org-projectile-strategy occ-capture-goto-marker make-instance occ-context :category org-projectile-category-from-file org-capture-get :original-file :template :strategy :options]
+      #'#[0 "\303\304\305\306\307\310\311!!\312\301\313\12\314\300&\11!\207"
+            [nil "* TODO %?\12" org-projectile-strategy occ-capture-goto-marker make-instance occ-context :category org-projectile-category-from-file org-capture-get :original-file :template :strategy :options]
             11]
-      "* TODO %?
-")
+      "* TODO %?\12")
      ("t" "task" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* NEXT %?
-%U
-%a
-")
+      "* NEXT %?\12%U\12%a\12")
      ("i" "interrupt" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* %?
-%U
-%a
-")
+      "* %?\12%U\12%a\12")
      ("q" "quote" entry
       (file "~/Library/CloudStorage/Dropbox/org/quotes.org")
-      "* %?
-#+begin_quote
-%x
-#+end_quote
-- %a
-")
+      "* %?\12#+begin_quote\12%x\12#+end_quote\12- %a\12")
      ("p" "New Project" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* PLANNING %?
-%a
-")
+      "* PLANNING %?\12%a\12")
      ("P" "Phone call" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* PHONE Phone call with %? :PHONE:
-%U")
+      "* PHONE Phone call with %? :PHONE:\12%U")
      ("m" "Meeting" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* MEETING with %? :MEETING:
-%U")
+      "* MEETING with %? :MEETING:\12%U")
      ("s" "Scheduled Action" entry
       (file+datetree "~/Library/CloudStorage/Dropbox/org/diary.org")
-      "* %?
-%U
-")
+      "* %?\12%U\12")
      ("R" "Reading Link" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* DONE Read %c :IDLE:
-%U
-")
+      "* DONE Read %c :IDLE:\12%U\12")
      ("b" "Bookmark link" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* NEXT Read %c :BOOKMARK:IDLE:
-%U
-" :immediate-finish t)
+      "* NEXT Read %c :BOOKMARK:IDLE:\12%U\12" :immediate-finish t)
      ("r" "Read later" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* NEXT Read %c :IDLE:
-%U
-" :immediate-finish t)
+      "* NEXT Read %c :IDLE:\12%U\12" :immediate-finish t)
      ("e" "respond" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* NEXT Respond to %:from on %:subject
-SCHEDULED: %t
-%U
-%a
-" :immediate-finish t)
+      "* NEXT Respond to %:from on %:subject\12SCHEDULED: %t\12%U\12%a\12" :immediate-finish t)
      ("W" "Emacs Buffer (eww or w3m)" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* NEXT Read %a
-%U")
+      "* NEXT Read %a\12%U")
      ("w" "org-protocol" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* NEXT Review %c
-%U
-" :immediate-finish t)
+      "* NEXT Review %c\12%U\12" :immediate-finish t)
      ("I" "New RIA" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* IDLE %? :IDLE:
-%U
-%a
-SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
-:PROPERTIES:
-:REPEAT_TO_STATE: IDLE
-:END:
-")
+      "* IDLE %? :IDLE:\12%U\12%a\12SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\12:PROPERTIES:\12:REPEAT_TO_STATE: IDLE\12:END:\12")
      ("n" "note" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* %? :NOTE:
-%U
-%a
-")
+      "* %? :NOTE:\12%U\12%a\12")
      ("h" "Habit" entry
       (file "~/Library/CloudStorage/Dropbox/org/refile.org")
-      "* NEXT %?
-%U
-%a
-SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
-:PROPERTIES:
-:STYLE: habit
-:REPEAT_TO_STATE: NEXT
-:END:
-")))
+      "* NEXT %?\12%U\12%a\12SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\12:PROPERTIES:\12:STYLE: habit\12:REPEAT_TO_STATE: NEXT\12:END:\12")))
  '(org-clock-idle-time 10)
  '(org-clock-into-drawer "LOGBOOK")
  '(org-clock-persist 'history)
@@ -322,24 +272,10 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9)))
  '(org-refile-use-outline-path t)
  '(org-remember-templates
-   '(("Todo" 116 "* TODO %^{Brief Description} %^g\\nAdded: %U\\n %i\"
-" nil "Tasks" nil)
-     ("Journal" 106 "\\n* %^{topic} %T \\n%i%?\\n\"
-" nil nil nil)
-     ("Book" 98 "\\n* %^{Book Title} %t :READING: \\n
-" nil nil nil)
-     ("Paper" 112 "\\n* TODO %^{Paper Title} %t :READING: \\n:PROPERTIES:\\n:Title: %?\\n:Author:\\n:Year:\\n:Book Title:\\n:END:\\nComments:\\n
-" nil "Citations" nil)) t)
- '(org-roam-capture-templates
-   '(("d" "default" plain #'org-roam-capture--get-point "%?" :file-name "%<%Y%m%d%H%M%S>-${slug}" :head "#+title: ${title}
-" :unnarrowed t)
-     ("c" "CoH RP character" plain #'org-roam-capture--get-point "%?" :file-name "coh/character/%<%Y%m%d%H%M%S>-${slug}" :head "#+title: ${title}
-
-* Description
-
-* Background
-
-* Interactions" :unnarrowed t)) t)
+   '(("Todo" 116 "* TODO %^{Brief Description} %^g\\nAdded: %U\\n %i\"\12" nil "Tasks" nil)
+     ("Journal" 106 "\\n* %^{topic} %T \\n%i%?\\n\"\12" nil nil nil)
+     ("Book" 98 "\\n* %^{Book Title} %t :READING: \\n\12" nil nil nil)
+     ("Paper" 112 "\\n* TODO %^{Paper Title} %t :READING: \\n:PROPERTIES:\\n:Title: %?\\n:Author:\\n:Year:\\n:Book Title:\\n:END:\\nComments:\\n\12" nil "Citations" nil)) t)
  '(org-roam-tag-sources '(prop all-directories))
  '(org-tag-alist
    '((:startgroup "Location")
@@ -375,7 +311,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(osx-clipboard-mode nil)
  '(outline-regexp "\\*+ " t)
  '(package-selected-packages
-   '(kaleidoscope kaleidoscope-evil-state-flash zeal-at-point org-projectile-helm copy-as-format jira-markup-mode ox-jira yatemplate yasnippet scratch-ext scratch megahanda gited meghanada ob-http ob-go ox-gfm org-plus-contrib tern magithub helm-projectile helm-company helm-ag password-store terraform-mode ini-mode ztree make-it-so dired-toggle-sudo hook-helpers indent-tools pylint python-docstring protobuf-mode pyimport kubernetes org-edit-latex literal-string magit-lfs anything-tramp flycheck-flawfinder anaconda-mode python-switch-quotes blackboard-theme importmagic wand string-inflection protocol-buffer forth-mode ag ibuffer-projectile ibuffer-git rc-mode py-autopep8 fix-muscle-memory blackboard-bold-mode hyperbole grab-mac-link rbenv rbenv-mode solarized-theme python-test company-ansible ansible-doc ansible emacs-clim emacs-eclim groovy-mode yapfify modern-cpp-font-lock geiser macrostep use-package smex cssh yaml-mode wsd-mode window-purpose wgrep-pt wgrep-helm uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy syslog-mode ssh-config-mode ssh srefactor sqlup-mode spaceline shelldoc runner reveal-in-osx-finder rainbow-delimiters python-pylint python-pep8 python-info python pymacs pyfmt pyenv-mode-auto pydoc-info pydoc puppet-mode pungi projectile-speedbar projectile-codesearch pretty-mode preproc-font-lock popwin plan9-theme pip-requirements persp-projectile paredit-menu paredit-everywhere pandoc-mode package-safe-delete package+ ox-pandoc osx-trash osx-lib osx-clipboard osx-browse orgit org-ref org-projectile org-mobile-sync org-mac-link org-mac-iCal org-journal org-gcal org-fstree org-dropbox org-context org-cliplink org-caldav org-bullets org-bookmark-heading org-alert objc-font-lock ob-restclient nose multicolumn markdown-mode+ markdown-mac-link magit-gitflow magit-find-file magit-filenotify magit-annex list-unicode-display jst json-mode js2-refactor java-snippets interleave ical-pull hl-indent highlight-parentheses helm-unicode helm-pydoc helm-package helm-orgcard helm-org-rifle helm-open-github helm-ls-git helm-helm-commands helm-gtags helm-go-package helm-git-files helm-git helm-c-yasnippet helm-ack graphviz-dot-mode gotest golint golden-ratio go-stacktracer go-snippets go-projectile go-errcheck go-dlv go-direx go-complete gmail2bbdb gitignore-mode git-annex ggtags form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fic-mode feature-mode eyebrowse expand-region evernote-mode eproject epkg emr elwm elpy elhome ein editorconfig edit-server-htmlize e2wm-term e2wm-bookmark docker-tramp docker dired-imenu dired-filter dired+ dash-at-point csv-mode counsel-dash corral company-math company-jedi company-irony company-inf-ruby company-go company-c-headers company-auctex company-anaconda common-lisp-snippets code-library clojure-snippets clojure-project-mode clojure-mode-extra-font-locking clojure-env clojure-cheatsheet clj-refactor cider-profile cider-decompile cedit bury-successful-compilation bibtex-utils beginend bbdb auto-yasnippet auctex-lua auctex-latexmk all ace-window))
+   '(kaleidoscope kaleidoscope-evil-state-flash zeal-at-point org-projectile-helm copy-as-format jira-markup-mode ox-jira yatemplate yasnippet scratch-ext scratch megahanda gited meghanada ob-http ob-go ox-gfm org-plus-contrib tern helm-projectile helm-company helm-ag password-store terraform-mode ini-mode ztree make-it-so dired-toggle-sudo hook-helpers indent-tools pylint python-docstring protobuf-mode pyimport kubernetes org-edit-latex literal-string anything-tramp flycheck-flawfinder anaconda-mode python-switch-quotes blackboard-theme importmagic wand string-inflection protocol-buffer forth-mode ag ibuffer-projectile ibuffer-git rc-mode py-autopep8 fix-muscle-memory blackboard-bold-mode hyperbole grab-mac-link rbenv rbenv-mode solarized-theme python-test company-ansible ansible-doc ansible emacs-clim emacs-eclim groovy-mode yapfify modern-cpp-font-lock geiser macrostep use-package smex cssh yaml-mode wsd-mode window-purpose wgrep-pt wgrep-helm uuidgen unify-opening unbound typopunct top-mode toggle-quotes tidy syslog-mode ssh-config-mode ssh srefactor sqlup-mode spaceline shelldoc runner reveal-in-osx-finder rainbow-delimiters python-pylint python-pep8 python-info python pymacs pyfmt pyenv-mode-auto pydoc-info pydoc puppet-mode pungi projectile-speedbar projectile-codesearch pretty-mode preproc-font-lock popwin plan9-theme pip-requirements persp-projectile paredit-menu paredit-everywhere pandoc-mode package-safe-delete package+ ox-pandoc osx-trash osx-lib osx-clipboard osx-browse orgit org-ref org-projectile org-mobile-sync org-mac-link org-mac-iCal org-journal org-gcal org-fstree org-dropbox org-context org-cliplink org-caldav org-bullets org-bookmark-heading org-alert objc-font-lock ob-restclient nose multicolumn markdown-mode+ markdown-mac-link magit-gitflow magit-find-file magit-filenotify magit-annex list-unicode-display jst json-mode js2-refactor java-snippets interleave ical-pull hl-indent highlight-parentheses helm-unicode helm-pydoc helm-package helm-orgcard helm-org-rifle helm-open-github helm-ls-git helm-helm-commands helm-gtags helm-go-package helm-git-files helm-git helm-c-yasnippet helm-ack graphviz-dot-mode gotest golint golden-ratio go-stacktracer go-snippets go-projectile go-errcheck go-dlv go-direx go-complete gmail2bbdb gitignore-mode git-annex ggtags form-feed flymake-yaml flymake-shell flymake-ruby flymake-racket flymake-python-pyflakes flymake-puppet flymake-lua flymake-json flymake-go flymake-csslint flymake-css flycheck-pyflakes flycheck-google-cpplint fic-mode feature-mode eyebrowse expand-region evernote-mode eproject epkg emr elwm elpy elhome ein editorconfig edit-server-htmlize e2wm-term e2wm-bookmark docker dired-imenu dired-filter dired+ dash-at-point csv-mode counsel-dash corral company-math company-jedi company-irony company-inf-ruby company-go company-c-headers company-auctex company-anaconda common-lisp-snippets code-library clojure-snippets clojure-project-mode clojure-mode-extra-font-locking clojure-env clojure-cheatsheet clj-refactor cider-profile cider-decompile cedit bury-successful-compilation bibtex-utils beginend bbdb auto-yasnippet auctex-lua auctex-latexmk all ace-window))
  '(paradox-automatically-star t)
  '(paradox-execute-asynchronously t)
  '(paradox-github-token t)
