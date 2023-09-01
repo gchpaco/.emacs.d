@@ -23,15 +23,7 @@
            "Exclude todo keywords with a done state from refile targets"
            (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
-         (setq-default org-modules
-                       '(org-eshell org-eww org-git-link
-                                    org-mac-link org-mac-message org-bbdb
-                                    org-bibtex org-docview org-gnus org-habit
-                                    org-id org-info org-irc org-mhe
-                                    org-protocol org-rmail org-w3m
-                                    org-man org-panel
-                                    ox-confluence)
-                       org-outline-path-complete-in-steps nil
+         (setq-default org-outline-path-complete-in-steps nil
                        org-edit-src-content-indentation 0
                        org-src-tab-acts-natively t
                        org-src-preserve-indentation t
@@ -90,20 +82,17 @@
                   org-fast-tag-selection-single-key 'expert
                   org-insert-heading-hook nil)))
 
+(use-package alert :straight t)
+(use-package orgit :straight t)
 (use-package org-alert
   :functions org-alert-enable
   :straight t
   :init (add-hook 'after-init-hook #'org-alert-enable))
 
-(use-package org-bookmark-heading :straight t)
-(use-package org-cliplink :straight t)
 (use-package org-context
   :straight t
   :init (org-context-mode +1))
-(use-package org-download :straight t)
 (use-package org-fstree :straight t)
-(use-package org-journal :straight t)
-(use-package orgit :straight t)
 
 (use-package org-capture
   :bind (("\C-cr" . org-capture)
@@ -217,8 +206,6 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
                    :working-directory "/Users/ghughes/wd/web-home/"
                    :online-suffix ".html" :working-suffix ".org"))))
 
-(use-package helm-org-rifle :straight t)
-
 (use-package org-bullets
   :commands (org-bullets-mode)
   :straight t
@@ -227,7 +214,6 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 (use-package ob-go :straight t)
 (use-package ob-http :straight t)
 (use-package restclient :straight t)
-(use-package ob-restclient :straight t)
 (use-package ob-markdown :straight t)
 (use-package org-projectile :straight t
   :bind (("C-c c" . org-capture)

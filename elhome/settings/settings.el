@@ -313,7 +313,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
  '(org-mobile-files '(org-agenda-files "recipes.org"))
  '(org-mobile-inbox-for-pull "~/Library/CloudStorage/Dropbox/Apps/MobileOrg/index.org")
  '(org-modules
-   '(org-eshell org-eww org-git-link org-mac-iCal org-mac-link org-mac-message org-bbdb org-bibtex org-docview org-gnus org-habit org-id org-info org-irc org-mhe org-protocol org-rmail org-w3m org-checklist org-git-link org-mac-iCal org-mac-link org-man org-panel))
+   '(ol-bbdb ol-bibtex ol-docview ol-doi ol-eww ol-gnus org-habit org-id ol-info org-protocol ol-w3m ol-eshell ol-man ob-go ob-http ob-http-mode ob-markdown ob-wsdmode org-context org-fstree org-project-capture org-projectile org-projectile-helm orgit))
  '(org-outline-path-complete-in-steps nil)
  '(org-protocol-project-alist
    '(("http://sigwinch.org/Graham/" :base-url "http://sigwinch.org/Graham/" :working-directory "/Users/ghughes/wd/web-home/" :online-suffix ".html" :working-suffix ".org")))

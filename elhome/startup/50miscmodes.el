@@ -94,7 +94,6 @@
 
 (use-package sqlup-mode :straight t)
 
-(use-package cssh :straight t)
 (use-package ssh :straight t)
 (use-package ssh-config-mode :straight t :disabled t)
 

@@ -24,7 +24,5 @@
 
 (add-to-list 'completion-ignored-extensions ".git/")
 
-(use-package magithub :straight t)
-(use-package magit-lfs :straight t)
 (use-package orgit :straight t)
 (use-package magit-todos :straight t)

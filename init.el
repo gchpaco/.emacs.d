@@ -11,10 +11,10 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-(straight-use-package 'use-package)
 (require 'use-package)
 (straight-use-package 'elhome)
 (require 'elhome)
+(straight-use-package 'org)
 (straight-use-package 'python-mode)
 (require 'python-mode)
 (straight-use-package 'hook-helpers)
