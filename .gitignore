@@ -70,3 +70,8 @@ secrets.el
 /image-dired
 /javadoc-cache
 /magithub
+/forge-database.sqlite
+/history
+/org-roam.db
+/elpy/
+/transient/
