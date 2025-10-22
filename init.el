@@ -13,12 +13,9 @@
 
 (require 'use-package)
 (straight-use-package 'elhome)
-(require 'elhome)
 (straight-use-package 'org)
 (straight-use-package 'python-mode)
-(require 'python-mode)
 (straight-use-package 'hook-helpers)
-(use-package hook-helpers)
 
 (straight-use-package 'diminish)
 
@@ -35,7 +32,8 @@ I.e. each element of the list is of the form (NAME . VERSION) where
 NAME is the package name as a symbol, and VERSION is its version
 as a list.")
 
-(straight-use-package 'elhome)
+(require 'python-mode)
+(require 'org)
 (require 'elhome)
 
 (elhome-init)

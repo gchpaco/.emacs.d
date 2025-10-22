@@ -3,7 +3,7 @@
 
 (require 'cl-lib)
 
-(defvar gch/org-dir (file-name-as-directory "~/Library/CloudStorage/Dropbox/org"))
+(defvar gch/org-dir (file-name-as-directory "~/Dropbox/org"))
 
 (use-package code-library
   :init (setq-default code-library-directory "~/wd/code/library/")
@@ -83,7 +83,6 @@
                   org-insert-heading-hook nil)))
 
 (use-package alert :straight t)
-(use-package orgit :straight t)
 (use-package org-alert
   :functions org-alert-enable
   :straight t
@@ -227,19 +226,8 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
 (use-package helm-org :straight t)
 (use-package org-projectile-helm :straight t)
 (use-package org-roam :straight t
-  :init (setq org-roam-v2-ack t)
   :custom
-  (org-roam-directory gch/org-dir)
-  (org-roam-completion-everywhere t)
-  (org-roam-capture-templates
-   '(("d" "default" plain
-      "%?"
-      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}" "#+title: ${title}")
-      :unnarrowed t)
-     ("c" "CoH RP character" plain
-      "%?" :if-new (file+head "coh/character/%<%Y%m%d%H%M%S>-${slug}"
-                              "#+title: ${title}\n\n* Description\n\n* Background\n\n* Interactions")
-      :unnarrowed t)))
+  (org-roam-directory (concat gch/org-dir "roam"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n i" . org-roam-node-insert)
@@ -255,6 +243,7 @@ SCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")
                 deft-extensions '("md" "org")))
 
 (use-package olivetti :straight t
+  :commands olivetti-mode
   :config
   (setq-default fill-column 78)
   ;; The original value is "\f\\|[ ]*$", so we add the bullets (-),

@@ -3,13 +3,15 @@
 
 (use-package e2wm
   :straight t
+  :disabled t
   :bind ("M-+" . e2wm:start-management))
-(use-package window-layout :straight t)
-(use-package e2wm-bookmark :straight t)
-(use-package term)
-(use-package e2wm-term :straight t)
+(use-package window-layout :straight t :disabled t)
+(use-package e2wm-bookmark :straight t :disabled t)
+(use-package term :disabled t)
+(use-package e2wm-term :straight t :disabled t)
 (use-package elwm
   :straight t
+  :disabled t
   :bind
   ("C-c <down>" . elwm-shift-down)
   ("C-c <up>" . elwm-shift-up)

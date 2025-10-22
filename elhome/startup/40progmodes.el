@@ -54,8 +54,6 @@
 
 (use-package literal-string :straight t)
 
-(use-package kubernetes :straight t)
-
 (use-package protobuf-mode :straight t
   :mode "\\.proto\\'"
   :config
@@ -87,7 +85,6 @@
 
 (use-package markdown-mode :straight t)
 (use-package markdown-mode+ :straight t)
-(use-package markdown-mac-link :straight t :disabled t)
 
 (use-package docker :straight t)
 (use-package tramp-container)
@@ -103,8 +100,6 @@
 (use-package pretty-mode
   :straight t
   :config (global-pretty-mode 1))
-
-;(use-package syslog-mode :straight t)
 
 (use-package restclient :straight t)
 

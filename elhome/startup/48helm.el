@@ -10,7 +10,7 @@
          ("C-x b" . helm-mini)
          ("C-x C-f" . helm-find-files)
          ("C-h SPC" . helm-all-mark-rings))
-  :config (progn (setq-default helm-command-prefix-key "C-c h")
+  :config (progn (setq-default helm-command-prefix-key "C-c g")
                  (add-to-list 'helm-sources-using-default-as-input
                               'helm-source-man-pages)
                  (helm-mode 1)
@@ -18,7 +18,7 @@
                             ([tab] . helm-execute-persistent-action)
                             ("C-i" . helm-execute-persistent-action)
                             ("C-z" . helm-select-action))
-                 (bind-key "C-c h o" #'helm-occur))
+                 (bind-key "C-c g o" #'helm-occur))
   :straight t)
 
 (use-package shell)

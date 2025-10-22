@@ -134,7 +134,7 @@
 
 (use-package editorconfig :straight t)
 
-(use-package epkg :straight t)
+(use-package epkg :straight t :disabled t)
 
 (use-package git-annex :straight t)
 

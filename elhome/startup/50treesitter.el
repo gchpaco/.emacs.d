@@ -1,6 +1,9 @@
 (eval-when-compile
   (require 'use-package))
 
+(use-package tree-sitter :straight t)
+(add-to-list 'treesit-extra-load-path (expand-file-name "~/wd/EXTERNAL/tree-sitter-module/dist"))
+
 (setq treesit-language-source-alist
    '((bash "https://github.com/tree-sitter/tree-sitter-bash")
      (cmake "https://github.com/uyha/tree-sitter-cmake")

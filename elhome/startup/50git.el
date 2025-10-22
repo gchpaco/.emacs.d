@@ -13,9 +13,9 @@
   (remove-hook 'git-rebase-mode-hook 'delete-trailing-whitespace))
 (add-hook 'git-rebase-mode-hook 'gch/git-rebase-postinit)
 
-(use-package magit-annex :straight t)
-(use-package magit-filenotify :straight t)
-(use-package magit-gitflow :straight t)
+(use-package magit-annex :straight t :disabled t)
+(use-package magit-filenotify :straight t :disabled t)
+(use-package magit-gitflow :straight t :disabled t)
 (use-package magit-wip
   :disabled t
   :straight t
@@ -24,5 +24,5 @@
 
 (add-to-list 'completion-ignored-extensions ".git/")
 
-(use-package orgit :straight t)
-(use-package magit-todos :straight t)
+(use-package orgit :straight t :disabled t)
+(use-package magit-todos :straight t :disabled t)

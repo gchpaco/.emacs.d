@@ -23,17 +23,14 @@
 (use-package go-errcheck :straight t)
 (use-package go-guru :straight t)
 (use-package go-projectile :straight t)
-(use-package go-snippets :straight t)
 (use-package go-stacktracer :straight t)
 (use-package golint :straight t)
 (use-package gotest :straight t)
-(use-package flymake-go :straight t)
+(use-package flymake-go :straight t :disabled t)
 (use-package company-go :straight t)
 (use-package go-oracle
   :disabled t
   :straight t
   :init (setq-default go-oracle-command (expand-file-name "~/lib/go/bin/oracle")))
 
-(add-to-list 'exec-path "/usr/local/go/bin")
-(setenv "PATH" (concat (getenv "PATH") ":" "/usr/local/go/bin"))
 (setenv "GOPATH" "/Users/ghughes/lib/go:/Users/ghughes/wd/git-work/lib/go")

@@ -45,12 +45,15 @@
   :bind ("C-c m" . woman))
 
 (use-package tramp
+  :straight t
   :config
-  (setq tramp-default-method "ssh")
   (defalias 'exit-tramp 'tramp-cleanup-all-buffers)
+  (connection-local-set-profile-variables
+   'remote-direct-async-process
+   '((tramp-direct-async-process . t)))
+  (connection-local-set-profiles
+   '(:application tramp :protocol "scp")
+   'remote-direct-async-process)
+  (setq magit-tramp-pipe-stty-settings 'pty)
   (add-to-list 'tramp-default-proxies-alist
-               '("\\." nil nil))
-  (add-to-list 'tramp-default-proxies-alist
-               '("\\`cunningham\\.local\\'" nil "/ssh:sc.denali-systems.com:"))
-  (add-to-list 'tramp-default-proxies-alist
-               '("\\`ec2cloner\\'" nil "/ssh:cunningham.local:")))
+               '("\\." nil nil)))

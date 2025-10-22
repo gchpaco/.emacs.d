@@ -1,6 +1,6 @@
 ;;; mac-local.el --- Local Macintosh configurations
 
-;; Copyright (C) 2008, 2014, 2016  Graham Hughes
+;; Copyright (C) 2008, 2014, 2016, 2025  Graham Hughes
 
 ;; Author: Graham Hughes <graham@sigwinch.org>
 ;; Keywords: local
@@ -51,7 +51,8 @@
    (fortune)
    (floor (/ (frame-pixel-width) 8))))
 
-(osx-browse-mode 1)
+;(require 'osx-browse)
+;(osx-browse-mode 1)
 
 (provide 'mac-local)
 ;;; mac-local.el ends here

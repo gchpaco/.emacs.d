@@ -9,7 +9,7 @@
   :diminish elpy-mode
   :init (setq-default python-shell-exec-path
                       (list (expand-file-name "~/.pyenv/shims")
-                            "/usr/local/opt/pyenv/shims"))
+                            "/opt/homebrew/opt/pyenv/shims"))
   :config
   (setq-default python-shell-interpreter "python3"
                 python-shell-interpreter-args "-i")
